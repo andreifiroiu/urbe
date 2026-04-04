@@ -1,0 +1,23 @@
+<?php
+
+use Illuminate\Support\Facades\Schedule;
+
+Schedule::command('eventpulse:scrape')
+    ->everyFourHours()
+    ->withoutOverlapping()
+    ->appendOutputTo(storage_path('logs/scraper.log'));
+
+Schedule::command('eventpulse:process-events')
+    ->everyFifteenMinutes()
+    ->withoutOverlapping();
+
+Schedule::command('eventpulse:send-notifications')
+    ->dailyAt(sprintf('%02d:00', config('eventpulse.notifications.hour', 8)))
+    ->withoutOverlapping();
+
+Schedule::command('eventpulse:decay-profiles')
+    ->weekly()
+    ->withoutOverlapping();
+
+Schedule::command('horizon:snapshot')
+    ->everyFiveMinutes();
