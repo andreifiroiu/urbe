@@ -21,8 +21,6 @@ class ClassifyEventJob implements ShouldBeUnique, ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'ai';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
@@ -30,7 +28,9 @@ class ClassifyEventJob implements ShouldBeUnique, ShouldQueue
 
     public function __construct(
         public readonly string $eventId,
-    ) {}
+    ) {
+        $this->onQueue('ai');
+    }
 
     /**
      * @return array<int, object>

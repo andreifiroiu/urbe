@@ -8,12 +8,12 @@ use App\Models\User;
 use App\Services\InterestProfile\ProfileUpdater;
 
 beforeEach(function () {
-    $this->updater = new ProfileUpdater();
+    $this->updater = new ProfileUpdater;
 });
 
 it('increases category score for interested reaction', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5],
+        'interest_profile' => ['music' => 0.5],
     ]);
 
     $event = Event::factory()->create([
@@ -24,12 +24,12 @@ it('increases category score for interested reaction', function () {
     $this->updater->updateFromFeedback($user, $event, 'interested');
 
     $user->refresh();
-    expect($user->interest_profile['Music'])->toBeGreaterThan(0.5);
+    expect($user->interest_profile['music'])->toBeGreaterThan(0.5);
 });
 
 it('decreases category score for not_interested reaction', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Sports' => 0.6],
+        'interest_profile' => ['sports' => 0.6],
     ]);
 
     $event = Event::factory()->create([
@@ -40,12 +40,12 @@ it('decreases category score for not_interested reaction', function () {
     $this->updater->updateFromFeedback($user, $event, 'not_interested');
 
     $user->refresh();
-    expect($user->interest_profile['Sports'])->toBeLessThan(0.6);
+    expect($user->interest_profile['sports'])->toBeLessThan(0.6);
 });
 
 it('clamps score to maximum 1.0', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.95],
+        'interest_profile' => ['music' => 0.95],
     ]);
 
     $event = Event::factory()->create([
@@ -56,12 +56,12 @@ it('clamps score to maximum 1.0', function () {
     $this->updater->updateFromFeedback($user, $event, 'saved');
 
     $user->refresh();
-    expect($user->interest_profile['Music'])->toBeLessThanOrEqual(1.0);
+    expect($user->interest_profile['music'])->toBeLessThanOrEqual(1.0);
 });
 
 it('clamps score to minimum 0.0', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Technology' => 0.05],
+        'interest_profile' => ['technology' => 0.05],
     ]);
 
     $event = Event::factory()->create([
@@ -72,12 +72,12 @@ it('clamps score to minimum 0.0', function () {
     $this->updater->updateFromFeedback($user, $event, 'hidden');
 
     $user->refresh();
-    expect($user->interest_profile['Technology'])->toBeGreaterThanOrEqual(0.0);
+    expect($user->interest_profile['technology'])->toBeGreaterThanOrEqual(0.0);
 });
 
 it('updates tag scores alongside category scores', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5, 'tag:jazz' => 0.3],
+        'interest_profile' => ['music' => 0.5, 'tag:jazz' => 0.3],
     ]);
 
     $event = Event::factory()->create([
@@ -95,7 +95,7 @@ it('updates tag scores alongside category scores', function () {
 
 it('does nothing for zero delta reactions', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5],
+        'interest_profile' => ['music' => 0.5],
     ]);
 
     $event = Event::factory()->create([
@@ -103,11 +103,10 @@ it('does nothing for zero delta reactions', function () {
         'tags' => [],
     ]);
 
-    // 'unknown_reaction' should have no delta configured
     $this->updater->updateFromFeedback($user, $event, 'unknown_reaction');
 
     $user->refresh();
-    expect($user->interest_profile['Music'])->toBe(0.5);
+    expect($user->interest_profile['music'])->toBe(0.5);
 });
 
 it('correctly clamps scores via clampScore method', function () {

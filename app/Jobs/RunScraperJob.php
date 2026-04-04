@@ -18,8 +18,6 @@ class RunScraperJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'scraping';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
@@ -27,7 +25,9 @@ class RunScraperJob implements ShouldQueue
 
     public function __construct(
         public ?string $source = null,
-    ) {}
+    ) {
+        $this->onQueue('scraping');
+    }
 
     public function handle(ScraperOrchestrator $orchestrator): void
     {

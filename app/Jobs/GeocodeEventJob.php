@@ -19,8 +19,6 @@ class GeocodeEventJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'enrichment';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
@@ -28,7 +26,9 @@ class GeocodeEventJob implements ShouldQueue
 
     public function __construct(
         public readonly string $eventId,
-    ) {}
+    ) {
+        $this->onQueue('enrichment');
+    }
 
     public function handle(EventEnricher $enricher): void
     {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\Services\InterestProfile\ProfileScorer;
 
 beforeEach(function () {
-    $this->scorer = new ProfileScorer();
+    $this->scorer = new ProfileScorer;
 });
 
 it('returns the category score from the profile', function () {
@@ -30,7 +30,7 @@ it('calculates average tag score from matching tags', function () {
 
     // Average of 0.9 and 0.7
     $score = $this->scorer->calculateTagScore($profile, ['jazz', 'live-music']);
-    expect($score)->toBe(0.8);
+    expect($score)->toEqualWithDelta(0.8, 0.0001);
 });
 
 it('returns zero for empty tags', function () {

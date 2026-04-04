@@ -12,19 +12,13 @@ use App\Services\Recommendation\FeedbackProcessor;
 
 beforeEach(function () {
     $this->processor = new FeedbackProcessor(
-        profileUpdater: new ProfileUpdater(),
+        profileUpdater: new ProfileUpdater,
     );
 });
 
-it('processes an interested reaction and updates the profile', function () {
-    $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5],
-    ]);
-
-    $event = Event::factory()->create([
-        'category' => EventCategory::Music,
-        'tags' => ['jazz'],
-    ]);
+it('processes an interested reaction and increases category score', function () {
+    $user = User::factory()->create(['interest_profile' => ['music' => 0.5]]);
+    $event = Event::factory()->create(['category' => EventCategory::Music, 'tags' => ['jazz']]);
 
     $reaction = UserEventReaction::factory()->create([
         'user_id' => $user->id,
@@ -39,18 +33,12 @@ it('processes an interested reaction and updates the profile', function () {
     $user->refresh();
 
     expect($reaction->is_processed)->toBeTrue();
-    expect($user->interest_profile['Music'])->toBeGreaterThan(0.5);
+    expect($user->interest_profile['music'])->toBeGreaterThan(0.5);
 });
 
-it('processes a not_interested reaction and decreases the score', function () {
-    $user = User::factory()->create([
-        'interest_profile' => ['Sports' => 0.6],
-    ]);
-
-    $event = Event::factory()->create([
-        'category' => EventCategory::Sports,
-        'tags' => [],
-    ]);
+it('processes not_interested and decreases score', function () {
+    $user = User::factory()->create(['interest_profile' => ['sports' => 0.6]]);
+    $event = Event::factory()->create(['category' => EventCategory::Sports, 'tags' => []]);
 
     $reaction = UserEventReaction::factory()->create([
         'user_id' => $user->id,
@@ -62,18 +50,12 @@ it('processes a not_interested reaction and decreases the score', function () {
     $this->processor->processReaction($reaction);
 
     $user->refresh();
-    expect($user->interest_profile['Sports'])->toBeLessThan(0.6);
+    expect($user->interest_profile['sports'])->toBeLessThan(0.6);
 });
 
 it('skips already processed reactions', function () {
-    $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5],
-    ]);
-
-    $event = Event::factory()->create([
-        'category' => EventCategory::Music,
-        'tags' => [],
-    ]);
+    $user = User::factory()->create(['interest_profile' => ['music' => 0.5]]);
+    $event = Event::factory()->create(['category' => EventCategory::Music, 'tags' => []]);
 
     $reaction = UserEventReaction::factory()->create([
         'user_id' => $user->id,
@@ -85,39 +67,11 @@ it('skips already processed reactions', function () {
     $this->processor->processReaction($reaction);
 
     $user->refresh();
-    // Score should remain unchanged since reaction was already processed
-    expect($user->interest_profile['Music'])->toBe(0.5);
-});
-
-it('processes saved reaction with higher delta than interested', function () {
-    $user = User::factory()->create([
-        'interest_profile' => ['Arts' => 0.4],
-    ]);
-
-    $event = Event::factory()->create([
-        'category' => EventCategory::Arts,
-        'tags' => [],
-    ]);
-
-    $reaction = UserEventReaction::factory()->create([
-        'user_id' => $user->id,
-        'event_id' => $event->id,
-        'reaction' => Reaction::Saved,
-        'is_processed' => false,
-    ]);
-
-    $this->processor->processReaction($reaction);
-
-    $user->refresh();
-    $savedDelta = config('eventpulse.feedback.deltas.saved');
-    $expectedScore = 0.4 + $savedDelta;
-    expect($user->interest_profile['Arts'])->toBe(min(1.0, $expectedScore));
+    expect($user->interest_profile['music'])->toBe(0.5);
 });
 
 it('processes all unprocessed reactions in batch', function () {
-    $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.5, 'Sports' => 0.5],
-    ]);
+    $user = User::factory()->create(['interest_profile' => ['music' => 0.5, 'sports' => 0.5]]);
 
     $event1 = Event::factory()->create(['category' => EventCategory::Music, 'tags' => []]);
     $event2 = Event::factory()->create(['category' => EventCategory::Sports, 'tags' => []]);
@@ -139,4 +93,22 @@ it('processes all unprocessed reactions in batch', function () {
 
     expect($count)->toBe(2);
     expect(UserEventReaction::where('is_processed', false)->count())->toBe(0);
+});
+
+it('saved reaction gives higher delta than interested', function () {
+    $user = User::factory()->create(['interest_profile' => ['arts' => 0.4]]);
+    $event = Event::factory()->create(['category' => EventCategory::Arts, 'tags' => []]);
+
+    $reaction = UserEventReaction::factory()->create([
+        'user_id' => $user->id,
+        'event_id' => $event->id,
+        'reaction' => Reaction::Saved,
+        'is_processed' => false,
+    ]);
+
+    $this->processor->processReaction($reaction);
+
+    $user->refresh();
+    $savedDelta = config('eventpulse.feedback.deltas.saved');
+    expect($user->interest_profile['arts'])->toBe(min(1.0, 0.4 + $savedDelta));
 });

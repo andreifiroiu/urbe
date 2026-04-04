@@ -7,7 +7,7 @@ use App\Models\Event;
 use App\Services\Processing\EventDeduplicator;
 
 beforeEach(function () {
-    $this->deduplicator = new EventDeduplicator();
+    $this->deduplicator = new EventDeduplicator;
 });
 
 it('generates consistent fingerprints for the same event data', function () {

@@ -19,18 +19,18 @@ class ProcessFeedbackJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'processing';
-
     public int $tries = 2;
 
     public function __construct(
         public readonly string $reactionId,
-    ) {}
+    ) {
+        $this->onQueue('processing');
+    }
 
     public function handle(FeedbackProcessor $processor): void
     {
         $reaction = UserEventReaction::findOrFail($this->reactionId);
 
-        $processor->process($reaction);
+        $processor->processReaction($reaction);
     }
 }

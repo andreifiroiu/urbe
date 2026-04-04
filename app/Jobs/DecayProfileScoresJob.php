@@ -18,11 +18,12 @@ class DecayProfileScoresJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'default';
-
     public int $tries = 1;
 
-    public function __construct() {}
+    public function __construct()
+    {
+        $this->onQueue('default');
+    }
 
     public function handle(ProfileDecayer $decayer): void
     {

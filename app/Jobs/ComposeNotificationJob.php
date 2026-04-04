@@ -19,13 +19,13 @@ class ComposeNotificationJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'notifications';
-
     public int $tries = 2;
 
     public function __construct(
         public readonly string $userId,
-    ) {}
+    ) {
+        $this->onQueue('notifications');
+    }
 
     public function handle(NotificationComposer $composer): void
     {

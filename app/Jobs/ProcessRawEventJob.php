@@ -19,13 +19,13 @@ class ProcessRawEventJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'processing';
-
     public int $tries = 2;
 
     public function __construct(
         public readonly RawEvent $rawEvent,
-    ) {}
+    ) {
+        $this->onQueue('processing');
+    }
 
     public function handle(EventPipeline $pipeline): void
     {

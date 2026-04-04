@@ -10,36 +10,31 @@ use Illuminate\Support\Collection;
 class DiversityFilter
 {
     /**
-     * Ensures category diversity in recommendation sets by preventing
-     * any single category from dominating the results. Applies a cap
-     * per category and interleaves events from different categories
-     * to create a balanced and varied recommendation list.
-     */
-    public function __construct() {}
-
-    /**
-     * Filter a scored collection of events to ensure category diversity.
+     * Cap events per category and round-robin interleave for variety.
      *
-     * Groups events by category, caps each group to a maximum count,
-     * and interleaves them so the final list alternates between categories
-     * rather than clustering same-category events together.
-     *
-     * @param Collection<int, Event> $events The scored events sorted by relevance score descending.
-     * @param int $maxPerCategory The maximum number of events allowed per category.
-     * @return Collection<int, Event> The filtered and interleaved events.
+     * @param  Collection<int, Event>  $events  Scored events, already sorted by relevance.
+     * @param  int  $maxPerCategory  Maximum events from a single category.
+     * @return Collection<int, Event>
      */
     public function filter(Collection $events, int $maxPerCategory = 3): Collection
     {
-        // TODO: Group events by their category value: $events->groupBy(fn($e) => $e->category?->value ?? 'other')
-        // TODO: For each category group, take only the first $maxPerCategory events (already sorted by score)
-        // TODO: Interleave the groups: round-robin through categories, picking one event from each in turn
-        //       This prevents same-category events from clustering in the output
-        // TODO: Example interleave algorithm:
-        //   TODO: Initialize empty result collection
-        //   TODO: While any group still has events:
-        //     TODO: For each category group with remaining events:
-        //       TODO: Shift the first event from the group and add to result
-        // TODO: Return the interleaved collection
-        return collect();
+        $grouped = $events->groupBy(fn (Event $event) => $event->category?->value ?? 'other');
+
+        // Cap each group
+        $capped = $grouped->map(fn (Collection $group) => $group->take($maxPerCategory)->values());
+
+        // Round-robin interleave
+        $result = collect();
+        $maxSize = $capped->max(fn (Collection $g) => $g->count()) ?? 0;
+
+        for ($i = 0; $i < $maxSize; $i++) {
+            foreach ($capped as $group) {
+                if (isset($group[$i])) {
+                    $result->push($group[$i]);
+                }
+            }
+        }
+
+        return $result->values();
     }
 }
