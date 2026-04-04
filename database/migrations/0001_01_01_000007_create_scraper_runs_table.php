@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('scraper_runs', function (Blueprint $table) {
-            $table->uuid('id')->primary()->default(DB::raw('gen_random_uuid()'));
+            $table->uuid('id')->primary();
             $table->string('source');
             $table->string('status'); // 'running', 'completed', 'failed'
             $table->integer('events_found')->default(0);
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('events_updated')->default(0);
             $table->integer('events_skipped')->default(0);
             $table->integer('errors_count')->default(0);
-            $table->jsonb('error_log')->default('[]');
+            $table->json('error_log')->default('[]');
             $table->timestamp('started_at');
             $table->timestamp('finished_at')->nullable();
             $table->timestamps();
