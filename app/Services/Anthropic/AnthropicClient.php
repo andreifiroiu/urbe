@@ -92,6 +92,72 @@ class AnthropicClient
     }
 
     /**
+     * Send a multi-turn conversation to the Claude API.
+     *
+     * @param  string  $systemPrompt  The system prompt.
+     * @param  array<int, array{role: string, content: string}>  $messages  Alternating user/assistant messages.
+     * @param  string  $operation  Operation name for logging.
+     * @param  array<string, mixed>  $logMetadata  Extra log metadata.
+     * @return array{content: string, input_tokens: int, output_tokens: int}
+     *
+     * @throws RuntimeException If the API call fails.
+     */
+    public function sendMultiTurn(
+        string $systemPrompt,
+        array $messages,
+        string $operation = 'unknown',
+        array $logMetadata = [],
+    ): array {
+        try {
+            $response = Http::withHeaders([
+                'x-api-key' => $this->apiKey,
+                'anthropic-version' => self::API_VERSION,
+            ])
+                ->timeout(30)
+                ->connectTimeout(10)
+                ->retry(2, 1000, throw: false)
+                ->post(self::API_URL, [
+                    'model' => $this->model,
+                    'max_tokens' => $this->maxTokens,
+                    'system' => $systemPrompt,
+                    'messages' => $messages,
+                ]);
+
+            if ($response->failed()) {
+                Log::error('Anthropic API request failed', [
+                    'status' => $response->status(),
+                    'body' => $response->body(),
+                    'operation' => $operation,
+                ]);
+
+                throw new RuntimeException(
+                    "Anthropic API returned status {$response->status()}: {$response->body()}"
+                );
+            }
+
+            $data = $response->json();
+            $content = $data['content'][0]['text'] ?? '';
+            $inputTokens = $data['usage']['input_tokens'] ?? 0;
+            $outputTokens = $data['usage']['output_tokens'] ?? 0;
+
+            $this->logUsage($operation, $inputTokens, $outputTokens, $logMetadata);
+
+            return [
+                'content' => $content,
+                'input_tokens' => $inputTokens,
+                'output_tokens' => $outputTokens,
+            ];
+        } catch (ConnectionException $e) {
+            Log::error('Anthropic API connection failed', [
+                'message' => $e->getMessage(),
+                'operation' => $operation,
+            ]);
+
+            throw new RuntimeException("Anthropic API connection failed: {$e->getMessage()}", 0, $e);
+        }
+    }
+
+    /**
      * Log token usage to the llm_usage_logs table.
      *
      * @param  array<string, mixed>  $metadata

@@ -49,7 +49,38 @@ return [
         'api_key' => env('ANTHROPIC_API_KEY'),
         'max_tokens' => 1024,
         'classification_prompt' => 'You are an event classifier. Given the event title and description, classify it into exactly one category and extract relevant tags. Respond in JSON format with keys: "category" (one of: Music, Arts, Sports, Technology, Food, Nightlife, Business, Health, Education, Family, Community, Film, Literature, Other), "tags" (array of lowercase strings), "confidence" (float 0-1).',
-        'onboarding_system_prompt' => 'You are EventPulse, a friendly assistant helping users discover local events. Ask about their interests, preferred event types, price sensitivity, and location preferences. Be conversational and extract structured preferences from natural language. After gathering enough information (3-5 exchanges), summarize their profile.',
+        'onboarding_system_prompt' => <<<'PROMPT'
+You are EventPulse, a friendly assistant helping users discover local events in their city.
+
+Guide the conversation through these stages:
+1. INTERESTS: Ask what kinds of events they enjoy — music, arts, sports, food, tech, etc. Probe for specifics ("What genres of music?" "Any favourite cuisines?").
+2. PAST EVENTS: Ask about memorable events they have attended recently and what they liked about them.
+3. CONSTRAINTS: Ask about practical preferences — budget sensitivity (free vs paid), preferred days/times, how far they are willing to travel, indoor vs outdoor.
+4. CONFIRMATION: Once you have enough detail (at least 3-4 exchanges), summarise what you have learned in a short bullet list and ask the user to confirm or correct it. End your summary message with the exact marker [PROFILE_READY] on its own line.
+
+Rules:
+- Keep messages short and conversational (2-3 sentences max).
+- Ask only ONE question at a time.
+- Never output JSON — that is handled by a separate profile generator.
+- Use the user's name if available.
+- If the user gives very short answers, gently probe for more detail.
+PROMPT,
+        'profile_generation_prompt' => <<<'PROMPT'
+Analyse the following onboarding conversation and produce a JSON interest profile for this user.
+
+The JSON must have these keys:
+- Category scores: use the exact lowercase category names (music, arts, sports, technology, food, nightlife, business, health, education, family, community, film, literature). Score each from 0.0 (no interest) to 1.0 (strong interest). Only include categories with evidence from the conversation.
+- Tag scores: prefix with "tag:" followed by a lowercase kebab-case tag (e.g., "tag:jazz", "tag:street-food", "tag:outdoor"). Score each 0.0–1.0.
+- "city": the user's preferred city as a string, or null.
+- "price_sensitive": true/false based on whether they prefer free or cheap events.
+- "preferred_times": an array of strings like ["evening", "weekend"].
+
+Return ONLY valid JSON, no markdown, no explanation.
+PROMPT,
+    ],
+    'onboarding' => [
+        'min_exchanges' => 4,
+        'welcome_message' => "Hi! I'm EventPulse — I help you discover amazing local events. To get started, tell me: what kinds of activities and events do you enjoy most?",
     ],
     'city' => env('EVENTPULSE_CITY', 'Bucharest'),
     'categories' => ['Music', 'Arts', 'Sports', 'Technology', 'Food', 'Nightlife', 'Business', 'Health', 'Education', 'Family', 'Community', 'Film', 'Literature', 'Other'],

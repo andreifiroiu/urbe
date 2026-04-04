@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     // Onboarding chat
     Route::get('onboarding', [ChatController::class, 'index'])->name('onboarding');
     Route::post('onboarding/chat', [ChatController::class, 'store'])->name('onboarding.chat');
+    Route::post('onboarding/confirm-profile', [ChatController::class, 'confirmProfile'])->name('onboarding.confirm');
 
     // Dashboard / Recommendations
     Route::get('/', [RecommendationController::class, 'index'])->name('dashboard');
