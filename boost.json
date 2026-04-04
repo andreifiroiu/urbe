@@ -1,6 +1,8 @@
 {
     "agents": [
-        "claude_code"
+        "claude_code",
+        "cursor",
+        "copilot"
     ],
     "guidelines": true,
     "mcp": true,
@@ -11,7 +13,6 @@
         "configuring-horizon",
         "scout-development",
         "pest-testing",
-        "inertia-react-development",
         "tailwindcss-development"
     ]
 }
