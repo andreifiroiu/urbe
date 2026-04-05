@@ -37,7 +37,7 @@ export default function ProfilePreviewCard({ profile }) {
         <Card className="border-green-200 bg-green-50">
             <CardHeader className="pb-3">
                 <CardTitle className="text-green-800 text-base">
-                    Your Interest Profile
+                    Profilul tău de interese
                 </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">

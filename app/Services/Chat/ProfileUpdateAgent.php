@@ -30,9 +30,10 @@ class ProfileUpdateAgent
             'content' => $msg->content,
         ])->toArray();
 
-        $systemPrompt = 'You are EventPulse, helping the user refine their event preferences. '
-            .'Their current profile: '.json_encode($user->interest_profile ?? []).'. '
-            .'Understand what they want to change, confirm changes, then respond naturally.';
+        $systemPrompt = 'Ești EventPulse, ajuți utilizatorul să-și rafineze preferințele pentru evenimente. '
+            .'Profilul curent: '.json_encode($user->interest_profile ?? []).'. '
+            .'Înțelege ce vrea să modifice, confirmă schimbările, apoi răspunde natural. '
+            .'Răspunde întotdeauna în română.';
 
         try {
             $result = $this->client->sendMultiTurn(
@@ -49,7 +50,7 @@ class ProfileUpdateAgent
                 'error' => $e->getMessage(),
             ]);
 
-            return "I'm sorry, I had trouble processing that. Could you try again?";
+            return 'Îmi pare rău, am întâmpinat o problemă. Poți încerca din nou?';
         }
     }
 }

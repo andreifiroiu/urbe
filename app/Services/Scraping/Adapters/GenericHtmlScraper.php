@@ -13,25 +13,28 @@ class GenericHtmlScraper extends AbstractHtmlScraper
     /**
      * A generic HTML scraper that extracts event data from configured web pages.
      *
-     * Configuration is read from config('eventpulse.scrapers.sources.generic_html').
      * Extend AbstractHtmlScraper and implement site-specific selectors in scrape().
      */
-    public function source(): string
+    public function adapterKey(): string
     {
         return 'generic_html';
     }
 
-    protected function sourceUrl(): string
+    public function sourceIdentifier(array $sourceConfig): string
     {
-        return (string) config('eventpulse.scrapers.sources.generic_html.base_url', '');
+        $host = (string) parse_url($sourceConfig['url'], PHP_URL_HOST);
+
+        return 'generic_html@'.$host;
     }
 
     /**
      * Scrape configured HTML pages and return a collection of RawEvent DTOs.
      *
+     * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int}  $sourceConfig
+     * @param  array{label: string, timezone: string, coordinates: list<float>, radius_km: int}  $cityConfig
      * @return Collection<int, RawEvent>
      */
-    public function scrape(): Collection
+    public function scrape(array $sourceConfig, array $cityConfig): Collection
     {
         // TODO: Read page definitions from config('eventpulse.scrapers.generic_html.pages')
         // TODO: For each page definition, fetchPage(), parse DOM, extract event containers

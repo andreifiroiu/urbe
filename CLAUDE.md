@@ -69,12 +69,21 @@ eventpulse/
 │   │   ├── Scraping/
 │   │   │   ├── ScraperOrchestrator.php
 │   │   │   └── Adapters/
-│   │   │       ├── IaBiletScraper.php
-│   │   │       ├── ZileSiNoptiScraper.php
-│   │   │       ├── AllEventsScraper.php
-│   │   │       ├── EventbriteScraper.php
-│   │   │       ├── GenericHtmlScraper.php
-│   │   │       └── RssFeedScraper.php
+│   │   │       ├── AbstractHtmlScraper.php   # Base class: HTTP, Romanian date/price parsing, fingerprinting
+│   │   │       ├── IaBiletScraper.php        # Parameterized (multi-city)
+│   │   │       ├── ZileSiNoptiScraper.php    # Parameterized (multi-city)
+│   │   │       ├── AllEventsScraper.php       # Parameterized (multi-city)
+│   │   │       ├── EventbriteScraper.php      # Parameterized (multi-city, API-based)
+│   │   │       ├── OnEventScraper.php         # Parameterized (multi-city)
+│   │   │       ├── EntertixScraper.php        # Parameterized (multi-city, city_filter)
+│   │   │       ├── MeetupScraper.php          # Parameterized (multi-city, API-based)
+│   │   │       ├── GoogleEventsScraper.php    # Parameterized (multi-city, SerpApi)
+│   │   │       ├── TimisoreniScraper.php      # City-specific: Timișoara
+│   │   │       ├── OperaTimisoaraScraper.php  # City-specific: Timișoara
+│   │   │       ├── TeatruNationalTmScraper.php# City-specific: Timișoara
+│   │   │       ├── VisitTimisoaraScraper.php  # City-specific: Timișoara
+│   │   │       ├── RadioTimisoaraScraper.php  # City-specific: Timișoara
+│   │   │       └── GenericHtmlScraper.php     # Configurable CSS-selector scraper for quick additions
 │   │   ├── Processing/
 │   │   │   ├── EventDeduplicator.php
 │   │   │   ├── EventClassifier.php
@@ -212,6 +221,7 @@ eventpulse/
 5. **Email-first notifications**: Lowest friction for MVP. Push notifications come in Phase 2.
 6. **Scraper adapter pattern**: Each source is a pluggable adapter implementing `ScraperAdapter`. Adding a new source means writing one class — no changes to the pipeline.
 7. **Discovery as first-class feature**: The exploration budget is baked into `NotificationComposer` from day one, not bolted on later.
+8. **Multi-city config with parameterized scrapers**: Scraper *classes* are reusable across cities (iaBilet, Zile și Nopți, etc. — only the URL/params change). Config is organized *per-city*, where each city lists its sources with adapter key + URL/params. City-specific scrapers (e.g., OperaTimisoaraScraper) only appear in that city's config. This means adding a new city requires zero code for shared scrapers — just config lines. See `config/eventpulse.php` under `cities`.
 
 ## Environment Variables
 
@@ -248,9 +258,11 @@ MAIL_PASSWORD=
 MAIL_FROM_ADDRESS=events@eventpulse.app
 MAIL_FROM_NAME="EventPulse"
 
-EVENTPULSE_CITY=Timișoara
-EVENTPULSE_SCRAPE_INTERVAL_HOURS=4
+EVENTPULSE_DEFAULT_CITY=timisoara
 EVENTPULSE_NOTIFICATION_HOUR=8
+
+EVENTBRITE_API_KEY=
+SERPAPI_API_KEY=
 ```
 
 ## Common Commands
@@ -264,8 +276,9 @@ npm run dev
 php artisan horizon
 
 # Run scrapers manually
-php artisan eventpulse:scrape                    # all sources
-php artisan eventpulse:scrape --source=eventbrite # single source
+php artisan eventpulse:scrape                              # all sources, default city
+php artisan eventpulse:scrape --city=timisoara              # all sources for a city
+php artisan eventpulse:scrape --city=timisoara --source=iabilet  # single source, single city
 
 # Process pending raw events
 php artisan eventpulse:process-events
@@ -292,7 +305,7 @@ Build in this order:
 2. **Models + factories** — all Eloquent models with casts, relationships, factories
 3. **Enums** — EventCategory, Reaction, NotificationChannel, NotificationFrequency
 4. **Config** — `config/eventpulse.php` with all tunable values
-5. **Scraper infrastructure** — ScraperAdapter interface, ScraperOrchestrator, one concrete adapter (GenericHtmlScraper)
+5. **Scraper infrastructure** — ScraperAdapter interface, AbstractHtmlScraper base class, ScraperOrchestrator with per-city config, MVP adapters (IaBilet, ZileSiNopti, AllEvents, Eventbrite)
 6. **Event pipeline** — EventDeduplicator → EventClassifier → EventEnricher → EventPipeline
 7. **Interest profile services** — ProfileScorer, ProfileUpdater, ProfileDecayer
 8. **Recommendation engine** — RecommendationEngine, DiscoveryEngine, DiversityFilter
@@ -313,6 +326,99 @@ Build in this order:
 - **Event expiry**: Events in the past should be soft-excluded from recommendations but kept in DB for analytics. Add a scope: `Event::upcoming()`.
 - **Rate limits**: Claude API, geocoding APIs, and scraped sites all have rate limits. Use Laravel's `RateLimiter` and queue throttling.
 - **Timezone handling**: Store all times in UTC. Convert to user's local timezone only in presentation layer (email, dashboard).
+
+## Scraper Config Architecture
+
+Scrapers are organized per-city in `config/eventpulse.php`. Scraper classes are either **parameterized** (reusable across cities — receive their URL/params from config) or **city-specific** (unique adapter for one city). The `ScraperOrchestrator` reads the active city's source list and dispatches jobs accordingly.
+
+**Scraper adapter contract:** Every adapter's `scrape()` method receives a source config array (containing `url`, `params`, `city_filter`, etc.) instead of hardcoded URLs. The adapter uses this config to know what to fetch.
+
+**Config structure in `config/eventpulse.php`:**
+
+```php
+'default_city' => env('EVENTPULSE_DEFAULT_CITY', 'timisoara'),
+
+'adapter_registry' => [
+    // Maps adapter key → class. Parameterized scrapers are reused across cities.
+    'iabilet'          => \App\Services\Scraping\Adapters\IaBiletScraper::class,
+    'zilesinopti'      => \App\Services\Scraping\Adapters\ZileSiNoptiScraper::class,
+    'allevents'        => \App\Services\Scraping\Adapters\AllEventsScraper::class,
+    'eventbrite'       => \App\Services\Scraping\Adapters\EventbriteScraper::class,
+    'onevent'          => \App\Services\Scraping\Adapters\OnEventScraper::class,
+    'entertix'         => \App\Services\Scraping\Adapters\EntertixScraper::class,
+    'meetup'           => \App\Services\Scraping\Adapters\MeetupScraper::class,
+    'google_events'    => \App\Services\Scraping\Adapters\GoogleEventsScraper::class,
+    // City-specific (Timișoara)
+    'timisoreni'       => \App\Services\Scraping\Adapters\TimisoreniScraper::class,
+    'opera_timisoara'  => \App\Services\Scraping\Adapters\OperaTimisoaraScraper::class,
+    'teatru_national_tm' => \App\Services\Scraping\Adapters\TeatruNationalTmScraper::class,
+    'visit_timisoara'  => \App\Services\Scraping\Adapters\VisitTimisoaraScraper::class,
+    'radio_timisoara'  => \App\Services\Scraping\Adapters\RadioTimisoaraScraper::class,
+],
+
+'cities' => [
+    'timisoara' => [
+        'label'       => 'Timișoara',
+        'coordinates' => [45.7489, 21.2087],
+        'radius_km'   => 25,
+        'timezone'    => 'Europe/Bucharest',
+        'sources'     => [
+            // Parameterized scrapers — same class, city-specific URL/params
+            ['adapter' => 'iabilet',       'url' => 'https://m.iabilet.ro/bilete-in-timisoara/',        'enabled' => true,  'interval_hours' => 4],
+            ['adapter' => 'zilesinopti',   'url' => 'https://zilesinopti.ro/evenimente-timisoara/',      'enabled' => true,  'interval_hours' => 4,
+             'extra_urls' => ['https://zilesinopti.ro/evenimente-timisoara-weekend/']],
+            ['adapter' => 'allevents',     'url' => 'https://allevents.in/timisoara/all',               'enabled' => true,  'interval_hours' => 6],
+            ['adapter' => 'eventbrite',    'params' => ['address' => 'Timisoara,Romania'],               'enabled' => true,  'interval_hours' => 6],
+            ['adapter' => 'onevent',       'url' => 'https://www.onevent.ro/orase/timisoara/',           'enabled' => false, 'interval_hours' => 6],
+            ['adapter' => 'entertix',      'url' => 'https://www.entertix.ro/evenimente',
+             'city_filter' => 'Timișoara',                                                               'enabled' => false, 'interval_hours' => 8],
+            ['adapter' => 'meetup',        'params' => ['location' => 'ro--timisoara'],                  'enabled' => false, 'interval_hours' => 6],
+            ['adapter' => 'google_events', 'params' => ['q' => 'Events in Timisoara'],                   'enabled' => false, 'interval_hours' => 12],
+
+            // City-specific scrapers — unique to Timișoara
+            ['adapter' => 'timisoreni',         'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/', 'enabled' => false, 'interval_hours' => 8],
+            ['adapter' => 'opera_timisoara',    'url' => 'https://www.ort.ro/ro/Spectacole.html',               'enabled' => false, 'interval_hours' => 24],
+            ['adapter' => 'teatru_national_tm', 'url' => 'https://www.tntm.ro/',                                'enabled' => false, 'interval_hours' => 24],
+            ['adapter' => 'visit_timisoara',    'url' => 'https://visit-timisoara.com/events-activities/',       'enabled' => false, 'interval_hours' => 12],
+            ['adapter' => 'radio_timisoara',    'url' => 'https://www.radiotimisoara.ro/agenda-evenimente',      'enabled' => false, 'interval_hours' => 12],
+        ],
+    ],
+    // Future cities:
+    // 'cluj' => [
+    //     'label' => 'Cluj-Napoca',
+    //     'coordinates' => [46.7712, 23.6236],
+    //     'radius_km' => 25,
+    //     'timezone' => 'Europe/Bucharest',
+    //     'sources' => [
+    //         ['adapter' => 'iabilet',     'url' => 'https://m.iabilet.ro/bilete-in-cluj-napoca/',     'enabled' => true, 'interval_hours' => 4],
+    //         ['adapter' => 'zilesinopti', 'url' => 'https://zilesinopti.ro/evenimente-cluj-napoca/',   'enabled' => true, 'interval_hours' => 4],
+    //         ['adapter' => 'allevents',   'url' => 'https://allevents.in/cluj-napoca/all',             'enabled' => true, 'interval_hours' => 6],
+    //         // Cluj-specific scrapers would go here
+    //     ],
+    // ],
+],
+```
+
+**How ScraperOrchestrator uses this:**
+
+```php
+// Run all enabled sources for a city
+$orchestrator->runCity('timisoara');
+
+// Run one source for a city
+$orchestrator->runSource('timisoara', 'iabilet');
+
+// Run all enabled sources for all cities
+$orchestrator->runAll();
+```
+
+**How adapters receive config:** The `ScraperAdapter` interface's `scrape()` method signature is:
+
+```php
+public function scrape(array $sourceConfig, array $cityConfig): Collection;
+```
+
+Where `$sourceConfig` is one entry from the city's `sources` array and `$cityConfig` is the city-level config (label, coordinates, timezone). This way the adapter gets the URL, params, and city context without hardcoding anything.
 
 ===
 

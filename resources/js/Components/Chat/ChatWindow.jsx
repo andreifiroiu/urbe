@@ -18,7 +18,7 @@ export default function ChatWindow({ messages = [], isTyping = false }) {
         <div className="flex-1 overflow-y-auto p-4">
             {messages.length === 0 && (
                 <div className="flex items-center justify-center h-full text-gray-400 text-sm">
-                    Start a conversation to set up your preferences.
+                    Începe o conversație pentru a-ți configura preferințele.
                 </div>
             )}
             {messages.map((message) => (

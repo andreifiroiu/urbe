@@ -44,7 +44,7 @@ class OnboardingAgent
                 'error' => $e->getMessage(),
             ]);
 
-            return "I'm sorry, I had trouble processing that. Could you try again?";
+            return 'Îmi pare rău, am întâmpinat o problemă. Poți încerca din nou?';
         }
     }
 
@@ -75,7 +75,7 @@ class OnboardingAgent
                 'error' => $e->getMessage(),
             ]);
 
-            return "I'm sorry, I had trouble processing that. Could you try again?";
+            return 'Îmi pare rău, am întâmpinat o problemă. Poți încerca din nou?';
         }
     }
 

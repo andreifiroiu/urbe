@@ -24,34 +24,51 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0',
     ];
 
-    abstract public function source(): string;
-
     /** @return Collection<int, RawEvent> */
-    abstract public function scrape(): Collection;
+    abstract public function scrape(array $sourceConfig, array $cityConfig): Collection;
 
-    abstract protected function sourceUrl(): string;
-
-    public function supports(string $source): bool
-    {
-        return $source === $this->source();
-    }
-
-    public function isAvailable(): bool
+    /**
+     * Check whether the source is reachable.
+     *
+     * @param  array{url: string}  $sourceConfig
+     */
+    public function isAvailable(array $sourceConfig): bool
     {
         try {
             $response = Http::withHeaders([
                 'User-Agent' => $this->randomUserAgent(),
-            ])->head($this->sourceUrl());
+            ])->head($sourceConfig['url']);
 
             return $response->status() < 400;
         } catch (\Throwable $e) {
-            Log::warning("Scraper availability check failed for {$this->source()}", [
-                'url' => $this->sourceUrl(),
+            Log::warning("Scraper availability check failed for {$this->adapterKey()}", [
+                'url' => $sourceConfig['url'],
                 'error' => $e->getMessage(),
             ]);
 
             return false;
         }
+    }
+
+    /**
+     * Return the primary URL from source config.
+     *
+     * @param  array{url: string}  $sourceConfig
+     */
+    protected function getUrl(array $sourceConfig): string
+    {
+        return $sourceConfig['url'];
+    }
+
+    /**
+     * Return extra URLs (e.g. weekend pages) from source config.
+     *
+     * @param  array{extra_urls?: list<string>}  $sourceConfig
+     * @return list<string>
+     */
+    protected function getExtraUrls(array $sourceConfig): array
+    {
+        return $sourceConfig['extra_urls'] ?? [];
     }
 
     /**
@@ -63,7 +80,7 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
      */
     protected function fetchPage(string $url): string
     {
-        sleep(rand(2, 5));
+        $this->sleepBetweenRequests();
 
         try {
             $response = Http::withHeaders([
@@ -72,7 +89,7 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
             ])->get($url);
 
             if ($response->status() === 429 || $response->status() === 503) {
-                sleep(10);
+                $this->sleepOnRetry();
 
                 $response = Http::withHeaders([
                     'User-Agent' => $this->randomUserAgent(),
@@ -81,7 +98,7 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
             }
 
             if ($response->failed()) {
-                Log::warning("Failed to fetch page for {$this->source()}", [
+                Log::warning("Failed to fetch page for {$this->adapterKey()}", [
                     'url' => $url,
                     'status' => $response->status(),
                 ]);
@@ -91,7 +108,7 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
 
             return $response->body();
         } catch (\Throwable $e) {
-            Log::warning("Exception fetching page for {$this->source()}", [
+            Log::warning("Exception fetching page for {$this->adapterKey()}", [
                 'url' => $url,
                 'error' => $e->getMessage(),
             ]);
@@ -287,6 +304,42 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
         ]);
 
         return hash('sha256', $normalized);
+    }
+
+    /**
+     * Push events from $source into $target, skipping fingerprint duplicates.
+     *
+     * @param  Collection<int, RawEvent>  $source
+     * @param  Collection<int, RawEvent>  $target
+     * @param  array<int, string>  &$seen
+     */
+    protected function mergeUnique(Collection $source, Collection $target, array &$seen): void
+    {
+        foreach ($source as $event) {
+            $fp = $this->generateFingerprint($event->title, $event->startsAt, $event->venue);
+            if (! in_array($fp, $seen, strict: true)) {
+                $seen[] = $fp;
+                $target->push($event);
+            }
+        }
+    }
+
+    /**
+     * Pause between requests. Override in tests/subclasses to reduce delay.
+     */
+    protected function sleepBetweenRequests(): void
+    {
+        /** @var array{0: int, 1: int} $range */
+        $range = config('eventpulse.scrapers.request_delay', [2, 5]);
+        sleep(rand($range[0], $range[1]));
+    }
+
+    /**
+     * Pause before retrying a rate-limited request. Override in tests to skip.
+     */
+    protected function sleepOnRetry(): void
+    {
+        sleep(10);
     }
 
     private function randomUserAgent(): string

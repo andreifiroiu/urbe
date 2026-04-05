@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace App\Http\Resources;
 
+use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @mixin \App\Models\ChatMessage
+ * @mixin ChatMessage
  */
 class ChatMessageResource extends JsonResource
 {
@@ -20,7 +21,7 @@ class ChatMessageResource extends JsonResource
         return [
             'id' => $this->id,
             'role' => $this->role,
-            'content' => $this->content,
+            'content' => trim(str_replace('[PROFILE_READY]', '', $this->content)),
             'context' => $this->context,
             'created_at' => $this->created_at?->toIso8601String(),
         ];

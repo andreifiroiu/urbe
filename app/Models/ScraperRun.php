@@ -21,6 +21,7 @@ class ScraperRun extends Model
      */
     protected $fillable = [
         'source',
+        'city',
         'status',
         'events_found',
         'events_created',

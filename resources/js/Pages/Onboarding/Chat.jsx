@@ -69,7 +69,7 @@ export default function Chat({
                         id: `err-${Date.now()}`,
                         role: 'assistant',
                         content:
-                            'Sorry, something went wrong. Please try again.',
+                            'Ceva a mers greșit. Te rugăm să încerci din nou.',
                         created_at: new Date().toISOString(),
                     },
                 ]);
@@ -110,7 +110,7 @@ export default function Chat({
 
     return (
         <>
-            <Head title="Welcome to EventPulse" />
+            <Head title="Bun venit la EventPulse" />
             <div className="min-h-screen bg-gray-50 flex flex-col">
                 {/* Header */}
                 <div className="bg-white border-b border-gray-200 px-4 py-4">
@@ -120,7 +120,7 @@ export default function Chat({
                                 EventPulse
                             </h1>
                             <p className="text-sm text-gray-500">
-                                Tell us what you&apos;re interested in
+                                Spune-ne ce te interesează
                             </p>
                         </div>
                         {isComplete && !profile && (
@@ -130,8 +130,8 @@ export default function Chat({
                                 className="bg-green-600 hover:bg-green-700"
                             >
                                 {isConfirming
-                                    ? 'Generating profile...'
-                                    : 'Confirm & Continue'}
+                                    ? 'Se generează profilul...'
+                                    : 'Confirmă și continuă'}
                             </Button>
                         )}
                     </div>
@@ -146,7 +146,7 @@ export default function Chat({
                         <div className="px-4 pb-4">
                             <ProfilePreviewCard profile={profile} />
                             <p className="text-center text-sm text-gray-500 mt-2">
-                                Redirecting to your dashboard...
+                                Redirecționare către tabloul de bord...
                             </p>
                         </div>
                     )}
@@ -162,8 +162,8 @@ export default function Chat({
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder={
                                     isComplete
-                                        ? 'Add more details or click Confirm above...'
-                                        : 'Type your message...'
+                                        ? 'Adaugă detalii sau apasă Confirmă mai sus...'
+                                        : 'Scrie mesajul tău...'
                                 }
                                 disabled={isSending || !!profile}
                                 className="flex-1"
@@ -187,7 +187,7 @@ export default function Chat({
                                     />
                                 </svg>
                                 <span className="sr-only sm:not-sr-only">
-                                    Send
+                                    Trimite
                                 </span>
                             </Button>
                         </form>

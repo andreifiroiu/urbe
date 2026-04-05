@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+use App\Services\Scraping\Adapters\GenericHtmlScraper;
+use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
     'recommendation' => [
@@ -44,69 +46,43 @@ return [
         ],
         'request_delay' => [2, 5],
         'max_pages' => 10,
-        'sources' => [
-            'iabilet' => [
-                'enabled' => true,
-                'base_url' => 'https://m.iabilet.ro/bilete-in-timisoara/',
-                'interval_hours' => 4,
-            ],
-            'zilesinopti' => [
-                'enabled' => true,
-                'base_url' => 'https://zilesinopti.ro/evenimente-timisoara/',
-                'interval_hours' => 4,
-            ],
-            'allevents' => [
-                'enabled' => true,
-                'base_url' => 'https://allevents.in/timisoara/all',
-                'interval_hours' => 6,
-            ],
-            'eventbrite' => [
-                'enabled' => true,
-                'base_url' => 'https://www.eventbriteapi.com/v3/',
-                'interval_hours' => 6,
-            ],
-            'onevent' => [
-                'enabled' => false,
-                'base_url' => 'https://www.onevent.ro/orase/timisoara/',
-                'interval_hours' => 6,
-            ],
-            'timisoreni' => [
-                'enabled' => false,
-                'base_url' => 'https://www.timisoreni.ro/info/index/t--evenimente/',
-                'interval_hours' => 8,
-            ],
-            'opera' => [
-                'enabled' => false,
-                'base_url' => 'https://www.ort.ro/ro/Spectacole.html',
-                'interval_hours' => 24,
-            ],
-            'teatru_national' => [
-                'enabled' => false,
-                'base_url' => 'https://www.tntm.ro/',
-                'interval_hours' => 24,
-            ],
-            'entertix' => [
-                'enabled' => false,
-                'base_url' => 'https://www.entertix.ro/evenimente',
-                'interval_hours' => 8,
-            ],
-            'visit_timisoara' => [
-                'enabled' => false,
-                'base_url' => 'https://visit-timisoara.com/events-activities/',
-                'interval_hours' => 12,
-            ],
-            'radio_timisoara' => [
-                'enabled' => false,
-                'base_url' => 'https://www.radiotimisoara.ro/agenda-evenimente',
-                'interval_hours' => 12,
-            ],
-            'meetup' => [
-                'enabled' => false,
-                'base_url' => 'https://www.meetup.com/find/ro--timisoara/',
-                'interval_hours' => 6,
+    ],
+
+    'adapter_registry' => [
+        'zilesinopti' => ZileSiNoptiScraper::class,
+        'generic_html' => GenericHtmlScraper::class,
+    ],
+
+    'cities' => [
+        'timisoara' => [
+            'label' => 'Timișoara',
+            'timezone' => 'Europe/Bucharest',
+            'coordinates' => [45.7489, 21.2087],
+            'radius_km' => 25,
+            'sources' => [
+                [
+                    'adapter' => 'zilesinopti',
+                    'url' => 'https://zilesinopti.ro/evenimente-timisoara/',
+                    'extra_urls' => ['https://zilesinopti.ro/evenimente-timisoara-weekend/'],
+                    'enabled' => true,
+                    'interval_hours' => 4,
+                ],
+                ['adapter' => 'iabilet',        'url' => 'https://m.iabilet.ro/bilete-in-timisoara/',              'enabled' => false, 'interval_hours' => 4],
+                ['adapter' => 'allevents',       'url' => 'https://allevents.in/timisoara/all',                     'enabled' => false, 'interval_hours' => 6],
+                ['adapter' => 'eventbrite',      'url' => 'https://www.eventbriteapi.com/v3/',                      'enabled' => false, 'interval_hours' => 6],
+                ['adapter' => 'onevent',         'url' => 'https://www.onevent.ro/orase/timisoara/',                'enabled' => false, 'interval_hours' => 6],
+                ['adapter' => 'timisoreni',      'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/',    'enabled' => false, 'interval_hours' => 8],
+                ['adapter' => 'opera',           'url' => 'https://www.ort.ro/ro/Spectacole.html',                  'enabled' => false, 'interval_hours' => 24],
+                ['adapter' => 'teatru_national', 'url' => 'https://www.tntm.ro/',                                   'enabled' => false, 'interval_hours' => 24],
+                ['adapter' => 'entertix',        'url' => 'https://www.entertix.ro/evenimente',                     'enabled' => false, 'interval_hours' => 8],
+                ['adapter' => 'visit_timisoara', 'url' => 'https://visit-timisoara.com/events-activities/',         'enabled' => false, 'interval_hours' => 12],
+                ['adapter' => 'radio_timisoara', 'url' => 'https://www.radiotimisoara.ro/agenda-evenimente',        'enabled' => false, 'interval_hours' => 12],
+                ['adapter' => 'meetup',          'url' => 'https://www.meetup.com/find/ro--timisoara/',             'enabled' => false, 'interval_hours' => 6],
             ],
         ],
     ],
+
+    'default_city' => env('EVENTPULSE_DEFAULT_CITY', 'timisoara'),
     'notifications' => [
         'hour' => (int) env('EVENTPULSE_NOTIFICATION_HOUR', 8),
         'max_events_per_digest' => 10,
@@ -124,23 +100,24 @@ return [
         'max_tokens' => 1024,
         'classification_prompt' => 'You are an event classifier. Given the event title and description, classify it into exactly one category and extract relevant tags. Respond in JSON format with keys: "category" (one of: Music, Arts, Sports, Technology, Food, Nightlife, Business, Health, Education, Family, Community, Film, Literature, Other), "tags" (array of lowercase strings), "confidence" (float 0-1).',
         'onboarding_system_prompt' => <<<'PROMPT'
-You are EventPulse, a friendly assistant helping users discover local events in their city.
+Ești EventPulse, un asistent prietenos care îi ajută pe utilizatori să descopere evenimente locale în orașul lor.
 
-Guide the conversation through these stages:
-1. INTERESTS: Ask what kinds of events they enjoy — music, arts, sports, food, tech, etc. Probe for specifics ("What genres of music?" "Any favourite cuisines?").
-2. PAST EVENTS: Ask about memorable events they have attended recently and what they liked about them.
-3. CONSTRAINTS: Ask about practical preferences — budget sensitivity (free vs paid), preferred days/times, how far they are willing to travel, indoor vs outdoor.
-4. CONFIRMATION: Once you have enough detail (at least 3-4 exchanges), summarise what you have learned in a short bullet list and ask the user to confirm or correct it. End your summary message with the exact marker [PROFILE_READY] on its own line.
+Ghidează conversația prin aceste etape:
+1. INTERESE: Întreabă ce tipuri de evenimente îi plac — muzică, arte, sport, mâncare, tech, etc. Aprofundează cu întrebări specifice (de ex. „Ce genuri muzicale preferi?" „Ai bucătării preferate?").
+2. EVENIMENTE TRECUTE: Întreabă despre evenimente memorabile la care a participat recent și ce i-a plăcut la ele.
+3. CONSTRÂNGERI: Întreabă despre preferințele practice — sensibilitate la preț (gratuit vs. cu plată), zilele/orele preferate, cât de departe e dispus să meargă, interior vs. exterior.
+4. CONFIRMARE: Odată ce ai suficiente detalii (cel puțin 3-4 schimburi), rezumă ce ai aflat într-o listă scurtă cu puncte și roagă utilizatorul să confirme sau să corecteze. Încheie mesajul de rezumat cu markerul exact [PROFILE_READY] pe o linie separată.
 
-Rules:
-- Keep messages short and conversational (2-3 sentences max).
-- Ask only ONE question at a time.
-- Never output JSON — that is handled by a separate profile generator.
-- Use the user's name if available.
-- If the user gives very short answers, gently probe for more detail.
+Reguli:
+- Păstrează mesajele scurte și conversaționale (maximum 2-3 propoziții).
+- Pune doar O singură întrebare pe rând.
+- Nu genera JSON — acesta este gestionat de un generator de profil separat.
+- Folosește numele utilizatorului dacă este disponibil.
+- Dacă utilizatorul dă răspunsuri foarte scurte, încearcă să afli mai multe detalii.
+- Răspunde întotdeauna în română.
 PROMPT,
         'profile_generation_prompt' => <<<'PROMPT'
-Analyse the following onboarding conversation and produce a JSON interest profile for this user.
+Analyse the following onboarding conversation (in Romanian) and produce a JSON interest profile for this user.
 
 The JSON must have these keys:
 - Category scores: use the exact lowercase category names (music, arts, sports, technology, food, nightlife, business, health, education, family, community, film, literature). Score each from 0.0 (no interest) to 1.0 (strong interest). Only include categories with evidence from the conversation.
@@ -154,7 +131,7 @@ PROMPT,
     ],
     'onboarding' => [
         'min_exchanges' => 4,
-        'welcome_message' => "Hi! I'm EventPulse — I help you discover amazing local events. To get started, tell me: what kinds of activities and events do you enjoy most?",
+        'welcome_message' => 'Salut! Sunt EventPulse — te ajut să descoperi evenimente locale. Pentru început, spune-mi: ce tipuri de activități și evenimente îți plac cel mai mult?',
     ],
     'city' => env('EVENTPULSE_CITY', 'Bucharest'),
     'categories' => ['Music', 'Arts', 'Sports', 'Technology', 'Food', 'Nightlife', 'Business', 'Health', 'Education', 'Family', 'Community', 'Film', 'Literature', 'Other'],

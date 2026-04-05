@@ -28,8 +28,8 @@ class RecommendationController extends Controller
         $discoveryEvents = Event::whereIn('id', $batch->discoveryEventIds)->get();
 
         return Inertia::render('Dashboard/Index', [
-            'recommendations' => EventResource::collection($recommendations),
-            'discoveryEvents' => EventResource::collection($discoveryEvents),
+            'recommendations' => EventResource::collection($recommendations)->resolve(),
+            'discoveryEvents' => EventResource::collection($discoveryEvents)->resolve(),
         ]);
     }
 

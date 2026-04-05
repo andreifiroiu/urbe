@@ -23,18 +23,18 @@ class RunScraperJob implements ShouldQueue
     /** @var array<int, int> */
     public array $backoff = [60, 300, 900];
 
+    /**
+     * @param  array{adapter: string, url: string, enabled: bool, interval_hours: int}  $sourceConfig
+     */
     public function __construct(
-        public ?string $source = null,
+        public readonly string $cityKey,
+        public readonly array $sourceConfig,
     ) {
         $this->onQueue('scraping');
     }
 
     public function handle(ScraperOrchestrator $orchestrator): void
     {
-        if ($this->source !== null) {
-            $orchestrator->runSource($this->source);
-        } else {
-            $orchestrator->runAll();
-        }
+        $orchestrator->runSource($this->cityKey, $this->sourceConfig['adapter']);
     }
 }

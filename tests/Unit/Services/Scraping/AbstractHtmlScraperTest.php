@@ -12,18 +12,18 @@ use Illuminate\Support\Collection;
  */
 class ConcreteHtmlScraper extends AbstractHtmlScraper
 {
-    public function source(): string
+    public function adapterKey(): string
     {
         return 'test_scraper';
     }
 
-    protected function sourceUrl(): string
+    public function sourceIdentifier(array $sourceConfig): string
     {
-        return 'https://example.com/events';
+        return 'test_scraper@example.com';
     }
 
     /** @return Collection<int, RawEvent> */
-    public function scrape(): Collection
+    public function scrape(array $sourceConfig, array $cityConfig): Collection
     {
         return collect();
     }

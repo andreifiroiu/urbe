@@ -25,20 +25,7 @@ class AppServiceProvider extends ServiceProvider
             );
         });
 
-        $this->app->singleton(ScraperOrchestrator::class, function ($app) {
-            /** @var array<string, array{enabled: bool}> $sources */
-            $sources = config('eventpulse.scrapers.sources', []);
-            $registry = ScraperOrchestrator::ADAPTER_REGISTRY;
-            $adapters = [];
-
-            foreach ($sources as $key => $cfg) {
-                if ($cfg['enabled'] && isset($registry[$key])) {
-                    $adapters[] = $app->make($registry[$key]);
-                }
-            }
-
-            return new ScraperOrchestrator(adapters: $adapters);
-        });
+        $this->app->singleton(ScraperOrchestrator::class, fn ($app) => new ScraperOrchestrator($app));
     }
 
     /**

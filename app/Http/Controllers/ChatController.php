@@ -102,7 +102,7 @@ class ChatController extends Controller
         if (empty($profile)) {
             return response()->json([
                 'success' => false,
-                'message' => 'Could not generate a profile. Please continue chatting.',
+                'message' => 'Nu s-a putut genera profilul. Te rugăm să continui conversația.',
             ], 422);
         }
 

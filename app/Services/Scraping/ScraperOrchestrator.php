@@ -8,73 +8,57 @@ use App\Contracts\ScraperAdapter;
 use App\DTOs\RawEvent;
 use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
-use App\Services\Scraping\Adapters\GenericHtmlScraper;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 
 class ScraperOrchestrator
 {
-    /**
-     * Maps config source keys to their concrete adapter class names.
-     * Add new entries here as each adapter is implemented.
-     *
-     * @var array<string, class-string<ScraperAdapter>>
-     */
-    public const array ADAPTER_REGISTRY = [
-        'generic_html' => GenericHtmlScraper::class,
-    ];
+    public function __construct(private readonly Application $app) {}
 
     /**
-     * @param  array<int, ScraperAdapter>  $adapters
-     */
-    public function __construct(
-        private readonly array $adapters = [],
-    ) {}
-
-    /**
-     * Dispatch one RunScraperJob per enabled source that has a registered adapter.
+     * Dispatch one RunScraperJob per enabled source across all configured cities.
      */
     public function runAll(): void
     {
-        /** @var array<string, array{enabled: bool, base_url: string, interval_hours: int}> $sources */
-        $sources = config('eventpulse.scrapers.sources', []);
+        /** @var array<string, mixed> $cities */
+        $cities = config('eventpulse.cities', []);
 
-        foreach ($sources as $key => $cfg) {
-            if (! $cfg['enabled']) {
-                continue;
-            }
-
-            if (! isset(self::ADAPTER_REGISTRY[$key])) {
-                continue;
-            }
-
-            RunScraperJob::dispatch($key);
+        foreach (array_keys($cities) as $cityKey) {
+            $this->runCity($cityKey);
         }
     }
 
     /**
-     * Run a single scraper identified by its source name and return scraped events.
+     * Dispatch one RunScraperJob per enabled source for a single city.
+     */
+    public function runCity(string $cityKey): void
+    {
+        foreach ($this->getEnabledSources($cityKey) as $sourceConfig) {
+            RunScraperJob::dispatch($cityKey, $sourceConfig);
+        }
+    }
+
+    /**
+     * Execute one scraper synchronously, record a ScraperRun, and return scraped events.
      *
      * @return Collection<int, RawEvent>
-     *
-     * @throws \InvalidArgumentException If no adapter supports the given source.
      */
-    public function runSource(string $source): Collection
+    public function runSource(string $cityKey, string $adapterKey): Collection
     {
-        $adapter = $this->getAdapterForSource($source);
-
-        if ($adapter === null) {
-            throw new \InvalidArgumentException("No adapter found for source: {$source}");
-        }
+        $cityConfig = $this->getCityConfig($cityKey);
+        $sourceConfig = $this->findSourceConfig($cityKey, $adapterKey);
+        $adapter = $this->resolveAdapter($adapterKey);
 
         $run = ScraperRun::create([
-            'source' => $source,
+            'source' => $adapterKey,
+            'city' => $cityKey,
             'status' => 'running',
             'started_at' => now(),
         ]);
 
         try {
-            $events = $adapter->scrape();
+            $events = $adapter->scrape($sourceConfig, $cityConfig);
 
             $run->update([
                 'status' => 'completed',
@@ -84,7 +68,7 @@ class ScraperOrchestrator
 
             return $events;
         } catch (\Throwable $e) {
-            Log::error("Scraper failed for source: {$source}", [
+            Log::error("Scraper failed for {$adapterKey}@{$cityKey}", [
                 'error' => $e->getMessage(),
             ]);
 
@@ -95,39 +79,105 @@ class ScraperOrchestrator
                 'finished_at' => now(),
             ]);
 
-            $this->alertIfConsecutiveFailuresExceedThreshold($source);
+            $this->alertIfConsecutiveFailuresExceedThreshold($adapterKey, $cityKey);
 
             return collect();
         }
     }
 
     /**
-     * Find the adapter that supports the given source name.
+     * Resolve an adapter instance from the registry by its key.
+     *
+     * @throws \InvalidArgumentException If the key has no registered class.
      */
-    public function getAdapterForSource(string $source): ?ScraperAdapter
+    public function resolveAdapter(string $adapterKey): ScraperAdapter
     {
-        foreach ($this->adapters as $adapter) {
-            if ($adapter->supports($source)) {
-                return $adapter;
+        /** @var array<string, class-string<ScraperAdapter>> $registry */
+        $registry = config('eventpulse.adapter_registry', []);
+
+        if (! isset($registry[$adapterKey])) {
+            throw new \InvalidArgumentException("No adapter registered for key: {$adapterKey}");
+        }
+
+        return $this->app->make($registry[$adapterKey]);
+    }
+
+    /**
+     * Return the full city config array for the given city key.
+     *
+     * @return array{label: string, timezone: string, coordinates: list<float>, radius_km: int, sources: list<array<string, mixed>>}
+     *
+     * @throws \InvalidArgumentException If the city key is not configured.
+     */
+    public function getCityConfig(string $cityKey): array
+    {
+        /** @var array<string, mixed>|null $config */
+        $config = config("eventpulse.cities.{$cityKey}");
+
+        if ($config === null) {
+            throw new \InvalidArgumentException("No city configured for key: {$cityKey}");
+        }
+
+        return $config;
+    }
+
+    /**
+     * Return only the enabled sources for a city that have a registered adapter.
+     *
+     * @return list<array{adapter: string, url: string, enabled: bool, interval_hours: int}>
+     */
+    public function getEnabledSources(string $cityKey): array
+    {
+        /** @var array<string, class-string<ScraperAdapter>> $registry */
+        $registry = config('eventpulse.adapter_registry', []);
+
+        /** @var list<array{adapter: string, url: string, enabled: bool, interval_hours: int}> $sources */
+        $sources = config("eventpulse.cities.{$cityKey}.sources", []);
+
+        return array_values(
+            array_filter(
+                $sources,
+                fn (array $s): bool => $s['enabled'] && isset($registry[$s['adapter']]),
+            ),
+        );
+    }
+
+    /**
+     * Find the source config entry for a specific adapter key within a city.
+     *
+     * @return array{adapter: string, url: string, enabled: bool, interval_hours: int}
+     *
+     * @throws \InvalidArgumentException If no source config is found.
+     */
+    private function findSourceConfig(string $cityKey, string $adapterKey): array
+    {
+        /** @var list<array{adapter: string, url: string, enabled: bool, interval_hours: int}> $sources */
+        $sources = config("eventpulse.cities.{$cityKey}.sources", []);
+
+        foreach ($sources as $source) {
+            if ($source['adapter'] === $adapterKey) {
+                return $source;
             }
         }
 
-        return null;
+        throw new \InvalidArgumentException("No source config found for adapter '{$adapterKey}' in city '{$cityKey}'");
     }
 
-    private function alertIfConsecutiveFailuresExceedThreshold(string $source): void
+    private function alertIfConsecutiveFailuresExceedThreshold(string $adapterKey, string $cityKey): void
     {
         $threshold = (int) config('eventpulse.scraping.max_consecutive_failures', 3);
 
-        $consecutiveFailures = ScraperRun::where('source', $source)
+        $consecutiveFailures = ScraperRun::where('source', $adapterKey)
+            ->where('city', $cityKey)
             ->latest('started_at')
             ->take($threshold)
             ->get()
             ->every(fn (ScraperRun $run): bool => $run->status === 'failed');
 
         if ($consecutiveFailures) {
-            Log::critical("Scraper source '{$source}' has failed {$threshold} consecutive times.", [
-                'source' => $source,
+            Log::critical("Scraper '{$adapterKey}@{$cityKey}' has failed {$threshold} consecutive times.", [
+                'adapter' => $adapterKey,
+                'city' => $cityKey,
             ]);
         }
     }
