@@ -6,6 +6,7 @@ namespace App\Services\Processing;
 
 use App\DTOs\RawEvent;
 use App\Enums\EventCategory;
+use App\Jobs\ClassifyEventJob;
 use App\Jobs\DownloadEventImageJob;
 use App\Models\Event;
 use Illuminate\Support\Collection;
@@ -15,8 +16,6 @@ class EventPipeline
 {
     public function __construct(
         private readonly EventDeduplicator $deduplicator,
-        private readonly EventClassifier $classifier,
-        private readonly EventEnricher $enricher,
     ) {}
 
     /**
@@ -80,8 +79,10 @@ class EventPipeline
         Log::info('EventPipeline: saved event', [
             'title' => $event->title,
             'source' => $event->source,
-            'starts_at' => $event->starts_at?->toDateTimeString(),
+            'starts_at' => $event->getRawOriginal('starts_at'),
         ]);
+
+        ClassifyEventJob::dispatch($event->id);
 
         if ($rawEvent->imageUrl !== null) {
             DownloadEventImageJob::dispatch($event);

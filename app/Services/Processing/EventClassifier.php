@@ -40,11 +40,11 @@ class EventClassifier
 
             $classified = $this->parseResponse($response['content']);
 
-            $event->update([
+            Event::withoutSyncingToSearch(fn () => $event->update([
                 'category' => $classified->category,
                 'tags' => $classified->tags,
                 'is_classified' => true,
-            ]);
+            ]));
 
             return $classified;
         } catch (\Throwable $e) {
@@ -59,11 +59,11 @@ class EventClassifier
                 confidence: 0.0,
             );
 
-            $event->update([
+            Event::withoutSyncingToSearch(fn () => $event->update([
                 'category' => $fallback->category,
                 'tags' => $fallback->tags,
                 'is_classified' => true,
-            ]);
+            ]));
 
             return $fallback;
         }
@@ -101,7 +101,7 @@ class EventClassifier
         }
 
         if (! empty($event->tags)) {
-            $parts[] = 'Source Tags: '.implode(', ', $event->tags);
+            $parts[] = 'Source Tags: '.implode(', ', (array) $event->tags);
         }
 
         return implode("\n", $parts);
@@ -194,6 +194,7 @@ class EventClassifier
     /**
      * Resolve tags to an array of lowercase trimmed strings.
      */
+    /** @return array<int, string> */
     private function resolveTags(mixed $tags): array
     {
         if (! is_array($tags)) {

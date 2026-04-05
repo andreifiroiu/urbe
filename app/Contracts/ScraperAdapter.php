@@ -17,7 +17,7 @@ interface ScraperAdapter
      * Called immediately for each parsed event. The caller is responsible for
      * persisting, deduplicating, or otherwise handling each event.
      *
-     * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int}  $sourceConfig
+     * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int, country?: string}  $sourceConfig
      * @param  array{label: string, timezone: string, coordinates: list<float>, radius_km: int}  $cityConfig
      * @param  callable(RawEvent): void  $onEvent
      */

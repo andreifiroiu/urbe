@@ -1,7 +1,9 @@
 <?php
 
 declare(strict_types=1);
+use App\Services\Scraping\Adapters\AllEventsScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
+use App\Services\Scraping\Adapters\IaBiletScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
@@ -52,6 +54,8 @@ return [
     ],
 
     'adapter_registry' => [
+        'allevents' => AllEventsScraper::class,
+        'iabilet' => IaBiletScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
     ],
