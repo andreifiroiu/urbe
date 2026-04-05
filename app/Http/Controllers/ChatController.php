@@ -45,7 +45,7 @@ class ChatController extends Controller
         }
 
         return Inertia::render('Onboarding/Chat', [
-            'messages' => ChatMessageResource::collection($messages),
+            'messages' => ChatMessageResource::collection($messages)->resolve(),
             'onboardingComplete' => $this->onboardingAgent->isOnboardingComplete($user),
             'profileReady' => $this->onboardingAgent->isOnboardingComplete($user),
         ]);

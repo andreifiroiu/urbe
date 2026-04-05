@@ -32,7 +32,7 @@ class RunScraperJob implements ShouldQueue
     public function handle(ScraperOrchestrator $orchestrator): void
     {
         if ($this->source !== null) {
-            $orchestrator->runSingle($this->source);
+            $orchestrator->runSource($this->source);
         } else {
             $orchestrator->runAll();
         }

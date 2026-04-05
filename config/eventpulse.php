@@ -33,6 +33,80 @@ return [
         'max_consecutive_failures' => 3,
         'timeout_seconds' => 30,
     ],
+    'scrapers' => [
+        'user_agents' => [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15',
+            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0',
+        ],
+        'request_delay' => [2, 5],
+        'max_pages' => 10,
+        'sources' => [
+            'iabilet' => [
+                'enabled' => true,
+                'base_url' => 'https://m.iabilet.ro/bilete-in-timisoara/',
+                'interval_hours' => 4,
+            ],
+            'zilesinopti' => [
+                'enabled' => true,
+                'base_url' => 'https://zilesinopti.ro/evenimente-timisoara/',
+                'interval_hours' => 4,
+            ],
+            'allevents' => [
+                'enabled' => true,
+                'base_url' => 'https://allevents.in/timisoara/all',
+                'interval_hours' => 6,
+            ],
+            'eventbrite' => [
+                'enabled' => true,
+                'base_url' => 'https://www.eventbriteapi.com/v3/',
+                'interval_hours' => 6,
+            ],
+            'onevent' => [
+                'enabled' => false,
+                'base_url' => 'https://www.onevent.ro/orase/timisoara/',
+                'interval_hours' => 6,
+            ],
+            'timisoreni' => [
+                'enabled' => false,
+                'base_url' => 'https://www.timisoreni.ro/info/index/t--evenimente/',
+                'interval_hours' => 8,
+            ],
+            'opera' => [
+                'enabled' => false,
+                'base_url' => 'https://www.ort.ro/ro/Spectacole.html',
+                'interval_hours' => 24,
+            ],
+            'teatru_national' => [
+                'enabled' => false,
+                'base_url' => 'https://www.tntm.ro/',
+                'interval_hours' => 24,
+            ],
+            'entertix' => [
+                'enabled' => false,
+                'base_url' => 'https://www.entertix.ro/evenimente',
+                'interval_hours' => 8,
+            ],
+            'visit_timisoara' => [
+                'enabled' => false,
+                'base_url' => 'https://visit-timisoara.com/events-activities/',
+                'interval_hours' => 12,
+            ],
+            'radio_timisoara' => [
+                'enabled' => false,
+                'base_url' => 'https://www.radiotimisoara.ro/agenda-evenimente',
+                'interval_hours' => 12,
+            ],
+            'meetup' => [
+                'enabled' => false,
+                'base_url' => 'https://www.meetup.com/find/ro--timisoara/',
+                'interval_hours' => 6,
+            ],
+        ],
+    ],
     'notifications' => [
         'hour' => (int) env('EVENTPULSE_NOTIFICATION_HOUR', 8),
         'max_events_per_digest' => 10,

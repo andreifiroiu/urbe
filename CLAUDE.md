@@ -69,8 +69,10 @@ eventpulse/
 │   │   ├── Scraping/
 │   │   │   ├── ScraperOrchestrator.php
 │   │   │   └── Adapters/
+│   │   │       ├── IaBiletScraper.php
+│   │   │       ├── ZileSiNoptiScraper.php
+│   │   │       ├── AllEventsScraper.php
 │   │   │       ├── EventbriteScraper.php
-│   │   │       ├── MeetupScraper.php
 │   │   │       ├── GenericHtmlScraper.php
 │   │   │       └── RssFeedScraper.php
 │   │   ├── Processing/
@@ -204,12 +206,12 @@ eventpulse/
 ## Key Architecture Decisions
 
 1. **PostgreSQL over MySQL**: JSONB support for flexible interest profiles, tags, and metadata. GIN indexes for tag queries. `gen_random_uuid()` for UUIDs.
-1. **Separate queue names**: Prevents scraper backlog from blocking notification delivery. Horizon can allocate different worker counts per queue.
-1. **LLM for classification over rule-based**: Event descriptions are too varied for regex/keyword matching. LLM classification handles edge cases and multi-language content gracefully.
-1. **Chat-based onboarding over form-based**: Conversational UI captures nuance ("I like jazz but not smooth jazz") that checkboxes can't. The LLM extracts structured preferences from natural language.
-1. **Email-first notifications**: Lowest friction for MVP. Push notifications come in Phase 2.
-1. **Scraper adapter pattern**: Each source is a pluggable adapter implementing `ScraperAdapter`. Adding a new source means writing one class — no changes to the pipeline.
-1. **Discovery as first-class feature**: The exploration budget is baked into `NotificationComposer` from day one, not bolted on later.
+2. **Separate queue names**: Prevents scraper backlog from blocking notification delivery. Horizon can allocate different worker counts per queue.
+3. **LLM for classification over rule-based**: Event descriptions are too varied for regex/keyword matching. LLM classification handles edge cases and multi-language content gracefully.
+4. **Chat-based onboarding over form-based**: Conversational UI captures nuance ("I like jazz but not smooth jazz") that checkboxes can't. The LLM extracts structured preferences from natural language.
+5. **Email-first notifications**: Lowest friction for MVP. Push notifications come in Phase 2.
+6. **Scraper adapter pattern**: Each source is a pluggable adapter implementing `ScraperAdapter`. Adding a new source means writing one class — no changes to the pipeline.
+7. **Discovery as first-class feature**: The exploration budget is baked into `NotificationComposer` from day one, not bolted on later.
 
 ## Environment Variables
 
@@ -246,7 +248,7 @@ MAIL_PASSWORD=
 MAIL_FROM_ADDRESS=events@eventpulse.app
 MAIL_FROM_NAME="EventPulse"
 
-EVENTPULSE_CITY=Bucharest
+EVENTPULSE_CITY=Timișoara
 EVENTPULSE_SCRAPE_INTERVAL_HOURS=4
 EVENTPULSE_NOTIFICATION_HOUR=8
 ```
@@ -287,20 +289,20 @@ php artisan eventpulse:decay-profiles
 Build in this order:
 
 1. **Database schema** — migrations for all tables
-1. **Models + factories** — all Eloquent models with casts, relationships, factories
-1. **Enums** — EventCategory, Reaction, NotificationChannel, NotificationFrequency
-1. **Config** — `config/eventpulse.php` with all tunable values
-1. **Scraper infrastructure** — ScraperAdapter interface, ScraperOrchestrator, one concrete adapter (GenericHtmlScraper)
-1. **Event pipeline** — EventDeduplicator → EventClassifier → EventEnricher → EventPipeline
-1. **Interest profile services** — ProfileScorer, ProfileUpdater, ProfileDecayer
-1. **Recommendation engine** — RecommendationEngine, DiscoveryEngine, DiversityFilter
-1. **Chat / onboarding** — OnboardingAgent, ProfileGenerator, ChatController
-1. **Notifications** — NotificationComposer, EmailRenderer, NotificationDispatcher
-1. **API + controllers** — all routes and controllers
-1. **Frontend pages** — Onboarding chat → Dashboard → Event browse → Settings
-1. **Artisan commands** — CLI wrappers for all scheduled operations
-1. **Scheduled tasks** — `app/Console/Kernel.php` scheduling
-1. **Tests** — unit tests for services, feature tests for API endpoints
+2. **Models + factories** — all Eloquent models with casts, relationships, factories
+3. **Enums** — EventCategory, Reaction, NotificationChannel, NotificationFrequency
+4. **Config** — `config/eventpulse.php` with all tunable values
+5. **Scraper infrastructure** — ScraperAdapter interface, ScraperOrchestrator, one concrete adapter (GenericHtmlScraper)
+6. **Event pipeline** — EventDeduplicator → EventClassifier → EventEnricher → EventPipeline
+7. **Interest profile services** — ProfileScorer, ProfileUpdater, ProfileDecayer
+8. **Recommendation engine** — RecommendationEngine, DiscoveryEngine, DiversityFilter
+9. **Chat / onboarding** — OnboardingAgent, ProfileGenerator, ChatController
+10. **Notifications** — NotificationComposer, EmailRenderer, NotificationDispatcher
+11. **API + controllers** — all routes and controllers
+12. **Frontend pages** — Onboarding chat → Dashboard → Event browse → Settings
+13. **Artisan commands** — CLI wrappers for all scheduled operations
+14. **Scheduled tasks** — `app/Console/Kernel.php` scheduling
+15. **Tests** — unit tests for services, feature tests for API endpoints
 
 ## Things to Watch Out For
 

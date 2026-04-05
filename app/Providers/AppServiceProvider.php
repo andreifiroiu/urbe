@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Contracts\ScraperAdapter;
 use App\Services\Anthropic\AnthropicClient;
-use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use App\Services\Scraping\ScraperOrchestrator;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\RateLimiter;
@@ -28,14 +26,19 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton(ScraperOrchestrator::class, function ($app) {
-            return new ScraperOrchestrator(
-                adapters: [
-                    $app->make(GenericHtmlScraper::class),
-                ],
-            );
-        });
+            /** @var array<string, array{enabled: bool}> $sources */
+            $sources = config('eventpulse.scrapers.sources', []);
+            $registry = ScraperOrchestrator::ADAPTER_REGISTRY;
+            $adapters = [];
 
-        $this->app->bind(ScraperAdapter::class, GenericHtmlScraper::class);
+            foreach ($sources as $key => $cfg) {
+                if ($cfg['enabled'] && isset($registry[$key])) {
+                    $adapters[] = $app->make($registry[$key]);
+                }
+            }
+
+            return new ScraperOrchestrator(adapters: $adapters);
+        });
     }
 
     /**

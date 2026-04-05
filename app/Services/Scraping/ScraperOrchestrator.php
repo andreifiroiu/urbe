@@ -6,57 +6,54 @@ namespace App\Services\Scraping;
 
 use App\Contracts\ScraperAdapter;
 use App\DTOs\RawEvent;
+use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
+use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 
 class ScraperOrchestrator
 {
     /**
-     * Orchestrates the execution of all registered scraper adapters.
+     * Maps config source keys to their concrete adapter class names.
+     * Add new entries here as each adapter is implemented.
      *
-     * Manages scraper lifecycle (start, run, record results) and handles
-     * failures gracefully so that one broken scraper never crashes the
-     * entire pipeline.
-     *
-     * @param array<int, ScraperAdapter> $adapters
+     * @var array<string, class-string<ScraperAdapter>>
+     */
+    public const array ADAPTER_REGISTRY = [
+        'generic_html' => GenericHtmlScraper::class,
+    ];
+
+    /**
+     * @param  array<int, ScraperAdapter>  $adapters
      */
     public function __construct(
         private readonly array $adapters = [],
     ) {}
 
     /**
-     * Run all registered scrapers and return aggregated raw events.
-     *
-     * Iterates through every adapter, creates a ScraperRun audit record for
-     * each, invokes the scrape method, and collects all resulting RawEvent
-     * DTOs into a single collection. Failures are caught per-adapter so one
-     * broken source does not block the rest.
-     *
-     * @return Collection<int, RawEvent>
+     * Dispatch one RunScraperJob per enabled source that has a registered adapter.
      */
-    public function runAll(): Collection
+    public function runAll(): void
     {
-        // TODO: Initialize an empty collection to accumulate RawEvents
-        // TODO: Iterate through all $this->adapters
-        // TODO: For each adapter, create a ScraperRun record with status='running' and started_at=now()
-        // TODO: Call adapter->scrape() inside a try/catch block
-        // TODO: On success: update ScraperRun with events_found count, status='completed', finished_at=now()
-        // TODO: On failure: catch \Throwable, log the error with adapter source name
-        // TODO:   Update ScraperRun with status='failed', errors_count++, error_log with exception message
-        // TODO:   Check consecutive failure count for this source using ScraperRun::where('source', ...)->latest()->take(threshold)
-        // TODO:   If consecutive failures > config('eventpulse.scraper.max_consecutive_failures'), log a critical alert
-        // TODO: Merge successful results into the accumulator collection
-        // TODO: Return the accumulated RawEvent collection
-        return collect();
+        /** @var array<string, array{enabled: bool, base_url: string, interval_hours: int}> $sources */
+        $sources = config('eventpulse.scrapers.sources', []);
+
+        foreach ($sources as $key => $cfg) {
+            if (! $cfg['enabled']) {
+                continue;
+            }
+
+            if (! isset(self::ADAPTER_REGISTRY[$key])) {
+                continue;
+            }
+
+            RunScraperJob::dispatch($key);
+        }
     }
 
     /**
-     * Run a single scraper identified by its source name.
-     *
-     * Looks up the adapter that supports the given source string, executes
-     * it with the same error-handling semantics as runAll(), and returns
-     * the scraped raw events.
+     * Run a single scraper identified by its source name and return scraped events.
      *
      * @return Collection<int, RawEvent>
      *
@@ -64,26 +61,74 @@ class ScraperOrchestrator
      */
     public function runSource(string $source): Collection
     {
-        // TODO: Call getAdapterForSource($source)
-        // TODO: If null, throw \InvalidArgumentException("No adapter found for source: {$source}")
-        // TODO: Create a ScraperRun record with status='running' and started_at=now()
-        // TODO: Call adapter->scrape() inside try/catch
-        // TODO: On success: update ScraperRun with results, return scraped RawEvents
-        // TODO: On failure: update ScraperRun as failed, log error, return empty collection
-        return collect();
+        $adapter = $this->getAdapterForSource($source);
+
+        if ($adapter === null) {
+            throw new \InvalidArgumentException("No adapter found for source: {$source}");
+        }
+
+        $run = ScraperRun::create([
+            'source' => $source,
+            'status' => 'running',
+            'started_at' => now(),
+        ]);
+
+        try {
+            $events = $adapter->scrape();
+
+            $run->update([
+                'status' => 'completed',
+                'events_found' => $events->count(),
+                'finished_at' => now(),
+            ]);
+
+            return $events;
+        } catch (\Throwable $e) {
+            Log::error("Scraper failed for source: {$source}", [
+                'error' => $e->getMessage(),
+            ]);
+
+            $run->update([
+                'status' => 'failed',
+                'errors_count' => 1,
+                'error_log' => [$e->getMessage()],
+                'finished_at' => now(),
+            ]);
+
+            $this->alertIfConsecutiveFailuresExceedThreshold($source);
+
+            return collect();
+        }
     }
 
     /**
      * Find the adapter that supports the given source name.
-     *
-     * Iterates through registered adapters and returns the first one whose
-     * supports() method returns true for the given source string.
      */
     public function getAdapterForSource(string $source): ?ScraperAdapter
     {
-        // TODO: Loop through $this->adapters
-        // TODO: Return the first adapter where $adapter->supports($source) === true
-        // TODO: Return null if no adapter matches
+        foreach ($this->adapters as $adapter) {
+            if ($adapter->supports($source)) {
+                return $adapter;
+            }
+        }
+
         return null;
+    }
+
+    private function alertIfConsecutiveFailuresExceedThreshold(string $source): void
+    {
+        $threshold = (int) config('eventpulse.scraping.max_consecutive_failures', 3);
+
+        $consecutiveFailures = ScraperRun::where('source', $source)
+            ->latest('started_at')
+            ->take($threshold)
+            ->get()
+            ->every(fn (ScraperRun $run): bool => $run->status === 'failed');
+
+        if ($consecutiveFailures) {
+            Log::critical("Scraper source '{$source}' has failed {$threshold} consecutive times.", [
+                'source' => $source,
+            ]);
+        }
     }
 }

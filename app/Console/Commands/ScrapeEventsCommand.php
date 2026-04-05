@@ -17,15 +17,15 @@ class ScrapeEventsCommand extends Command
     {
         $source = $this->option('source');
 
-        if ($source) {
+        if (is_string($source)) {
             $this->info("Running scraper for source: {$source}");
             $events = $orchestrator->runSource($source);
+            $this->info("Scraped {$events->count()} raw events.");
         } else {
-            $this->info('Running all scrapers...');
-            $events = $orchestrator->runAll();
+            $this->info('Dispatching scraper jobs for all enabled sources...');
+            $orchestrator->runAll();
+            $this->info('Scraper jobs dispatched.');
         }
-
-        $this->info("Scraped {$events->count()} raw events.");
 
         return self::SUCCESS;
     }
