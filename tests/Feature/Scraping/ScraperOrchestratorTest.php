@@ -8,7 +8,6 @@ use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 use App\Services\Scraping\ScraperOrchestrator;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Queue;
 
 // ---------------------------------------------------------------------------
@@ -27,29 +26,26 @@ class FakeZileSiNoptiAdapter implements ScraperAdapter
         return 'zilesinopti@zilesinopti.ro';
     }
 
-    /** @return Collection<int, RawEvent> */
-    public function scrape(array $sourceConfig, array $cityConfig): Collection
+    public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void
     {
-        return collect([
-            new RawEvent(
-                title: 'Test Event',
-                description: null,
-                sourceUrl: 'https://zilesinopti.ro/evenimente/test/',
-                sourceId: 'test',
-                source: 'zilesinopti',
-                venue: null,
-                address: null,
-                city: $cityConfig['label'],
-                startsAt: null,
-                endsAt: null,
-                priceMin: null,
-                priceMax: null,
-                currency: null,
-                isFree: null,
-                imageUrl: null,
-                metadata: [],
-            ),
-        ]);
+        $onEvent(new RawEvent(
+            title: 'Test Event',
+            description: null,
+            sourceUrl: 'https://zilesinopti.ro/evenimente/test/',
+            sourceId: 'test',
+            source: 'zilesinopti',
+            venue: null,
+            address: null,
+            city: $cityConfig['label'],
+            startsAt: null,
+            endsAt: null,
+            priceMin: null,
+            priceMax: null,
+            currency: null,
+            isFree: null,
+            imageUrl: null,
+            metadata: [],
+        ));
     }
 }
 
@@ -65,8 +61,7 @@ class ThrowingAdapter implements ScraperAdapter
         return 'zilesinopti@zilesinopti.ro';
     }
 
-    /** @return Collection<int, RawEvent> */
-    public function scrape(array $sourceConfig, array $cityConfig): Collection
+    public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void
     {
         throw new RuntimeException('Scraper network error');
     }
@@ -194,10 +189,9 @@ describe('runSource', function () {
         );
 
         $orchestrator = app(ScraperOrchestrator::class);
-        $events = $orchestrator->runSource('timisoara', 'zilesinopti');
+        $saved = $orchestrator->runSource('timisoara', 'zilesinopti');
 
-        expect($events)->toHaveCount(1)
-            ->and($events->first()->city)->toBe('Timișoara');
+        expect($saved)->toBeInt()->toBe(1);
 
         $run = ScraperRun::where('source', 'zilesinopti')
             ->where('city', 'timisoara')
@@ -210,16 +204,16 @@ describe('runSource', function () {
             ->and($run->finished_at)->not->toBeNull();
     });
 
-    it('marks the ScraperRun as failed and returns empty collection on exception', function () {
+    it('marks the ScraperRun as failed and returns 0 on exception', function () {
         $this->app->bind(
             ZileSiNoptiScraper::class,
             ThrowingAdapter::class,
         );
 
         $orchestrator = app(ScraperOrchestrator::class);
-        $events = $orchestrator->runSource('timisoara', 'zilesinopti');
+        $saved = $orchestrator->runSource('timisoara', 'zilesinopti');
 
-        expect($events)->toBeEmpty();
+        expect($saved)->toBeInt()->toBe(0);
 
         $run = ScraperRun::where('source', 'zilesinopti')
             ->where('city', 'timisoara')

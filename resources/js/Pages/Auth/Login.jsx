@@ -17,15 +17,25 @@ export default function Login() {
 
     return (
         <>
-            <Head title="Login" />
-            <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-                <Card className="w-full max-w-md">
+            <Head title="Intră în cont — Ghes" />
+            <div
+                className="min-h-screen flex flex-col items-center justify-center px-4"
+                style={{ backgroundColor: '#0A1128' }}
+            >
+                <Link href="/" className="mb-8">
+                    <img
+                        src="/images/logo-dark.png"
+                        alt="Ghes"
+                        className="h-14 w-auto"
+                    />
+                </Link>
+                <Card className="w-full max-w-md border-0 shadow-2xl">
                     <CardHeader className="text-center">
-                        <CardTitle className="text-2xl">
-                            Welcome back
+                        <CardTitle className="text-2xl" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                            Bine ai revenit
                         </CardTitle>
                         <CardDescription>
-                            Sign in to your EventPulse account
+                            Intră în contul tău Ghes
                         </CardDescription>
                     </CardHeader>
                     <form onSubmit={handleSubmit}>
@@ -37,7 +47,7 @@ export default function Login() {
                                     type="email"
                                     value={data.email}
                                     onChange={(e) => setData('email', e.target.value)}
-                                    placeholder="you@example.com"
+                                    placeholder="tu@exemplu.com"
                                     autoComplete="email"
                                     required
                                 />
@@ -46,13 +56,13 @@ export default function Login() {
                                 )}
                             </div>
                             <div className="space-y-2">
-                                <Label htmlFor="password">Password</Label>
+                                <Label htmlFor="password">Parolă</Label>
                                 <Input
                                     id="password"
                                     type="password"
                                     value={data.password}
                                     onChange={(e) => setData('password', e.target.value)}
-                                    placeholder="Enter your password"
+                                    placeholder="Introdu parola"
                                     autoComplete="current-password"
                                     required
                                 />
@@ -66,18 +76,20 @@ export default function Login() {
                         <CardFooter className="flex flex-col gap-4">
                             <Button
                                 type="submit"
-                                className="w-full"
+                                className="w-full font-semibold"
+                                style={{ backgroundColor: '#FF5733', color: '#fff' }}
                                 disabled={processing}
                             >
-                                {processing ? 'Signing in...' : 'Sign in'}
+                                {processing ? 'Se conectează...' : 'Intră în cont'}
                             </Button>
                             <p className="text-sm text-gray-500 text-center">
-                                Don't have an account?{' '}
+                                Nu ai cont?{' '}
                                 <Link
                                     href="/register"
-                                    className="text-indigo-600 hover:text-indigo-800 font-medium"
+                                    className="font-medium hover:underline"
+                                    style={{ color: '#FF5733' }}
                                 >
-                                    Register
+                                    Înregistrează-te
                                 </Link>
                             </p>
                         </CardFooter>

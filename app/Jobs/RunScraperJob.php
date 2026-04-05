@@ -23,6 +23,9 @@ class RunScraperJob implements ShouldQueue
     /** @var array<int, int> */
     public array $backoff = [60, 300, 900];
 
+    /** Allow up to 10 minutes — scraper sleeps between requests to avoid rate limits. */
+    public int $timeout = 600;
+
     /**
      * @param  array{adapter: string, url: string, enabled: bool, interval_hours: int}  $sourceConfig
      */

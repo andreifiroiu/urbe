@@ -19,27 +19,37 @@ export default function Register() {
 
     return (
         <>
-            <Head title="Register" />
-            <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-                <Card className="w-full max-w-md">
+            <Head title="Înregistrare — Ghes" />
+            <div
+                className="min-h-screen flex flex-col items-center justify-center px-4"
+                style={{ backgroundColor: '#0A1128' }}
+            >
+                <Link href="/" className="mb-8">
+                    <img
+                        src="/images/logo-dark.png"
+                        alt="Ghes"
+                        className="h-14 w-auto"
+                    />
+                </Link>
+                <Card className="w-full max-w-md border-0 shadow-2xl">
                     <CardHeader className="text-center">
-                        <CardTitle className="text-2xl">
-                            Create an account
+                        <CardTitle className="text-2xl" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                            Creează-ți contul
                         </CardTitle>
                         <CardDescription>
-                            Join EventPulse to discover local events
+                            Alătură-te și descoperă ce se întâmplă în oraș
                         </CardDescription>
                     </CardHeader>
                     <form onSubmit={handleSubmit}>
                         <CardContent className="space-y-4">
                             <div className="space-y-2">
-                                <Label htmlFor="name">Name</Label>
+                                <Label htmlFor="name">Nume</Label>
                                 <Input
                                     id="name"
                                     type="text"
                                     value={data.name}
                                     onChange={(e) => setData('name', e.target.value)}
-                                    placeholder="Your name"
+                                    placeholder="Numele tău"
                                     autoComplete="name"
                                     required
                                 />
@@ -54,7 +64,7 @@ export default function Register() {
                                     type="email"
                                     value={data.email}
                                     onChange={(e) => setData('email', e.target.value)}
-                                    placeholder="you@example.com"
+                                    placeholder="tu@exemplu.com"
                                     autoComplete="email"
                                     required
                                 />
@@ -63,13 +73,13 @@ export default function Register() {
                                 )}
                             </div>
                             <div className="space-y-2">
-                                <Label htmlFor="password">Password</Label>
+                                <Label htmlFor="password">Parolă</Label>
                                 <Input
                                     id="password"
                                     type="password"
                                     value={data.password}
                                     onChange={(e) => setData('password', e.target.value)}
-                                    placeholder="Create a password"
+                                    placeholder="Creează o parolă"
                                     autoComplete="new-password"
                                     required
                                 />
@@ -81,7 +91,7 @@ export default function Register() {
                             </div>
                             <div className="space-y-2">
                                 <Label htmlFor="password_confirmation">
-                                    Confirm Password
+                                    Confirmă parola
                                 </Label>
                                 <Input
                                     id="password_confirmation"
@@ -90,7 +100,7 @@ export default function Register() {
                                     onChange={(e) =>
                                         setData('password_confirmation', e.target.value)
                                     }
-                                    placeholder="Confirm your password"
+                                    placeholder="Confirmă parola"
                                     autoComplete="new-password"
                                     required
                                 />
@@ -104,18 +114,20 @@ export default function Register() {
                         <CardFooter className="flex flex-col gap-4">
                             <Button
                                 type="submit"
-                                className="w-full"
+                                className="w-full font-semibold"
+                                style={{ backgroundColor: '#FF5733', color: '#fff' }}
                                 disabled={processing}
                             >
-                                {processing ? 'Creating account...' : 'Create account'}
+                                {processing ? 'Se creează contul...' : 'Creează cont'}
                             </Button>
                             <p className="text-sm text-gray-500 text-center">
-                                Already have an account?{' '}
+                                Ai deja cont?{' '}
                                 <Link
                                     href="/login"
-                                    className="text-indigo-600 hover:text-indigo-800 font-medium"
+                                    className="font-medium hover:underline"
+                                    style={{ color: '#FF5733' }}
                                 >
-                                    Sign in
+                                    Intră în cont
                                 </Link>
                             </p>
                         </CardFooter>

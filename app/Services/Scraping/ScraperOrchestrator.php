@@ -8,9 +8,10 @@ use App\Contracts\ScraperAdapter;
 use App\DTOs\RawEvent;
 use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
+use App\Services\Processing\EventPipeline;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 class ScraperOrchestrator
 {
@@ -40,15 +41,16 @@ class ScraperOrchestrator
     }
 
     /**
-     * Execute one scraper synchronously, record a ScraperRun, and return scraped events.
-     *
-     * @return Collection<int, RawEvent>
+     * Execute one scraper synchronously, save each event as it arrives, and return saved count.
      */
-    public function runSource(string $cityKey, string $adapterKey): Collection
+    public function runSource(string $cityKey, string $adapterKey): int
     {
         $cityConfig = $this->getCityConfig($cityKey);
         $sourceConfig = $this->findSourceConfig($cityKey, $adapterKey);
         $adapter = $this->resolveAdapter($adapterKey);
+
+        /** @var EventPipeline $pipeline */
+        $pipeline = $this->app->make(EventPipeline::class);
 
         $run = ScraperRun::create([
             'source' => $adapterKey,
@@ -57,17 +59,32 @@ class ScraperOrchestrator
             'started_at' => now(),
         ]);
 
+        $saved = 0;
+
         try {
-            $events = $adapter->scrape($sourceConfig, $cityConfig);
+            $adapter->scrape(
+                $sourceConfig,
+                $cityConfig,
+                function (RawEvent $event) use ($pipeline, &$saved, $adapterKey): void {
+                    try {
+                        if ($pipeline->process($event) !== null) {
+                            $saved++;
+                        }
+                    } catch (Throwable $e) {
+                        Log::error("runSource: failed to process event for {$adapterKey}", [
+                            'title' => $event->title,
+                            'error' => $e->getMessage(),
+                        ]);
+                    }
+                }
+            );
 
             $run->update([
                 'status' => 'completed',
-                'events_found' => $events->count(),
+                'events_found' => $saved,
                 'finished_at' => now(),
             ]);
-
-            return $events;
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             Log::error("Scraper failed for {$adapterKey}@{$cityKey}", [
                 'error' => $e->getMessage(),
             ]);
@@ -80,9 +97,9 @@ class ScraperOrchestrator
             ]);
 
             $this->alertIfConsecutiveFailuresExceedThreshold($adapterKey, $cityKey);
-
-            return collect();
         }
+
+        return $saved;
     }
 
     /**

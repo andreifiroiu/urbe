@@ -24,8 +24,12 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0',
     ];
 
-    /** @return Collection<int, RawEvent> */
-    abstract public function scrape(array $sourceConfig, array $cityConfig): Collection;
+    /**
+     * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int}  $sourceConfig
+     * @param  array{label: string, timezone: string, coordinates: list<float>, radius_km: int}  $cityConfig
+     * @param  callable(RawEvent): void  $onEvent  Called immediately for each parsed event.
+     */
+    abstract public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void;
 
     /**
      * Check whether the source is reachable.
@@ -74,12 +78,30 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
     /**
      * Fetch the HTML content of a single page.
      *
-     * Adds a random delay, sets realistic browser headers, and retries once
-     * on 429/503 responses with a 10-second backoff. Returns an empty string
-     * on any failure so callers can skip gracefully.
+     * In local environment, responses are cached to disk for the duration
+     * configured in eventpulse.scrapers.cache_ttl_minutes (default 60 min).
+     * Set to 0 to disable caching. Speeds up repeated test runs without
+     * hammering the live site.
+     *
+     * Adds a random delay in production, retries once on 429/503.
+     * Returns an empty string on any failure so callers can skip gracefully.
      */
     protected function fetchPage(string $url): string
     {
+        $cacheTtl = (int) config('eventpulse.scrapers.cache_ttl_minutes', 0);
+
+        if ($cacheTtl > 0 && app()->environment('local', 'testing')) {
+            $cacheKey = 'scraper_page_'.md5($url);
+
+            /** @var string|null $cached */
+            $cached = cache()->get($cacheKey);
+            if ($cached !== null) {
+                Log::debug('fetchPage: cache hit', ['url' => $url]);
+
+                return $cached;
+            }
+        }
+
         $this->sleepBetweenRequests();
 
         try {
@@ -88,13 +110,28 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
                 'Accept-Language' => 'ro-RO,ro;q=0.9,en;q=0.8',
             ])->get($url);
 
+            Log::debug("fetchPage: HTTP {$response->status()}", [
+                'adapter' => $this->adapterKey(),
+                'url' => $url,
+                'body_length' => strlen($response->body()),
+            ]);
+
             if ($response->status() === 429 || $response->status() === 503) {
+                Log::warning("fetchPage: rate limited ({$response->status()}), retrying after back-off", [
+                    'adapter' => $this->adapterKey(),
+                    'url' => $url,
+                ]);
                 $this->sleepOnRetry();
 
                 $response = Http::withHeaders([
                     'User-Agent' => $this->randomUserAgent(),
                     'Accept-Language' => 'ro-RO,ro;q=0.9,en;q=0.8',
                 ])->get($url);
+
+                Log::debug("fetchPage: retry HTTP {$response->status()}", [
+                    'adapter' => $this->adapterKey(),
+                    'url' => $url,
+                ]);
             }
 
             if ($response->failed()) {
@@ -106,7 +143,14 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
                 return '';
             }
 
-            return $response->body();
+            $body = $response->body();
+
+            if (isset($cacheKey) && $cacheTtl > 0) {
+                cache()->put($cacheKey, $body, now()->addMinutes($cacheTtl));
+                Log::debug('fetchPage: cached response', ['url' => $url, 'ttl_minutes' => $cacheTtl]);
+            }
+
+            return $body;
         } catch (\Throwable $e) {
             Log::warning("Exception fetching page for {$this->adapterKey()}", [
                 'url' => $url,

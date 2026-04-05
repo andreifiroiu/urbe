@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Contracts;
 
 use App\DTOs\RawEvent;
-use Illuminate\Support\Collection;
 
 interface ScraperAdapter
 {
@@ -15,11 +14,14 @@ interface ScraperAdapter
     /**
      * Scrape events for a specific city/source combination.
      *
+     * Called immediately for each parsed event. The caller is responsible for
+     * persisting, deduplicating, or otherwise handling each event.
+     *
      * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int}  $sourceConfig
      * @param  array{label: string, timezone: string, coordinates: list<float>, radius_km: int}  $cityConfig
-     * @return Collection<int, RawEvent>
+     * @param  callable(RawEvent): void  $onEvent
      */
-    public function scrape(array $sourceConfig, array $cityConfig): Collection;
+    public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void;
 
     /**
      * Human-readable identifier for logging and audit records.

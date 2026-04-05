@@ -2,10 +2,8 @@
 
 declare(strict_types=1);
 
-use App\DTOs\RawEvent;
 use App\Services\Scraping\Adapters\AbstractHtmlScraper;
 use Carbon\Carbon;
-use Illuminate\Support\Collection;
 
 /**
  * Concrete implementation exposing protected helpers for testing.
@@ -22,10 +20,9 @@ class ConcreteHtmlScraper extends AbstractHtmlScraper
         return 'test_scraper@example.com';
     }
 
-    /** @return Collection<int, RawEvent> */
-    public function scrape(array $sourceConfig, array $cityConfig): Collection
+    public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void
     {
-        return collect();
+        // no-op stub for testing base class helpers
     }
 
     // Proxy methods to expose protected helpers

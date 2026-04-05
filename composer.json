@@ -14,7 +14,8 @@
         "laravel/scout": "^11.1",
         "laravel/tinker": "^3.0",
         "meilisearch/meilisearch-php": "^1.16",
-        "spatie/laravel-ray": "^1.43"
+        "spatie/laravel-ray": "^1.43",
+        "ext-libxml": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

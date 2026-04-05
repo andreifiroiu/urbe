@@ -46,6 +46,9 @@ return [
         ],
         'request_delay' => [2, 5],
         'max_pages' => 10,
+        // Cache page responses in local/testing env to avoid hammering the site on repeated runs.
+        // Set to 0 to disable. Responses are cached in the default cache store.
+        'cache_ttl_minutes' => (int) env('SCRAPER_CACHE_TTL_MINUTES', 60),
     ],
 
     'adapter_registry' => [

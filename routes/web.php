@@ -9,10 +9,14 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\EmailReactionController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\NotificationSettingsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecommendationController;
 use Illuminate\Support\Facades\Route;
+
+// Public landing page — guests see the landing, authenticated users are redirected to dashboard
+Route::get('/', [LandingController::class, 'index'])->name('home');
 
 // Signed email reaction URL — no auth required, signature validates identity
 Route::get('reactions/{user}/{event}/{reaction}', [EmailReactionController::class, 'store'])
@@ -37,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::post('onboarding/confirm-profile', [ChatController::class, 'confirmProfile'])->name('onboarding.confirm');
 
     // Dashboard / Recommendations
-    Route::get('/', [RecommendationController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [RecommendationController::class, 'index'])->name('dashboard');
 
     // Events
     Route::get('events', [EventController::class, 'index'])->name('events.index');

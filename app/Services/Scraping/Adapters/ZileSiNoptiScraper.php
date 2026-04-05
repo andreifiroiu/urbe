@@ -36,61 +36,88 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
         return self::SOURCE.'@'.$host;
     }
 
-    /** @return Collection<int, RawEvent> */
-    public function scrape(array $sourceConfig, array $cityConfig): Collection
+    public function scrape(array $sourceConfig, array $cityConfig, callable $onEvent): void
     {
         $mainUrl = $this->getUrl($sourceConfig);
         $weekendUrl = $this->getExtraUrls($sourceConfig)[0] ?? null;
         $city = $cityConfig['label'];
 
-        /** @var array<string, string> $seenFingerprints */
-        $seenFingerprints = [];
-        $allEvents = collect();
+        // Shared detail-page fetch state — prevents fetching the same URL
+        // more than once across all listing pages in a single scrape run.
+        /** @var array<string, string|null> $fetchedDescriptions  URL → description (or null if not found) */
+        $fetchedDescriptions = [];
+        $detailCount = 0;
+        $detailWindowStart = time();
 
         $days = (int) config('eventpulse.scrapers.max_pages', self::DEFAULT_DAYS);
+        $emitted = 0;
+
+        Log::debug('ZileSiNoptiScraper: starting scrape', [
+            'main_url' => $mainUrl,
+            'weekend_url' => $weekendUrl,
+            'city' => $city,
+            'days' => $days,
+        ]);
 
         // Fetch one page per upcoming calendar day
         for ($offset = 0; $offset < $days; $offset++) {
             $date = now()->addDays($offset);
             $url = rtrim($mainUrl, '/').'/?zi='.$date->format('Y-m-d');
 
+            Log::debug("ZileSiNoptiScraper: fetching day page {$offset}/{$days}", ['url' => $url]);
+
             $html = $this->fetchPage($url);
             if ($html === '') {
+                Log::debug('ZileSiNoptiScraper: empty response, skipping day', ['url' => $url]);
+
                 continue;
             }
 
-            $this->mergeUnique(
-                $this->parseListingPage($html, $date->startOfDay()->copy(), $city),
-                $allEvents,
-                $seenFingerprints,
-            );
+            $parsed = $this->parseListingPage($html, $date->startOfDay()->copy(), $city, $fetchedDescriptions, $detailCount, $detailWindowStart);
+            Log::debug("ZileSiNoptiScraper: parsed {$parsed->count()} events from day page", ['date' => $date->toDateString()]);
+
+            foreach ($parsed as $event) {
+                $onEvent($event);
+                $emitted++;
+            }
         }
 
         // Weekend page — inline dates embedded in each card
         if ($weekendUrl !== null) {
+            Log::debug('ZileSiNoptiScraper: fetching weekend page', ['url' => $weekendUrl]);
+
             $weekendHtml = $this->fetchPage($weekendUrl);
             if ($weekendHtml !== '') {
-                $this->mergeUnique(
-                    $this->parseListingPage($weekendHtml, null, $city),
-                    $allEvents,
-                    $seenFingerprints,
-                );
+                $parsed = $this->parseListingPage($weekendHtml, null, $city, $fetchedDescriptions, $detailCount, $detailWindowStart);
+                Log::debug("ZileSiNoptiScraper: parsed {$parsed->count()} events from weekend page");
+
+                foreach ($parsed as $event) {
+                    $onEvent($event);
+                    $emitted++;
+                }
+            } else {
+                Log::debug('ZileSiNoptiScraper: empty response from weekend page');
             }
         }
 
-        Log::info('ZileSiNoptiScraper: scraped '.$allEvents->count().' events.');
-
-        return $allEvents;
+        Log::info('ZileSiNoptiScraper: scrape complete', ['emitted' => $emitted, 'city' => $city]);
     }
 
     /**
      * Parse all `.kzn-sw-item` cards from a listing page.
      *
      * @param  ?Carbon  $pageDate  Known date for this page (null = each card carries its own date).
+     * @param  array<string, string|null>  $fetchedDescriptions  URL → description (or null if fetch attempted but empty)
      * @return Collection<int, RawEvent>
      */
-    private function parseListingPage(string $html, ?Carbon $pageDate, string $city): Collection
-    {
+    private function parseListingPage(
+        string $html,
+        ?Carbon $pageDate,
+        string $city,
+        array &$fetchedDescriptions,
+        int &$detailCount,
+        int &$detailWindowStart,
+    ): Collection {
         $dom = new \DOMDocument;
         libxml_use_internal_errors(true);
         $dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'), LIBXML_NOWARNING | LIBXML_NOERROR);
@@ -98,10 +125,11 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
 
         $xpath = new \DOMXPath($dom);
         $items = $xpath->query('//*[contains(@class,"kzn-sw-item")]');
+        $itemCount = $items ? $items->length : 0;
+
+        Log::debug("ZileSiNoptiScraper: found {$itemCount} kzn-sw-item elements in page");
 
         $events = collect();
-        $detailCount = 0;
-        $detailWindowStart = time();
 
         foreach ($items as $item) {
             $event = $this->parseEventCard($item, $xpath, $pageDate, $city);
@@ -109,20 +137,41 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
                 continue;
             }
 
+            Log::debug('ZileSiNoptiScraper: parsed card', [
+                'title' => $event->title,
+                'starts_at' => $event->startsAt,
+                'venue' => $event->venue,
+                'source_url' => $event->sourceUrl,
+            ]);
+
             // Optionally enrich with description from detail page
             if ($event->description === null) {
-                // Reset rate-limit window
-                if (time() - $detailWindowStart >= 60) {
-                    $detailCount = 0;
-                    $detailWindowStart = time();
-                }
-
-                if ($detailCount < self::DETAIL_RATE_LIMIT) {
-                    $description = $this->fetchDetailDescription($event->sourceUrl);
-                    if ($description !== null) {
-                        $event = $this->withDescription($event, $description);
+                if (array_key_exists($event->sourceUrl, $fetchedDescriptions)) {
+                    // Already fetched this URL in this scrape run — reuse cached result
+                    $cached = $fetchedDescriptions[$event->sourceUrl];
+                    if ($cached !== null) {
+                        $event = $this->withDescription($event, $cached);
+                        Log::debug('ZileSiNoptiScraper: reused cached description', ['url' => $event->sourceUrl]);
                     }
-                    $detailCount++;
+                } else {
+                    // Reset rate-limit window
+                    if (time() - $detailWindowStart >= 60) {
+                        $detailCount = 0;
+                        $detailWindowStart = time();
+                    }
+
+                    if ($detailCount < self::DETAIL_RATE_LIMIT) {
+                        Log::debug("ZileSiNoptiScraper: fetching detail page ({$detailCount}/".self::DETAIL_RATE_LIMIT.')', [
+                            'url' => $event->sourceUrl,
+                        ]);
+                        $description = $this->fetchDetailDescription($event->sourceUrl);
+                        $fetchedDescriptions[$event->sourceUrl] = $description;
+                        if ($description !== null) {
+                            $event = $this->withDescription($event, $description);
+                            Log::debug('ZileSiNoptiScraper: enriched event with description');
+                        }
+                        $detailCount++;
+                    }
                 }
             }
 
@@ -231,6 +280,19 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
             array_filter(array_map('trim', preg_split('/[\n\r]+/', $text) ?: [])),
         );
 
+        Log::debug('ZileSiNoptiScraper: parseDateTimeFromCard', [
+            'raw' => json_encode($text),
+            'lines' => $lines,
+            'page_date' => $pageDate?->toDateString(),
+        ]);
+
+        // The live site sometimes concatenates day+date+time without a newline, e.g.
+        // "Duminică 05/0415:00" — split on the time portion (HH:MM at end of string).
+        // Require at least one non-digit char first so pure times like "18:00" are not split.
+        if (count($lines) === 1 && preg_match('/^(\D.+?)(\d{1,2}:\d{2})$/', $lines[0], $m)) {
+            $lines = [trim($m[1]), $m[2]];
+        }
+
         if (count($lines) >= 2) {
             // e.g. ["DUMINICĂ 05/04", "10:00"]
             $date = $this->parseRomanianDate($lines[0]);
@@ -289,7 +351,7 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
         $parts = [];
         foreach ($paragraphs as $p) {
             $text = $this->stripHtml($p->textContent);
-            if (mb_strlen($text) > 30) {
+            if (mb_strlen($text) > 30 && ! $this->isBoilerplate($text)) {
                 $parts[] = $text;
             }
 
@@ -299,6 +361,29 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
         }
 
         return $parts !== [] ? implode("\n\n", $parts) : null;
+    }
+
+    /**
+     * Detect site-wide boilerplate text that should never be stored as a description.
+     * These strings appear in the footer/sidebar of every zilesinopti.ro page.
+     */
+    private function isBoilerplate(string $text): bool
+    {
+        $markers = [
+            'marcă înregistrată',
+            'City Guide Media',
+            'Vrei să fii la curent cu cele mai noi Evenimente',
+            'ZILE ȘI NOPȚI',
+            'zilesinopti.ro',
+        ];
+
+        foreach ($markers as $marker) {
+            if (str_contains($text, $marker)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

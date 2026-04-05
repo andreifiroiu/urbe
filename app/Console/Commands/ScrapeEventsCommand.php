@@ -11,7 +11,8 @@ class ScrapeEventsCommand extends Command
 {
     protected $signature = 'eventpulse:scrape
         {--city= : Run scrapers for a specific city key (default: all cities)}
-        {--source= : Run a specific adapter key within the city (requires --city)}';
+        {--source= : Run a specific adapter key within the city (requires --city)}
+        {--limit= : Override max_pages for this run (useful for quick tests)}';
 
     protected $description = 'Run event scrapers to fetch new events from configured sources';
 
@@ -20,10 +21,14 @@ class ScrapeEventsCommand extends Command
         $city = $this->option('city');
         $source = $this->option('source');
 
+        if (is_string($this->option('limit'))) {
+            config(['eventpulse.scrapers.max_pages' => (int) $this->option('limit')]);
+        }
+
         if (is_string($city) && is_string($source)) {
             $this->info("Running scraper for {$source}@{$city}...");
-            $events = $orchestrator->runSource($city, $source);
-            $this->info("Scraped {$events->count()} raw events.");
+            $saved = $orchestrator->runSource($city, $source);
+            $this->info("Saved {$saved} new events to database.");
         } elseif (is_string($city)) {
             $this->info("Dispatching scraper jobs for city: {$city}...");
             $orchestrator->runCity($city);

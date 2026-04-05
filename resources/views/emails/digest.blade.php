@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $subject ?? 'Your EventPulse Digest' }}</title>
+    <title>{{ $subject ?? 'Digestul tău Ghes' }}</title>
     <style>
         body { margin: 0; padding: 0; background-color: #f4f4f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
@@ -37,15 +37,15 @@
     {{-- Header --}}
     <tr>
         <td class="header">
-            <h1>EventPulse</h1>
-            <p>Hi {{ $user->name }}, here are your picks for today</p>
+            <h1>Ghes</h1>
+            <p>Salut {{ $user->name }}, uite ce te așteaptă diseară</p>
         </td>
     </tr>
 
     {{-- Recommended events --}}
     @if(count($recommendedEvents) > 0)
     <tr>
-        <td class="section-title">Recommended for You</td>
+        <td class="section-title">Recomandate pentru tine</td>
     </tr>
     @foreach($recommendedEvents as $item)
         @php $event = $item['event']; $urls = $item['reaction_urls']; @endphp
@@ -64,7 +64,7 @@
                         &middot; {{ $event->venue }}
                     @endif
                     @if($event->is_free)
-                        &middot; Free
+                        &middot; Gratuit
                     @elseif($event->price_min)
                         &middot; {{ $event->currency }} {{ number_format($event->price_min, 0) }}@if($event->price_max && $event->price_max != $event->price_min)–{{ number_format($event->price_max, 0) }}@endif
                     @endif
@@ -73,9 +73,9 @@
                     <div class="event-description">{{ Str::limit($event->description, 150) }}</div>
                 @endif
                 <div class="reactions">
-                    <a href="{{ $urls['interested'] }}" class="reaction-btn btn-interested">&#x2764; Interested</a>
-                    <a href="{{ $urls['not_interested'] }}" class="reaction-btn btn-not-interested">&#x1f44e; Not for me</a>
-                    <a href="{{ $urls['saved'] }}" class="reaction-btn btn-saved">&#x1f516; Save</a>
+                    <a href="{{ $urls['interested'] }}" class="reaction-btn btn-interested">&#x2764; Mă interesează</a>
+                    <a href="{{ $urls['not_interested'] }}" class="reaction-btn btn-not-interested">&#x1f44e; Nu-i pentru mine</a>
+                    <a href="{{ $urls['saved'] }}" class="reaction-btn btn-saved">&#x1f516; Salvează</a>
                 </div>
             </td>
         </tr>
@@ -85,13 +85,13 @@
     {{-- Discovery events --}}
     @if(count($discoveryEvents) > 0)
     <tr>
-        <td class="section-title discovery-section" style="padding-top:20px;">Something New to Try</td>
+        <td class="section-title discovery-section" style="padding-top:20px;">Descoperă ceva nou</td>
     </tr>
     @foreach($discoveryEvents as $item)
         @php $event = $item['event']; $urls = $item['reaction_urls']; @endphp
         <tr>
             <td class="event-card discovery-section">
-                <span class="discovery-label">Discovery</span>
+                <span class="discovery-label">Descoperire</span>
                 <div class="event-title">{{ $event->title }}</div>
                 <div class="event-meta">
                     <span class="category-badge">{{ ucfirst($event->category->value) }}</span>
@@ -106,9 +106,9 @@
                     <div class="event-description">{{ Str::limit($event->description, 120) }}</div>
                 @endif
                 <div class="reactions">
-                    <a href="{{ $urls['interested'] }}" class="reaction-btn btn-interested">&#x2764; Interested</a>
-                    <a href="{{ $urls['not_interested'] }}" class="reaction-btn btn-not-interested">&#x1f44e; Not for me</a>
-                    <a href="{{ $urls['saved'] }}" class="reaction-btn btn-saved">&#x1f516; Save</a>
+                    <a href="{{ $urls['interested'] }}" class="reaction-btn btn-interested">&#x2764; Mă interesează</a>
+                    <a href="{{ $urls['not_interested'] }}" class="reaction-btn btn-not-interested">&#x1f44e; Nu-i pentru mine</a>
+                    <a href="{{ $urls['saved'] }}" class="reaction-btn btn-saved">&#x1f516; Salvează</a>
                 </div>
             </td>
         </tr>
@@ -118,8 +118,8 @@
     {{-- Footer --}}
     <tr>
         <td class="footer">
-            <p>You're receiving this because you signed up for EventPulse digests.</p>
-            <p><a href="{{ route('settings.notifications') }}">Manage notification preferences</a></p>
+            <p>Primești acest email deoarece ești abonat la digesturile Ghes.</p>
+            <p><a href="{{ route('settings.notifications') }}">Gestionează preferințele de notificare</a></p>
         </td>
     </tr>
 

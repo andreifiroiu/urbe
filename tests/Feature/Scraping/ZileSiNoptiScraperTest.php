@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use App\DTOs\RawEvent;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 
 // ---------------------------------------------------------------------------
@@ -15,6 +17,23 @@ class TestZileSiNoptiScraper extends ZileSiNoptiScraper
     protected function sleepBetweenRequests(): void {}
 
     protected function sleepOnRetry(): void {}
+}
+
+// ---------------------------------------------------------------------------
+// Helper: run scrape() and collect all emitted RawEvents into a Collection.
+// ---------------------------------------------------------------------------
+
+/**
+ * @param  array<string, mixed>  $sourceConfig
+ * @param  array<string, mixed>  $cityConfig
+ * @return Collection<int, RawEvent>
+ */
+function scrapeToCollection(ZileSiNoptiScraper $scraper, array $sourceConfig, array $cityConfig): Collection
+{
+    $events = collect();
+    $scraper->scrape($sourceConfig, $cityConfig, fn ($e) => $events->push($e));
+
+    return $events;
 }
 
 // ---------------------------------------------------------------------------
@@ -117,7 +136,7 @@ describe('title and venue splitting via @', function () use ($defaultSourceConfi
             ['title' => 'Concert Jazz @ Filarmonica Banatul', 'venue' => 'Timișoara', 'time' => '19:00', 'category' => 'Concerte'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->title)->toBe('Concert Jazz')
             ->and($events->first()->venue)->toBe('Filarmonica Banatul');
@@ -128,7 +147,7 @@ describe('title and venue splitting via @', function () use ($defaultSourceConfi
             ['title' => 'Spectacol de dans @ Teatrul Național', 'venue' => 'Timișoara', 'time' => '20:00', 'category' => 'Teatru'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->venue)->toBe('Teatrul Național');
     });
@@ -138,7 +157,7 @@ describe('title and venue splitting via @', function () use ($defaultSourceConfi
             ['title' => 'Târgul de Paște 2026', 'venue' => 'Piața Victoriei', 'time' => '10:00', 'category' => 'Târg'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->title)->toBe('Târgul de Paște 2026')
             ->and($events->first()->venue)->toBe('Piața Victoriei');
@@ -149,7 +168,7 @@ describe('title and venue splitting via @', function () use ($defaultSourceConfi
             ['title' => 'Opera Tosca @ Opera Română', 'venue' => 'Opera Română', 'time' => '19:00', 'category' => 'Opera'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->metadata['category_hint'])->toBe('Opera');
     });
@@ -170,7 +189,7 @@ describe('Romanian day-name date parsing in card', function () use ($defaultSour
             ]),
         );
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events)->not->toBeEmpty();
         $startsAt = Carbon::parse($events->first()->startsAt);
@@ -191,7 +210,7 @@ describe('Romanian day-name date parsing in card', function () use ($defaultSour
             ]),
         );
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         $startsAt = Carbon::parse($events->first()->startsAt);
         expect($startsAt->day)->toBe(10)
@@ -208,7 +227,7 @@ describe('Romanian day-name date parsing in card', function () use ($defaultSour
             ['title' => 'Fiul @ Teatrul German', 'venue' => 'Teatrul German', 'time' => '18:30', 'category' => 'Teatru'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         // The first event from the first day page uses today (April 6) as date
         $found = $events->first(fn ($e) => str_contains($e->title, 'Fiul'));
@@ -232,7 +251,7 @@ describe('Romanian day-name date parsing in card', function () use ($defaultSour
             ]),
         );
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         $startsAt = Carbon::parse($events->first()->startsAt);
         expect($startsAt->day)->toBe(11)->and($startsAt->month)->toBe(4);
@@ -264,7 +283,7 @@ describe('deduplication between main and weekend page', function () use ($defaul
             'zilesinopti.ro/evenimente-timisoara-weekend/' => Http::response($weekendHtml),
         ]);
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         $matching = $events->filter(fn ($e) => str_contains($e->title, 'Sunset on Sundays'));
         expect($matching->count())->toBe(1);
@@ -288,7 +307,7 @@ describe('deduplication between main and weekend page', function () use ($defaul
             'zilesinopti.ro/evenimente-timisoara-weekend/' => Http::response(emptyListingPage()),
         ]);
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         // Different dates → different fingerprints → both kept
         $matching = $events->filter(fn ($e) => str_contains($e->title, 'Frumoasa'));
@@ -342,7 +361,7 @@ describe('skipping non-event elements', function () use ($defaultSourceConfig, $
             'zilesinopti.ro/evenimente-timisoara-weekend/' => Http::response(emptyListingPage()),
         ]);
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events)->toHaveCount(1)
             ->and($events->first()->title)->toBe('Concert Real');
@@ -367,7 +386,7 @@ describe('skipping non-event elements', function () use ($defaultSourceConfig, $
 
         fakeZilesRequests($emptyTitleHtml);
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events)->toBeEmpty();
     });
@@ -383,7 +402,7 @@ describe('RawEvent fields', function () use ($defaultSourceConfig, $defaultCityC
             ['title' => 'Event @ Venue', 'venue' => 'Venue', 'time' => '20:00', 'category' => 'Concert'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->source)->toBe('zilesinopti');
     });
@@ -393,7 +412,7 @@ describe('RawEvent fields', function () use ($defaultSourceConfig, $defaultCityC
             ['title' => 'Event @ Venue', 'venue' => 'Venue', 'time' => '20:00', 'category' => 'Concert'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->city)->toBe('Timișoara');
     });
@@ -404,7 +423,7 @@ describe('RawEvent fields', function () use ($defaultSourceConfig, $defaultCityC
                 'href' => 'https://zilesinopti.ro/evenimente/concert-jazz-filarmonica/'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->sourceId)->toBe('concert-jazz-filarmonica');
     });
@@ -417,7 +436,7 @@ describe('RawEvent fields', function () use ($defaultSourceConfig, $defaultCityC
             ['title' => $title, 'venue' => 'Teatrul German', 'time' => '18:30', 'category' => 'Teatru', 'sumar' => $sumar],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->description)->toBe($sumar);
     });
@@ -429,7 +448,7 @@ describe('RawEvent fields', function () use ($defaultSourceConfig, $defaultCityC
             ['title' => $title, 'venue' => 'Timișoara', 'time' => '14:00', 'category' => 'Party'],
         ]));
 
-        $events = (new TestZileSiNoptiScraper)->scrape($defaultSourceConfig, $defaultCityConfig);
+        $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
         expect($events->first()->description)->toBeNull();
     });
