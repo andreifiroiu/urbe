@@ -7,6 +7,7 @@ namespace App\Providers;
 use App\Services\Anthropic\AnthropicClient;
 use App\Services\Scraping\ScraperOrchestrator;
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 
@@ -33,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        JsonResource::withoutWrapping();
+
         RateLimiter::for('anthropic-api', function () {
             return Limit::perMinute(100);
         });

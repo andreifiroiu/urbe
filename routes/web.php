@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
     // Profile
     Route::get('profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('profile/resend-verification', [ProfileController::class, 'resendVerification'])->name('profile.resend-verification');
 
     // Notification Settings
     Route::get('settings/notifications', [NotificationSettingsController::class, 'show'])->name('settings.notifications');

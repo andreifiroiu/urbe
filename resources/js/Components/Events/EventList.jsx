@@ -7,7 +7,7 @@ import EventCard from '@/Components/Events/EventCard';
  */
 export default function EventList({
     events = [],
-    emptyMessage = 'No events found.',
+    emptyMessage = 'Niciun eveniment găsit.',
 }) {
     if (events.length === 0) {
         return (

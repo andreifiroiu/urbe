@@ -265,7 +265,7 @@ describe('Romanian day-name date parsing in card', function () use ($defaultSour
 // ---------------------------------------------------------------------------
 
 describe('deduplication between main and weekend page', function () use ($defaultSourceConfig, $defaultCityConfig) {
-    it('does not return duplicate when same event appears on both pages', function () use ($defaultSourceConfig, $defaultCityConfig) {
+    it('emits the same event from both pages — DB dedup in EventPipeline handles duplicates', function () use ($defaultSourceConfig, $defaultCityConfig) {
         Carbon::setTestNow(Carbon::create(2026, 4, 5));
 
         $event = ['title' => 'Sunset on Sundays @ D\'Arc pe Mal', 'venue' => 'Timișoara', 'time' => '14:00', 'category' => 'Party'];
@@ -285,8 +285,10 @@ describe('deduplication between main and weekend page', function () use ($defaul
 
         $events = scrapeToCollection(new TestZileSiNoptiScraper, $defaultSourceConfig, $defaultCityConfig);
 
+        // The scraper emits both (day-page and weekend-page copies); EventPipeline's DB
+        // fingerprint check deduplicates them when processing each event.
         $matching = $events->filter(fn ($e) => str_contains($e->title, 'Sunset on Sundays'));
-        expect($matching->count())->toBe(1);
+        expect($matching->count())->toBe(2);
 
         Carbon::setTestNow();
     });

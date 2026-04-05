@@ -4,9 +4,9 @@ import { Button } from '@/Components/ui/Button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-    { href: '/dashboard', label: 'Dashboard' },
-    { href: '/events', label: 'Events' },
-    { href: '/profile', label: 'Profile' },
+    { href: '/dashboard', label: 'Acasă' },
+    { href: '/events', label: 'Evenimente' },
+    { href: '/profile', label: 'Profil' },
 ];
 
 /**
@@ -70,7 +70,7 @@ export default function AppLayout({ children, title }) {
                                     className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10"
                                 >
                                     <span className="text-sm">
-                                        {auth?.user?.name || 'User'}
+                                        {auth?.user?.name || 'Cont'}
                                     </span>
                                     <svg
                                         className={cn(
@@ -96,14 +96,14 @@ export default function AppLayout({ children, title }) {
                                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                                             onClick={() => setUserMenuOpen(false)}
                                         >
-                                            Your Profile
+                                            Profilul meu
                                         </Link>
                                         <hr className="my-1 border-gray-100" />
                                         <button
                                             onClick={handleLogout}
                                             className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                                         >
-                                            Logout
+                                            Deconectare
                                         </button>
                                     </div>
                                 )}
@@ -176,7 +176,7 @@ export default function AppLayout({ children, title }) {
                         </div>
                         <div className="border-t border-white/10 px-4 py-3">
                             <p className="text-sm font-medium text-white">
-                                {auth?.user?.name || 'User'}
+                                {auth?.user?.name || 'Cont'}
                             </p>
                             <p className="text-xs text-white/50">
                                 {auth?.user?.email || ''}

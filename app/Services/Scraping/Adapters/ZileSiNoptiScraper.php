@@ -124,7 +124,7 @@ class ZileSiNoptiScraper extends AbstractHtmlScraper
         libxml_clear_errors();
 
         $xpath = new \DOMXPath($dom);
-        $items = $xpath->query('//*[contains(@class,"kzn-sw-item")]');
+        $items = $xpath->query('//*[contains(concat(" ", normalize-space(@class), " "), " kzn-sw-item ")]');
         $itemCount = $items ? $items->length : 0;
 
         Log::debug("ZileSiNoptiScraper: found {$itemCount} kzn-sw-item elements in page");

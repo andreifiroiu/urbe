@@ -22,9 +22,28 @@ class ProfileController extends Controller
 
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->update($request->validated());
+        $user = $request->user();
+        $validated = $request->validated();
+
+        if (isset($validated['email']) && $validated['email'] !== $user->email) {
+            $validated['email_verified_at'] = null;
+        }
+
+        $user->update($validated);
+
+        if (isset($validated['email_verified_at'])) {
+            $user->sendEmailVerificationNotification();
+        }
 
         return redirect()->route('profile.show')
             ->with('success', 'Profile updated.');
+    }
+
+    public function resendVerification(Request $request): RedirectResponse
+    {
+        $request->user()->sendEmailVerificationNotification();
+
+        return redirect()->route('profile.show')
+            ->with('success', 'Verification email sent.');
     }
 }

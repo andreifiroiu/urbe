@@ -8,11 +8,11 @@ import EventList from '@/Components/Events/EventList';
  */
 export default function SavedEvents({ events = [] }) {
     return (
-        <AppLayout title="Saved Events">
-            <Head title="Saved Events" />
+        <AppLayout title="Evenimente salvate">
+            <Head title="Evenimente salvate" />
             <EventList
                 events={events}
-                emptyMessage="You haven't saved any events yet. Browse events and bookmark the ones you like."
+                emptyMessage="Nu ai salvat niciun eveniment. Răsfoiește evenimentele și adaugă-le la favorite pe cele care îți plac."
             />
         </AppLayout>
     );
