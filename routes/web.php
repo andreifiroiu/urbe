@@ -6,12 +6,18 @@ use App\Http\Controllers\Admin\ScraperController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\EmailReactionController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\NotificationSettingsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecommendationController;
 use Illuminate\Support\Facades\Route;
+
+// Signed email reaction URL — no auth required, signature validates identity
+Route::get('reactions/{user}/{event}/{reaction}', [EmailReactionController::class, 'store'])
+    ->name('reactions.email')
+    ->middleware('signed');
 
 // Auth (guest only)
 Route::middleware('guest')->group(function () {

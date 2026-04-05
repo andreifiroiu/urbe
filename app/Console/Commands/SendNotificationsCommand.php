@@ -23,9 +23,15 @@ class SendNotificationsCommand extends Command
             $user = User::findOrFail($userId);
             $this->info("Composing notification for user: {$user->email}");
 
-            $notification = $composer->composeForUser($user);
-            $dispatcher->dispatch($notification);
+            $notification = $composer->compose($user);
 
+            if ($notification === null) {
+                $this->warn('No events to recommend for this user.');
+
+                return self::SUCCESS;
+            }
+
+            $dispatcher->dispatch($notification);
             $this->info('Notification sent successfully.');
 
             return self::SUCCESS;
@@ -33,7 +39,7 @@ class SendNotificationsCommand extends Command
 
         $this->info('Composing notifications for all due users...');
 
-        $notifications = $composer->composeForDueUsers();
+        $notifications = $composer->composeForAll();
 
         if ($notifications->isEmpty()) {
             $this->info('No users are due for notifications.');
@@ -43,11 +49,9 @@ class SendNotificationsCommand extends Command
 
         $this->info("Dispatching {$notifications->count()} notifications...");
 
-        foreach ($notifications as $notification) {
-            $dispatcher->dispatch($notification);
-        }
+        $sent = $dispatcher->dispatchBatch($notifications);
 
-        $this->info("Successfully sent {$notifications->count()} notifications.");
+        $this->info("Successfully sent {$sent}/{$notifications->count()} notifications.");
 
         return self::SUCCESS;
     }
