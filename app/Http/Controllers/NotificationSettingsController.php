@@ -34,7 +34,7 @@ class NotificationSettingsController extends Controller
             'notification_frequency' => NotificationFrequency::from($validated['frequency']),
         ]);
 
-        return redirect()->route('settings.notifications')
+        return redirect()->route('profile.show')
             ->with('success', 'Notification settings updated.');
     }
 }

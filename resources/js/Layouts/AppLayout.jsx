@@ -7,7 +7,6 @@ const navLinks = [
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/events', label: 'Events' },
     { href: '/profile', label: 'Profile' },
-    { href: '/settings/notifications', label: 'Settings' },
 ];
 
 /**
@@ -98,13 +97,6 @@ export default function AppLayout({ children, title }) {
                                             onClick={() => setUserMenuOpen(false)}
                                         >
                                             Your Profile
-                                        </Link>
-                                        <Link
-                                            href="/settings/notifications"
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                                            onClick={() => setUserMenuOpen(false)}
-                                        >
-                                            Settings
                                         </Link>
                                         <hr className="my-1 border-gray-100" />
                                         <button
