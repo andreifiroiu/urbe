@@ -6,6 +6,7 @@ use App\Services\Scraping\Adapters\EventbriteScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use App\Services\Scraping\Adapters\IaBiletScraper;
 use App\Services\Scraping\Adapters\OnEventScraper;
+use App\Services\Scraping\Adapters\TimisoreniScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
@@ -60,6 +61,7 @@ return [
         'eventbrite' => EventbriteScraper::class,
         'iabilet' => IaBiletScraper::class,
         'onevent' => OnEventScraper::class,
+        'timisoreni' => TimisoreniScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
     ],
@@ -82,7 +84,7 @@ return [
                 ['adapter' => 'allevents',       'url' => 'https://allevents.in/timisoara/all',                     'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'eventbrite',      'params' => ['address' => 'Timisoara,Romania'],                    'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'onevent',         'url' => 'https://www.onevent.ro/orase/timisoara/',                'enabled' => false, 'interval_hours' => 6],
-                ['adapter' => 'timisoreni',      'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/',    'enabled' => false, 'interval_hours' => 8],
+                ['adapter' => 'timisoreni', 'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/', 'extra_urls' => ['https://www.timisoreni.ro/info/spectacole/'], 'enabled' => false, 'interval_hours' => 8],
                 ['adapter' => 'opera',           'url' => 'https://www.ort.ro/ro/Spectacole.html',                  'enabled' => false, 'interval_hours' => 24],
                 ['adapter' => 'teatru_national', 'url' => 'https://www.tntm.ro/',                                   'enabled' => false, 'interval_hours' => 24],
                 ['adapter' => 'entertix',        'url' => 'https://www.entertix.ro/evenimente',                     'enabled' => false, 'interval_hours' => 8],
