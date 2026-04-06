@@ -11,6 +11,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Spatie\Browsershot\Browsershot;
 
 abstract class AbstractHtmlScraper implements ScraperAdapter
 {
@@ -384,6 +385,29 @@ abstract class AbstractHtmlScraper implements ScraperAdapter
     protected function sleepOnRetry(): void
     {
         sleep(10);
+    }
+
+    /**
+     * Render a URL with a headless browser (Browsershot / Puppeteer) and return
+     * the resulting page HTML.
+     *
+     * Override in test doubles to return fixture HTML without launching a browser.
+     */
+    protected function fetchWithBrowsershot(string $url): string
+    {
+        try {
+            return Browsershot::url($url)
+                ->waitUntilNetworkIdle()
+                ->timeout(30)
+                ->bodyHtml();
+        } catch (\Throwable $e) {
+            Log::warning("fetchWithBrowsershot failed for {$this->adapterKey()}", [
+                'url' => $url,
+                'error' => $e->getMessage(),
+            ]);
+
+            return '';
+        }
     }
 
     private function randomUserAgent(): string

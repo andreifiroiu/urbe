@@ -11,6 +11,7 @@ use App\Services\Scraping\Adapters\OnEventScraper;
 use App\Services\Scraping\Adapters\OperaTimisoaraScraper;
 use App\Services\Scraping\Adapters\TeatruNationalTmScraper;
 use App\Services\Scraping\Adapters\TimisoreniScraper;
+use App\Services\Scraping\Adapters\VisitTimisoaraScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
@@ -70,6 +71,7 @@ return [
         'teatru_national_tm' => TeatruNationalTmScraper::class,
         'timisoreni' => TimisoreniScraper::class,
         'meetup' => MeetupScraper::class,
+        'visit_timisoara' => VisitTimisoaraScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
     ],
