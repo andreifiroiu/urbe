@@ -141,14 +141,14 @@ class ScraperOrchestrator
     /**
      * Return only the enabled sources for a city that have a registered adapter.
      *
-     * @return list<array{adapter: string, url: string, enabled: bool, interval_hours: int}>
+     * @return list<array{adapter: string, url?: string, params?: array<string, mixed>, enabled: bool, interval_hours: int}>
      */
     public function getEnabledSources(string $cityKey): array
     {
         /** @var array<string, class-string<ScraperAdapter>> $registry */
         $registry = config('eventpulse.adapter_registry', []);
 
-        /** @var list<array{adapter: string, url: string, enabled: bool, interval_hours: int}> $sources */
+        /** @var list<array{adapter: string, url?: string, params?: array<string, mixed>, enabled: bool, interval_hours: int}> $sources */
         $sources = config("eventpulse.cities.{$cityKey}.sources", []);
 
         return array_values(
@@ -162,13 +162,13 @@ class ScraperOrchestrator
     /**
      * Find the source config entry for a specific adapter key within a city.
      *
-     * @return array{adapter: string, url: string, enabled: bool, interval_hours: int}
+     * @return array{adapter: string, url?: string, params?: array<string, mixed>, enabled: bool, interval_hours: int}
      *
      * @throws \InvalidArgumentException If no source config is found.
      */
     private function findSourceConfig(string $cityKey, string $adapterKey): array
     {
-        /** @var list<array{adapter: string, url: string, enabled: bool, interval_hours: int}> $sources */
+        /** @var list<array{adapter: string, url?: string, params?: array<string, mixed>, enabled: bool, interval_hours: int}> $sources */
         $sources = config("eventpulse.cities.{$cityKey}.sources", []);
 
         foreach ($sources as $source) {

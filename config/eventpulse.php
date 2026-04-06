@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 use App\Services\Scraping\Adapters\AllEventsScraper;
+use App\Services\Scraping\Adapters\EventbriteScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use App\Services\Scraping\Adapters\IaBiletScraper;
+use App\Services\Scraping\Adapters\OnEventScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
@@ -55,7 +57,9 @@ return [
 
     'adapter_registry' => [
         'allevents' => AllEventsScraper::class,
+        'eventbrite' => EventbriteScraper::class,
         'iabilet' => IaBiletScraper::class,
+        'onevent' => OnEventScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
     ],
@@ -76,7 +80,7 @@ return [
                 ],
                 ['adapter' => 'iabilet',        'url' => 'https://m.iabilet.ro/bilete-in-timisoara/',              'enabled' => false, 'interval_hours' => 4],
                 ['adapter' => 'allevents',       'url' => 'https://allevents.in/timisoara/all',                     'enabled' => false, 'interval_hours' => 6],
-                ['adapter' => 'eventbrite',      'url' => 'https://www.eventbriteapi.com/v3/',                      'enabled' => false, 'interval_hours' => 6],
+                ['adapter' => 'eventbrite',      'params' => ['address' => 'Timisoara,Romania'],                    'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'onevent',         'url' => 'https://www.onevent.ro/orase/timisoara/',                'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'timisoreni',      'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/',    'enabled' => false, 'interval_hours' => 8],
                 ['adapter' => 'opera',           'url' => 'https://www.ort.ro/ro/Spectacole.html',                  'enabled' => false, 'interval_hours' => 24],
@@ -90,6 +94,7 @@ return [
     ],
 
     'default_city' => env('EVENTPULSE_DEFAULT_CITY', 'timisoara'),
+    'eventbrite_api_key' => env('EVENTBRITE_API_KEY'),
     'notifications' => [
         'hour' => (int) env('EVENTPULSE_NOTIFICATION_HOUR', 8),
         'max_events_per_digest' => 10,

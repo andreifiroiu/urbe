@@ -17,7 +17,7 @@ interface ScraperAdapter
      * Called immediately for each parsed event. The caller is responsible for
      * persisting, deduplicating, or otherwise handling each event.
      *
-     * @param  array{adapter: string, url: string, extra_urls?: list<string>, enabled: bool, interval_hours: int, country?: string}  $sourceConfig
+     * @param  array{adapter: string, url?: string, extra_urls?: list<string>, enabled: bool, interval_hours: int, country?: string, params?: array<string, mixed>}  $sourceConfig
      * @param  array{label: string, timezone: string, coordinates: list<float>, radius_km: int}  $cityConfig
      * @param  callable(RawEvent): void  $onEvent
      */
@@ -27,7 +27,7 @@ interface ScraperAdapter
      * Human-readable identifier for logging and audit records.
      * Convention: "adapterKey@hostname" e.g. "zilesinopti@zilesinopti.ro".
      *
-     * @param  array{adapter: string, url: string}  $sourceConfig
+     * @param  array{adapter: string, url?: string, params?: array<string, mixed>}  $sourceConfig
      */
     public function sourceIdentifier(array $sourceConfig): string;
 }
