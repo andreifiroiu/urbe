@@ -6,6 +6,8 @@ use App\Services\Scraping\Adapters\EventbriteScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use App\Services\Scraping\Adapters\IaBiletScraper;
 use App\Services\Scraping\Adapters\OnEventScraper;
+use App\Services\Scraping\Adapters\OperaTimisoaraScraper;
+use App\Services\Scraping\Adapters\TeatruNationalTmScraper;
 use App\Services\Scraping\Adapters\TimisoreniScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
@@ -61,6 +63,8 @@ return [
         'eventbrite' => EventbriteScraper::class,
         'iabilet' => IaBiletScraper::class,
         'onevent' => OnEventScraper::class,
+        'opera_timisoara' => OperaTimisoaraScraper::class,
+        'teatru_national_tm' => TeatruNationalTmScraper::class,
         'timisoreni' => TimisoreniScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
@@ -85,8 +89,8 @@ return [
                 ['adapter' => 'eventbrite',      'params' => ['address' => 'Timisoara,Romania'],                    'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'onevent',         'url' => 'https://www.onevent.ro/orase/timisoara/',                'enabled' => false, 'interval_hours' => 6],
                 ['adapter' => 'timisoreni', 'url' => 'https://www.timisoreni.ro/info/index/t--evenimente/', 'extra_urls' => ['https://www.timisoreni.ro/info/spectacole/'], 'enabled' => false, 'interval_hours' => 8],
-                ['adapter' => 'opera',           'url' => 'https://www.ort.ro/ro/Spectacole.html',                  'enabled' => false, 'interval_hours' => 24],
-                ['adapter' => 'teatru_national', 'url' => 'https://www.tntm.ro/',                                   'enabled' => false, 'interval_hours' => 24],
+                ['adapter' => 'opera_timisoara', 'url' => 'https://www.ort.ro/ro/Spectacole.html',                   'enabled' => false, 'interval_hours' => 24],
+                ['adapter' => 'teatru_national_tm', 'url' => 'https://www.tntm.ro/',                                   'enabled' => false, 'interval_hours' => 24],
                 ['adapter' => 'entertix',        'url' => 'https://www.entertix.ro/evenimente',                     'enabled' => false, 'interval_hours' => 8],
                 ['adapter' => 'visit_timisoara', 'url' => 'https://visit-timisoara.com/events-activities/',         'enabled' => false, 'interval_hours' => 12],
                 ['adapter' => 'radio_timisoara', 'url' => 'https://www.radiotimisoara.ro/agenda-evenimente',        'enabled' => false, 'interval_hours' => 12],
