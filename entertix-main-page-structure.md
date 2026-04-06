@@ -1,0 +1,7055 @@
+- generic [active] [ref=e1]:
+  - dialog "This website uses cookies" [ref=e2]:
+    - generic [ref=e3]:
+      - link "Cookiebot by Usercentrics - opens in a new window" [ref=e6] [cursor=pointer]:
+        - /url: https://www.cookiebot.com/en/what-is-behind-powered-by-cookiebot/?utm_source=banner_cb&utm_medium=referral&utm_content=v2
+        - img [ref=e7]
+      - tabpanel "Consent" [ref=e34]:
+        - generic [ref=e36]:
+          - heading "This website uses cookies" [level=2] [ref=e37]
+          - generic [ref=e38]: We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+        - generic [ref=e39]:
+          - group "Consent Selection" [ref=e45]:
+            - generic [ref=e46]: Consent Selection
+            - generic [ref=e47]:
+              - generic [ref=e48]:
+                - strong [ref=e50]: Necessary
+                - generic [ref=e51]:
+                  - checkbox "Necessary" [checked] [disabled]
+              - generic [ref=e52]:
+                - strong [ref=e54] [cursor=pointer]: Preferences
+                - switch "Preferences" [ref=e56] [cursor=pointer]
+              - generic [ref=e57]:
+                - strong [ref=e59] [cursor=pointer]: Statistics
+                - switch "Statistics" [ref=e61] [cursor=pointer]
+              - generic [ref=e62]:
+                - strong [ref=e64] [cursor=pointer]: Marketing
+                - switch "Marketing" [ref=e66] [cursor=pointer]
+          - link "Show details" [ref=e68] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=e72]:
+        - button "Deny" [ref=e73] [cursor=pointer]
+        - button "Allow selection" [ref=e74] [cursor=pointer]
+        - button "Allow all" [ref=e75] [cursor=pointer]
+  - generic [ref=e76]:
+    - navigation [ref=e77]:
+      - generic [ref=e79]:
+        - link "entertix" [ref=e82] [cursor=pointer]:
+          - /url: https://www.entertix.ro
+          - img "entertix" [ref=e84]
+        - generic [ref=e87]:
+          - textbox "Cauta evenimente, sali, date sau artisti" [ref=e88]
+          - button [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]: 
+        - generic [ref=e94]:
+          - button "EN" [ref=e95] [cursor=pointer]
+          - button "DE" [ref=e96] [cursor=pointer]
+          - button "HU" [ref=e97] [cursor=pointer]
+    - generic [ref=e100]:
+      - generic [ref=e103]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: 24.12.20
+          - generic [ref=e107]: 31.12.26
+        - generic [ref=e108]:
+          - generic [ref=e109]: FEMEI, regia Raluca Iani @TNRS - Scena Digitala
+          - generic [ref=e110]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e112] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7432/femei-regia-raluca-iani-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e115]:
+        - generic [ref=e117]:
+          - generic [ref=e118]: 24.12.20
+          - generic [ref=e119]: 31.12.26
+        - generic [ref=e120]:
+          - generic [ref=e121]: ZEUL CARNAGIULUI, regia Bogdan Saratean @TNRS - Scena Digitala
+          - generic [ref=e122]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e124] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7433/zeul-carnagiului-regia-bogdan-saratean-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e127]:
+        - generic [ref=e129]:
+          - generic [ref=e130]: 24.12.20
+          - generic [ref=e131]: 31.12.26
+        - generic [ref=e132]:
+          - generic [ref=e133]: Felii, un spectacol de Lia Bugnar, cu Ofelia Popii @TNRS - Scena Digitala
+          - generic [ref=e134]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e136] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7045/felii-un-spectacol-de-lia-bugnar-cu-ofelia-popii-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e139]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: 24.12.20
+          - generic [ref=e143]: 31.12.26
+        - generic [ref=e144]:
+          - generic [ref=e145]: Tom si Jerry 2.0, regia Florin Piersic Jr. @TNRS - Scena Digitala
+          - generic [ref=e146]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e148] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7046/tom-si-jerry-2-0-regia-florin-piersic-jr-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e151]:
+        - generic [ref=e153]:
+          - generic [ref=e154]: 24.12.20
+          - generic [ref=e155]: 31.12.26
+        - generic [ref=e156]:
+          - generic [ref=e157]: Autobahn, regia Andrei si Andreea Grosu @TNRS - Scena Digitala
+          - generic [ref=e158]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e160] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7048/autobahn-regia-andrei-si-andreea-grosu-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e163]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: 24.12.20
+          - generic [ref=e167]: 31.12.26
+        - generic [ref=e168]:
+          - generic [ref=e169]: Opinia publica, regia Theodor-Cristian Popescu@TNRS - Scena Digitala
+          - generic [ref=e170]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e172] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7049/opinia-publica-regia-theodor-cristian-popescu-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e175]:
+        - generic [ref=e177]:
+          - generic [ref=e178]: 24.12.20
+          - generic [ref=e179]: 31.12.26
+        - generic [ref=e180]:
+          - generic [ref=e181]: Maternal, regia Radu Nica@TNRS - Scena Digitala
+          - generic [ref=e182]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e184] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7050/maternal-regia-radu-nica-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e187]:
+        - generic [ref=e189]:
+          - generic [ref=e190]: 24.12.20
+          - generic [ref=e191]: 31.12.26
+        - generic [ref=e192]:
+          - generic [ref=e193]: Vazduh@TNRS - Scena Digitala
+          - generic [ref=e194]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e196] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7051/vazduh-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e199]:
+        - generic [ref=e201]:
+          - generic [ref=e202]: 24.12.20
+          - generic [ref=e203]: 31.12.26
+        - generic [ref=e204]:
+          - generic [ref=e205]: Abonament Lunar@TNRS - Scena Digitala
+          - generic [ref=e206]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e208] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7052/abonament-lunar-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e211]:
+        - generic [ref=e213]:
+          - generic [ref=e214]: 24.12.20
+          - generic [ref=e215]: 31.12.26
+        - generic [ref=e216]:
+          - generic [ref=e217]: Abonament 3 luni@TNRS - Scena Digitala
+          - generic [ref=e218]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e220] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7053/abonament-3-luni-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e223]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: 24.12.20
+          - generic [ref=e227]: 31.12.26
+        - generic [ref=e228]:
+          - generic [ref=e229]: Abonament 12 luni@TNRS - Scena Digitala
+          - generic [ref=e230]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 24 dec 20 - 31 dec 26
+        - link "Bilete" [ref=e232] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7055/abonament-12-luni-tnrs-scena-digitala-24-dec-20-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e235]:
+        - generic [ref=e237]:
+          - generic [ref=e238]: 01.02.21
+          - generic [ref=e239]: 31.12.26
+        - generic [ref=e240]:
+          - generic [ref=e241]: Sunt o baba comunista @TNRS - Scena Digitala
+          - generic [ref=e242]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 21 - 31 dec 26
+        - link "Bilete" [ref=e244] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7231/sunt-o-baba-comunista-tnrs-scena-digitala-1-feb-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e247]:
+        - generic [ref=e249]:
+          - generic [ref=e250]: 01.02.21
+          - generic [ref=e251]: 31.12.26
+        - generic [ref=e252]:
+          - generic [ref=e253]: Cea mai frumoasa zi @TNRS - Scena Digitala
+          - generic [ref=e254]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 21 - 31 dec 26
+        - link "Bilete" [ref=e256] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7232/cea-mai-frumoasa-zi-tnrs-scena-digitala-1-feb-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e259]:
+        - generic [ref=e261]:
+          - generic [ref=e262]: 01.04.21
+          - generic [ref=e263]: 31.12.26
+        - generic [ref=e264]:
+          - generic [ref=e265]: Vara in care mama a avut ochii verzi @TNRS - Scena Digitala
+          - generic [ref=e266]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 21 - 31 dec 26
+        - link "Bilete" [ref=e268] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7499/vara-in-care-mama-a-avut-ochii-verzi-tnrs-scena-digitala-1-apr-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e271]:
+        - generic [ref=e273]:
+          - generic [ref=e274]: 01.04.21
+          - generic [ref=e275]: 31.12.26
+        - generic [ref=e276]:
+          - generic [ref=e277]: Contra democratiei @TNRS - Scena Digitala
+          - generic [ref=e278]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 21 - 31 dec 26
+        - link "Bilete" [ref=e280] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7500/contra-democratiei-tnrs-scena-digitala-1-apr-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e283]:
+        - generic [ref=e285]:
+          - generic [ref=e286]: 01.05.21
+          - generic [ref=e287]: 31.12.26
+        - generic [ref=e288]:
+          - generic [ref=e289]: Mici crime conjugale @TNRS - Scena Digitala
+          - generic [ref=e290]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 21 - 31 dec 26
+        - link "Bilete" [ref=e292] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7556/mici-crime-conjugale-tnrs-scena-digitala-1-mai-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e295]:
+        - generic [ref=e297]:
+          - generic [ref=e298]: 01.05.21
+          - generic [ref=e299]: 31.12.26
+        - generic [ref=e300]:
+          - generic [ref=e301]: Hin und Her @TNRS - Scena Digitala
+          - generic [ref=e302]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 21 - 31 dec 26
+        - link "Bilete" [ref=e304] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7557/hin-und-her-tnrs-scena-digitala-1-mai-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e307]:
+        - generic [ref=e309]:
+          - generic [ref=e310]: 01.05.21
+          - generic [ref=e311]: 31.12.26
+        - generic [ref=e312]:
+          - generic [ref=e313]: ROavangarde @TNRS - Scena Digitala
+          - generic [ref=e314]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 21 - 31 dec 26
+        - link "Bilete" [ref=e316] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7558/roavangarde-tnrs-scena-digitala-1-mai-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e319]:
+        - generic [ref=e321]:
+          - generic [ref=e322]: 01.06.21
+          - generic [ref=e323]: 31.12.26
+        - generic [ref=e324]:
+          - generic [ref=e325]: Mal/Praxis @TNRS - Scena Digitala
+          - generic [ref=e326]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 21 - 31 dec 26
+        - link "Bilete" [ref=e328] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7804/mal-praxis-tnrs-scena-digitala-1-iun-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e331]:
+        - generic [ref=e333]:
+          - generic [ref=e334]: 01.06.21
+          - generic [ref=e335]: 31.12.26
+        - generic [ref=e336]:
+          - generic [ref=e337]: Orb de mina @TNRS - Scena Digitala
+          - generic [ref=e338]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 21 - 31 dec 26
+        - link "Bilete" [ref=e340] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7805/orb-de-mina-tnrs-scena-digitala-1-iun-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e343]:
+        - generic [ref=e345]:
+          - generic [ref=e346]: 01.07.21
+          - generic [ref=e347]: 31.12.26
+        - generic [ref=e348]:
+          - generic [ref=e349]: Conferinta iraniana @TNRS - Scena Digitala
+          - generic [ref=e350]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 21 - 31 dec 26
+        - link "Bilete" [ref=e352] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8127/conferinta-iraniana-tnrs-scena-digitala-1-iul-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e355]:
+        - generic [ref=e357]:
+          - generic [ref=e358]: 01.07.21
+          - generic [ref=e359]: 31.12.26
+        - generic [ref=e360]:
+          - generic [ref=e361]: Oscar si buni roz @TNRS - Scena Digitala
+          - generic [ref=e362]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 21 - 31 dec 26
+        - link "Bilete" [ref=e364] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8128/oscar-si-buni-roz-tnrs-scena-digitala-1-iul-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e367]:
+        - generic [ref=e369]:
+          - generic [ref=e370]: 01.08.21
+          - generic [ref=e371]: 31.12.26
+        - generic [ref=e372]:
+          - generic [ref=e373]: De cealalta parte a lumii @TNRS - Scena Digitala
+          - generic [ref=e374]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 aug 21 - 31 dec 26
+        - link "Bilete" [ref=e376] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8629/de-cealalta-parte-a-lumii-tnrs-scena-digitala-1-aug-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e379]:
+        - generic [ref=e381]:
+          - generic [ref=e382]: 01.09.21
+          - generic [ref=e383]: 31.12.26
+        - generic [ref=e384]:
+          - generic [ref=e385]: Mesaje spre univers @TNRS - Scena Digitala
+          - generic [ref=e386]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 sep 21 - 31 dec 26
+        - link "Bilete" [ref=e388] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8906/mesaje-spre-univers-tnrs-scena-digitala-1-sep-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e391]:
+        - generic [ref=e393]:
+          - generic [ref=e394]: 01.12.21
+          - generic [ref=e395]: 31.12.26
+        - generic [ref=e396]:
+          - generic [ref=e397]: BOOKPINK@TNRS - Scena Digitala
+          - generic [ref=e398]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e400] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/9829/bookpink-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e403]:
+        - generic [ref=e405]:
+          - generic [ref=e406]: 01.12.21
+          - generic [ref=e407]: 31.12.26
+        - generic [ref=e408]:
+          - generic [ref=e409]: QUARTETT@TNRS - Scena Digitala
+          - generic [ref=e410]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e412] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/9830/quartett-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e415]:
+        - generic [ref=e417]:
+          - generic [ref=e418]: 01.12.21
+          - generic [ref=e419]: 31.12.26
+        - generic [ref=e420]:
+          - generic [ref=e421]: Steaua fara nume @TNRS - Scena Digitala
+          - generic [ref=e422]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e424] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/9831/steaua-fara-nume-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e427]:
+        - generic [ref=e429]:
+          - generic [ref=e430]: 01.12.21
+          - generic [ref=e431]: 31.12.26
+        - generic [ref=e432]:
+          - generic [ref=e433]: Antisocial@TNRS - Scena Digitala
+          - generic [ref=e434]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e436] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/9832/antisocial-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e439]:
+        - generic [ref=e441]:
+          - generic [ref=e442]: 01.12.21
+          - generic [ref=e443]: 31.12.26
+        - generic [ref=e444]:
+          - generic [ref=e445]: Youtopia@TNRS - Scena Digitala
+          - generic [ref=e446]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e448] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/9833/youtopia-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e451]:
+        - generic [ref=e453]:
+          - generic [ref=e454]: 01.12.21
+          - generic [ref=e455]: 31.12.26
+        - generic [ref=e456]:
+          - generic [ref=e457]: TREI SURORI@TNRS - Scena Digitala
+          - generic [ref=e458]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 21 - 31 dec 26
+        - link "Bilete" [ref=e460] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/10143/trei-surori-tnrs-scena-digitala-1-dec-21-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e463]:
+        - generic [ref=e465]:
+          - generic [ref=e466]: 01.01.21
+          - generic [ref=e467]: 31.12.26
+        - generic [ref=e468]:
+          - generic [ref=e469]: MOROI, regia Alexandru Dabija @TNRS - Scena Digitala
+          - generic [ref=e470]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26
+        - link "Bilete" [ref=e472] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7031/moroi-regia-alexandru-dabija-tnrs-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e475]:
+        - generic [ref=e477]:
+          - generic [ref=e478]: 01.01.21
+          - generic [ref=e479]: 31.12.26
+        - generic [ref=e480]:
+          - generic [ref=e481]: Povestea ursilor panda @TNRS - Scena Digitala
+          - generic [ref=e482]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26
+        - link "Bilete" [ref=e484] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8630/povestea-ursilor-panda-tnrs-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e487]:
+        - generic [ref=e489]:
+          - generic [ref=e490]: 01.01.21
+          - generic [ref=e491]: 31.12.26
+        - generic [ref=e492]:
+          - generic [ref=e493]: Calatoriile lui Gulliver @TNRS - Scena Digitala
+          - generic [ref=e494]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26
+        - link "Bilete" [ref=e496] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/8905/calatoriile-lui-gulliver-tnrs-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e499]:
+        - generic [ref=e501]:
+          - generic [ref=e502]: 01.01.21
+          - generic [ref=e503]: 31.12.26
+        - generic [ref=e504]:
+          - generic [ref=e505]: INCOACE SI INCOLO / HIN UND HER - transmisie live@Scena Digitala
+          - generic [ref=e506]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e508] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7486/incoace-si-incolo-hin-und-her-transmisie-live-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e511]:
+        - generic [ref=e513]:
+          - generic [ref=e514]: 01.01.21
+          - generic [ref=e515]: 31.12.26
+        - generic [ref=e516]:
+          - generic [ref=e517]: TOM SI JERRY 2.0 - transmisie live@Scena Digitala
+          - generic [ref=e518]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e520] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7488/tom-si-jerry-2-0-transmisie-live-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e523]:
+        - generic [ref=e525]:
+          - generic [ref=e526]: 01.01.21
+          - generic [ref=e527]: 31.12.26
+        - generic [ref=e528]:
+          - generic [ref=e529]: Doi pe un balansoar @Scena Digitala
+          - generic [ref=e530]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e532] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/10864/doi-pe-un-balansoar-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e535]:
+        - generic [ref=e537]:
+          - generic [ref=e538]: 01.01.21
+          - generic [ref=e539]: 31.12.26
+        - generic [ref=e540]:
+          - generic [ref=e541]: Live - transmisie live@Scena Digitala
+          - generic [ref=e542]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e544] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/7308/live-transmisie-live-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e547]:
+        - generic [ref=e549]:
+          - generic [ref=e550]: 01.01.21
+          - generic [ref=e551]: 31.12.26
+        - generic [ref=e552]:
+          - generic [ref=e553]: Tattoo@TNRS - Scena Digitala
+          - generic [ref=e554]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e556] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/10424/tattoo-tnrs-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e559]:
+        - generic [ref=e561]:
+          - generic [ref=e562]: 01.01.21
+          - generic [ref=e563]: 31.12.26
+        - generic [ref=e564]:
+          - generic [ref=e565]: Cerere in casatorie@TNRS - Scena Digitala
+          - generic [ref=e566]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 22 - 31 dec 26, 19:00
+        - link "Bilete" [ref=e568] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/11247/cerere-in-casatorie-tnrs-scena-digitala-1-ian-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e571]:
+        - generic [ref=e573]:
+          - generic [ref=e574]: 01.06.22
+          - generic [ref=e575]: 31.12.26
+        - generic [ref=e576]:
+          - generic [ref=e577]: Puzzle@TNRS - Scena Digitala
+          - generic [ref=e578]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 22 - 31 dec 26
+        - link "Bilete" [ref=e580] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/12154/puzzle-tnrs-scena-digitala-1-iun-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e583]:
+        - generic [ref=e585]:
+          - generic [ref=e586]: 01.06.22
+          - generic [ref=e587]: 31.12.26
+        - generic [ref=e588]:
+          - generic [ref=e589]: Necunoscuta cunoscuta@TNRS - Scena Digitala
+          - generic [ref=e590]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 22 - 31 dec 26
+        - link "Bilete" [ref=e592] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/12155/necunoscuta-cunoscuta-tnrs-scena-digitala-1-iun-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e595]:
+        - generic [ref=e597]:
+          - generic [ref=e598]: 01.06.22
+          - generic [ref=e599]: 31.12.26
+        - generic [ref=e600]:
+          - generic [ref=e601]: BRAVUL SOLDAT ŠVEJK@TNRS - Scena Digitala
+          - generic [ref=e602]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 22 - 31 dec 26
+        - link "Bilete" [ref=e604] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/11919/bravul-soldat-vejk-tnrs-scena-digitala-1-iun-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e607]:
+        - generic [ref=e609]:
+          - generic [ref=e610]: 01.07.22
+          - generic [ref=e611]: 31.12.26
+        - generic [ref=e612]:
+          - generic [ref=e613]: Hedda Gabler@TNRS - Scena Digitala
+          - generic [ref=e614]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e616] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/12819/hedda-gabler-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e619]:
+        - generic [ref=e621]:
+          - generic [ref=e622]: 01.07.22
+          - generic [ref=e623]: 31.12.26
+        - generic [ref=e624]:
+          - generic [ref=e625]: Trei surori. Monoloage@TNRS - Scena Digitala
+          - generic [ref=e626]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e628] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/14452/trei-surori-monoloage-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e631]:
+        - generic [ref=e633]:
+          - generic [ref=e634]: 01.07.22
+          - generic [ref=e635]: 31.12.26
+        - generic [ref=e636]:
+          - generic [ref=e637]: Domnul iedeman@TNRS - Scena Digitala
+          - generic [ref=e638]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e640] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/14453/domnul-iedeman-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e643]:
+        - generic [ref=e645]:
+          - generic [ref=e646]: 01.07.22
+          - generic [ref=e647]: 31.12.26
+        - generic [ref=e648]:
+          - generic [ref=e649]: Tesatorul de vise - Poveste de Craciun@TNRS - Scena Digitala
+          - generic [ref=e650]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e652] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/14213/tesatorul-de-vise-poveste-de-craciun-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e655]:
+        - generic [ref=e657]:
+          - generic [ref=e658]: 01.07.22
+          - generic [ref=e659]: 31.12.26
+        - generic [ref=e660]:
+          - generic [ref=e661]: Macbeth@TNRS - Scena Digitala
+          - generic [ref=e662]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e664] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/12434/macbeth-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e667]:
+        - generic [ref=e669]:
+          - generic [ref=e670]: 01.07.22
+          - generic [ref=e671]: 31.12.26
+        - generic [ref=e672]:
+          - generic [ref=e673]: Rug@TNRS - Scena Digitala
+          - generic [ref=e674]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e676] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/13245/rug-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e679]:
+        - generic [ref=e681]:
+          - generic [ref=e682]: 01.07.22
+          - generic [ref=e683]: 31.12.26
+        - generic [ref=e684]:
+          - generic [ref=e685]: Romeo si Julieta@TNRS - Scena Digitala
+          - generic [ref=e686]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 22 - 31 dec 26
+        - link "Bilete" [ref=e688] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/13791/romeo-si-julieta-tnrs-scena-digitala-1-iul-22-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e691]:
+        - generic [ref=e693]:
+          - generic [ref=e694]: 01.02.23
+          - generic [ref=e695]: 31.12.26
+        - generic [ref=e696]:
+          - generic [ref=e697]: Cameristele@TNRS - Scena Digitala
+          - generic [ref=e698]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 23 - 31 dec 26
+        - link "Bilete" [ref=e700] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/14918/cameristele-tnrs-scena-digitala-1-feb-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e703]:
+        - generic [ref=e705]:
+          - generic [ref=e706]: 01.02.23
+          - generic [ref=e707]: 31.12.26
+        - generic [ref=e708]:
+          - generic [ref=e709]: Sarbatori fericite@TNRS - Scena Digitala
+          - generic [ref=e710]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 23 - 31 dec 26
+        - link "Bilete" [ref=e712] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/14919/sarbatori-fericite-tnrs-scena-digitala-1-feb-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e715]:
+        - generic [ref=e717]:
+          - generic [ref=e718]: 01.03.23
+          - generic [ref=e719]: 31.12.26
+        - generic [ref=e720]:
+          - generic [ref=e721]: Antigona@TNRS - Scena Digitala
+          - generic [ref=e722]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mar 23 - 31 dec 26
+        - link "Bilete" [ref=e724] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/15367/antigona-tnrs-scena-digitala-1-mar-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e727]:
+        - generic [ref=e729]:
+          - generic [ref=e730]: 01.03.23
+          - generic [ref=e731]: 31.12.26
+        - generic [ref=e732]:
+          - generic [ref=e733]: Perfect compus@TNRS - Scena Digitala
+          - generic [ref=e734]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mar 23 - 31 dec 26
+        - link "Bilete" [ref=e736] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/15368/perfect-compus-tnrs-scena-digitala-1-mar-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e739]:
+        - generic [ref=e741]:
+          - generic [ref=e742]: 01.04.23
+          - generic [ref=e743]: 31.12.26
+        - generic [ref=e744]:
+          - generic [ref=e745]: Livada de visini@TNRS - Scena Digitala
+          - generic [ref=e746]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 23 - 31 dec 26
+        - link "Bilete" [ref=e748] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/16024/livada-de-visini-tnrs-scena-digitala-1-apr-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e751]:
+        - generic [ref=e753]:
+          - generic [ref=e754]: 01.04.23
+          - generic [ref=e755]: 31.12.26
+        - generic [ref=e756]:
+          - generic [ref=e757]: Operele lui William Shakespeare pe scurt@TNRS - Scena Digitala
+          - generic [ref=e758]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 23 - 31 dec 26
+        - link "Bilete" [ref=e760] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/16025/operele-lui-william-shakespeare-pe-scurt-tnrs-scena-digitala-1-apr-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e763]:
+        - generic [ref=e765]:
+          - generic [ref=e766]: 01.05.23
+          - generic [ref=e767]: 31.12.26
+        - generic [ref=e768]:
+          - generic [ref=e769]: D\'ale lolelor@TNRS - Scena Digitala
+          - generic [ref=e770]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 23 - 31 dec 26
+        - link "Bilete" [ref=e772] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/16710/d-ale-lolelor-tnrs-scena-digitala-1-mai-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e775]:
+        - generic [ref=e777]:
+          - generic [ref=e778]: 01.06.23
+          - generic [ref=e779]: 31.12.26
+        - generic [ref=e780]:
+          - generic [ref=e781]: Am angajat un ucigas profesionist@TNRS - Scena Digitala
+          - generic [ref=e782]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 23 - 31 dec 26
+        - link "Bilete" [ref=e784] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/17301/am-angajat-un-ucigas-profesionist-tnrs-scena-digitala-1-iun-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e787]:
+        - generic [ref=e789]:
+          - generic [ref=e790]: 25.08.23
+          - generic [ref=e791]: 31.05.26
+        - generic [ref=e792]:
+          - generic [ref=e793]: MINA KIDS
+          - generic [ref=e794]: MINA Museum, Bucuresti, 25 aug 23 - 31 mai 26
+        - link "Bilete" [ref=e796] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/18332/mina-kids-25-aug-23-31-mai-26-mina-museum-bucuresti.html
+      - generic [ref=e799]:
+        - generic [ref=e801]:
+          - generic [ref=e802]: 13.09.23
+          - generic [ref=e803]: 31.12.26
+        - generic [ref=e804]:
+          - generic [ref=e805]: Jocul de-a vacanta@TNRS - Scena Digitala
+          - generic [ref=e806]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 13 sep 23 - 31 dec 26
+        - link "Bilete" [ref=e808] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/16711/jocul-de-a-vacanta-tnrs-scena-digitala-13-sep-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e811]:
+        - generic [ref=e813]:
+          - generic [ref=e814]: 01.11.23
+          - generic [ref=e815]: 31.12.26
+        - generic [ref=e816]:
+          - generic [ref=e817]: Un secret despre bucurie @TNRS - Scena Digitala
+          - generic [ref=e818]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 nov 23 - 31 dec 26
+        - link "Bilete" [ref=e820] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/19346/un-secret-despre-bucurie-tnrs-scena-digitala-1-nov-23-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e823]:
+        - generic [ref=e825]:
+          - generic [ref=e826]: 01.01.24
+          - generic [ref=e827]: 31.12.26
+        - generic [ref=e828]:
+          - generic [ref=e829]: Ora in care nu stiam nimic unii de altii @TNRS - Scena Digitala
+          - generic [ref=e830]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 24 - 31 dec 26
+        - link "Bilete" [ref=e832] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/20360/ora-in-care-nu-stiam-nimic-unii-de-altii-tnrs-scena-digitala-1-ian-24-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e835]:
+        - generic [ref=e837]:
+          - generic [ref=e838]: 01.01.24
+          - generic [ref=e839]: 31.12.26
+        - generic [ref=e840]:
+          - generic [ref=e841]: (Aproape) Toate operele lui Molière@TNRS - Scena Digitala
+          - generic [ref=e842]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 24 - 31 dec 26
+        - link "Bilete" [ref=e844] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/20223/aproape-toate-operele-lui-molire-tnrs-scena-digitala-1-ian-24-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e847]:
+        - generic [ref=e849]:
+          - generic [ref=e850]: 01.04.24
+          - generic [ref=e851]: 01.02.30
+        - generic [ref=e852]:
+          - generic [ref=e853]: Constantin Chiriac si Constantin Necula in dialog cu Florin Piersic @TNRS - Scena Digitala
+          - generic [ref=e854]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 24 - 1 feb 30
+        - link "Bilete" [ref=e856] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/22095/constantin-chiriac-si-constantin-necula-in-dialog-cu-florin-piersic-tnrs-scena-digitala-1-apr-24-1-feb-30-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e859]:
+        - generic [ref=e861]:
+          - generic [ref=e862]: 16.05.24
+          - generic [ref=e863]: 01.01.26
+        - generic [ref=e864]:
+          - generic [ref=e865]: Dinozaurii - O calatorie imersiva in Lumea Preistorica + Lectie Astronomie
+          - generic [ref=e866]: MINA Museum, Bucuresti, 16 mai 24 - 1 ian 27
+        - link "Bilete" [ref=e868] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/23076/dinozaurii-o-calatorie-imersiva-in-lumea-preistorica-lectie-astronomie-16-mai-24-1-ian-27-mina-museum-bucuresti.html
+      - generic [ref=e871]:
+        - generic [ref=e873]:
+          - generic [ref=e874]: 01.10.24
+          - generic [ref=e875]: 31.12.26
+        - generic [ref=e876]:
+          - generic [ref=e877]: PESCARUSUL @TNRS - Scena Digitala
+          - generic [ref=e878]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 oct 24 - 31 dec 26
+        - link "Bilete" [ref=e880] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/24999/pescarusul-tnrs-scena-digitala-1-oct-24-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e883]:
+        - generic [ref=e885]:
+          - generic [ref=e886]: 01.11.24
+          - generic [ref=e887]: 31.12.26
+        - generic [ref=e888]:
+          - generic [ref=e889]: Woyzeck @TNRS - Scena Digitala
+          - generic [ref=e890]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 nov 24 - 31 dec 26
+        - link "Bilete" [ref=e892] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/25719/woyzeck-tnrs-scena-digitala-1-nov-24-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e895]:
+        - generic [ref=e897]:
+          - generic [ref=e898]: 01.12.24
+          - generic [ref=e899]: 31.12.26
+        - generic [ref=e900]:
+          - generic [ref=e901]: Legenda din Hamelin, o posibila istorie a sasilor @TNRS - Scena Digitala
+          - generic [ref=e902]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 24 - 31 dec 26
+        - link "Bilete" [ref=e904] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/26263/legenda-din-hamelin-o-posibila-istorie-a-sasilor-tnrs-scena-digitala-1-dec-24-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e907]:
+        - generic [ref=e909]:
+          - generic [ref=e910]: 06.12.24
+          - generic [ref=e911]: 31.05.26
+        - generic [ref=e912]:
+          - generic [ref=e913]: Padurea Magica + Lectie Astronomie
+          - generic [ref=e914]: MINA Museum, Bucuresti, 6 dec 24 - 31 mai 26, 10:00
+        - link "Bilete" [ref=e916] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/26307/padurea-magica-lectie-astronomie-6-dec-24-31-mai-26-mina-museum-bucuresti.html
+      - generic [ref=e919]:
+        - generic [ref=e921]:
+          - generic [ref=e922]: 01.04.25
+          - generic [ref=e923]: 31.12.26
+        - generic [ref=e924]:
+          - generic [ref=e925]: Electra @TNRS - Scena Digitala
+          - generic [ref=e926]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 25 - 31 dec 26
+        - link "Bilete" [ref=e928] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/28593/electra-tnrs-scena-digitala-1-apr-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e931]:
+        - generic [ref=e933]:
+          - generic [ref=e934]: 01.05.25
+          - generic [ref=e935]: 31.12.26
+        - generic [ref=e936]:
+          - generic [ref=e937]: Acumulari@TNRS - Scena Digitala
+          - generic [ref=e938]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 25 - 31 dec 26
+        - link "Bilete" [ref=e940] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/29937/acumulari-tnrs-scena-digitala-1-mai-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e943]:
+        - generic [ref=e945]:
+          - generic [ref=e946]: 01.05.25
+          - generic [ref=e947]: 31.12.26
+        - generic [ref=e948]:
+          - generic [ref=e949]: Container @TNRS - Scena Digitala
+          - generic [ref=e950]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mai 25 - 31 dec 26
+        - link "Bilete" [ref=e952] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/29938/container-tnrs-scena-digitala-1-mai-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e955]:
+        - generic [ref=e957]:
+          - generic [ref=e958]: 01.06.25
+          - generic [ref=e959]: 31.12.26
+        - generic [ref=e960]:
+          - generic [ref=e961]: Procesul @TNRS - Scena Digitala
+          - generic [ref=e962]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 25 - 31 dec 26
+        - link "Bilete" [ref=e964] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30598/procesul-tnrs-scena-digitala-1-iun-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e967]:
+        - generic [ref=e969]:
+          - generic [ref=e970]: 01.06.25
+          - generic [ref=e971]: 31.12.26
+        - generic [ref=e972]:
+          - generic [ref=e973]: Curannera @TNRS - Scena Digitala
+          - generic [ref=e974]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iun 25 - 31 dec 26
+        - link "Bilete" [ref=e976] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30599/curannera-tnrs-scena-digitala-1-iun-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e979]:
+        - generic [ref=e981]:
+          - generic [ref=e982]: 05.06.25
+          - generic [ref=e983]: 31.12.26
+        - generic [ref=e984]:
+          - generic [ref=e985]: Muzeul de Arta Cluj-Napoca - Expozitii Temporare / Temporary Exhibitions
+          - generic [ref=e986]: Muzeul de Arta , Cluj-Napoca, 5 iun 25 - 31 dec 26
+        - link "Bilete" [ref=e988] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30625/muzeul-de-arta-cluj-napoca-expozitii-temporare-temporary-exhibitions-5-iun-25-31-dec-26-muzeul-de-arta-cluj-napoca.html
+      - generic [ref=e991]:
+        - generic [ref=e993]:
+          - generic [ref=e994]: 05.06.25
+          - generic [ref=e995]: 31.12.26
+        - generic [ref=e996]:
+          - generic [ref=e997]: Muzeul de Arta Cluj-Napoca - Galeria Nationala / National Gallery
+          - generic [ref=e998]: Muzeul de Arta , Cluj-Napoca, 5 iun 25 - 31 dec 26
+        - link "Bilete" [ref=e1000] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/28603/muzeul-de-arta-cluj-napoca-galeria-nationala-national-gallery-5-iun-25-31-dec-26-muzeul-de-arta-cluj-napoca.html
+      - generic [ref=e1003]:
+        - generic [ref=e1005]:
+          - generic [ref=e1006]: 01.07.25
+          - generic [ref=e1007]: 31.12.26
+        - generic [ref=e1008]:
+          - generic [ref=e1009]: Painea din cer / Mana @TNRS - Scena Digitala
+          - generic [ref=e1010]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 25 - 31 dec 26
+        - link "Bilete" [ref=e1012] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31018/painea-din-cer-mana-tnrs-scena-digitala-1-iul-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1015]:
+        - generic [ref=e1017]:
+          - generic [ref=e1018]: 01.07.25
+          - generic [ref=e1019]: 31.12.26
+        - generic [ref=e1020]:
+          - generic [ref=e1021]: Nunta insangerata @TNRS - Scena Digitala
+          - generic [ref=e1022]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 iul 25 - 31 dec 26
+        - link "Bilete" [ref=e1024] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31019/nunta-insangerata-tnrs-scena-digitala-1-iul-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1027]:
+        - generic [ref=e1029]:
+          - generic [ref=e1030]: 01.08.25
+          - generic [ref=e1031]: 31.12.26
+        - generic [ref=e1032]:
+          - generic [ref=e1033]: Concert de deschidere FITS – Rapsodiile @TNRS - Scena Digitala
+          - generic [ref=e1034]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 aug 25 - 31 dec 26
+        - link "Bilete" [ref=e1036] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31429/concert-de-deschidere-fits-rapsodiile-tnrs-scena-digitala-1-aug-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1039]:
+        - generic [ref=e1041]:
+          - generic [ref=e1042]: 01.08.25
+          - generic [ref=e1043]: 31.12.26
+        - generic [ref=e1044]:
+          - generic [ref=e1045]: 11 Luptători @TNRS - Scena Digitala
+          - generic [ref=e1046]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 aug 25 - 31 dec 26
+        - link "Bilete" [ref=e1048] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31430/11-lupttori-tnrs-scena-digitala-1-aug-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1051]:
+        - generic [ref=e1053]:
+          - generic [ref=e1054]: 01.08.25
+          - generic [ref=e1055]: 31.12.26
+        - generic [ref=e1056]:
+          - generic [ref=e1057]: Ultima generație @TNRS - Scena Digitala
+          - generic [ref=e1058]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 aug 25 - 31 dec 26
+        - link "Bilete" [ref=e1060] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31431/ultima-generaie-tnrs-scena-digitala-1-aug-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1063]:
+        - generic [ref=e1065]:
+          - generic [ref=e1066]: 01.09.25
+          - generic [ref=e1067]: 31.12.26
+        - generic [ref=e1068]:
+          - generic [ref=e1069]: Cuplu @TNRS - Scena Digitala
+          - generic [ref=e1070]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 sep 25 - 31 dec 26
+        - link "Bilete" [ref=e1072] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31918/cuplu-tnrs-scena-digitala-1-sep-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1075]:
+        - generic [ref=e1077]:
+          - generic [ref=e1078]: 01.09.25
+          - generic [ref=e1079]: 31.12.26
+        - generic [ref=e1080]:
+          - generic [ref=e1081]: Sunetul muzicuței @TNRS - Scena Digitala
+          - generic [ref=e1082]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 sep 25 - 31 dec 26
+        - link "Bilete" [ref=e1084] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31920/sunetul-muzicuei-tnrs-scena-digitala-1-sep-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1087]:
+        - generic [ref=e1089]:
+          - generic [ref=e1090]: 01.09.25
+          - generic [ref=e1091]: 31.12.26
+        - generic [ref=e1092]:
+          - generic [ref=e1093]: Violoncelul @TNRS - Scena Digitala
+          - generic [ref=e1094]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 sep 25 - 31 dec 26
+        - link "Bilete" [ref=e1096] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31922/violoncelul-tnrs-scena-digitala-1-sep-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1099]:
+        - generic [ref=e1101]:
+          - generic [ref=e1102]: 01.10.25
+          - generic [ref=e1103]: 31.12.26
+        - generic [ref=e1104]:
+          - generic [ref=e1105]: Lovitura de grație @TNRS - Scena Digitala
+          - generic [ref=e1106]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 oct 25 - 31 dec 26
+        - link "Bilete" [ref=e1108] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32619/lovitura-de-graie-tnrs-scena-digitala-1-oct-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1111]:
+        - generic [ref=e1113]:
+          - generic [ref=e1114]: 01.10.25
+          - generic [ref=e1115]: 31.12.26
+        - generic [ref=e1116]:
+          - generic [ref=e1117]: În numele Fado @TNRS - Scena Digitala
+          - generic [ref=e1118]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 oct 25 - 31 dec 26
+        - link "Bilete" [ref=e1120] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32620/n-numele-fado-tnrs-scena-digitala-1-oct-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1123]:
+        - generic [ref=e1125]:
+          - generic [ref=e1126]: 01.10.25
+          - generic [ref=e1127]: 31.12.26
+        - generic [ref=e1128]:
+          - generic [ref=e1129]: Iarna @TNRS - Scena Digitala
+          - generic [ref=e1130]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 oct 25 - 31 dec 26
+        - link "Bilete" [ref=e1132] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32621/iarna-tnrs-scena-digitala-1-oct-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1135]:
+        - generic [ref=e1137]:
+          - generic [ref=e1138]: 01.10.25
+          - generic [ref=e1139]: 30.11.26
+        - generic [ref=e1140]:
+          - generic [ref=e1141]: Voucher poligon de tragere Progear
+          - generic [ref=e1142]: Progear Performance Center, Bucuresti, 1 oct 25 - 30 nov 26
+        - link "Bilete" [ref=e1144] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32978/voucher-poligon-de-tragere-progear-1-oct-25-30-nov-26-progear-performance-center-bucuresti.html
+      - generic [ref=e1147]:
+        - generic [ref=e1149]:
+          - generic [ref=e1150]: 16 oct
+          - generic [ref=e1151]: 30 nov
+        - generic [ref=e1152]:
+          - generic [ref=e1153]: Programari poligon de tragere Progear
+          - generic [ref=e1154]: Progear Performance Center, Bucuresti, 16 oct - 30 nov 2025
+        - link "Bilete" [ref=e1156] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32975/programari-poligon-de-tragere-progear-16-oct-30-nov-2025-progear-performance-center-bucuresti.html
+      - generic [ref=e1159]:
+        - generic [ref=e1161]:
+          - generic [ref=e1162]: 31.10.25
+          - generic [ref=e1163]: 31.12.26
+        - generic [ref=e1164]:
+          - generic [ref=e1165]: MINA KIDS@IASI
+          - generic [ref=e1166]: MINA , Iasi, 31 oct 25 - 31 dec 26
+        - link "Bilete" [ref=e1168] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31671/mina-kids-iasi-31-oct-25-31-dec-26-mina-iasi.html
+      - generic [ref=e1171]:
+        - generic [ref=e1173]:
+          - generic [ref=e1174]: 01.11.25
+          - generic [ref=e1175]: 31.12.26
+        - generic [ref=e1176]:
+          - generic [ref=e1177]: Mozart Requiem KV626 @TNRS - Scena Digitala
+          - generic [ref=e1178]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 nov 25 - 31 dec 26
+        - link "Bilete" [ref=e1180] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33374/mozart-requiem-kv626-tnrs-scena-digitala-1-nov-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1183]:
+        - generic [ref=e1185]:
+          - generic [ref=e1186]: 01.11.25
+          - generic [ref=e1187]: 31.12.26
+        - generic [ref=e1188]:
+          - generic [ref=e1189]: Concert de muzica bizantina@TNRS - Scena Digitala
+          - generic [ref=e1190]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 nov 25 - 31 dec 26
+        - link "Bilete" [ref=e1192] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33375/concert-de-muzica-bizantina-tnrs-scena-digitala-1-nov-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1195]:
+        - generic [ref=e1197]:
+          - generic [ref=e1198]: 01.11.25
+          - generic [ref=e1199]: 31.12.26
+        - generic [ref=e1200]:
+          - generic [ref=e1201]: O istorie a omenirii @TNRS - Scena Digitala
+          - generic [ref=e1202]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 nov 25 - 31 dec 26
+        - link "Bilete" [ref=e1204] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33376/o-istorie-a-omenirii-tnrs-scena-digitala-1-nov-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1207]:
+        - generic [ref=e1209]:
+          - generic [ref=e1210]: 14.11.25
+          - generic [ref=e1211]: 14.11.26
+        - generic [ref=e1212]:
+          - generic [ref=e1213]: Galeria de Arta Nationala
+          - generic [ref=e1214]: Muzeul National de Arta al Romaniei, Bucuresti, 14 nov 25 - 14 nov 26
+        - link "Bilete" [ref=e1216] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33708/galeria-de-arta-nationala-14-nov-25-14-nov-26-muzeul-national-de-arta-al-romaniei-bucuresti.html
+      - generic [ref=e1219]:
+        - generic [ref=e1221]:
+          - generic [ref=e1222]: 14.11.25
+          - generic [ref=e1223]: 14.11.26
+        - generic [ref=e1224]:
+          - generic [ref=e1225]: Galeria de Arta Europeana
+          - generic [ref=e1226]: Muzeul National de Arta al Romaniei, Bucuresti, 14 nov 25 - 14 nov 26
+        - link "Bilete" [ref=e1228] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33709/galeria-de-arta-europeana-14-nov-25-14-nov-26-muzeul-national-de-arta-al-romaniei-bucuresti.html
+      - generic [ref=e1231]:
+        - generic [ref=e1233]:
+          - generic [ref=e1234]: 14.11.25
+          - generic [ref=e1235]: 14.11.26
+        - generic [ref=e1236]:
+          - generic [ref=e1237]: Galeria de Arta Decorativa Europeana + Galeria de Arta Orientala
+          - generic [ref=e1238]: Muzeul National de Arta al Romaniei, Bucuresti, 14 nov 25 - 14 nov 26
+        - link "Bilete" [ref=e1240] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33710/galeria-de-arta-decorativa-europeana-galeria-de-arta-orientala-14-nov-25-14-nov-26-muzeul-national-de-arta-al-romaniei-bucuresti.html
+      - generic [ref=e1243]:
+        - generic [ref=e1245]:
+          - generic [ref=e1246]: 14.11.25
+          - generic [ref=e1247]: 14.11.26
+        - generic [ref=e1248]:
+          - generic [ref=e1249]: Muzeul Colecțiilor de Arta
+          - generic [ref=e1250]: Muzeul Colectiilor de Arta, Bucuresti, 14 nov 25 - 14 nov 26
+        - link "Bilete" [ref=e1252] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33713/muzeul-coleciilor-de-arta-14-nov-25-14-nov-26-muzeul-colectiilor-de-arta-bucuresti.html
+      - generic [ref=e1255]:
+        - generic [ref=e1257]:
+          - generic [ref=e1258]: 30.11.25
+          - generic [ref=e1259]: 31.12.26
+        - generic [ref=e1260]:
+          - generic [ref=e1261]: Retro Universe - Time Travel Park
+          - generic [ref=e1262]: Retro Universe, Cluj-Napoca, 30 nov 25 - 31 dec 26
+        - link "Bilete" [ref=e1264] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33759/retro-universe-time-travel-park-30-nov-25-31-dec-26-retro-universe-cluj-napoca.html
+      - generic [ref=e1267]:
+        - generic [ref=e1269]:
+          - generic [ref=e1270]: 01.12.25
+          - generic [ref=e1271]: 31.12.26
+        - generic [ref=e1272]:
+          - generic [ref=e1273]: Fado - Dor și lumină @TNRS - Scena Digitala
+          - generic [ref=e1274]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 25 - 31 dec 26
+        - link "Bilete" [ref=e1276] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33884/fado-dor-i-lumin-tnrs-scena-digitala-1-dec-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1279]:
+        - generic [ref=e1281]:
+          - generic [ref=e1282]: 01.12.25
+          - generic [ref=e1283]: 31.12.26
+        - generic [ref=e1284]:
+          - generic [ref=e1285]: The Director\'s Cut - Best of Kibbutz @TNRS - Scena Digitala
+          - generic [ref=e1286]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 25 - 31 dec 26
+        - link "Bilete" [ref=e1288] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33885/the-director-s-cut-best-of-kibbutz-tnrs-scena-digitala-1-dec-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1291]:
+        - generic [ref=e1293]:
+          - generic [ref=e1294]: 01.12.25
+          - generic [ref=e1295]: 31.12.26
+        - generic [ref=e1296]:
+          - generic [ref=e1297]: Unchiul Vanea @TNRS - Scena Digitala
+          - generic [ref=e1298]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 dec 25 - 31 dec 26
+        - link "Bilete" [ref=e1300] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33886/unchiul-vanea-tnrs-scena-digitala-1-dec-25-31-dec-26-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1303]:
+        - generic [ref=e1305]:
+          - generic [ref=e1306]: 13.12.25
+          - generic [ref=e1307]: 22.04.26
+        - generic [ref=e1308]:
+          - generic [ref=e1309]: Matisse + Van Gogh
+          - generic [ref=e1310]: MINA , Iasi, 13 dec 25 - 22 apr 26
+        - link "Bilete" [ref=e1312] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34205/matisse-van-gogh-13-dec-25-22-apr-26-mina-iasi.html
+      - generic [ref=e1315]:
+        - generic [ref=e1317]:
+          - generic [ref=e1318]: 20-27
+          - generic [ref=e1319]: dec
+        - generic [ref=e1320]:
+          - generic [ref=e1321]: Abonamente Corvinul Hunedoara - Sezon 2025/2026
+          - generic [ref=e1322]: Stadionul Corvinul 1921 Hunedoara, Hunedoara, 20 - 27 decembrie 2025
+        - link "Bilete" [ref=e1324] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31303/abonamente-corvinul-hunedoara-sezon-2025-2026-20-27-decembrie-2025-stadionul-corvinul-1921-hunedoara-hunedoara.html
+      - generic [ref=e1327]:
+        - generic [ref=e1329]:
+          - generic [ref=e1330]: 31.12.26
+          - generic [ref=e1331]: 31.05.26
+        - generic [ref=e1332]:
+          - generic [ref=e1333]: Pachete Play-Off Chindia Targoviste 2025-2026
+          - generic [ref=e1334]: Stadionul Eugen Popescu, Targoviste, 31 dec 25 - 31 mai 26
+        - link "Bilete" [ref=e1336] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36335/pachete-play-off-chindia-targoviste-2025-2026-31-dec-25-31-mai-26-stadionul-eugen-popescu-targoviste.html
+      - generic [ref=e1339]:
+        - generic [ref=e1341]:
+          - generic [ref=e1342]: 01.01.26
+          - generic [ref=e1343]: 31.01.27
+        - generic [ref=e1344]:
+          - generic [ref=e1345]: Intre ziduri @TNRS - Scena Digitala
+          - generic [ref=e1346]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 26 - 31 ian 27
+        - link "Bilete" [ref=e1348] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34436/intre-ziduri-tnrs-scena-digitala-1-ian-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1351]:
+        - generic [ref=e1353]:
+          - generic [ref=e1354]: 01.01.26
+          - generic [ref=e1355]: 31.01.27
+        - generic [ref=e1356]:
+          - generic [ref=e1357]: Glorie lui Dumnezeu @TNRS - Scena Digitala
+          - generic [ref=e1358]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 26 - 31 ian 27
+        - link "Bilete" [ref=e1360] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34437/glorie-lui-dumnezeu-tnrs-scena-digitala-1-ian-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1363]:
+        - generic [ref=e1365]:
+          - generic [ref=e1366]: 01.01.26
+          - generic [ref=e1367]: 31.01.27
+        - generic [ref=e1368]:
+          - generic [ref=e1369]: Flamenco fusion @TNRS - Scena Digitala
+          - generic [ref=e1370]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 ian 26 - 31 ian 27
+        - link "Bilete" [ref=e1372] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34438/flamenco-fusion-tnrs-scena-digitala-1-ian-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1375]:
+        - generic [ref=e1377]:
+          - generic [ref=e1378]: 03.01.26
+          - generic [ref=e1379]: 03.10.26
+        - generic [ref=e1380]:
+          - generic [ref=e1381]: Vivaldi + Da Vinci
+          - generic [ref=e1382]: MINA Museum, Bucuresti, 3 ian - 3 oct 2026
+        - link "Bilete" [ref=e1384] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34338/vivaldi-da-vinci-3-ian-3-oct-2026-mina-museum-bucuresti.html
+      - generic [ref=e1387]:
+        - generic [ref=e1389]:
+          - generic [ref=e1390]: 19 ian
+          - generic [ref=e1391]: 3 mai
+        - generic [ref=e1392]:
+          - generic [ref=e1393]: Expoziția „Ștefan Bertalan. În ritmul lumii — O retrospectivă” (6 februarie - 3 mai 2026)
+          - generic [ref=e1394]: MARe/Muzeul de Arta Recenta, Bucuresti, 19 ian - 3 mai 2026
+        - link "Bilete" [ref=e1396] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34659/expoziia-tefan-bertalan-n-ritmul-lumii-o-retrospectiv-6-februarie-3-mai-2026-19-ian-3-mai-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e1399]:
+        - generic [ref=e1401]:
+          - generic [ref=e1402]: 23 ian
+          - generic [ref=e1403]: 22 apr
+        - generic [ref=e1404]:
+          - generic [ref=e1405]: Cosmos + Dinozauri + Lumea Subacvatica
+          - generic [ref=e1406]: MINA , Iasi, 23 ian - 22 apr 2026
+        - link "Bilete" [ref=e1408] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34601/cosmos-dinozauri-lumea-subacvatica-23-ian-22-apr-2026-mina-iasi.html
+      - generic [ref=e1411]:
+        - generic [ref=e1413]:
+          - generic [ref=e1414]: 23 ian
+          - generic [ref=e1415]: 22 apr
+        - generic [ref=e1416]:
+          - generic [ref=e1417]: Klimt + Kandinski
+          - generic [ref=e1418]: MINA , Iasi, 23 ian - 22 apr 2026
+        - link "Bilete" [ref=e1420] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34602/klimt-kandinski-23-ian-22-apr-2026-mina-iasi.html
+      - generic [ref=e1423]:
+        - generic [ref=e1425]:
+          - generic [ref=e1426]: 23.01.26
+          - generic [ref=e1427]: 23.04.26
+        - generic [ref=e1428]:
+          - generic [ref=e1429]: Kandinski + Monet + Superliga
+          - generic [ref=e1430]: MINA Museum, Bucuresti, 23 ian - 23 apr 2026
+        - link "Bilete" [ref=e1432] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34374/kandinski-monet-superliga-23-ian-23-apr-2026-mina-museum-bucuresti.html
+      - generic [ref=e1435]:
+        - generic [ref=e1437]:
+          - generic [ref=e1438]: 31 ian
+          - generic [ref=e1439]: 23 apr
+        - generic [ref=e1440]:
+          - generic [ref=e1441]: Egipt+Planeta
+          - generic [ref=e1442]: MINA Museum, Bucuresti, 31 ian - 23 apr 2026
+        - link "Bilete" [ref=e1444] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34373/egipt-planeta-31-ian-23-apr-2026-mina-museum-bucuresti.html
+      - generic [ref=e1447]:
+        - generic [ref=e1449]:
+          - generic [ref=e1450]: 01.02.26
+          - generic [ref=e1451]: 31.01.27
+        - generic [ref=e1452]:
+          - generic [ref=e1453]: Nesupusele @TNRS - Scena Digitala
+          - generic [ref=e1454]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 26 - 31 ian 27, 16:15
+        - link "Bilete" [ref=e1456] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34973/nesupusele-tnrs-scena-digitala-1-feb-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1459]:
+        - generic [ref=e1461]:
+          - generic [ref=e1462]: 01.02.26
+          - generic [ref=e1463]: 31.01.27
+        - generic [ref=e1464]:
+          - generic [ref=e1465]: Iona @TNRS - Scena Digitala
+          - generic [ref=e1466]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 26 - 31 ian 27, 16:15
+        - link "Bilete" [ref=e1468] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34974/iona-tnrs-scena-digitala-1-feb-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1471]:
+        - generic [ref=e1473]:
+          - generic [ref=e1474]: 01.02.26
+          - generic [ref=e1475]: 31.01.27
+        - generic [ref=e1476]:
+          - generic [ref=e1477]: Briza din Est @TNRS - Scena Digitala
+          - generic [ref=e1478]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 feb 26 - 31 ian 27, 16:15
+        - link "Bilete" [ref=e1480] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34975/briza-din-est-tnrs-scena-digitala-1-feb-26-31-ian-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1483]:
+        - generic [ref=e1485]:
+          - generic [ref=e1486]: 28 feb
+          - generic [ref=e1487]: 18 apr
+        - generic [ref=e1488]:
+          - generic [ref=e1489]: "Pachet cursuri de arta contemporana pentru privitori alintati Trainer: Iuna Serban"
+          - generic [ref=e1490]: MARe/Muzeul de Arta Recenta, Bucuresti, 28 feb - 18 apr 2026, 11:00
+        - link "Bilete" [ref=e1492] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34128/pachet-cursuri-de-arta-contemporana-pentru-privitori-alintati-trainer-iuna-serban-28-feb-18-apr-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e1495]:
+        - generic [ref=e1497]:
+          - generic [ref=e1498]: 01.03.26
+          - generic [ref=e1499]: 31.03.27
+        - generic [ref=e1500]:
+          - generic [ref=e1501]: Aici nu se simte @TNRS - Scena Digitala
+          - generic [ref=e1502]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mar 26 - 31 mar 27
+        - link "Bilete" [ref=e1504] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35835/aici-nu-se-simte-tnrs-scena-digitala-1-mar-26-31-mar-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1507]:
+        - generic [ref=e1509]:
+          - generic [ref=e1510]: 01.03.26
+          - generic [ref=e1511]: 31.03.27
+        - generic [ref=e1512]:
+          - generic [ref=e1513]: Viitor pentru @TNRS - Scena Digitala
+          - generic [ref=e1514]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mar 26 - 31 mar 27
+        - link "Bilete" [ref=e1516] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35836/viitor-pentru-tnrs-scena-digitala-1-mar-26-31-mar-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1519]:
+        - generic [ref=e1521]:
+          - generic [ref=e1522]: 01.03.26
+          - generic [ref=e1523]: 31.03.27
+        - generic [ref=e1524]:
+          - generic [ref=e1525]: Frumusete pura @TNRS - Scena Digitala
+          - generic [ref=e1526]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 mar 26 - 31 mar 27
+        - link "Bilete" [ref=e1528] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35838/frumusete-pura-tnrs-scena-digitala-1-mar-26-31-mar-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1531]:
+        - generic [ref=e1533]:
+          - generic [ref=e1534]: 20 mar
+          - generic [ref=e1535]: 30 apr
+        - generic [ref=e1536]:
+          - generic [ref=e1537]: Dino + Egipt
+          - generic [ref=e1538]: MINA, Timisoara, 20 mar - 30 apr 2026
+        - link "Bilete" [ref=e1540] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35468/dino-egipt-20-mar-30-apr-2026-mina-timisoara.html
+      - generic [ref=e1543]:
+        - generic [ref=e1545]:
+          - generic [ref=e1546]: 20 mar
+          - generic [ref=e1547]: 30 apr
+        - generic [ref=e1548]:
+          - generic [ref=e1549]: Matisse + Monet
+          - generic [ref=e1550]: MINA, Timisoara, 20 mar - 30 apr 2026
+        - link "Bilete" [ref=e1552] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35469/matisse-monet-20-mar-30-apr-2026-mina-timisoara.html
+      - generic [ref=e1555]:
+        - generic [ref=e1557]:
+          - generic [ref=e1558]: 1 apr
+          - generic [ref=e1559]: 31 mai
+        - generic [ref=e1560]:
+          - generic [ref=e1561]: HER box - Pachet flexibil cu experiente PENTRU EA la alegere
+          - generic [ref=e1562]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1564] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31829/her-box-pachet-flexibil-cu-experiente-pentru-ea-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1567]:
+        - generic [ref=e1569]:
+          - generic [ref=e1570]: 1 apr
+          - generic [ref=e1571]: 31 mai
+        - generic [ref=e1572]:
+          - generic [ref=e1573]: LOVE BOX - Pachet flexibil cu experiente DE CUPLU la alegere
+          - generic [ref=e1574]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1576] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31832/love-box-pachet-flexibil-cu-experiente-de-cuplu-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1579]:
+        - generic [ref=e1581]:
+          - generic [ref=e1582]: 1 apr
+          - generic [ref=e1583]: 31 mai
+        - generic [ref=e1584]:
+          - generic [ref=e1585]: DRIVING box - Pachet flexibil cu experiente DE DRIVING la alegere
+          - generic [ref=e1586]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1588] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31833/driving-box-pachet-flexibil-cu-experiente-de-driving-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1591]:
+        - generic [ref=e1593]:
+          - generic [ref=e1594]: 1 apr
+          - generic [ref=e1595]: 31 mai
+        - generic [ref=e1596]:
+          - generic [ref=e1597]: RELAXING box - Pachet flexibil cu experiente DE RELAXARE la alegere
+          - generic [ref=e1598]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1600] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31834/relaxing-box-pachet-flexibil-cu-experiente-de-relaxare-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1603]:
+        - generic [ref=e1605]:
+          - generic [ref=e1606]: 1 apr
+          - generic [ref=e1607]: 31 mai
+        - generic [ref=e1608]:
+          - generic [ref=e1609]: GIFT CARD complice.ro - ofera emotii, nu lucruri
+          - generic [ref=e1610]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1612] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33141/gift-card-complice-ro-ofera-emotii-nu-lucruri-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1615]:
+        - generic [ref=e1617]:
+          - generic [ref=e1618]: 1 apr
+          - generic [ref=e1619]: 31 mai
+        - generic [ref=e1620]:
+          - generic [ref=e1621]: Unique Box - Pachet flexibil cu experiente la alegere
+          - generic [ref=e1622]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1624] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31393/unique-box-pachet-flexibil-cu-experiente-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1627]:
+        - generic [ref=e1629]:
+          - generic [ref=e1630]: 1 apr
+          - generic [ref=e1631]: 31 mai
+        - generic [ref=e1632]:
+          - generic [ref=e1633]: HIS box - Pachet flexibil cu experiente PENTRU EL la alegere
+          - generic [ref=e1634]: Complice.ro, online, 1 apr - 31 mai 2026
+        - link "Bilete" [ref=e1636] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31395/his-box-pachet-flexibil-cu-experiente-pentru-el-la-alegere-1-apr-31-mai-2026-complice-ro-online.html
+      - generic [ref=e1639]:
+        - generic [ref=e1641]:
+          - generic [ref=e1642]: 01.04.26
+          - generic [ref=e1643]: 30.04.27
+        - generic [ref=e1644]:
+          - generic [ref=e1645]: Cantendi a Deus @TNRS - Scena Digitala
+          - generic [ref=e1646]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 26 - 30 apr 27
+        - link "Bilete" [ref=e1648] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36855/cantendi-a-deus-tnrs-scena-digitala-1-apr-26-30-apr-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1651]:
+        - generic [ref=e1653]:
+          - generic [ref=e1654]: 01.04.26
+          - generic [ref=e1655]: 30.04.27
+        - generic [ref=e1656]:
+          - generic [ref=e1657]: Organland @TNRS - Scena Digitala
+          - generic [ref=e1658]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 26 - 30 apr 27
+        - link "Bilete" [ref=e1660] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36856/organland-tnrs-scena-digitala-1-apr-26-30-apr-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1663]:
+        - generic [ref=e1665]:
+          - generic [ref=e1666]: 01.04.26
+          - generic [ref=e1667]: 30.04.27
+        - generic [ref=e1668]:
+          - generic [ref=e1669]: Jocuri, vorbe, greieri @TNRS - Scena Digitala
+          - generic [ref=e1670]: TNRS - SCENA DIGITALA, www.scena-digitala.ro, 1 apr 26 - 30 apr 27
+        - link "Bilete" [ref=e1672] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36857/jocuri-vorbe-greieri-tnrs-scena-digitala-1-apr-26-30-apr-27-tnrs-scena-digitala-www-scena-digitala-ro.html
+      - generic [ref=e1675]:
+        - generic [ref=e1677]:
+          - generic [ref=e1678]: 1-30
+          - generic [ref=e1679]: apr
+        - generic [ref=e1680]:
+          - generic [ref=e1681]: Sweet Adventure
+          - generic [ref=e1682]: Muzeul Dulciurilor, Bucuresti, 1 - 30 aprilie 2026
+        - link "Bilete" [ref=e1684] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/23034/sweet-adventure-1-30-aprilie-2026-muzeul-dulciurilor-bucuresti.html
+      - generic [ref=e1687]:
+        - generic [ref=e1689]:
+          - generic [ref=e1690]: 3 apr
+          - generic [ref=e1691]: 26 iul
+        - generic [ref=e1692]:
+          - generic [ref=e1693]: LIA ȘI DAN PERJOVSCHI. DRAFT PENTRU O RETROSPECTIVĂ COMUNĂ
+          - generic [ref=e1694]: ARCUB - Hanul Gabroveni, Bucuresti, 3 apr - 26 iul 2026
+        - link "Bilete" [ref=e1696] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36619/lia-i-dan-perjovschi-draft-pentru-o-retrospectiv-comun-3-apr-26-iul-2026-arcub-hanul-gabroveni-bucuresti.html
+      - generic [ref=e1699]:
+        - generic [ref=e1701]:
+          - generic [ref=e1702]: 3 apr
+          - generic [ref=e1703]: 26 iun
+        - generic [ref=e1704]:
+          - generic [ref=e1705]: Abonament Legacy Season - Trimestrul III
+          - generic [ref=e1706]: Filarmonica Oltenia, Craiova, 3 apr - 26 iun 2026, 12:03
+        - link "Bilete" [ref=e1708] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36383/abonament-legacy-season-trimestrul-iii-3-apr-26-iun-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e1711]:
+        - generic [ref=e1713]:
+          - generic [ref=e1714]: "6"
+          - generic [ref=e1715]: apr
+        - generic [ref=e1716]:
+          - generic [ref=e1717]: FC PETROLUL - FK CSIKSZEREDA
+          - generic [ref=e1718]: Stadion Ilie Oana Ploiesti, Ploiesti, 6 aprilie 2026, 17:30
+        - link "Bilete" [ref=e1720] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36891/fc-petrolul-fk-csikszereda-6-aprilie-2026-stadion-ilie-oana-ploiesti-ploiesti.html
+      - generic [ref=e1723]:
+        - generic [ref=e1725]:
+          - generic [ref=e1726]: "6"
+          - generic [ref=e1727]: apr
+        - generic [ref=e1728]:
+          - generic [ref=e1729]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e1730]: Shopping City, Timisoara, 6 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1732] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35916/circul-circo-bellucci-timisoara-6-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e1735]:
+        - generic [ref=e1737]:
+          - generic [ref=e1738]: "6"
+          - generic [ref=e1739]: apr
+        - generic [ref=e1740]:
+          - generic [ref=e1741]: IN PLINA GLORIE
+          - generic [ref=e1742]: Sala Studio Teofil Valcu, Iasi, 6 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1744] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35558/in-plina-glorie-6-aprilie-2026-sala-studio-teofil-valcu-iasi.html
+      - generic [ref=e1747]:
+        - generic [ref=e1749]:
+          - generic [ref=e1750]: "6"
+          - generic [ref=e1751]: apr
+        - generic [ref=e1752]:
+          - generic [ref=e1753]: Der Sohn/ Fiul/ The Son
+          - generic [ref=e1754]: Teatrul German de Stat, Timisoara, 6 aprilie 2026, 18:30
+        - link "Bilete" [ref=e1756] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35963/der-sohn-fiul-the-son-6-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e1759]:
+        - generic [ref=e1761]:
+          - generic [ref=e1762]: "6"
+          - generic [ref=e1763]: apr
+        - generic [ref=e1764]:
+          - generic [ref=e1765]: Circul Orlando
+          - generic [ref=e1766]: Langa Gara Nicolina, Iasi, 6 aprilie 2026, 18:30
+        - link "Bilete" [ref=e1768] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36479/circul-orlando-6-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e1771]:
+        - generic [ref=e1773]:
+          - generic [ref=e1774]: "6"
+          - generic [ref=e1775]: apr
+        - generic [ref=e1776]:
+          - generic [ref=e1777]: Concert Coral
+          - generic [ref=e1778]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 6 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1780] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36439/concert-coral-6-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e1783]:
+        - generic [ref=e1785]:
+          - generic [ref=e1786]: "6"
+          - generic [ref=e1787]: apr
+        - generic [ref=e1788]:
+          - generic [ref=e1789]: "Matt Rife: Stay Golden World Tour"
+          - generic [ref=e1790]: Sala Palatului, Bucuresti, 6 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1792] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35432/matt-rife-stay-golden-world-tour-6-aprilie-2026-sala-palatului-bucuresti.html
+      - generic [ref=e1795]:
+        - generic [ref=e1797]:
+          - generic [ref=e1798]: "6"
+          - generic [ref=e1799]: apr
+        - generic [ref=e1800]:
+          - generic [ref=e1801]: Veniti, crestini, la rugaciune!
+          - generic [ref=e1802]: Casa de Cultura a Studentilor, Cluj Napoca, 6 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1804] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35701/veniti-crestini-la-rugaciune-6-aprilie-2026-casa-de-cultura-a-studentilor-cluj-napoca.html
+      - generic [ref=e1807]:
+        - generic [ref=e1809]:
+          - generic [ref=e1810]: "6"
+          - generic [ref=e1811]: apr
+        - generic [ref=e1812]:
+          - generic [ref=e1813]: UNIVERSITATEA CRAIOVA - CFR CLUJ
+          - generic [ref=e1814]: Stadionul Ion Oblemenco, Craiova, 6 aprilie 2026, 20:30
+        - link "Bilete" [ref=e1816] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36807/universitatea-craiova-cfr-cluj-6-aprilie-2026-stadionul-ion-oblemenco-craiova.html
+      - generic [ref=e1819]:
+        - generic [ref=e1821]:
+          - generic [ref=e1822]: "6"
+          - generic [ref=e1823]: apr
+        - generic [ref=e1824]:
+          - generic [ref=e1825]: PARKING - UNIVERSITATEA CRAIOVA - CFR CLUJ
+          - generic [ref=e1826]: Stadionul Ion Oblemenco, Craiova, 6 aprilie 2026, 20:30
+        - link "Bilete" [ref=e1828] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36837/parking-universitatea-craiova-cfr-cluj-6-aprilie-2026-stadionul-ion-oblemenco-craiova.html
+      - generic [ref=e1831]:
+        - generic [ref=e1833]:
+          - generic [ref=e1834]: "7"
+          - generic [ref=e1835]: apr
+        - generic [ref=e1836]:
+          - generic [ref=e1837]: Fata babei si fata mosneagului
+          - generic [ref=e1838]: Teatrul de Papusi Puck, Cluj-Napoca, 7 aprilie 2026, 17:00
+        - link "Bilete" [ref=e1840] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36573/fata-babei-si-fata-mosneagului-7-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e1843]:
+        - generic [ref=e1845]:
+          - generic [ref=e1846]: "7"
+          - generic [ref=e1847]: apr
+        - generic [ref=e1848]:
+          - generic [ref=e1849]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e1850]: Shopping City, Timisoara, 7 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1852] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36304/circul-circo-bellucci-timisoara-7-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e1855]:
+        - generic [ref=e1857]:
+          - generic [ref=e1858]: "7"
+          - generic [ref=e1859]: apr
+        - generic [ref=e1860]:
+          - generic [ref=e1861]: ALBA CA ZAPADA
+          - generic [ref=e1862]: Teatrul Ion Creanga SALA MARE, Bucuresti, 7 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1864] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36082/alba-ca-zapada-7-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e1867]:
+        - generic [ref=e1869]:
+          - generic [ref=e1870]: "7"
+          - generic [ref=e1871]: apr
+        - generic [ref=e1872]:
+          - generic [ref=e1873]: Circul Orlando
+          - generic [ref=e1874]: Langa Gara Nicolina, Iasi, 7 aprilie 2026, 18:30
+        - link "Bilete" [ref=e1876] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36480/circul-orlando-7-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e1879]:
+        - generic [ref=e1881]:
+          - generic [ref=e1882]: "7"
+          - generic [ref=e1883]: apr
+        - generic [ref=e1884]:
+          - generic [ref=e1885]: TRISTEȚEA ȘI BUCURIA DIN VIAȚA GIRAFELOR
+          - generic [ref=e1886]: SPATIUL DE PROIECTE CULTURALE / FABRICA DE TIGARETE, Sfantu Gheorghe, 7 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1888] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36882/tristeea-i-bucuria-din-viaa-girafelor-7-aprilie-2026-spatiul-de-proiecte-culturale-fabrica-de-tigarete-sfantu-gheorghe.html
+      - generic [ref=e1891]:
+        - generic [ref=e1893]:
+          - generic [ref=e1894]: "7"
+          - generic [ref=e1895]: apr
+        - generic [ref=e1896]:
+          - generic [ref=e1897]: Veniti, crestini, la rugaciune!
+          - generic [ref=e1898]: Centrul Cultural Dragan Muntean, Deva, 7 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1900] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35893/veniti-crestini-la-rugaciune-7-aprilie-2026-centrul-cultural-dragan-muntean-deva.html
+      - generic [ref=e1903]:
+        - generic [ref=e1905]:
+          - generic [ref=e1906]: "7"
+          - generic [ref=e1907]: apr
+        - generic [ref=e1908]:
+          - generic [ref=e1909]: Recital cameral
+          - generic [ref=e1910]: Filarmonica de Stat Dinu Lipatti, Satu Mare, 7 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1912] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36662/recital-cameral-7-aprilie-2026-filarmonica-de-stat-dinu-lipatti-satu-mare.html
+      - generic [ref=e1915]:
+        - generic [ref=e1917]:
+          - generic [ref=e1918]: "7"
+          - generic [ref=e1919]: apr
+        - generic [ref=e1920]:
+          - generic [ref=e1921]: MEIN KAMPF
+          - generic [ref=e1922]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 7 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1924] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36244/mein-kampf-7-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e1927]:
+        - generic [ref=e1929]:
+          - generic [ref=e1930]: "7"
+          - generic [ref=e1931]: apr
+        - generic [ref=e1932]:
+          - generic [ref=e1933]: FEMEIA - CAMP DE LUPTA
+          - generic [ref=e1934]: Sala de Teatru la CUB, Iasi, 7 aprilie 2026, 19:00
+        - link "Bilete" [ref=e1936] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35559/femeia-camp-de-lupta-7-aprilie-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e1939]:
+        - generic [ref=e1941]:
+          - generic [ref=e1942]: "8"
+          - generic [ref=e1943]: apr
+        - generic [ref=e1944]:
+          - generic [ref=e1945]: Atelier de Creație „Piticii pricepuți” – Ornament de Paște
+          - generic [ref=e1946]: Teatrul Gong - Sala Studio, SIBIU, 8 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1948] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36395/atelier-de-creaie-piticii-pricepui-ornament-de-pate-8-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e1951]:
+        - generic [ref=e1953]:
+          - generic [ref=e1954]: "8"
+          - generic [ref=e1955]: apr
+        - generic [ref=e1956]:
+          - generic [ref=e1957]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e1958]: Shopping City, Timisoara, 8 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1960] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35926/circul-circo-bellucci-timisoara-8-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e1963]:
+        - generic [ref=e1965]:
+          - generic [ref=e1966]: "8"
+          - generic [ref=e1967]: apr
+        - generic [ref=e1968]:
+          - generic [ref=e1969]: O MIE SI UNA DE NOPTI – LAMPA LUI ALADIN
+          - generic [ref=e1970]: Teatrul Ion Creanga SALA MARE, Bucuresti, 8 aprilie 2026, 18:00
+        - link "Bilete" [ref=e1972] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36083/o-mie-si-una-de-nopti-lampa-lui-aladin-8-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e1975]:
+        - generic [ref=e1977]:
+          - generic [ref=e1978]: "8"
+          - generic [ref=e1979]: apr
+        - generic [ref=e1980]:
+          - generic [ref=e1981]: Circul Fantazia
+          - generic [ref=e1982]: Circul Fantazia, NAVODARI, 8 aprilie 2026, 18:30
+        - link "Bilete" [ref=e1984] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36638/circul-fantazia-8-aprilie-2026-circul-fantazia-navodari.html
+      - generic [ref=e1987]:
+        - generic [ref=e1989]:
+          - generic [ref=e1990]: "8"
+          - generic [ref=e1991]: apr
+        - generic [ref=e1992]:
+          - generic [ref=e1993]: Circul Orlando
+          - generic [ref=e1994]: Langa Gara Nicolina, Iasi, 8 aprilie 2026, 18:30
+        - link "Bilete" [ref=e1996] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36471/circul-orlando-8-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e1999]:
+        - generic [ref=e2001]:
+          - generic [ref=e2002]: "8"
+          - generic [ref=e2003]: apr
+        - generic [ref=e2004]:
+          - generic [ref=e2005]: Circul Espinol
+          - generic [ref=e2006]: Circul Espinol., Brasov, 8 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2008] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36282/circul-espinol-8-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2011]:
+        - generic [ref=e2013]:
+          - generic [ref=e2014]: "8"
+          - generic [ref=e2015]: apr
+        - generic [ref=e2016]:
+          - generic [ref=e2017]: Concert Simfonic Extraordinar
+          - generic [ref=e2018]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 8 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2020] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36440/concert-simfonic-extraordinar-8-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e2023]:
+        - generic [ref=e2025]:
+          - generic [ref=e2026]: "8"
+          - generic [ref=e2027]: apr
+        - generic [ref=e2028]:
+          - generic [ref=e2029]: CÂNTECE DE SPERIAT FRICA
+          - generic [ref=e2030]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 8 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2032] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36246/cntece-de-speriat-frica-8-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e2035]:
+        - generic [ref=e2037]:
+          - generic [ref=e2038]: "8"
+          - generic [ref=e2039]: apr
+        - generic [ref=e2040]:
+          - generic [ref=e2041]: Madrigal - Saptamana Patimilor - Bucuresti
+          - generic [ref=e2042]: AULA POLITEHNICA , Bucuresti, 8 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2044] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34970/madrigal-saptamana-patimilor-bucuresti-8-aprilie-2026-aula-politehnica-bucuresti.html
+      - generic [ref=e2047]:
+        - generic [ref=e2049]:
+          - generic [ref=e2050]: "8"
+          - generic [ref=e2051]: apr
+        - generic [ref=e2052]:
+          - generic [ref=e2053]: FEMEIA- CAMP DE LUPTA
+          - generic [ref=e2054]: Sala de Teatru la CUB, Iasi, 8 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2056] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35560/femeia-camp-de-lupta-8-aprilie-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e2059]:
+        - generic [ref=e2061]:
+          - generic [ref=e2062]: "8"
+          - generic [ref=e2063]: apr
+        - generic [ref=e2064]:
+          - generic [ref=e2065]: Încurca-i drace!
+          - generic [ref=e2066]: TNRS – Sala Mare, Sibiu, 8 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2068] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36591/ncurca-i-drace-8-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e2071]:
+        - generic [ref=e2073]:
+          - generic [ref=e2074]: "9"
+          - generic [ref=e2075]: apr
+        - generic [ref=e2076]:
+          - generic [ref=e2077]: A brémai muzsikusok
+          - generic [ref=e2078]: Teatrul de Papusi Puck, Cluj-Napoca, 9 aprilie 2026, 11:00
+        - link "Bilete" [ref=e2080] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36668/a-brmai-muzsikusok-9-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e2083]:
+        - generic [ref=e2085]:
+          - generic [ref=e2086]: "9"
+          - generic [ref=e2087]: apr
+        - generic [ref=e2088]:
+          - generic [ref=e2089]: Kreativ Workshop „Flinke Finger” – Decorăm ouă magice / Atelierul de creație „Flinke Finger” – Zaubereier gestalten
+          - generic [ref=e2090]: Teatrul Gong - Sala Studio, SIBIU, 9 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2092] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36398/kreativ-workshop-flinke-finger-decorm-ou-magice-atelierul-de-creaie-flinke-finger-zaubereier-gestalten-9-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e2095]:
+        - generic [ref=e2097]:
+          - generic [ref=e2098]: "9"
+          - generic [ref=e2099]: apr
+        - generic [ref=e2100]:
+          - generic [ref=e2101]: Circul Europa
+          - generic [ref=e2102]: Circul Europa, Zarnesti, 9 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2104] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36928/circul-europa-9-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2107]:
+        - generic [ref=e2109]:
+          - generic [ref=e2110]: "9"
+          - generic [ref=e2111]: apr
+        - generic [ref=e2112]:
+          - generic [ref=e2113]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2114]: Shopping City, Timisoara, 9 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2116] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35919/circul-circo-bellucci-timisoara-9-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2119]:
+        - generic [ref=e2121]:
+          - generic [ref=e2122]: "9"
+          - generic [ref=e2123]: apr
+        - generic [ref=e2124]:
+          - generic [ref=e2125]: MOTANUL INCALTAT
+          - generic [ref=e2126]: Teatrul Ion Creanga SALA MARE, Bucuresti, 9 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2128] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36084/motanul-incaltat-9-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e2131]:
+        - generic [ref=e2133]:
+          - generic [ref=e2134]: "9"
+          - generic [ref=e2135]: apr
+        - generic [ref=e2136]:
+          - generic [ref=e2137]: Circul Fantazia
+          - generic [ref=e2138]: Circul Fantazia, NAVODARI, 9 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2140] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36639/circul-fantazia-9-aprilie-2026-circul-fantazia-navodari.html
+      - generic [ref=e2143]:
+        - generic [ref=e2145]:
+          - generic [ref=e2146]: "9"
+          - generic [ref=e2147]: apr
+        - generic [ref=e2148]:
+          - generic [ref=e2149]: Circul Euforia
+          - generic [ref=e2150]: Circul Euforia , Comanesti, 9 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2152] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36961/circul-euforia-9-aprilie-2026-circul-euforia-comanesti.html
+      - generic [ref=e2155]:
+        - generic [ref=e2157]:
+          - generic [ref=e2158]: "9"
+          - generic [ref=e2159]: apr
+        - generic [ref=e2160]:
+          - generic [ref=e2161]: Circul Orlando
+          - generic [ref=e2162]: Langa Gara Nicolina, Iasi, 9 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2164] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36472/circul-orlando-9-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e2167]:
+        - generic [ref=e2169]:
+          - generic [ref=e2170]: "9"
+          - generic [ref=e2171]: apr
+        - generic [ref=e2172]:
+          - generic [ref=e2173]: Circul Espinol
+          - generic [ref=e2174]: Circul Espinol, Brasov, 9 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2176] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36283/circul-espinol-9-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2179]:
+        - generic [ref=e2181]:
+          - generic [ref=e2182]: "9"
+          - generic [ref=e2183]: apr
+        - generic [ref=e2184]:
+          - generic [ref=e2185]: Concert vocal-simfonic
+          - generic [ref=e2186]: Filarmonica Oltenia, Craiova, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2188] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36386/concert-vocal-simfonic-9-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e2191]:
+        - generic [ref=e2193]:
+          - generic [ref=e2194]: "9"
+          - generic [ref=e2195]: apr
+        - generic [ref=e2196]:
+          - generic [ref=e2197]: "REQUIEM OF THE SOUL | Orchestra simfonică și Corul Filarmonicii Banatul | Dirijor: Azis Sadikovic | Soliști: Brit-Tone Müllertz, Ramona Zaharia, Marius Budoiu, Felix Pacher"
+          - generic [ref=e2198]: Sala Capitol, Timisoara, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2200] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34386/requiem-of-the-soul-orchestra-simfonic-i-corul-filarmonicii-banatul-dirijor-azis-sadikovic-soliti-brit-tone-mllertz-ramona-zaharia-marius-budoiu-felix-pacher-9-aprilie-2026-sala-capitol-timisoara.html
+      - generic [ref=e2203]:
+        - generic [ref=e2205]:
+          - generic [ref=e2206]: "9"
+          - generic [ref=e2207]: apr
+        - generic [ref=e2208]:
+          - generic [ref=e2209]: Concert vocal-simfonic – dirijor Julio García-Vico
+          - generic [ref=e2210]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2212] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35666/concert-vocal-simfonic-dirijor-julio-garca-vico-9-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e2215]:
+        - generic [ref=e2217]:
+          - generic [ref=e2218]: "9"
+          - generic [ref=e2219]: apr
+        - generic [ref=e2220]:
+          - generic [ref=e2221]: Recital de pian la 2, 4 si 6 maini
+          - generic [ref=e2222]: Filarmonica de Stat Dinu Lipatti, Satu Mare, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2224] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36735/recital-de-pian-la-2-4-si-6-maini-9-aprilie-2026-filarmonica-de-stat-dinu-lipatti-satu-mare.html
+      - generic [ref=e2227]:
+        - generic [ref=e2229]:
+          - generic [ref=e2230]: "9"
+          - generic [ref=e2231]: apr
+        - generic [ref=e2232]:
+          - generic [ref=e2233]: Încurca-i drace!
+          - generic [ref=e2234]: TNRS – Sala Mare, Sibiu, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2236] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36224/ncurca-i-drace-9-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e2239]:
+        - generic [ref=e2241]:
+          - generic [ref=e2242]: "9"
+          - generic [ref=e2243]: apr
+        - generic [ref=e2244]:
+          - generic [ref=e2245]: 20 DE ANI ÎN SIBERIA
+          - generic [ref=e2246]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2248] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36247/20-de-ani-n-siberia-9-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e2251]:
+        - generic [ref=e2253]:
+          - generic [ref=e2254]: "9"
+          - generic [ref=e2255]: apr
+        - generic [ref=e2256]:
+          - generic [ref=e2257]: Madrigal - Saptamana Patimilor - Bucuresti
+          - generic [ref=e2258]: AULA POLITEHNICA , Bucuresti, 9 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2260] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34971/madrigal-saptamana-patimilor-bucuresti-9-aprilie-2026-aula-politehnica-bucuresti.html
+      - generic [ref=e2263]:
+        - generic [ref=e2265]:
+          - generic [ref=e2266]: "9"
+          - generic [ref=e2267]: apr
+        - generic [ref=e2268]:
+          - generic [ref=e2269]: Frumosul si Bestiile
+          - generic [ref=e2270]: FF Theatre, Bucuresti, 9 aprilie 2026, 20:00
+        - link "Bilete" [ref=e2272] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36357/frumosul-si-bestiile-9-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e2275]:
+        - generic [ref=e2277]:
+          - generic [ref=e2278]: "9"
+          - generic [ref=e2279]: apr
+        - generic [ref=e2280]:
+          - generic [ref=e2281]: Concert MIHAIL | Live la Control
+          - generic [ref=e2282]: Club Control, Bucuresti, 9 aprilie 2026, 20:00
+        - link "Bilete" [ref=e2284] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36045/concert-mihail-live-la-control-9-aprilie-2026-club-control-bucuresti.html
+      - generic [ref=e2287]:
+        - generic [ref=e2289]:
+          - generic [ref=e2290]: 9-13
+          - generic [ref=e2291]: apr
+        - generic [ref=e2292]:
+          - generic [ref=e2293]: Easter Party
+          - generic [ref=e2294]: Club Pogany, Targu Jiu, 9 - 13 aprilie 2026, 23:00
+        - link "Bilete" [ref=e2296] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36589/easter-party-9-13-aprilie-2026-club-pogany-targu-jiu.html
+      - generic [ref=e2299]:
+        - generic [ref=e2301]:
+          - generic [ref=e2302]: "10"
+          - generic [ref=e2303]: apr
+        - generic [ref=e2304]:
+          - generic [ref=e2305]: Pregatiri de Paste cu Rica Iepurica @ Hanu’ lui Manuc
+          - generic [ref=e2306]: Hanu' lui Manuc, Bucuresti, 10 aprilie 2026, 11:00
+        - link "Bilete" [ref=e2308] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36959/pregatiri-de-paste-cu-rica-iepurica-hanu-lui-manuc-10-aprilie-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e2311]:
+        - generic [ref=e2313]:
+          - generic [ref=e2314]: "10"
+          - generic [ref=e2315]: apr
+        - generic [ref=e2316]:
+          - generic [ref=e2317]: Circul Europa
+          - generic [ref=e2318]: Circul Europa, Zarnesti, 10 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2320] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36929/circul-europa-10-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2323]:
+        - generic [ref=e2325]:
+          - generic [ref=e2326]: "10"
+          - generic [ref=e2327]: apr
+        - generic [ref=e2328]:
+          - generic [ref=e2329]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2330]: Shopping City, Timisoara, 10 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2332] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35922/circul-circo-bellucci-timisoara-10-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2335]:
+        - generic [ref=e2337]:
+          - generic [ref=e2338]: "10"
+          - generic [ref=e2339]: apr
+        - generic [ref=e2340]:
+          - generic [ref=e2341]: Circul Euforia
+          - generic [ref=e2342]: Circul Euforia , Comanesti, 10 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2344] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36962/circul-euforia-10-aprilie-2026-circul-euforia-comanesti.html
+      - generic [ref=e2347]:
+        - generic [ref=e2349]:
+          - generic [ref=e2350]: "10"
+          - generic [ref=e2351]: apr
+        - generic [ref=e2352]:
+          - generic [ref=e2353]: Circul Espinol
+          - generic [ref=e2354]: Circul Espinol, Brasov, 10 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2356] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36284/circul-espinol-10-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2359]:
+        - generic [ref=e2361]:
+          - generic [ref=e2362]: "10"
+          - generic [ref=e2363]: apr
+        - generic [ref=e2364]:
+          - generic [ref=e2365]: Caligula
+          - generic [ref=e2366]: FF Theatre, Bucuresti, 10 aprilie 2026, 20:00
+        - link "Bilete" [ref=e2368] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36358/caligula-10-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e2371]:
+        - generic [ref=e2373]:
+          - generic [ref=e2374]: "11"
+          - generic [ref=e2375]: apr
+        - generic [ref=e2376]:
+          - generic [ref=e2377]: A tornyocska
+          - generic [ref=e2378]: Teatrul de Papusi Puck, Cluj-Napoca, 11 aprilie 2026, 11:00
+        - link "Bilete" [ref=e2380] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36586/a-tornyocska-11-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e2383]:
+        - generic [ref=e2385]:
+          - generic [ref=e2386]: "11"
+          - generic [ref=e2387]: apr
+        - generic [ref=e2388]:
+          - generic [ref=e2389]: REMEMORABLE HORSE SHOW - Spectacular Indoor Experience
+          - generic [ref=e2390]: ISSA RESORT, Turda, 11 aprilie 2026, 13:30
+        - link "Bilete" [ref=e2392] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36906/rememorable-horse-show-spectacular-indoor-experience-11-aprilie-2026-issa-resort-turda.html
+      - generic [ref=e2395]:
+        - generic [ref=e2397]:
+          - generic [ref=e2398]: "11"
+          - generic [ref=e2399]: apr
+        - generic [ref=e2400]:
+          - generic [ref=e2401]: Circul Europa
+          - generic [ref=e2402]: Circul Europa, Zarnesti, 11 aprilie 2026, 15:00
+        - link "Bilete" [ref=e2404] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36931/circul-europa-11-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2407]:
+        - generic [ref=e2409]:
+          - generic [ref=e2410]: "11"
+          - generic [ref=e2411]: apr
+        - generic [ref=e2412]:
+          - generic [ref=e2413]: Circul Espinol
+          - generic [ref=e2414]: Circul Espinol, Brasov, 11 aprilie 2026, 16:00
+        - link "Bilete" [ref=e2416] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36285/circul-espinol-11-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2419]:
+        - generic [ref=e2421]:
+          - generic [ref=e2422]: "11"
+          - generic [ref=e2423]: apr
+        - generic [ref=e2424]:
+          - generic [ref=e2425]: Circul Europa
+          - generic [ref=e2426]: Circul Europa, Zarnesti, 11 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2428] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36930/circul-europa-11-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2431]:
+        - generic [ref=e2433]:
+          - generic [ref=e2434]: "11"
+          - generic [ref=e2435]: apr
+        - generic [ref=e2436]:
+          - generic [ref=e2437]: Circul Euforia
+          - generic [ref=e2438]: Circul Euforia , Comanesti, 11 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2440] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36963/circul-euforia-11-aprilie-2026-circul-euforia-comanesti.html
+      - generic [ref=e2443]:
+        - generic [ref=e2445]:
+          - generic [ref=e2446]: "11"
+          - generic [ref=e2447]: apr
+        - generic [ref=e2448]:
+          - generic [ref=e2449]: Musica Ricercata – DiVerdi | Concert extraordinar de închidere
+          - generic [ref=e2450]: Sala ”Mihai Perian” a Colegiului National de de Arta Ion Vidu, Timisoara, 11 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2452] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35823/musica-ricercata-diverdi-concert-extraordinar-de-nchidere-11-aprilie-2026-sala-mihai-perian-a-colegiului-national-de-de-arta-ion-vidu-timisoara.html
+      - generic [ref=e2455]:
+        - generic [ref=e2457]:
+          - generic [ref=e2458]: "12"
+          - generic [ref=e2459]: apr
+        - generic [ref=e2460]:
+          - generic [ref=e2461]: Manele all Stars
+          - generic [ref=e2462]: Laminor Arena, Bucuresti, 12 aprilie 2026
+        - link "Bilete" [ref=e2464] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34923/manele-all-stars-12-aprilie-2026-laminor-arena-bucuresti.html
+      - generic [ref=e2467]:
+        - generic [ref=e2469]:
+          - generic [ref=e2470]: "12"
+          - generic [ref=e2471]: apr
+        - generic [ref=e2472]:
+          - generic [ref=e2473]: Circul Europa
+          - generic [ref=e2474]: Circul Europa, Zarnesti, 12 aprilie 2026, 15:00
+        - link "Bilete" [ref=e2476] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36932/circul-europa-12-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2479]:
+        - generic [ref=e2481]:
+          - generic [ref=e2482]: "12"
+          - generic [ref=e2483]: apr
+        - generic [ref=e2484]:
+          - generic [ref=e2485]: Circul Fantazia
+          - generic [ref=e2486]: Circul Fantazia, NAVODARI, 12 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2488] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36640/circul-fantazia-12-aprilie-2026-circul-fantazia-navodari.html
+      - generic [ref=e2491]:
+        - generic [ref=e2493]:
+          - generic [ref=e2494]: "12"
+          - generic [ref=e2495]: apr
+        - generic [ref=e2496]:
+          - generic [ref=e2497]: NICOLAE GUTA
+          - generic [ref=e2498]: Club NOA, Cluj-Napoca, 12 aprilie 2026, 22:00
+        - link "Bilete" [ref=e2500] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36345/nicolae-guta-12-aprilie-2026-club-noa-cluj-napoca.html
+      - generic [ref=e2503]:
+        - generic [ref=e2505]:
+          - generic [ref=e2506]: "13"
+          - generic [ref=e2507]: apr
+        - generic [ref=e2508]:
+          - generic [ref=e2509]: Circul Fantazia
+          - generic [ref=e2510]: Circul Fantazia, NAVODARI, 13 aprilie 2026, 15:00
+        - link "Bilete" [ref=e2512] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36642/circul-fantazia-13-aprilie-2026-circul-fantazia-navodari.html
+      - generic [ref=e2515]:
+        - generic [ref=e2517]:
+          - generic [ref=e2518]: "13"
+          - generic [ref=e2519]: apr
+        - generic [ref=e2520]:
+          - generic [ref=e2521]: Circul Europa
+          - generic [ref=e2522]: Circul Europa, Zarnesti, 13 aprilie 2026, 15:00
+        - link "Bilete" [ref=e2524] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36933/circul-europa-13-aprilie-2026-circul-europa-zarnesti.html
+      - generic [ref=e2527]:
+        - generic [ref=e2529]:
+          - generic [ref=e2530]: "13"
+          - generic [ref=e2531]: apr
+        - generic [ref=e2532]:
+          - generic [ref=e2533]: Circul Euforia
+          - generic [ref=e2534]: Circul Euforia , Comanesti, 13 aprilie 2026, 15:00
+        - link "Bilete" [ref=e2536] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36965/circul-euforia-13-aprilie-2026-circul-euforia-comanesti.html
+      - generic [ref=e2539]:
+        - generic [ref=e2541]:
+          - generic [ref=e2542]: "13"
+          - generic [ref=e2543]: apr
+        - generic [ref=e2544]:
+          - generic [ref=e2545]: Circul Espinol
+          - generic [ref=e2546]: Circul Espinol, Brasov, 13 aprilie 2026, 16:00
+        - link "Bilete" [ref=e2548] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36286/circul-espinol-13-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2551]:
+        - generic [ref=e2553]:
+          - generic [ref=e2554]: "13"
+          - generic [ref=e2555]: apr
+        - generic [ref=e2556]:
+          - generic [ref=e2557]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2558]: Shopping City, Timisoara, 13 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2560] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35917/circul-circo-bellucci-timisoara-13-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2563]:
+        - generic [ref=e2565]:
+          - generic [ref=e2566]: "13"
+          - generic [ref=e2567]: apr
+        - generic [ref=e2568]:
+          - generic [ref=e2569]: Circul Fantazia
+          - generic [ref=e2570]: Circul Fantazia, NAVODARI, 13 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2572] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36641/circul-fantazia-13-aprilie-2026-circul-fantazia-navodari.html
+      - generic [ref=e2575]:
+        - generic [ref=e2577]:
+          - generic [ref=e2578]: "13"
+          - generic [ref=e2579]: apr
+        - generic [ref=e2580]:
+          - generic [ref=e2581]: Circul Euforia
+          - generic [ref=e2582]: Circul Euforia , Comanesti, 13 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2584] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36964/circul-euforia-13-aprilie-2026-circul-euforia-comanesti.html
+      - generic [ref=e2587]:
+        - generic [ref=e2589]:
+          - generic [ref=e2590]: "13"
+          - generic [ref=e2591]: apr
+        - generic [ref=e2592]:
+          - generic [ref=e2593]: Circul Orlando
+          - generic [ref=e2594]: Langa Gara Nicolina, Iasi, 13 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2596] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36473/circul-orlando-13-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e2599]:
+        - generic [ref=e2601]:
+          - generic [ref=e2602]: "13"
+          - generic [ref=e2603]: apr
+        - generic [ref=e2604]:
+          - generic [ref=e2605]: Circul Espinol
+          - generic [ref=e2606]: Circul Espinol, Brasov, 13 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2608] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36287/circul-espinol-13-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2611]:
+        - generic [ref=e2613]:
+          - generic [ref=e2614]: "14"
+          - generic [ref=e2615]: apr
+        - generic [ref=e2616]:
+          - generic [ref=e2617]: Circul Orlando
+          - generic [ref=e2618]: Langa Gara Nicolina, Iasi, 14 aprilie 2026, 11:30
+        - link "Bilete" [ref=e2620] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36474/circul-orlando-14-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e2623]:
+        - generic [ref=e2625]:
+          - generic [ref=e2626]: "14"
+          - generic [ref=e2627]: apr
+        - generic [ref=e2628]:
+          - generic [ref=e2629]: Circul Orlando
+          - generic [ref=e2630]: Langa Gara Nicolina, Iasi, 14 aprilie 2026, 15:30
+        - link "Bilete" [ref=e2632] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36487/circul-orlando-14-aprilie-2026-langa-gara-nicolina-iasi.html
+      - generic [ref=e2635]:
+        - generic [ref=e2637]:
+          - generic [ref=e2638]: "14"
+          - generic [ref=e2639]: apr
+        - generic [ref=e2640]:
+          - generic [ref=e2641]: Vasilache si Marioara in jurul lumii
+          - generic [ref=e2642]: Teatrul de Papusi Puck, Cluj-Napoca, 14 aprilie 2026, 17:00
+        - link "Bilete" [ref=e2644] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36575/vasilache-si-marioara-in-jurul-lumii-14-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e2647]:
+        - generic [ref=e2649]:
+          - generic [ref=e2650]: "14"
+          - generic [ref=e2651]: apr
+        - generic [ref=e2652]:
+          - generic [ref=e2653]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2654]: Shopping City, Timisoara, 14 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2656] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36305/circul-circo-bellucci-timisoara-14-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2659]:
+        - generic [ref=e2661]:
+          - generic [ref=e2662]: "14"
+          - generic [ref=e2663]: apr
+        - generic [ref=e2664]:
+          - generic [ref=e2665]: CHIRITZA ÎN CONCERT
+          - generic [ref=e2666]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 14 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2668] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36248/chiritza-n-concert-14-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e2671]:
+        - generic [ref=e2673]:
+          - generic [ref=e2674]: "14"
+          - generic [ref=e2675]: apr
+        - generic [ref=e2676]:
+          - generic [ref=e2677]: Der Kirschgarten / Livada de visini / The Cherry Orchard
+          - generic [ref=e2678]: Teatrul German de Stat, Timisoara, 14 aprilie 2026, 19:30
+        - link "Bilete" [ref=e2680] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35964/der-kirschgarten-livada-de-visini-the-cherry-orchard-14-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e2683]:
+        - generic [ref=e2685]:
+          - generic [ref=e2686]: "15"
+          - generic [ref=e2687]: apr
+        - generic [ref=e2688]:
+          - generic [ref=e2689]: Atelier de Creație „Piticii pricepuți” – Planeta noastră
+          - generic [ref=e2690]: Teatrul Gong - Sala Studio, SIBIU, 15 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2692] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36414/atelier-de-creaie-piticii-pricepui-planeta-noastr-15-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e2695]:
+        - generic [ref=e2697]:
+          - generic [ref=e2698]: "15"
+          - generic [ref=e2699]: apr
+        - generic [ref=e2700]:
+          - generic [ref=e2701]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2702]: Shopping City, Timisoara, 15 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2704] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35927/circul-circo-bellucci-timisoara-15-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2707]:
+        - generic [ref=e2709]:
+          - generic [ref=e2710]: "15"
+          - generic [ref=e2711]: apr
+        - generic [ref=e2712]:
+          - generic [ref=e2713]: Circul Espinol
+          - generic [ref=e2714]: Circul Espinol., Brasov, 15 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2716] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36288/circul-espinol-15-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2719]:
+        - generic [ref=e2721]:
+          - generic [ref=e2722]: "15"
+          - generic [ref=e2723]: apr
+        - generic [ref=e2724]:
+          - generic [ref=e2725]: Recital de pian
+          - generic [ref=e2726]: Filarmonica Oltenia, Craiova, 15 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2728] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36387/recital-de-pian-15-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e2731]:
+        - generic [ref=e2733]:
+          - generic [ref=e2734]: "15"
+          - generic [ref=e2735]: apr
+        - generic [ref=e2736]:
+          - generic [ref=e2737]: Dincolo de uitare
+          - generic [ref=e2738]: TNRS - Sala Studio, Sibiu, 15 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2740] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36226/dincolo-de-uitare-15-aprilie-2026-tnrs-sala-studio-sibiu.html
+      - generic [ref=e2743]:
+        - generic [ref=e2745]:
+          - generic [ref=e2746]: "15"
+          - generic [ref=e2747]: apr
+        - generic [ref=e2748]:
+          - generic [ref=e2749]: UMBRĂ PE HÂRTIE
+          - generic [ref=e2750]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 15 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2752] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36249/umbr-pe-hrtie-15-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e2755]:
+        - generic [ref=e2757]:
+          - generic [ref=e2758]: "16"
+          - generic [ref=e2759]: apr
+        - generic [ref=e2760]:
+          - generic [ref=e2761]: DAS SCHLOSS DER NACHTFEE - CASTELUL ZÂNEI NOPȚII
+          - generic [ref=e2762]: Teatrul Gong - Sala Etaj, Sibiu, 16 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2764] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36403/das-schloss-der-nachtfee-castelul-znei-nopii-16-aprilie-2026-teatrul-gong-sala-etaj-sibiu.html
+      - generic [ref=e2767]:
+        - generic [ref=e2769]:
+          - generic [ref=e2770]: "16"
+          - generic [ref=e2771]: apr
+        - generic [ref=e2772]:
+          - generic [ref=e2773]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2774]: Shopping City, Timisoara, 16 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2776] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35920/circul-circo-bellucci-timisoara-16-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2779]:
+        - generic [ref=e2781]:
+          - generic [ref=e2782]: "16"
+          - generic [ref=e2783]: apr
+        - generic [ref=e2784]:
+          - generic [ref=e2785]: REGELE CERB
+          - generic [ref=e2786]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 16 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2788] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36261/regele-cerb-16-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e2791]:
+        - generic [ref=e2793]:
+          - generic [ref=e2794]: "16"
+          - generic [ref=e2795]: apr
+        - generic [ref=e2796]:
+          - generic [ref=e2797]: Circul Espinol
+          - generic [ref=e2798]: Circul Espinol, Brasov, 16 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2800] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36289/circul-espinol-16-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2803]:
+        - generic [ref=e2805]:
+          - generic [ref=e2806]: "16"
+          - generic [ref=e2807]: apr
+        - generic [ref=e2808]:
+          - generic [ref=e2809]: CONCERT SIMFONIC
+          - generic [ref=e2810]: Filarmonica de Stat Dinu Lipatti, Satu Mare, 16 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2812] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36909/concert-simfonic-16-aprilie-2026-filarmonica-de-stat-dinu-lipatti-satu-mare.html
+      - generic [ref=e2815]:
+        - generic [ref=e2817]:
+          - generic [ref=e2818]: "16"
+          - generic [ref=e2819]: apr
+        - generic [ref=e2820]:
+          - generic [ref=e2821]: Concert Simfonic
+          - generic [ref=e2822]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 16 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2824] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36442/concert-simfonic-16-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e2827]:
+        - generic [ref=e2829]:
+          - generic [ref=e2830]: "16"
+          - generic [ref=e2831]: apr
+        - generic [ref=e2832]:
+          - generic [ref=e2833]: Éclats Sonores | Recital cameral | Radu Kiș (vioară), Roxana Ardeleanu (pian)
+          - generic [ref=e2834]: Bastion Theresia, Timisoara, 16 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2836] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36446/clats-sonores-recital-cameral-radu-ki-vioar-roxana-ardeleanu-pian-16-aprilie-2026-bastion-theresia-timisoara.html
+      - generic [ref=e2839]:
+        - generic [ref=e2841]:
+          - generic [ref=e2842]: "16"
+          - generic [ref=e2843]: apr
+        - generic [ref=e2844]:
+          - generic [ref=e2845]: The Story of Lola Blau
+          - generic [ref=e2846]: TNRS - Sala Studio, Sibiu, 16 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2848] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36227/the-story-of-lola-blau-16-aprilie-2026-tnrs-sala-studio-sibiu.html
+      - generic [ref=e2851]:
+        - generic [ref=e2853]:
+          - generic [ref=e2854]: "16"
+          - generic [ref=e2855]: apr
+        - generic [ref=e2856]:
+          - generic [ref=e2857]: A FOST SAU N-A FOST ?
+          - generic [ref=e2858]: Sala de Teatru la CUB, Iasi, 16 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2860] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36526/a-fost-sau-n-a-fost-16-aprilie-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e2863]:
+        - generic [ref=e2865]:
+          - generic [ref=e2866]: "17"
+          - generic [ref=e2867]: apr
+        - generic [ref=e2868]:
+          - generic [ref=e2869]: HEIDI
+          - generic [ref=e2870]: Teatrul German de Stat, Timisoara, 17 aprilie 2026, 11:00
+        - link "Bilete" [ref=e2872] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35965/heidi-17-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e2875]:
+        - generic [ref=e2877]:
+          - generic [ref=e2878]: "17"
+          - generic [ref=e2879]: apr
+        - generic [ref=e2880]:
+          - generic [ref=e2881]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e2882]: Shopping City, Timisoara, 17 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2884] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35923/circul-circo-bellucci-timisoara-17-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e2887]:
+        - generic [ref=e2889]:
+          - generic [ref=e2890]: "17"
+          - generic [ref=e2891]: apr
+        - generic [ref=e2892]:
+          - generic [ref=e2893]: CRED IN UNICORNI
+          - generic [ref=e2894]: Teatrul Ion Creanga SALA MARE, Bucuresti, 17 aprilie 2026, 18:00
+        - link "Bilete" [ref=e2896] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36086/cred-in-unicorni-17-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e2899]:
+        - generic [ref=e2901]:
+          - generic [ref=e2902]: "17"
+          - generic [ref=e2903]: apr
+        - generic [ref=e2904]:
+          - generic [ref=e2905]: Tur ghidat al expoziției “Ștefan Bertalan. În ritmul lumii - O retrospectivă’ (RO) Ioana Iuna Șerban, curator MARe
+          - generic [ref=e2906]: MARe/Muzeul de Arta Recenta, Bucuresti, 17 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2908] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36654/tur-ghidat-al-expoziiei-tefan-bertalan-n-ritmul-lumii-o-retrospectiv-ro-ioana-iuna-erban-curator-mare-17-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e2911]:
+        - generic [ref=e2913]:
+          - generic [ref=e2914]: "17"
+          - generic [ref=e2915]: apr
+        - generic [ref=e2916]:
+          - generic [ref=e2917]: Gaițele
+          - generic [ref=e2918]: Teatrul Toma Caragiu, Ploiesti, 17 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2920] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35253/gaiele-17-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e2923]:
+        - generic [ref=e2925]:
+          - generic [ref=e2926]: "17"
+          - generic [ref=e2927]: apr
+        - generic [ref=e2928]:
+          - generic [ref=e2929]: Circul Espinol
+          - generic [ref=e2930]: Circul Espinol, Brasov, 17 aprilie 2026, 18:30
+        - link "Bilete" [ref=e2932] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36290/circul-espinol-17-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e2935]:
+        - generic [ref=e2937]:
+          - generic [ref=e2938]: "17"
+          - generic [ref=e2939]: apr
+        - generic [ref=e2940]:
+          - generic [ref=e2941]: Concert simfonic
+          - generic [ref=e2942]: Filarmonica Oltenia, Craiova, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2944] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36388/concert-simfonic-17-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e2947]:
+        - generic [ref=e2949]:
+          - generic [ref=e2950]: "17"
+          - generic [ref=e2951]: apr
+        - generic [ref=e2952]:
+          - generic [ref=e2953]: Concert simfonic – dirijor Valentin Uryupin
+          - generic [ref=e2954]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2956] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35631/concert-simfonic-dirijor-valentin-uryupin-17-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e2959]:
+        - generic [ref=e2961]:
+          - generic [ref=e2962]: "17"
+          - generic [ref=e2963]: apr
+        - generic [ref=e2964]:
+          - generic [ref=e2965]: "OLD AND NEW WORLDS | Orchestra simfonică a Filarmonicii Banatul | Dirijor: Tomáš Brauner | Solistă: Alexandra Dariescu (pian)"
+          - generic [ref=e2966]: Sala Capitol, Timisoara, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2968] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34387/old-and-new-worlds-orchestra-simfonic-a-filarmonicii-banatul-dirijor-tom-brauner-solist-alexandra-dariescu-pian-17-aprilie-2026-sala-capitol-timisoara.html
+      - generic [ref=e2971]:
+        - generic [ref=e2973]:
+          - generic [ref=e2974]: "17"
+          - generic [ref=e2975]: apr
+        - generic [ref=e2976]:
+          - generic [ref=e2977]: TSCHICK / TSCHICK. DE CE AM FURAT MASINA / TSCHICK. WHY WE TOOK THE CAR
+          - generic [ref=e2978]: Teatrul German de Stat, Timisoara, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2980] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35966/tschick-tschick-de-ce-am-furat-masina-tschick-why-we-took-the-car-17-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e2983]:
+        - generic [ref=e2985]:
+          - generic [ref=e2986]: "17"
+          - generic [ref=e2987]: apr
+        - generic [ref=e2988]:
+          - generic [ref=e2989]: Puricele in ureche
+          - generic [ref=e2990]: TNRS – Sala Mare, Sibiu, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e2992] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36228/puricele-in-ureche-17-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e2995]:
+        - generic [ref=e2997]:
+          - generic [ref=e2998]: "17"
+          - generic [ref=e2999]: apr
+        - generic [ref=e3000]:
+          - generic [ref=e3001]: Vineri, 17 aprilie - Iar te sinucizi, iubito?
+          - generic [ref=e3002]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3004] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36491/vineri-17-aprilie-iar-te-sinucizi-iubito-17-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e3007]:
+        - generic [ref=e3009]:
+          - generic [ref=e3010]: "17"
+          - generic [ref=e3011]: apr
+        - generic [ref=e3012]:
+          - generic [ref=e3013]: „AUTENTIC ROMANESC – Din inimi de romani” – EDITIA A V-A cu Lavinia Goste si Marius Zorila
+          - generic [ref=e3014]: BT Arena - Sala Polivalenta, Cluj Napoca, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3016] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34703/autentic-romanesc-din-inimi-de-romani-editia-a-v-a-cu-lavinia-goste-si-marius-zorila-17-aprilie-2026-bt-arena-sala-polivalenta-cluj-napoca.html
+      - generic [ref=e3019]:
+        - generic [ref=e3021]:
+          - generic [ref=e3022]: "17"
+          - generic [ref=e3023]: apr
+        - generic [ref=e3024]:
+          - generic [ref=e3025]: SETEA SI FOAMEA
+          - generic [ref=e3026]: Teatrul National 'Vasile Alecsandri', Iasi, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3028] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36527/setea-si-foamea-17-aprilie-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e3031]:
+        - generic [ref=e3033]:
+          - generic [ref=e3034]: "17"
+          - generic [ref=e3035]: apr
+        - generic [ref=e3036]:
+          - generic [ref=e3037]: CUM S-A ÎNDRĂGOSTIT DOMNUL GHERASE DE CLARA SMITH
+          - generic [ref=e3038]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 17 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3040] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36337/cum-s-a-ndrgostit-domnul-gherase-de-clara-smith-17-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e3043]:
+        - generic [ref=e3045]:
+          - generic [ref=e3046]: "17"
+          - generic [ref=e3047]: apr
+        - generic [ref=e3048]:
+          - generic [ref=e3049]: Tavanul de sticla
+          - generic [ref=e3050]: FF Theatre, Bucuresti, 17 aprilie 2026, 20:00
+        - link "Bilete" [ref=e3052] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36359/tavanul-de-sticla-17-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e3055]:
+        - generic [ref=e3057]:
+          - generic [ref=e3058]: "17"
+          - generic [ref=e3059]: apr
+        - generic [ref=e3060]:
+          - generic [ref=e3061]: "Les nuits noires presents: MAISON NOCTURNE"
+          - generic [ref=e3062]: Grand Hotel Continental(etaj 2- sufragerie), Bucuresti, 17 aprilie 2026, 22:00
+        - link "Bilete" [ref=e3064] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36952/les-nuits-noires-presents-maison-nocturne-17-aprilie-2026-grand-hotel-continental-etaj-2-sufragerie-bucuresti.html
+      - generic [ref=e3067]:
+        - generic [ref=e3069]:
+          - generic [ref=e3070]: 18 apr
+          - generic [ref=e3071]: 31 mai
+        - generic [ref=e3072]:
+          - generic [ref=e3073]: Paul Neagu - Expoziția „Coduri generative”
+          - generic [ref=e3074]: Artwill | Contemporary Art Space, Bucuresti, 18 apr - 31 mai 2026
+        - link "Bilete" [ref=e3076] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36910/paul-neagu-expoziia-coduri-generative-18-apr-31-mai-2026-artwill-contemporary-art-space-bucuresti.html
+      - generic [ref=e3079]:
+        - generic [ref=e3081]:
+          - generic [ref=e3082]: "18"
+          - generic [ref=e3083]: apr
+        - generic [ref=e3084]:
+          - generic [ref=e3085]: Povestea Culorilor
+          - generic [ref=e3086]: Sectia de Papusi a Teatrului Municipal, Baia Mare, 18 aprilie 2026, 10:00
+        - link "Bilete" [ref=e3088] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36626/povestea-culorilor-18-aprilie-2026-sectia-de-papusi-a-teatrului-municipal-baia-mare.html
+      - generic [ref=e3091]:
+        - generic [ref=e3093]:
+          - generic [ref=e3094]: "18"
+          - generic [ref=e3095]: apr
+        - generic [ref=e3096]:
+          - generic [ref=e3097]: Atelierul de Comunicare prin Artă – Găinușe hazlii
+          - generic [ref=e3098]: Teatrul Gong - Sala Studio, SIBIU, 18 aprilie 2026, 10:00
+        - link "Bilete" [ref=e3100] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36417/atelierul-de-comunicare-prin-art-ginue-hazlii-18-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e3103]:
+        - generic [ref=e3105]:
+          - generic [ref=e3106]: "18"
+          - generic [ref=e3107]: apr
+        - generic [ref=e3108]:
+          - generic [ref=e3109]: Sonoro Kids Frumoasa din padurea Adormita / Sleeping Beauty
+          - generic [ref=e3110]: MINA Museum, Bucuresti, 18 aprilie 2026, 10:00
+        - link "Bilete" [ref=e3112] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36048/sonoro-kids-frumoasa-din-padurea-adormita-sleeping-beauty-18-aprilie-2026-mina-museum-bucuresti.html
+      - generic [ref=e3115]:
+        - generic [ref=e3117]:
+          - generic [ref=e3118]: "18"
+          - generic [ref=e3119]: apr
+        - generic [ref=e3120]:
+          - generic [ref=e3121]: DEGETICA
+          - generic [ref=e3122]: Teatrul Gong - Sala Parter, Sibiu, 18 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3124] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36405/degetica-18-aprilie-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e3127]:
+        - generic [ref=e3129]:
+          - generic [ref=e3130]: "18"
+          - generic [ref=e3131]: apr
+        - generic [ref=e3132]:
+          - generic [ref=e3133]: Sâmbătă, 18 aprilie - Hansel și Gretel
+          - generic [ref=e3134]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 18 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3136] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36492/smbt-18-aprilie-hansel-i-gretel-18-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e3139]:
+        - generic [ref=e3141]:
+          - generic [ref=e3142]: "18"
+          - generic [ref=e3143]: apr
+        - generic [ref=e3144]:
+          - generic [ref=e3145]: Plüm-Plüm kalandjai
+          - generic [ref=e3146]: Teatrul de Papusi Puck, Cluj-Napoca, 18 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3148] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36587/plm-plm-kalandjai-18-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e3151]:
+        - generic [ref=e3153]:
+          - generic [ref=e3154]: "18"
+          - generic [ref=e3155]: apr
+        - generic [ref=e3156]:
+          - generic [ref=e3157]: CRED IN UNICORNI
+          - generic [ref=e3158]: Teatrul Ion Creanga SALA MARE, Bucuresti, 18 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3160] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36087/cred-in-unicorni-18-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e3163]:
+        - generic [ref=e3165]:
+          - generic [ref=e3166]: "18"
+          - generic [ref=e3167]: apr
+        - generic [ref=e3168]:
+          - generic [ref=e3169]: Povestea Culorilor
+          - generic [ref=e3170]: Sectia de Papusi a Teatrului Municipal, Baia Mare, 18 aprilie 2026, 11:30
+        - link "Bilete" [ref=e3172] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36627/povestea-culorilor-18-aprilie-2026-sectia-de-papusi-a-teatrului-municipal-baia-mare.html
+      - generic [ref=e3175]:
+        - generic [ref=e3177]:
+          - generic [ref=e3178]: "18"
+          - generic [ref=e3179]: apr
+        - generic [ref=e3180]:
+          - generic [ref=e3181]: "Atelier de creație pentru copii ‘Amprente din grădină ’ Trainer: Beatrice Lefter, grupa 4-7 ani + grupa 8-12 ani"
+          - generic [ref=e3182]: MARe/Muzeul de Arta Recenta, Bucuresti, 18 aprilie 2026, 12:00
+        - link "Bilete" [ref=e3184] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36609/atelier-de-creaie-pentru-copii-amprente-din-grdin-trainer-beatrice-lefter-grupa-4-7-ani-grupa-8-12-ani-18-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e3187]:
+        - generic [ref=e3189]:
+          - generic [ref=e3190]: "18"
+          - generic [ref=e3191]: apr
+        - generic [ref=e3192]:
+          - generic [ref=e3193]: Atelierul de Comunicare prin Artă – Găinușe hazlii
+          - generic [ref=e3194]: Teatrul Gong - Sala Studio, SIBIU, 18 aprilie 2026, 12:00
+        - link "Bilete" [ref=e3196] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36416/atelierul-de-comunicare-prin-art-ginue-hazlii-18-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e3199]:
+        - generic [ref=e3201]:
+          - generic [ref=e3202]: "18"
+          - generic [ref=e3203]: apr
+        - generic [ref=e3204]:
+          - generic [ref=e3205]: "Curs de arta contemporana pentru privitori alintati #5 Trainer: Iuna Serban"
+          - generic [ref=e3206]: MARe/Muzeul de Arta Recenta, Bucuresti, 18 aprilie 2026, 12:00
+        - link "Bilete" [ref=e3208] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34127/curs-de-arta-contemporana-pentru-privitori-alintati-5-trainer-iuna-serban-18-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e3211]:
+        - generic [ref=e3213]:
+          - generic [ref=e3214]: "18"
+          - generic [ref=e3215]: apr
+        - generic [ref=e3216]:
+          - generic [ref=e3217]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e3218]: Shopping City, Timisoara, 18 aprilie 2026, 15:00
+        - link "Bilete" [ref=e3220] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35910/circul-circo-bellucci-timisoara-18-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e3223]:
+        - generic [ref=e3225]:
+          - generic [ref=e3226]: "18"
+          - generic [ref=e3227]: apr
+        - generic [ref=e3228]:
+          - generic [ref=e3229]: Circul Espinol
+          - generic [ref=e3230]: Circul Espinol, Brasov, 18 aprilie 2026, 16:00
+        - link "Bilete" [ref=e3232] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36292/circul-espinol-18-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e3235]:
+        - generic [ref=e3237]:
+          - generic [ref=e3238]: "18"
+          - generic [ref=e3239]: apr
+        - generic [ref=e3240]:
+          - generic [ref=e3241]: EUROVISION Pre-Party
+          - generic [ref=e3242]: Arenele Romane, Bucuresti, 18 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3244] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36102/eurovision-pre-party-18-aprilie-2026-arenele-romane-bucuresti.html
+      - generic [ref=e3247]:
+        - generic [ref=e3249]:
+          - generic [ref=e3250]: "18"
+          - generic [ref=e3251]: apr
+        - generic [ref=e3252]:
+          - generic [ref=e3253]: REMEMORABLE HORSE SHOW - Spectacular Indoor Experience
+          - generic [ref=e3254]: ISSA RESORT, Turda, 18 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3256] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36903/rememorable-horse-show-spectacular-indoor-experience-18-aprilie-2026-issa-resort-turda.html
+      - generic [ref=e3259]:
+        - generic [ref=e3261]:
+          - generic [ref=e3262]: "18"
+          - generic [ref=e3263]: apr
+        - generic [ref=e3264]:
+          - generic [ref=e3265]: DEGETICA
+          - generic [ref=e3266]: Teatrul Gong - Sala Parter, Sibiu, 18 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3268] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36406/degetica-18-aprilie-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e3271]:
+        - generic [ref=e3273]:
+          - generic [ref=e3274]: "18"
+          - generic [ref=e3275]: apr
+        - generic [ref=e3276]:
+          - generic [ref=e3277]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e3278]: Shopping City, Timisoara, 18 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3280] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35905/circul-circo-bellucci-timisoara-18-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e3283]:
+        - generic [ref=e3285]:
+          - generic [ref=e3286]: "18"
+          - generic [ref=e3287]: apr
+        - generic [ref=e3288]:
+          - generic [ref=e3289]: HARAP ALB
+          - generic [ref=e3290]: Teatrul Ion Creanga SALA MARE, Bucuresti, 18 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3292] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36088/harap-alb-18-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e3295]:
+        - generic [ref=e3297]:
+          - generic [ref=e3298]: "18"
+          - generic [ref=e3299]: apr
+        - generic [ref=e3300]:
+          - generic [ref=e3301]: Gaițele
+          - generic [ref=e3302]: Teatrul Toma Caragiu, Ploiesti, 18 aprilie 2026, 18:30
+        - link "Bilete" [ref=e3304] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35254/gaiele-18-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e3307]:
+        - generic [ref=e3309]:
+          - generic [ref=e3310]: "18"
+          - generic [ref=e3311]: apr
+        - generic [ref=e3312]:
+          - generic [ref=e3313]: Circul Espinol
+          - generic [ref=e3314]: Circul Espinol, Brasov, 18 aprilie 2026, 18:30
+        - link "Bilete" [ref=e3316] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36291/circul-espinol-18-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e3319]:
+        - generic [ref=e3321]:
+          - generic [ref=e3322]: "18"
+          - generic [ref=e3323]: apr
+        - generic [ref=e3324]:
+          - generic [ref=e3325]: Puricele in ureche
+          - generic [ref=e3326]: TNRS – Sala Mare, Sibiu, 18 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3328] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36229/puricele-in-ureche-18-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e3331]:
+        - generic [ref=e3333]:
+          - generic [ref=e3334]: "18"
+          - generic [ref=e3335]: apr
+        - generic [ref=e3336]:
+          - generic [ref=e3337]: "D`ALE CARNAVALULUI"
+          - generic [ref=e3338]: Teatrul National 'Vasile Alecsandri', Iasi, 18 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3340] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36528/d-ale-carnavalului-18-aprilie-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e3343]:
+        - generic [ref=e3345]:
+          - generic [ref=e3346]: "18"
+          - generic [ref=e3347]: apr
+        - generic [ref=e3348]:
+          - generic [ref=e3349]: JUST PUSH PLAY - 18!
+          - generic [ref=e3350]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 18 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3352] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36326/just-push-play-18-18-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e3355]:
+        - generic [ref=e3357]:
+          - generic [ref=e3358]: "18"
+          - generic [ref=e3359]: apr
+        - generic [ref=e3360]:
+          - generic [ref=e3361]: Cobzaru Fight Championship 11
+          - generic [ref=e3362]: Liceul Sanitar Antim Ivireanul, Ramnicu Valcea, 18 aprilie 2026, 19:30
+        - link "Bilete" [ref=e3364] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36425/cobzaru-fight-championship-11-18-aprilie-2026-liceul-sanitar-antim-ivireanul-ramnicu-valcea.html
+      - generic [ref=e3367]:
+        - generic [ref=e3369]:
+          - generic [ref=e3370]: "18"
+          - generic [ref=e3371]: apr
+        - generic [ref=e3372]:
+          - generic [ref=e3373]: SISTER ACT
+          - generic [ref=e3374]: Teatrul German de Stat, Timisoara, 18 aprilie 2026, 19:30
+        - link "Bilete" [ref=e3376] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35970/sister-act-18-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e3379]:
+        - generic [ref=e3381]:
+          - generic [ref=e3382]: "18"
+          - generic [ref=e3383]: apr
+        - generic [ref=e3384]:
+          - generic [ref=e3385]: Misery
+          - generic [ref=e3386]: FF Theatre, Bucuresti, 18 aprilie 2026, 20:00
+        - link "Bilete" [ref=e3388] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36360/misery-18-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e3391]:
+        - generic [ref=e3393]:
+          - generic [ref=e3394]: "19"
+          - generic [ref=e3395]: apr
+        - generic [ref=e3396]:
+          - generic [ref=e3397]: "ABA League: U-BT Cluj-Napoca vs. Budućnost VOLI"
+          - generic [ref=e3398]: BT Arena, Cluj-Napoca, 19 aprilie 2026
+        - link "Bilete" [ref=e3400] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35727/aba-league-u-bt-cluj-napoca-vs-budunost-voli-19-aprilie-2026-bt-arena-cluj-napoca.html
+      - generic [ref=e3403]:
+        - generic [ref=e3405]:
+          - generic [ref=e3406]: "19"
+          - generic [ref=e3407]: apr
+        - generic [ref=e3408]:
+          - generic [ref=e3409]: Spectacol de magie cu Magicianul Petruchio
+          - generic [ref=e3410]: Teatrul Amzei, Bucuresti, 19 aprilie 2026, 10:00
+        - link "Bilete" [ref=e3412] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37001/spectacol-de-magie-cu-magicianul-petruchio-19-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e3415]:
+        - generic [ref=e3417]:
+          - generic [ref=e3418]: "19"
+          - generic [ref=e3419]: apr
+        - generic [ref=e3420]:
+          - generic [ref=e3421]: DEGETICA
+          - generic [ref=e3422]: Teatrul Gong - Sala Parter, Sibiu, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3424] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36407/degetica-19-aprilie-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e3427]:
+        - generic [ref=e3429]:
+          - generic [ref=e3430]: "19"
+          - generic [ref=e3431]: apr
+        - generic [ref=e3432]:
+          - generic [ref=e3433]: Cartea Junglei
+          - generic [ref=e3434]: Teatrul de Animatie Imaginario, Ploiesti, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3436] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36470/cartea-junglei-19-aprilie-2026-teatrul-de-animatie-imaginario-ploiesti.html
+      - generic [ref=e3439]:
+        - generic [ref=e3441]:
+          - generic [ref=e3442]: "19"
+          - generic [ref=e3443]: apr
+        - generic [ref=e3444]:
+          - generic [ref=e3445]: Pestisorul de aur @ Hanu’ lui Manuc
+          - generic [ref=e3446]: Hanu' lui Manuc, Bucuresti, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3448] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36030/pestisorul-de-aur-hanu-lui-manuc-19-aprilie-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e3451]:
+        - generic [ref=e3453]:
+          - generic [ref=e3454]: "19"
+          - generic [ref=e3455]: apr
+        - generic [ref=e3456]:
+          - generic [ref=e3457]: Micul Prinț @ Muse Country Club Mogoșoaia
+          - generic [ref=e3458]: Muse Country Club, Mogosoaia, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3460] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36035/micul-prin-muse-country-club-mogooaia-19-aprilie-2026-muse-country-club-mogosoaia.html
+      - generic [ref=e3463]:
+        - generic [ref=e3465]:
+          - generic [ref=e3466]: "19"
+          - generic [ref=e3467]: apr
+        - generic [ref=e3468]:
+          - generic [ref=e3469]: Pinocchio
+          - generic [ref=e3470]: Teatrul de Papusi Puck, Cluj-Napoca, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3472] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36576/pinocchio-19-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e3475]:
+        - generic [ref=e3477]:
+          - generic [ref=e3478]: "19"
+          - generic [ref=e3479]: apr
+        - generic [ref=e3480]:
+          - generic [ref=e3481]: AMINTIRI DIN COPILARIE
+          - generic [ref=e3482]: Teatrul Ion Creanga SALA MARE, Bucuresti, 19 aprilie 2026, 11:00
+        - link "Bilete" [ref=e3484] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36089/amintiri-din-copilarie-19-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e3487]:
+        - generic [ref=e3489]:
+          - generic [ref=e3490]: "19"
+          - generic [ref=e3491]: apr
+        - generic [ref=e3492]:
+          - generic [ref=e3493]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e3494]: Shopping City, Timisoara, 19 aprilie 2026, 11:30
+        - link "Bilete" [ref=e3496] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35914/circul-circo-bellucci-timisoara-19-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e3499]:
+        - generic [ref=e3501]:
+          - generic [ref=e3502]: "19"
+          - generic [ref=e3503]: apr
+        - generic [ref=e3504]:
+          - generic [ref=e3505]: Circul Espinol
+          - generic [ref=e3506]: Circul Espinol, Brasov, 19 aprilie 2026, 11:30
+        - link "Bilete" [ref=e3508] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36293/circul-espinol-19-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e3511]:
+        - generic [ref=e3513]:
+          - generic [ref=e3514]: "19"
+          - generic [ref=e3515]: apr
+        - generic [ref=e3516]:
+          - generic [ref=e3517]: "Atelier de creație pentru copii ‘Atlas botanic: studii inspirate de natură ’ Trainer: Robert Boghiu, grupa 4-7 ani + grupa 8-12 ani"
+          - generic [ref=e3518]: MARe/Muzeul de Arta Recenta, Bucuresti, 19 aprilie 2026, 12:00
+        - link "Bilete" [ref=e3520] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36610/atelier-de-creaie-pentru-copii-atlas-botanic-studii-inspirate-de-natur-trainer-robert-boghiu-grupa-4-7-ani-grupa-8-12-ani-19-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e3523]:
+        - generic [ref=e3525]:
+          - generic [ref=e3526]: "19"
+          - generic [ref=e3527]: apr
+        - generic [ref=e3528]:
+          - generic [ref=e3529]: "Atelier de creație parinte-copil ‘Grădini în miniatură (Atelier de terarii)’ Trainer: Andreea Vrabie și Alexandru Lupu, varsta minima 7 ani"
+          - generic [ref=e3530]: MARe/Muzeul de Arta Recenta, Bucuresti, 19 aprilie 2026, 13:30
+        - link "Bilete" [ref=e3532] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36870/atelier-de-creaie-parinte-copil-grdini-n-miniatur-atelier-de-terarii-trainer-andreea-vrabie-i-alexandru-lupu-varsta-minima-7-ani-19-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e3535]:
+        - generic [ref=e3537]:
+          - generic [ref=e3538]: "19"
+          - generic [ref=e3539]: apr
+        - generic [ref=e3540]:
+          - generic [ref=e3541]: REMEMORABLE HORSE SHOW - Spectacular Indoor Experience
+          - generic [ref=e3542]: ISSA RESORT, Turda, 19 aprilie 2026, 13:30
+        - link "Bilete" [ref=e3544] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36907/rememorable-horse-show-spectacular-indoor-experience-19-aprilie-2026-issa-resort-turda.html
+      - generic [ref=e3547]:
+        - generic [ref=e3549]:
+          - generic [ref=e3550]: "19"
+          - generic [ref=e3551]: apr
+        - generic [ref=e3552]:
+          - generic [ref=e3553]: Circul - Circo Bellucci - Timisoara
+          - generic [ref=e3554]: Shopping City, Timisoara, 19 aprilie 2026, 15:00
+        - link "Bilete" [ref=e3556] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35909/circul-circo-bellucci-timisoara-19-aprilie-2026-shopping-city-timisoara.html
+      - generic [ref=e3559]:
+        - generic [ref=e3561]:
+          - generic [ref=e3562]: "19"
+          - generic [ref=e3563]: apr
+        - generic [ref=e3564]:
+          - generic [ref=e3565]: Circul Espinol
+          - generic [ref=e3566]: Circul Espinol, Brasov, 19 aprilie 2026, 15:30
+        - link "Bilete" [ref=e3568] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36294/circul-espinol-19-aprilie-2026-circul-espinol-brasov.html
+      - generic [ref=e3571]:
+        - generic [ref=e3573]:
+          - generic [ref=e3574]: "19"
+          - generic [ref=e3575]: apr
+        - generic [ref=e3576]:
+          - generic [ref=e3577]: IARNA
+          - generic [ref=e3578]: Fabrica de Cultura (Sala Lulu), Sibiu, 19 aprilie 2026, 17:00
+        - link "Bilete" [ref=e3580] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36231/iarna-19-aprilie-2026-fabrica-de-cultura-sala-lulu-sibiu.html
+      - generic [ref=e3583]:
+        - generic [ref=e3585]:
+          - generic [ref=e3586]: "19"
+          - generic [ref=e3587]: apr
+        - generic [ref=e3588]:
+          - generic [ref=e3589]: PINOCCHIO
+          - generic [ref=e3590]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 19 aprilie 2026, 17:00
+        - link "Bilete" [ref=e3592] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36328/pinocchio-19-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e3595]:
+        - generic [ref=e3597]:
+          - generic [ref=e3598]: "19"
+          - generic [ref=e3599]: apr
+        - generic [ref=e3600]:
+          - generic [ref=e3601]: Un barbat si mai multe femei
+          - generic [ref=e3602]: Casa Caragiale, Bucuresti, 19 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3604] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36899/un-barbat-si-mai-multe-femei-19-aprilie-2026-casa-caragiale-bucuresti.html
+      - generic [ref=e3607]:
+        - generic [ref=e3609]:
+          - generic [ref=e3610]: "19"
+          - generic [ref=e3611]: apr
+        - generic [ref=e3612]:
+          - generic [ref=e3613]: Nopti albe
+          - generic [ref=e3614]: Teatrul Amzei, Bucuresti, 19 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3616] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36657/nopti-albe-19-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e3619]:
+        - generic [ref=e3621]:
+          - generic [ref=e3622]: "19"
+          - generic [ref=e3623]: apr
+        - generic [ref=e3624]:
+          - generic [ref=e3625]: O MIE SI UNA DE NOPTI – LAMPA LUI ALADIN
+          - generic [ref=e3626]: Teatrul Ion Creanga SALA MARE, Bucuresti, 19 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3628] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36090/o-mie-si-una-de-nopti-lampa-lui-aladin-19-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e3631]:
+        - generic [ref=e3633]:
+          - generic [ref=e3634]: "19"
+          - generic [ref=e3635]: apr
+        - generic [ref=e3636]:
+          - generic [ref=e3637]: Cuscrii din Tirana
+          - generic [ref=e3638]: Teatrul Toma Caragiu, Ploiesti, 19 aprilie 2026, 18:30
+        - link "Bilete" [ref=e3640] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36159/cuscrii-din-tirana-19-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e3643]:
+        - generic [ref=e3645]:
+          - generic [ref=e3646]: "19"
+          - generic [ref=e3647]: apr
+        - generic [ref=e3648]:
+          - generic [ref=e3649]: ELIXIRUL DRAGOSTEI
+          - generic [ref=e3650]: Teatrul National de Opera si Balet Oleg Danovski, Constanta, 19 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3652] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36936/elixirul-dragostei-19-aprilie-2026-teatrul-national-de-opera-si-balet-oleg-danovski-constanta.html
+      - generic [ref=e3655]:
+        - generic [ref=e3657]:
+          - generic [ref=e3658]: "19"
+          - generic [ref=e3659]: apr
+        - generic [ref=e3660]:
+          - generic [ref=e3661]: Sunt o baba comunista
+          - generic [ref=e3662]: TNRS - Sala Studio, Sibiu, 19 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3664] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36230/sunt-o-baba-comunista-19-aprilie-2026-tnrs-sala-studio-sibiu.html
+      - generic [ref=e3667]:
+        - generic [ref=e3669]:
+          - generic [ref=e3670]: "19"
+          - generic [ref=e3671]: apr
+        - generic [ref=e3672]:
+          - generic [ref=e3673]: Duminică, 19 aprilie - Crimă la hotelul Howard Johnson’s
+          - generic [ref=e3674]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 19 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3676] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36493/duminic-19-aprilie-crim-la-hotelul-howard-johnson-s-19-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e3679]:
+        - generic [ref=e3681]:
+          - generic [ref=e3682]: "19"
+          - generic [ref=e3683]: apr
+        - generic [ref=e3684]:
+          - generic [ref=e3685]: "1984"
+          - generic [ref=e3686]: Teatrul National 'Vasile Alecsandri', Iasi, 19 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3688] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36529/1984-19-aprilie-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e3691]:
+        - generic [ref=e3693]:
+          - generic [ref=e3694]: "19"
+          - generic [ref=e3695]: apr
+        - generic [ref=e3696]:
+          - generic [ref=e3697]: PINOCCHIO
+          - generic [ref=e3698]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 19 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3700] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36329/pinocchio-19-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e3703]:
+        - generic [ref=e3705]:
+          - generic [ref=e3706]: "19"
+          - generic [ref=e3707]: apr
+        - generic [ref=e3708]:
+          - generic [ref=e3709]: Jocul accidentelor
+          - generic [ref=e3710]: FF Theatre, Bucuresti, 19 aprilie 2026, 20:00
+        - link "Bilete" [ref=e3712] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36361/jocul-accidentelor-19-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e3715]:
+        - generic [ref=e3717]:
+          - generic [ref=e3718]: "19"
+          - generic [ref=e3719]: apr
+        - generic [ref=e3720]:
+          - generic [ref=e3721]: Jezebel & Taraful Dor Nebun
+          - generic [ref=e3722]: Trattoria Monza, Bucuresti, 19 aprilie 2026, 20:00
+        - link "Bilete" [ref=e3724] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36334/jezebel-taraful-dor-nebun-19-aprilie-2026-trattoria-monza-bucuresti.html
+      - generic [ref=e3727]:
+        - generic [ref=e3729]:
+          - generic [ref=e3730]: "20"
+          - generic [ref=e3731]: apr
+        - generic [ref=e3732]:
+          - generic [ref=e3733]: Im West Theater Reschitz / La Teatrul de Vest din Reșița / In Reșița West Theatre HEIDI
+          - generic [ref=e3734]: Teatrul de Vest, Resita, 20 aprilie 2026, 11:30
+        - link "Bilete" [ref=e3736] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35971/im-west-theater-reschitz-la-teatrul-de-vest-din-reia-in-reia-west-theatre-heidi-20-aprilie-2026-teatrul-de-vest-resita.html
+      - generic [ref=e3739]:
+        - generic [ref=e3741]:
+          - generic [ref=e3742]: "20"
+          - generic [ref=e3743]: apr
+        - generic [ref=e3744]:
+          - generic [ref=e3745]: Lupul interzis - Lunea spectacolelor de colectie
+          - generic [ref=e3746]: Teatrul de Papusi Puck, Cluj-Napoca, 20 aprilie 2026, 17:00
+        - link "Bilete" [ref=e3748] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36572/lupul-interzis-lunea-spectacolelor-de-colectie-20-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e3751]:
+        - generic [ref=e3753]:
+          - generic [ref=e3754]: "21"
+          - generic [ref=e3755]: apr
+        - generic [ref=e3756]:
+          - generic [ref=e3757]: Pinocchio
+          - generic [ref=e3758]: Teatrul de Papusi Puck, Cluj-Napoca, 21 aprilie 2026, 17:00
+        - link "Bilete" [ref=e3760] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36577/pinocchio-21-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e3763]:
+        - generic [ref=e3765]:
+          - generic [ref=e3766]: "21"
+          - generic [ref=e3767]: apr
+        - generic [ref=e3768]:
+          - generic [ref=e3769]: Recital de pian – Viniciu Moroianu
+          - generic [ref=e3770]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 21 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3772] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35634/recital-de-pian-viniciu-moroianu-21-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e3775]:
+        - generic [ref=e3777]:
+          - generic [ref=e3778]: "21"
+          - generic [ref=e3779]: apr
+        - generic [ref=e3780]:
+          - generic [ref=e3781]: UN ALTFEL DI HARAP-ALB
+          - generic [ref=e3782]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 21 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3784] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36254/un-altfel-di-harap-alb-21-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e3787]:
+        - generic [ref=e3789]:
+          - generic [ref=e3790]: "21"
+          - generic [ref=e3791]: apr
+        - generic [ref=e3792]:
+          - generic [ref=e3793]: ZI DE BUCURIE reprogramat pentru 21 aprilie
+          - generic [ref=e3794]: Sala de Teatru la CUB, Iasi, 21 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3796] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35550/zi-de-bucurie-reprogramat-pentru-21-aprilie-21-aprilie-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e3799]:
+        - generic [ref=e3801]:
+          - generic [ref=e3802]: "22"
+          - generic [ref=e3803]: apr
+        - generic [ref=e3804]:
+          - generic [ref=e3805]: Atelier de Creație „Piticii pricepuți” – Planeta noastră
+          - generic [ref=e3806]: Teatrul Gong - Sala Studio, SIBIU, 22 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3808] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36415/atelier-de-creaie-piticii-pricepui-planeta-noastr-22-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e3811]:
+        - generic [ref=e3813]:
+          - generic [ref=e3814]: "22"
+          - generic [ref=e3815]: apr
+        - generic [ref=e3816]:
+          - generic [ref=e3817]: Concert cameral
+          - generic [ref=e3818]: Filarmonica Oltenia, Craiova, 22 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3820] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36389/concert-cameral-22-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e3823]:
+        - generic [ref=e3825]:
+          - generic [ref=e3826]: "22"
+          - generic [ref=e3827]: apr
+        - generic [ref=e3828]:
+          - generic [ref=e3829]: KATZELMACHER. WENN DAS MIT DER LIEBE NICHT WÄR/ KATZELMACHER. DACA N-AR FI VORBA DESPRE IUBIRE / KATZELMACHER. IF IT WOULDN'T BE ABOUT LOVE
+          - generic [ref=e3830]: Teatrul German de Stat, Timisoara, 22 aprilie 2026, 19:30
+        - link "Bilete" [ref=e3832] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35972/katzelmacher-wenn-das-mit-der-liebe-nicht-wr-katzelmacher-daca-n-ar-fi-vorba-despre-iubire-katzelmacher-if-it-wouldn-t-be-about-love-22-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e3835]:
+        - generic [ref=e3837]:
+          - generic [ref=e3838]: "22"
+          - generic [ref=e3839]: apr
+        - generic [ref=e3840]:
+          - generic [ref=e3841]: Caligula
+          - generic [ref=e3842]: FF Theatre, Bucuresti, 22 aprilie 2026, 20:00
+        - link "Bilete" [ref=e3844] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36362/caligula-22-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e3847]:
+        - generic [ref=e3849]:
+          - generic [ref=e3850]: "23"
+          - generic [ref=e3851]: apr
+        - generic [ref=e3852]:
+          - generic [ref=e3853]: Cartea Junglei
+          - generic [ref=e3854]: Teatrul de Animatie Imaginario, Ploiesti, 23 aprilie 2026, 10:30
+        - link "Bilete" [ref=e3856] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36935/cartea-junglei-23-aprilie-2026-teatrul-de-animatie-imaginario-ploiesti.html
+      - generic [ref=e3859]:
+        - generic [ref=e3861]:
+          - generic [ref=e3862]: 23-26
+          - generic [ref=e3863]: apr
+        - generic [ref=e3864]:
+          - generic [ref=e3865]: RAD ART FAIR
+          - generic [ref=e3866]: Caro, Bucuresti, 23 - 26 aprilie 2026, 12:00
+        - link "Bilete" [ref=e3868] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36323/rad-art-fair-23-26-aprilie-2026-caro-bucuresti.html
+      - generic [ref=e3871]:
+        - generic [ref=e3873]:
+          - generic [ref=e3874]: "23"
+          - generic [ref=e3875]: apr
+        - generic [ref=e3876]:
+          - generic [ref=e3877]: CEVA CU TAITEI
+          - generic [ref=e3878]: Sala Studio Teofil Valcu, Iasi, 23 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3880] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36555/ceva-cu-taitei-23-aprilie-2026-sala-studio-teofil-valcu-iasi.html
+      - generic [ref=e3883]:
+        - generic [ref=e3885]:
+          - generic [ref=e3886]: "23"
+          - generic [ref=e3887]: apr
+        - generic [ref=e3888]:
+          - generic [ref=e3889]: Concert Simfonic Extraordinar
+          - generic [ref=e3890]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 23 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3892] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36443/concert-simfonic-extraordinar-23-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e3895]:
+        - generic [ref=e3897]:
+          - generic [ref=e3898]: "23"
+          - generic [ref=e3899]: apr
+        - generic [ref=e3900]:
+          - generic [ref=e3901]: Neintelegerea
+          - generic [ref=e3902]: TNRS – Sala Mare, Sibiu, 23 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3904] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36232/neintelegerea-23-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e3907]:
+        - generic [ref=e3909]:
+          - generic [ref=e3910]: "23"
+          - generic [ref=e3911]: apr
+        - generic [ref=e3912]:
+          - generic [ref=e3913]: 12 OAMENI FURIOȘI
+          - generic [ref=e3914]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 23 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3916] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36315/12-oameni-furioi-23-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e3919]:
+        - generic [ref=e3921]:
+          - generic [ref=e3922]: "23"
+          - generic [ref=e3923]: apr
+        - generic [ref=e3924]:
+          - generic [ref=e3925]: "Academica Brass | Recital de instrumente de alamă | Coordonatori: ANDREI CANDRIANU, BOGDAN DIJMĂRESCU"
+          - generic [ref=e3926]: Sala ”Mihai Perian” a Colegiului National de de Arta Ion Vidu, Timisoara, 23 aprilie 2026, 19:00
+        - link "Bilete" [ref=e3928] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36607/academica-brass-recital-de-instrumente-de-alam-coordonatori-andrei-candrianu-bogdan-dijmrescu-23-aprilie-2026-sala-mihai-perian-a-colegiului-national-de-de-arta-ion-vidu-timisoara.html
+      - generic [ref=e3931]:
+        - generic [ref=e3933]:
+          - generic [ref=e3934]: "24"
+          - generic [ref=e3935]: apr
+        - generic [ref=e3936]:
+          - generic [ref=e3937]: ACROGRAFICA
+          - generic [ref=e3938]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 24 aprilie 2026, 10:00
+        - link "Bilete" [ref=e3940] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36530/acrografica-24-aprilie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e3943]:
+        - generic [ref=e3945]:
+          - generic [ref=e3946]: 24-26
+          - generic [ref=e3947]: apr
+        - generic [ref=e3948]:
+          - generic [ref=e3949]: East European Comic Con 2026
+          - generic [ref=e3950]: Romexpo , BUCURESTI, 24 - 26 aprilie 2026, 15:00
+        - link "Bilete" [ref=e3952] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35110/east-european-comic-con-2026-24-26-aprilie-2026-romexpo-bucuresti.html
+      - generic [ref=e3955]:
+        - generic [ref=e3957]:
+          - generic [ref=e3958]: "24"
+          - generic [ref=e3959]: apr
+        - generic [ref=e3960]:
+          - generic [ref=e3961]: Tur ghidat al expoziției “Ștefan Bertalan. În ritmul lumii - O retrospectivă’ (RO) Ovidiu Șandor, fondator și președinte al Fundației Art Encounters
+          - generic [ref=e3962]: MARe/Muzeul de Arta Recenta, Bucuresti, 24 aprilie 2026, 15:00
+        - link "Bilete" [ref=e3964] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36656/tur-ghidat-al-expoziiei-tefan-bertalan-n-ritmul-lumii-o-retrospectiv-ro-ovidiu-andor-fondator-i-preedinte-al-fundaiei-art-encounters-24-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e3967]:
+        - generic [ref=e3969]:
+          - generic [ref=e3970]: "24"
+          - generic [ref=e3971]: apr
+        - generic [ref=e3972]:
+          - generic [ref=e3973]: CONCERT’N DOI
+          - generic [ref=e3974]: Cinegold, Sala 1, Sibiu, 24 aprilie 2026, 17:00
+        - link "Bilete" [ref=e3976] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36924/concert-n-doi-24-aprilie-2026-cinegold-sala-1-sibiu.html
+      - generic [ref=e3979]:
+        - generic [ref=e3981]:
+          - generic [ref=e3982]: "24"
+          - generic [ref=e3983]: apr
+        - generic [ref=e3984]:
+          - generic [ref=e3985]: Circul - Circo Bellucci - Deva
+          - generic [ref=e3986]: Deva Shopping City, Deva, 24 aprilie 2026, 18:00
+        - link "Bilete" [ref=e3988] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36983/circul-circo-bellucci-deva-24-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e3991]:
+        - generic [ref=e3993]:
+          - generic [ref=e3994]: "24"
+          - generic [ref=e3995]: apr
+        - generic [ref=e3996]:
+          - generic [ref=e3997]: Concert Folcloric
+          - generic [ref=e3998]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 24 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4000] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36788/concert-folcloric-24-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e4003]:
+        - generic [ref=e4005]:
+          - generic [ref=e4006]: "24"
+          - generic [ref=e4007]: apr
+        - generic [ref=e4008]:
+          - generic [ref=e4009]: IN PLINA GLORIE
+          - generic [ref=e4010]: Sala Studio Teofil Valcu, Iasi, 24 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4012] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36556/in-plina-glorie-24-aprilie-2026-sala-studio-teofil-valcu-iasi.html
+      - generic [ref=e4015]:
+        - generic [ref=e4017]:
+          - generic [ref=e4018]: "24"
+          - generic [ref=e4019]: apr
+        - generic [ref=e4020]:
+          - generic [ref=e4021]: PETER PAN
+          - generic [ref=e4022]: Teatrul Ion Creanga SALA MARE, Bucuresti, 24 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4024] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36095/peter-pan-24-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e4027]:
+        - generic [ref=e4029]:
+          - generic [ref=e4030]: "24"
+          - generic [ref=e4031]: apr
+        - generic [ref=e4032]:
+          - generic [ref=e4033]: Cartea Junglei
+          - generic [ref=e4034]: Teatrul de Animatie Imaginario, Ploiesti, 24 aprilie 2026, 18:30
+        - link "Bilete" [ref=e4036] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36937/cartea-junglei-24-aprilie-2026-teatrul-de-animatie-imaginario-ploiesti.html
+      - generic [ref=e4039]:
+        - generic [ref=e4041]:
+          - generic [ref=e4042]: "24"
+          - generic [ref=e4043]: apr
+        - generic [ref=e4044]:
+          - generic [ref=e4045]: Dan Ciotoi și Generic la BRUTO Cluj-Napoca
+          - generic [ref=e4046]: BRUTO, Cluj-Napoca, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4048] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36876/dan-ciotoi-i-generic-la-bruto-cluj-napoca-24-aprilie-2026-bruto-cluj-napoca.html
+      - generic [ref=e4051]:
+        - generic [ref=e4053]:
+          - generic [ref=e4054]: "24"
+          - generic [ref=e4055]: apr
+        - generic [ref=e4056]:
+          - generic [ref=e4057]: MEIN KAMPF
+          - generic [ref=e4058]: Teatrul Andrei Mureseanu - SALA ARTA, Sfantu Gheorghe, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4060] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36883/mein-kampf-24-aprilie-2026-teatrul-andrei-mureseanu-sala-arta-sfantu-gheorghe.html
+      - generic [ref=e4063]:
+        - generic [ref=e4065]:
+          - generic [ref=e4066]: "24"
+          - generic [ref=e4067]: apr
+        - generic [ref=e4068]:
+          - generic [ref=e4069]: APOLODOR - un pinguin călător
+          - generic [ref=e4070]: Circul Metropolitan Bucuresti, Bucuresti, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4072] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34588/apolodor-un-pinguin-cltor-24-aprilie-2026-circul-metropolitan-bucuresti-bucuresti.html
+      - generic [ref=e4075]:
+        - generic [ref=e4077]:
+          - generic [ref=e4078]: "24"
+          - generic [ref=e4079]: apr
+        - generic [ref=e4080]:
+          - generic [ref=e4081]: Concert vocal-simfonic
+          - generic [ref=e4082]: Filarmonica Oltenia, Craiova, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4084] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36390/concert-vocal-simfonic-24-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e4087]:
+        - generic [ref=e4089]:
+          - generic [ref=e4090]: "24"
+          - generic [ref=e4091]: apr
+        - generic [ref=e4092]:
+          - generic [ref=e4093]: Concert simfonic – Arthur Fagen
+          - generic [ref=e4094]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4096] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35632/concert-simfonic-arthur-fagen-24-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e4099]:
+        - generic [ref=e4101]:
+          - generic [ref=e4102]: "24"
+          - generic [ref=e4103]: apr
+        - generic [ref=e4104]:
+          - generic [ref=e4105]: Concert Simfonic
+          - generic [ref=e4106]: Teatrul National de Opera si Balet Oleg Danovski, Constanta, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4108] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36938/concert-simfonic-24-aprilie-2026-teatrul-national-de-opera-si-balet-oleg-danovski-constanta.html
+      - generic [ref=e4111]:
+        - generic [ref=e4113]:
+          - generic [ref=e4114]: "24"
+          - generic [ref=e4115]: apr
+        - generic [ref=e4116]:
+          - generic [ref=e4117]: RAMNICU VALCEA O seara de neuitat - Irina Loghin si Mioara Velicu
+          - generic [ref=e4118]: Casa de Cultura a Sindicatelor, Ramnicu Valcea, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4120] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36171/ramnicu-valcea-o-seara-de-neuitat-irina-loghin-si-mioara-velicu-24-aprilie-2026-casa-de-cultura-a-sindicatelor-ramnicu-valcea.html
+      - generic [ref=e4123]:
+        - generic [ref=e4125]:
+          - generic [ref=e4126]: "24"
+          - generic [ref=e4127]: apr
+        - generic [ref=e4128]:
+          - generic [ref=e4129]: "HEROIC TALES | Orchestra simfonică a Filarmonicii Banatul | Dirijor: Gabriel Bebeșelea | Solistă: Leticia Moreno (vioară)"
+          - generic [ref=e4130]: Sala Capitol, Timisoara, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4132] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34388/heroic-tales-orchestra-simfonic-a-filarmonicii-banatul-dirijor-gabriel-bebeelea-solist-leticia-moreno-vioar-24-aprilie-2026-sala-capitol-timisoara.html
+      - generic [ref=e4135]:
+        - generic [ref=e4137]:
+          - generic [ref=e4138]: "24"
+          - generic [ref=e4139]: apr
+        - generic [ref=e4140]:
+          - generic [ref=e4141]: Micul ponei
+          - generic [ref=e4142]: TNRS - Sala Studio, Sibiu, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4144] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36233/micul-ponei-24-aprilie-2026-tnrs-sala-studio-sibiu.html
+      - generic [ref=e4147]:
+        - generic [ref=e4149]:
+          - generic [ref=e4150]: "24"
+          - generic [ref=e4151]: apr
+        - generic [ref=e4152]:
+          - generic [ref=e4153]: Vineri, 24 aprilie - Hipnoza in familie
+          - generic [ref=e4154]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4156] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36494/vineri-24-aprilie-hipnoza-in-familie-24-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e4159]:
+        - generic [ref=e4161]:
+          - generic [ref=e4162]: "24"
+          - generic [ref=e4163]: apr
+        - generic [ref=e4164]:
+          - generic [ref=e4165]: ELLING
+          - generic [ref=e4166]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4168] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36256/elling-24-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e4171]:
+        - generic [ref=e4173]:
+          - generic [ref=e4174]: "24"
+          - generic [ref=e4175]: apr
+        - generic [ref=e4176]:
+          - generic [ref=e4177]: CONCERT’N DOI
+          - generic [ref=e4178]: Cinegold, Sala 1, Sibiu, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4180] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36516/concert-n-doi-24-aprilie-2026-cinegold-sala-1-sibiu.html
+      - generic [ref=e4183]:
+        - generic [ref=e4185]:
+          - generic [ref=e4186]: "24"
+          - generic [ref=e4187]: apr
+        - generic [ref=e4188]:
+          - generic [ref=e4189]: Faust de Johann Wolfgang von Goethe
+          - generic [ref=e4190]: Teatrul INFINIT, Bucuresti, 24 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4192] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35761/faust-de-johann-wolfgang-von-goethe-24-aprilie-2026-teatrul-infinit-bucuresti.html
+      - generic [ref=e4195]:
+        - generic [ref=e4197]:
+          - generic [ref=e4198]: "24"
+          - generic [ref=e4199]: apr
+        - generic [ref=e4200]:
+          - generic [ref=e4201]: Funeralii fericite
+          - generic [ref=e4202]: FF Theatre, Bucuresti, 24 aprilie 2026, 20:00
+        - link "Bilete" [ref=e4204] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36364/funeralii-fericite-24-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e4207]:
+        - generic [ref=e4209]:
+          - generic [ref=e4210]: "24"
+          - generic [ref=e4211]: apr
+        - generic [ref=e4212]:
+          - generic [ref=e4213]: CALUGARITA FEMINISTA si MISOGINUL MODERNIST
+          - generic [ref=e4214]: Teatrul Amzei, Bucuresti, 24 aprilie 2026, 20:30
+        - link "Bilete" [ref=e4216] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36658/calugarita-feminista-si-misoginul-modernist-24-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e4219]:
+        - generic [ref=e4221]:
+          - generic [ref=e4222]: "25"
+          - generic [ref=e4223]: apr
+        - generic [ref=e4224]:
+          - generic [ref=e4225]: EDUCare – Educatie pentru succes
+          - generic [ref=e4226]: Sala Luceafarul, Bucuresti, 25 aprilie 2026
+        - link "Bilete" [ref=e4228] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33954/educare-educatie-pentru-succes-25-aprilie-2026-sala-luceafarul-bucuresti.html
+      - generic [ref=e4231]:
+        - generic [ref=e4233]:
+          - generic [ref=e4234]: "25"
+          - generic [ref=e4235]: apr
+        - generic [ref=e4236]:
+          - generic [ref=e4237]: Concert SoNoRo Kids – Frumoasa din pădurea adormită
+          - generic [ref=e4238]: MINA , Iasi, 25 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4240] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36875/concert-sonoro-kids-frumoasa-din-pdurea-adormit-25-aprilie-2026-mina-iasi.html
+      - generic [ref=e4243]:
+        - generic [ref=e4245]:
+          - generic [ref=e4246]: "25"
+          - generic [ref=e4247]: apr
+        - generic [ref=e4248]:
+          - generic [ref=e4249]: Fata babei si Fata mosneagului
+          - generic [ref=e4250]: Sectia de Papusi a Teatrului Municipal, Baia Mare, 25 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4252] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36628/fata-babei-si-fata-mosneagului-25-aprilie-2026-sectia-de-papusi-a-teatrului-municipal-baia-mare.html
+      - generic [ref=e4255]:
+        - generic [ref=e4257]:
+          - generic [ref=e4258]: "25"
+          - generic [ref=e4259]: apr
+        - generic [ref=e4260]:
+          - generic [ref=e4261]: Atelierul de Creat Povești – Plăsuțe cu dichis
+          - generic [ref=e4262]: Teatrul Gong - Sala Studio, SIBIU, 25 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4264] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36419/atelierul-de-creat-poveti-plsue-cu-dichis-25-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e4267]:
+        - generic [ref=e4269]:
+          - generic [ref=e4270]: "25"
+          - generic [ref=e4271]: apr
+        - generic [ref=e4272]:
+          - generic [ref=e4273]: HERMANN VISEAZA
+          - generic [ref=e4274]: Teatrul Gong - Sala Etaj, Sibiu, 25 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4276] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36409/hermann-viseaza-25-aprilie-2026-teatrul-gong-sala-etaj-sibiu.html
+      - generic [ref=e4279]:
+        - generic [ref=e4281]:
+          - generic [ref=e4282]: "25"
+          - generic [ref=e4283]: apr
+        - generic [ref=e4284]:
+          - generic [ref=e4285]: FOCSANI “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e4286]: Ateneul Popular Mr. Gh. Pastia, Focsani, 25 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4288] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35682/focsani-seful-casei-gasca-zurli-si-antonia-25-aprilie-2026-ateneul-popular-mr-gh-pastia-focsani.html
+      - generic [ref=e4291]:
+        - generic [ref=e4293]:
+          - generic [ref=e4294]: "25"
+          - generic [ref=e4295]: apr
+        - generic [ref=e4296]:
+          - generic [ref=e4297]: CRED IN UNICORNI
+          - generic [ref=e4298]: Teatrul Ion Creanga SALA MARE, Bucuresti, 25 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4300] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35202/cred-in-unicorni-25-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e4303]:
+        - generic [ref=e4305]:
+          - generic [ref=e4306]: "25"
+          - generic [ref=e4307]: apr
+        - generic [ref=e4308]:
+          - generic [ref=e4309]: Sâmbătă, 25 aprilie - Cei trei purcelusi
+          - generic [ref=e4310]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 25 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4312] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36495/smbt-25-aprilie-cei-trei-purcelusi-25-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e4315]:
+        - generic [ref=e4317]:
+          - generic [ref=e4318]: "25"
+          - generic [ref=e4319]: apr
+        - generic [ref=e4320]:
+          - generic [ref=e4321]: Palkó és Panna
+          - generic [ref=e4322]: Teatrul de Papusi Puck, Cluj-Napoca, 25 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4324] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36588/palk-s-panna-25-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e4327]:
+        - generic [ref=e4329]:
+          - generic [ref=e4330]: "25"
+          - generic [ref=e4331]: apr
+        - generic [ref=e4332]:
+          - generic [ref=e4333]: Fata babei si Fata mosneagului
+          - generic [ref=e4334]: Sectia de Papusi a Teatrului Municipal, Baia Mare, 25 aprilie 2026, 11:30
+        - link "Bilete" [ref=e4336] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36629/fata-babei-si-fata-mosneagului-25-aprilie-2026-sectia-de-papusi-a-teatrului-municipal-baia-mare.html
+      - generic [ref=e4339]:
+        - generic [ref=e4341]:
+          - generic [ref=e4342]: "25"
+          - generic [ref=e4343]: apr
+        - generic [ref=e4344]:
+          - generic [ref=e4345]: "Atelier de creație pentru copii ‘Harta naturii ’ Trainer: Izabela Axenie, grupa 4-7 ani + grupa 8-12 ani"
+          - generic [ref=e4346]: MARe/Muzeul de Arta Recenta, Bucuresti, 25 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4348] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36611/atelier-de-creaie-pentru-copii-harta-naturii-trainer-izabela-axenie-grupa-4-7-ani-grupa-8-12-ani-25-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e4351]:
+        - generic [ref=e4353]:
+          - generic [ref=e4354]: "25"
+          - generic [ref=e4355]: apr
+        - generic [ref=e4356]:
+          - generic [ref=e4357]: Capra cu trei iezi
+          - generic [ref=e4358]: Teatrul Amzei, Bucuresti, 25 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4360] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35876/capra-cu-trei-iezi-25-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e4363]:
+        - generic [ref=e4365]:
+          - generic [ref=e4366]: "25"
+          - generic [ref=e4367]: apr
+        - generic [ref=e4368]:
+          - generic [ref=e4369]: Atelierul de Creat Povești – Plăsuțe cu dichis
+          - generic [ref=e4370]: Teatrul Gong - Sala Studio, SIBIU, 25 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4372] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36418/atelierul-de-creat-poveti-plsue-cu-dichis-25-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e4375]:
+        - generic [ref=e4377]:
+          - generic [ref=e4378]: "25"
+          - generic [ref=e4379]: apr
+        - generic [ref=e4380]:
+          - generic [ref=e4381]: FOCSANI “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e4382]: Ateneul Popular Mr. Gh. Pastia, Focsani, 25 aprilie 2026, 14:00
+        - link "Bilete" [ref=e4384] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36901/focsani-seful-casei-gasca-zurli-si-antonia-25-aprilie-2026-ateneul-popular-mr-gh-pastia-focsani.html
+      - generic [ref=e4387]:
+        - generic [ref=e4389]:
+          - generic [ref=e4390]: "25"
+          - generic [ref=e4391]: apr
+        - generic [ref=e4392]:
+          - generic [ref=e4393]: Circul - Circo Bellucci - Deva
+          - generic [ref=e4394]: Deva Shopping City, Deva, 25 aprilie 2026, 15:00
+        - link "Bilete" [ref=e4396] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36980/circul-circo-bellucci-deva-25-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e4399]:
+        - generic [ref=e4401]:
+          - generic [ref=e4402]: "25"
+          - generic [ref=e4403]: apr
+        - generic [ref=e4404]:
+          - generic [ref=e4405]: REMEMORABLE HORSE SHOW - Spectacular Indoor Experience
+          - generic [ref=e4406]: ISSA RESORT, Turda, 25 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4408] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36904/rememorable-horse-show-spectacular-indoor-experience-25-aprilie-2026-issa-resort-turda.html
+      - generic [ref=e4411]:
+        - generic [ref=e4413]:
+          - generic [ref=e4414]: "25"
+          - generic [ref=e4415]: apr
+        - generic [ref=e4416]:
+          - generic [ref=e4417]: HERMANN VISEAZA
+          - generic [ref=e4418]: Teatrul Gong - Sala Etaj, Sibiu, 25 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4420] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36410/hermann-viseaza-25-aprilie-2026-teatrul-gong-sala-etaj-sibiu.html
+      - generic [ref=e4423]:
+        - generic [ref=e4425]:
+          - generic [ref=e4426]: "25"
+          - generic [ref=e4427]: apr
+        - generic [ref=e4428]:
+          - generic [ref=e4429]: Circul - Circo Bellucci - Deva
+          - generic [ref=e4430]: Deva Shopping City, Deva, 25 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4432] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36971/circul-circo-bellucci-deva-25-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e4435]:
+        - generic [ref=e4437]:
+          - generic [ref=e4438]: "25"
+          - generic [ref=e4439]: apr
+        - generic [ref=e4440]:
+          - generic [ref=e4441]: CRED IN UNICORNI
+          - generic [ref=e4442]: Teatrul Ion Creanga SALA MARE, Bucuresti, 25 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4444] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36776/cred-in-unicorni-25-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e4447]:
+        - generic [ref=e4449]:
+          - generic [ref=e4450]: "25"
+          - generic [ref=e4451]: apr
+        - generic [ref=e4452]:
+          - generic [ref=e4453]: HAI LA CIRC SA POVESTIM!
+          - generic [ref=e4454]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 25 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4456] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36531/hai-la-circ-sa-povestim-25-aprilie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e4459]:
+        - generic [ref=e4461]:
+          - generic [ref=e4462]: "25"
+          - generic [ref=e4463]: apr
+        - generic [ref=e4464]:
+          - generic [ref=e4465]: Descurca lume
+          - generic [ref=e4466]: Teatrul Toma Caragiu, Ploiesti, 25 aprilie 2026, 18:30
+        - link "Bilete" [ref=e4468] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36632/descurca-lume-25-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e4471]:
+        - generic [ref=e4473]:
+          - generic [ref=e4474]: "25"
+          - generic [ref=e4475]: apr
+        - generic [ref=e4476]:
+          - generic [ref=e4477]: MEIN KAMPF
+          - generic [ref=e4478]: Teatrul Andrei Mureseanu - SALA ARTA, Sfantu Gheorghe, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4480] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36884/mein-kampf-25-aprilie-2026-teatrul-andrei-mureseanu-sala-arta-sfantu-gheorghe.html
+      - generic [ref=e4483]:
+        - generic [ref=e4485]:
+          - generic [ref=e4486]: "25"
+          - generic [ref=e4487]: apr
+        - generic [ref=e4488]:
+          - generic [ref=e4489]: reACTIUNE
+          - generic [ref=e4490]: Teatrul Municipal Baia Mare - Sala Studio, Baia Mare, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4492] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36630/reactiune-25-aprilie-2026-teatrul-municipal-baia-mare-sala-studio-baia-mare.html
+      - generic [ref=e4495]:
+        - generic [ref=e4497]:
+          - generic [ref=e4498]: "25"
+          - generic [ref=e4499]: apr
+        - generic [ref=e4500]:
+          - generic [ref=e4501]: BUZAU O seara de neuitat - Romica Tociu si Cornel Palade
+          - generic [ref=e4502]: Sala Mare a Consiliul Judetean, Buzau, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4504] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36893/buzau-o-seara-de-neuitat-romica-tociu-si-cornel-palade-25-aprilie-2026-sala-mare-a-consiliul-judetean-buzau.html
+      - generic [ref=e4507]:
+        - generic [ref=e4509]:
+          - generic [ref=e4510]: "25"
+          - generic [ref=e4511]: apr
+        - generic [ref=e4512]:
+          - generic [ref=e4513]: LOVE IS IN THE AIR
+          - generic [ref=e4514]: Teatrul National de Opera si Balet Oleg Danovski, Constanta, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4516] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36939/love-is-in-the-air-25-aprilie-2026-teatrul-national-de-opera-si-balet-oleg-danovski-constanta.html
+      - generic [ref=e4519]:
+        - generic [ref=e4521]:
+          - generic [ref=e4522]: "25"
+          - generic [ref=e4523]: apr
+        - generic [ref=e4524]:
+          - generic [ref=e4525]: Neasemuita poveste a lui Abul Hossein Yemenitul și a fugii lui în pustie
+          - generic [ref=e4526]: TNRS – Sala Mare, Sibiu, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4528] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36234/neasemuita-poveste-a-lui-abul-hossein-yemenitul-i-a-fugii-lui-n-pustie-25-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e4531]:
+        - generic [ref=e4533]:
+          - generic [ref=e4534]: "25"
+          - generic [ref=e4535]: apr
+        - generic [ref=e4536]:
+          - generic [ref=e4537]: SKA-NK + support live @ B52 The Club
+          - generic [ref=e4538]: B52 The Club, Bucuresti, 25 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4540] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35788/ska-nk-support-live-b52-the-club-25-aprilie-2026-b52-the-club-bucuresti.html
+      - generic [ref=e4543]:
+        - generic [ref=e4545]:
+          - generic [ref=e4546]: "25"
+          - generic [ref=e4547]: apr
+        - generic [ref=e4548]:
+          - generic [ref=e4549]: Autopsia unor întâmplări nevinovate
+          - generic [ref=e4550]: FF Theatre, Bucuresti, 25 aprilie 2026, 20:00
+        - link "Bilete" [ref=e4552] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36365/autopsia-unor-ntmplri-nevinovate-25-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e4555]:
+        - generic [ref=e4557]:
+          - generic [ref=e4558]: "26"
+          - generic [ref=e4559]: apr
+        - generic [ref=e4560]:
+          - generic [ref=e4561]: Ocolul pământului în 80 zile
+          - generic [ref=e4562]: Teatrul Amzei, Bucuresti, 26 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4564] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36659/ocolul-pmntului-n-80-zile-26-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e4567]:
+        - generic [ref=e4569]:
+          - generic [ref=e4570]: "26"
+          - generic [ref=e4571]: apr
+        - generic [ref=e4572]:
+          - generic [ref=e4573]: Atelier pentru miniArtiști – Tablou de primăvară. Lumea marilor artiști
+          - generic [ref=e4574]: Teatrul Gong - Sala Studio, SIBIU, 26 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4576] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36421/atelier-pentru-miniartiti-tablou-de-primvar-lumea-marilor-artiti-26-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e4579]:
+        - generic [ref=e4581]:
+          - generic [ref=e4582]: "26"
+          - generic [ref=e4583]: apr
+        - generic [ref=e4584]:
+          - generic [ref=e4585]: RECITAL EDUCATIV PERCUȚIE | 0-2 ani | Sorina Savii
+          - generic [ref=e4586]: Sala Corului, Timisoara, 26 aprilie 2026, 10:00
+        - link "Bilete" [ref=e4588] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36449/recital-educativ-percuie-0-2-ani-sorina-savii-26-aprilie-2026-sala-corului-timisoara.html
+      - generic [ref=e4591]:
+        - generic [ref=e4593]:
+          - generic [ref=e4594]: "26"
+          - generic [ref=e4595]: apr
+        - generic [ref=e4596]:
+          - generic [ref=e4597]: FATA BABEI SI FATA MOSULUI
+          - generic [ref=e4598]: Teatrul Ion Creanga SALA MARE, Bucuresti, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4600] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36096/fata-babei-si-fata-mosului-26-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e4603]:
+        - generic [ref=e4605]:
+          - generic [ref=e4606]: "26"
+          - generic [ref=e4607]: apr
+        - generic [ref=e4608]:
+          - generic [ref=e4609]: HERMANN VISEAZA
+          - generic [ref=e4610]: Teatrul Gong - Sala Etaj, Sibiu, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4612] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36411/hermann-viseaza-26-aprilie-2026-teatrul-gong-sala-etaj-sibiu.html
+      - generic [ref=e4615]:
+        - generic [ref=e4617]:
+          - generic [ref=e4618]: "26"
+          - generic [ref=e4619]: apr
+        - generic [ref=e4620]:
+          - generic [ref=e4621]: VASLUI “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e4622]: Centrul Cultural Judetean, Vaslui, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4624] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35683/vaslui-seful-casei-gasca-zurli-si-antonia-26-aprilie-2026-centrul-cultural-judetean-vaslui.html
+      - generic [ref=e4627]:
+        - generic [ref=e4629]:
+          - generic [ref=e4630]: "26"
+          - generic [ref=e4631]: apr
+        - generic [ref=e4632]:
+          - generic [ref=e4633]: ABC-UL CIRCULUI
+          - generic [ref=e4634]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4636] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36534/abc-ul-circului-26-aprilie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e4639]:
+        - generic [ref=e4641]:
+          - generic [ref=e4642]: "26"
+          - generic [ref=e4643]: apr
+        - generic [ref=e4644]:
+          - generic [ref=e4645]: Danila Prepeleac
+          - generic [ref=e4646]: Teatrul de Animatie Imaginario, Ploiesti, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4648] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35262/danila-prepeleac-26-aprilie-2026-teatrul-de-animatie-imaginario-ploiesti.html
+      - generic [ref=e4651]:
+        - generic [ref=e4653]:
+          - generic [ref=e4654]: "26"
+          - generic [ref=e4655]: apr
+        - generic [ref=e4656]:
+          - generic [ref=e4657]: Dumbo cel istet @ Hanu’ lui Manuc
+          - generic [ref=e4658]: Hanu' lui Manuc, Bucuresti, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4660] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36031/dumbo-cel-istet-hanu-lui-manuc-26-aprilie-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e4663]:
+        - generic [ref=e4665]:
+          - generic [ref=e4666]: "26"
+          - generic [ref=e4667]: apr
+        - generic [ref=e4668]:
+          - generic [ref=e4669]: Cenușăreasa @ Nest Hub Baicului
+          - generic [ref=e4670]: Nest Hub Baicului, Bucuresti, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4672] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36053/cenureasa-nest-hub-baicului-26-aprilie-2026-nest-hub-baicului-bucuresti.html
+      - generic [ref=e4675]:
+        - generic [ref=e4677]:
+          - generic [ref=e4678]: "26"
+          - generic [ref=e4679]: apr
+        - generic [ref=e4680]:
+          - generic [ref=e4681]: Danila Prepeleac
+          - generic [ref=e4682]: Teatrul de Papusi Puck, Cluj-Napoca, 26 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4684] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36579/danila-prepeleac-26-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e4687]:
+        - generic [ref=e4689]:
+          - generic [ref=e4690]: "26"
+          - generic [ref=e4691]: apr
+        - generic [ref=e4692]:
+          - generic [ref=e4693]: RECITAL EDUCATIV PERCUȚIE | 3-5 ani | Sorina Savii
+          - generic [ref=e4694]: Sala Corului, Timisoara, 26 aprilie 2026, 11:30
+        - link "Bilete" [ref=e4696] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36450/recital-educativ-percuie-3-5-ani-sorina-savii-26-aprilie-2026-sala-corului-timisoara.html
+      - generic [ref=e4699]:
+        - generic [ref=e4701]:
+          - generic [ref=e4702]: "26"
+          - generic [ref=e4703]: apr
+        - generic [ref=e4704]:
+          - generic [ref=e4705]: Circul - Circo Bellucci - Deva
+          - generic [ref=e4706]: Deva Shopping City, Deva, 26 aprilie 2026, 11:30
+        - link "Bilete" [ref=e4708] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36981/circul-circo-bellucci-deva-26-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e4711]:
+        - generic [ref=e4713]:
+          - generic [ref=e4714]: "26"
+          - generic [ref=e4715]: apr
+        - generic [ref=e4716]:
+          - generic [ref=e4717]: "Atelier de creație pentru copii ‘Imagini în mișcare: agamograf ’ Trainer: Ana Olivia Lăzărescu, grupa 4-7 ani + grupa 8-12 ani"
+          - generic [ref=e4718]: MARe/Muzeul de Arta Recenta, Bucuresti, 26 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4720] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36612/atelier-de-creaie-pentru-copii-imagini-n-micare-agamograf-trainer-ana-olivia-lzrescu-grupa-4-7-ani-grupa-8-12-ani-26-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e4723]:
+        - generic [ref=e4725]:
+          - generic [ref=e4726]: "26"
+          - generic [ref=e4727]: apr
+        - generic [ref=e4728]:
+          - generic [ref=e4729]: "Atelier de creație parinte-copil ‘Fructe și legume în spirale’ Trainer: Izabela Axenie, grupa 4-7 ani + grupa 8-12 ani"
+          - generic [ref=e4730]: MARe/Muzeul de Arta Recenta, Bucuresti, 26 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4732] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36613/atelier-de-creaie-parinte-copil-fructe-i-legume-n-spirale-trainer-izabela-axenie-grupa-4-7-ani-grupa-8-12-ani-26-aprilie-2026-mare-muzeul-de-arta-recenta-bucuresti.html
+      - generic [ref=e4735]:
+        - generic [ref=e4737]:
+          - generic [ref=e4738]: "26"
+          - generic [ref=e4739]: apr
+        - generic [ref=e4740]:
+          - generic [ref=e4741]: Atelier pentru miniArtiști – Tablou de primăvară. Lumea marilor artiști
+          - generic [ref=e4742]: Teatrul Gong - Sala Studio, SIBIU, 26 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4744] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36420/atelier-pentru-miniartiti-tablou-de-primvar-lumea-marilor-artiti-26-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e4747]:
+        - generic [ref=e4749]:
+          - generic [ref=e4750]: "26"
+          - generic [ref=e4751]: apr
+        - generic [ref=e4752]:
+          - generic [ref=e4753]: Danila Prepeleac
+          - generic [ref=e4754]: Teatrul de Papusi Puck, Cluj-Napoca, 26 aprilie 2026, 12:30
+        - link "Bilete" [ref=e4756] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36580/danila-prepeleac-26-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e4759]:
+        - generic [ref=e4761]:
+          - generic [ref=e4762]: "26"
+          - generic [ref=e4763]: apr
+        - generic [ref=e4764]:
+          - generic [ref=e4765]: RECITAL EDUCATIV PERCUȚIE | 6-10 ani | Sorina Savii
+          - generic [ref=e4766]: Sala Corului, Timisoara, 26 aprilie 2026, 13:00
+        - link "Bilete" [ref=e4768] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36475/recital-educativ-percuie-6-10-ani-sorina-savii-26-aprilie-2026-sala-corului-timisoara.html
+      - generic [ref=e4771]:
+        - generic [ref=e4773]:
+          - generic [ref=e4774]: "26"
+          - generic [ref=e4775]: apr
+        - generic [ref=e4776]:
+          - generic [ref=e4777]: REMEMORABLE HORSE SHOW - Spectacular Indoor Experience
+          - generic [ref=e4778]: ISSA RESORT, Turda, 26 aprilie 2026, 13:30
+        - link "Bilete" [ref=e4780] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36908/rememorable-horse-show-spectacular-indoor-experience-26-aprilie-2026-issa-resort-turda.html
+      - generic [ref=e4783]:
+        - generic [ref=e4785]:
+          - generic [ref=e4786]: "26"
+          - generic [ref=e4787]: apr
+        - generic [ref=e4788]:
+          - generic [ref=e4789]: Circul - Circo Bellucci - Deva
+          - generic [ref=e4790]: Deva Shopping City, Deva, 26 aprilie 2026, 15:00
+        - link "Bilete" [ref=e4792] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36979/circul-circo-bellucci-deva-26-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e4795]:
+        - generic [ref=e4797]:
+          - generic [ref=e4798]: "26"
+          - generic [ref=e4799]: apr
+        - generic [ref=e4800]:
+          - generic [ref=e4801]: Neasemuita poveste a lui Abul Hossein Yemenitul și a fugii lui în pustie
+          - generic [ref=e4802]: TNRS – Sala Mare, Sibiu, 26 aprilie 2026, 17:00
+        - link "Bilete" [ref=e4804] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36235/neasemuita-poveste-a-lui-abul-hossein-yemenitul-i-a-fugii-lui-n-pustie-26-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e4807]:
+        - generic [ref=e4809]:
+          - generic [ref=e4810]: "26"
+          - generic [ref=e4811]: apr
+        - generic [ref=e4812]:
+          - generic [ref=e4813]: CALATORII PRIN GALAXII
+          - generic [ref=e4814]: Teatrul Ion Creanga SALA MARE, Bucuresti, 26 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4816] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36097/calatorii-prin-galaxii-26-aprilie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e4819]:
+        - generic [ref=e4821]:
+          - generic [ref=e4822]: "26"
+          - generic [ref=e4823]: apr
+        - generic [ref=e4824]:
+          - generic [ref=e4825]: Trei surori in Atena
+          - generic [ref=e4826]: Teatrul Amzei, Bucuresti, 26 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4828] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34462/trei-surori-in-atena-26-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e4831]:
+        - generic [ref=e4833]:
+          - generic [ref=e4834]: "26"
+          - generic [ref=e4835]: apr
+        - generic [ref=e4836]:
+          - generic [ref=e4837]: MEMORIA APEI
+          - generic [ref=e4838]: Sala Studio Teofil Valcu, Iasi, 26 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4840] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36557/memoria-apei-26-aprilie-2026-sala-studio-teofil-valcu-iasi.html
+      - generic [ref=e4843]:
+        - generic [ref=e4845]:
+          - generic [ref=e4846]: "26"
+          - generic [ref=e4847]: apr
+        - generic [ref=e4848]:
+          - generic [ref=e4849]: Contele de Monte Cristo
+          - generic [ref=e4850]: Teatrul Toma Caragiu, Ploiesti, 26 aprilie 2026, 18:30
+        - link "Bilete" [ref=e4852] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36633/contele-de-monte-cristo-26-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e4855]:
+        - generic [ref=e4857]:
+          - generic [ref=e4858]: "26"
+          - generic [ref=e4859]: apr
+        - generic [ref=e4860]:
+          - generic [ref=e4861]: Duminică, 26 aprilie - DESPRE SOARECI SI OAMENI
+          - generic [ref=e4862]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 26 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4864] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36496/duminic-26-aprilie-despre-soareci-si-oameni-26-aprilie-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e4867]:
+        - generic [ref=e4869]:
+          - generic [ref=e4870]: "26"
+          - generic [ref=e4871]: apr
+        - generic [ref=e4872]:
+          - generic [ref=e4873]: O SCRISOARE PIERDUTĂ ÎN CONCERT
+          - generic [ref=e4874]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 26 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4876] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36257/o-scrisoare-pierdut-n-concert-26-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e4879]:
+        - generic [ref=e4881]:
+          - generic [ref=e4882]: "26"
+          - generic [ref=e4883]: apr
+        - generic [ref=e4884]:
+          - generic [ref=e4885]: Cerere in casatorie
+          - generic [ref=e4886]: Teatrul Amzei, Bucuresti, 26 aprilie 2026, 20:00
+        - link "Bilete" [ref=e4888] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36660/cerere-in-casatorie-26-aprilie-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e4891]:
+        - generic [ref=e4893]:
+          - generic [ref=e4894]: "27"
+          - generic [ref=e4895]: apr
+        - generic [ref=e4896]:
+          - generic [ref=e4897]: Concert educativ - SISTEMUL SOLAR MUZICAL / Calatorie muzicala de explorare a sistemului solar
+          - generic [ref=e4898]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 27 aprilie 2026, 11:00
+        - link "Bilete" [ref=e4900] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36379/concert-educativ-sistemul-solar-muzical-calatorie-muzicala-de-explorare-a-sistemului-solar-27-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e4903]:
+        - generic [ref=e4905]:
+          - generic [ref=e4906]: "27"
+          - generic [ref=e4907]: apr
+        - generic [ref=e4908]:
+          - generic [ref=e4909]: Concert educativ - SISTEMUL SOLAR MUZICAL / Calatorie muzicala de explorare a sistemului solar
+          - generic [ref=e4910]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 27 aprilie 2026, 12:00
+        - link "Bilete" [ref=e4912] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36574/concert-educativ-sistemul-solar-muzical-calatorie-muzicala-de-explorare-a-sistemului-solar-27-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e4915]:
+        - generic [ref=e4917]:
+          - generic [ref=e4918]: "27"
+          - generic [ref=e4919]: apr
+        - generic [ref=e4920]:
+          - generic [ref=e4921]: Circul - Circo Bellucci - Deva
+          - generic [ref=e4922]: Deva Shopping City, Deva, 27 aprilie 2026, 18:00
+        - link "Bilete" [ref=e4924] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36972/circul-circo-bellucci-deva-27-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e4927]:
+        - generic [ref=e4929]:
+          - generic [ref=e4930]: "27"
+          - generic [ref=e4931]: apr
+        - generic [ref=e4932]:
+          - generic [ref=e4933]: 8 FEMEI
+          - generic [ref=e4934]: Teatrul National 'Vasile Alecsandri', Iasi, 27 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4936] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36558/8-femei-27-aprilie-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e4939]:
+        - generic [ref=e4941]:
+          - generic [ref=e4942]: "27"
+          - generic [ref=e4943]: apr
+        - generic [ref=e4944]:
+          - generic [ref=e4945]: Bădăranii
+          - generic [ref=e4946]: Teatrul National Bucuresti - Sala Mica, Bucuresti, 27 aprilie 2026, 19:30
+        - link "Bilete" [ref=e4948] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36537/bdranii-27-aprilie-2026-teatrul-national-bucuresti-sala-mica-bucuresti.html
+      - generic [ref=e4951]:
+        - generic [ref=e4953]:
+          - generic [ref=e4954]: "28"
+          - generic [ref=e4955]: apr
+        - generic [ref=e4956]:
+          - generic [ref=e4957]: Danila Prepeleac
+          - generic [ref=e4958]: Teatrul de Papusi Puck, Cluj-Napoca, 28 aprilie 2026, 17:00
+        - link "Bilete" [ref=e4960] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36581/danila-prepeleac-28-aprilie-2026-teatrul-de-papusi-puck-cluj-napoca.html
+      - generic [ref=e4963]:
+        - generic [ref=e4965]:
+          - generic [ref=e4966]: "28"
+          - generic [ref=e4967]: apr
+        - generic [ref=e4968]:
+          - generic [ref=e4969]: PIETONUL AERULUI
+          - generic [ref=e4970]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 28 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4972] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36258/pietonul-aerului-28-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e4975]:
+        - generic [ref=e4977]:
+          - generic [ref=e4978]: "28"
+          - generic [ref=e4979]: apr
+        - generic [ref=e4980]:
+          - generic [ref=e4981]: SETEA SI FOAMEA
+          - generic [ref=e4982]: Teatrul National 'Vasile Alecsandri', Iasi, 28 aprilie 2026, 19:00
+        - link "Bilete" [ref=e4984] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36559/setea-si-foamea-28-aprilie-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e4987]:
+        - generic [ref=e4989]:
+          - generic [ref=e4990]: "29"
+          - generic [ref=e4991]: apr
+        - generic [ref=e4992]:
+          - generic [ref=e4993]: CANDACE BUSHNELL - the real CARRIE BRADSHAW
+          - generic [ref=e4994]: Sala Luceafarul, Bucuresti, 29 aprilie 2026
+        - link "Bilete" [ref=e4996] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35431/candace-bushnell-the-real-carrie-bradshaw-29-aprilie-2026-sala-luceafarul-bucuresti.html
+      - generic [ref=e4999]:
+        - generic [ref=e5001]:
+          - generic [ref=e5002]: "29"
+          - generic [ref=e5003]: apr
+        - generic [ref=e5004]:
+          - generic [ref=e5005]: Atelier de Creație „Piticii pricepuți” – Tobițe colorate
+          - generic [ref=e5006]: Teatrul Gong - Sala Studio, SIBIU, 29 aprilie 2026, 18:00
+        - link "Bilete" [ref=e5008] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36423/atelier-de-creaie-piticii-pricepui-tobie-colorate-29-aprilie-2026-teatrul-gong-sala-studio-sibiu.html
+      - generic [ref=e5011]:
+        - generic [ref=e5013]:
+          - generic [ref=e5014]: "29"
+          - generic [ref=e5015]: apr
+        - generic [ref=e5016]:
+          - generic [ref=e5017]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5018]: Deva Shopping City, Deva, 29 aprilie 2026, 18:00
+        - link "Bilete" [ref=e5020] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36984/circul-circo-bellucci-deva-29-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e5023]:
+        - generic [ref=e5025]:
+          - generic [ref=e5026]: "29"
+          - generic [ref=e5027]: apr
+        - generic [ref=e5028]:
+          - generic [ref=e5029]: ITALIA SE PREZINTĂ
+          - generic [ref=e5030]: Teatrul Toma Caragiu, Ploiesti, 29 aprilie 2026, 18:30
+        - link "Bilete" [ref=e5032] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36156/italia-se-prezint-29-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e5035]:
+        - generic [ref=e5037]:
+          - generic [ref=e5038]: "29"
+          - generic [ref=e5039]: apr
+        - generic [ref=e5040]:
+          - generic [ref=e5041]: Recital extraordinar
+          - generic [ref=e5042]: Filarmonica Oltenia, Craiova, 29 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5044] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36391/recital-extraordinar-29-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e5047]:
+        - generic [ref=e5049]:
+          - generic [ref=e5050]: "29"
+          - generic [ref=e5051]: apr
+        - generic [ref=e5052]:
+          - generic [ref=e5053]: Concert de Jazz Extraordinar
+          - generic [ref=e5054]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 29 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5056] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36445/concert-de-jazz-extraordinar-29-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e5059]:
+        - generic [ref=e5061]:
+          - generic [ref=e5062]: "29"
+          - generic [ref=e5063]: apr
+        - generic [ref=e5064]:
+          - generic [ref=e5065]: Lungul drum al zilei catre noapte
+          - generic [ref=e5066]: TNRS – Sala Mare, Sibiu, 29 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5068] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36236/lungul-drum-al-zilei-catre-noapte-29-aprilie-2026-tnrs-sala-mare-sibiu.html
+      - generic [ref=e5071]:
+        - generic [ref=e5073]:
+          - generic [ref=e5074]: "29"
+          - generic [ref=e5075]: apr
+        - generic [ref=e5076]:
+          - generic [ref=e5077]: NUMĂRUL 1 MONDIAL – PREMIERĂ
+          - generic [ref=e5078]: Teatrul National Cluj-Napoca, Studio Euphorion, Cluj-Napoca, 29 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5080] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36325/numrul-1-mondial-premier-29-aprilie-2026-teatrul-national-cluj-napoca-studio-euphorion-cluj-napoca.html
+      - generic [ref=e5083]:
+        - generic [ref=e5085]:
+          - generic [ref=e5086]: "29"
+          - generic [ref=e5087]: apr
+        - generic [ref=e5088]:
+          - generic [ref=e5089]: Lysistrata 3.0
+          - generic [ref=e5090]: Teatrul German de Stat, Timisoara, 29 aprilie 2026, 19:30
+        - link "Bilete" [ref=e5092] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35973/lysistrata-3-0-29-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5095]:
+        - generic [ref=e5097]:
+          - generic [ref=e5098]: "29"
+          - generic [ref=e5099]: apr
+        - generic [ref=e5100]:
+          - generic [ref=e5101]: 50 de nuante de gri ale doamnei Cucu
+          - generic [ref=e5102]: FF Theatre, Bucuresti, 29 aprilie 2026, 20:00
+        - link "Bilete" [ref=e5104] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36366/50-de-nuante-de-gri-ale-doamnei-cucu-29-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e5107]:
+        - generic [ref=e5109]:
+          - generic [ref=e5110]: "30"
+          - generic [ref=e5111]: apr
+        - generic [ref=e5112]:
+          - generic [ref=e5113]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5114]: Deva Shopping City, Deva, 30 aprilie 2026, 18:00
+        - link "Bilete" [ref=e5116] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36974/circul-circo-bellucci-deva-30-aprilie-2026-deva-shopping-city-deva.html
+      - generic [ref=e5119]:
+        - generic [ref=e5121]:
+          - generic [ref=e5122]: "30"
+          - generic [ref=e5123]: apr
+        - generic [ref=e5124]:
+          - generic [ref=e5125]: DRAMA NIGHTS 1&2
+          - generic [ref=e5126]: Teatrul German de Stat , Timisoara, 30 aprilie 2026, 18:00
+        - link "Bilete" [ref=e5128] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35974/drama-nights-1-2-30-aprilie-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5131]:
+        - generic [ref=e5133]:
+          - generic [ref=e5134]: "30"
+          - generic [ref=e5135]: apr
+        - generic [ref=e5136]:
+          - generic [ref=e5137]: 9 RUȘINI și alte tablouri scandaloase din istoria recentă a României
+          - generic [ref=e5138]: Teatrul National Cluj-Napoca, Sala Mare, Cluj-Napoca, 30 aprilie 2026, 18:00
+        - link "Bilete" [ref=e5140] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36260/9-ruini-i-alte-tablouri-scandaloase-din-istoria-recent-a-romniei-30-aprilie-2026-teatrul-national-cluj-napoca-sala-mare-cluj-napoca.html
+      - generic [ref=e5143]:
+        - generic [ref=e5145]:
+          - generic [ref=e5146]: "30"
+          - generic [ref=e5147]: apr
+        - generic [ref=e5148]:
+          - generic [ref=e5149]: Gaițele
+          - generic [ref=e5150]: Teatrul Toma Caragiu, Ploiesti, 30 aprilie 2026, 18:30
+        - link "Bilete" [ref=e5152] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35255/gaiele-30-aprilie-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e5155]:
+        - generic [ref=e5157]:
+          - generic [ref=e5158]: "30"
+          - generic [ref=e5159]: apr
+        - generic [ref=e5160]:
+          - generic [ref=e5161]: UNCHIUL VANIA
+          - generic [ref=e5162]: Teatrul Andrei Mureseanu - SALA ARTA, Sfantu Gheorghe, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5164] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36885/unchiul-vania-30-aprilie-2026-teatrul-andrei-mureseanu-sala-arta-sfantu-gheorghe.html
+      - generic [ref=e5167]:
+        - generic [ref=e5169]:
+          - generic [ref=e5170]: "30"
+          - generic [ref=e5171]: apr
+        - generic [ref=e5172]:
+          - generic [ref=e5173]: Improjoker
+          - generic [ref=e5174]: Teatrul Municipal Baia Mare - Sala Studio, Baia Mare, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5176] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36631/improjoker-30-aprilie-2026-teatrul-municipal-baia-mare-sala-studio-baia-mare.html
+      - generic [ref=e5179]:
+        - generic [ref=e5181]:
+          - generic [ref=e5182]: "30"
+          - generic [ref=e5183]: apr
+        - generic [ref=e5184]:
+          - generic [ref=e5185]: Concert simfonic
+          - generic [ref=e5186]: Filarmonica Oltenia, Craiova, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5188] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36392/concert-simfonic-30-aprilie-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e5191]:
+        - generic [ref=e5193]:
+          - generic [ref=e5194]: "30"
+          - generic [ref=e5195]: apr
+        - generic [ref=e5196]:
+          - generic [ref=e5197]: Concert vocal-simfonic – dirijor Gergely Madaras
+          - generic [ref=e5198]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5200] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35633/concert-vocal-simfonic-dirijor-gergely-madaras-30-aprilie-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e5203]:
+        - generic [ref=e5205]:
+          - generic [ref=e5206]: "30"
+          - generic [ref=e5207]: apr
+        - generic [ref=e5208]:
+          - generic [ref=e5209]: TULCEA O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e5210]: Casa de Cultura a Sindicatelor, Tulcea, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5212] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36187/tulcea-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-30-aprilie-2026-casa-de-cultura-a-sindicatelor-tulcea.html
+      - generic [ref=e5215]:
+        - generic [ref=e5217]:
+          - generic [ref=e5218]: "30"
+          - generic [ref=e5219]: apr
+        - generic [ref=e5220]:
+          - generic [ref=e5221]: Concert Simfonic Extraordinar
+          - generic [ref=e5222]: Filarmonica Paul Constantinescu - Sala Ion Baciu, Ploiesti, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5224] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36447/concert-simfonic-extraordinar-30-aprilie-2026-filarmonica-paul-constantinescu-sala-ion-baciu-ploiesti.html
+      - generic [ref=e5227]:
+        - generic [ref=e5229]:
+          - generic [ref=e5230]: "30"
+          - generic [ref=e5231]: apr
+        - generic [ref=e5232]:
+          - generic [ref=e5233]: Dincolo de uitare
+          - generic [ref=e5234]: TNRS - Sala Studio, Sibiu, 30 aprilie 2026, 19:00
+        - link "Bilete" [ref=e5236] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36237/dincolo-de-uitare-30-aprilie-2026-tnrs-sala-studio-sibiu.html
+      - generic [ref=e5239]:
+        - generic [ref=e5241]:
+          - generic [ref=e5242]: "30"
+          - generic [ref=e5243]: apr
+        - generic [ref=e5244]:
+          - generic [ref=e5245]: Cum se duce totul dracu
+          - generic [ref=e5246]: FF Theatre, Bucuresti, 30 aprilie 2026, 20:00
+        - link "Bilete" [ref=e5248] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36367/cum-se-duce-totul-dracu-30-aprilie-2026-ff-theatre-bucuresti.html
+      - generic [ref=e5251]:
+        - generic [ref=e5253]:
+          - generic [ref=e5254]: "1"
+          - generic [ref=e5255]: mai
+        - generic [ref=e5256]:
+          - generic [ref=e5257]: "SANTSAT → CLUJ: SEASON OPEN"
+          - generic [ref=e5258]: PARCUL ETNOGRAFIC NATIONAL „ROMULUS VUIA”, Cluj-Napoca, 1 mai 2026, 11:00
+        - link "Bilete" [ref=e5260] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36164/santsat-cluj-season-open-1-mai-2026-parcul-etnografic-national-romulus-vuia-cluj-napoca.html
+      - generic [ref=e5263]:
+        - generic [ref=e5265]:
+          - generic [ref=e5266]: "1"
+          - generic [ref=e5267]: mai
+        - generic [ref=e5268]:
+          - generic [ref=e5269]: Povestea celor trei purceluși @ Hanu’ lui Manuc
+          - generic [ref=e5270]: Hanu' lui Manuc, Bucuresti, 1 mai 2026, 11:00
+        - link "Bilete" [ref=e5272] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36032/povestea-celor-trei-purcelui-hanu-lui-manuc-1-mai-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e5275]:
+        - generic [ref=e5277]:
+          - generic [ref=e5278]: "1"
+          - generic [ref=e5279]: mai
+        - generic [ref=e5280]:
+          - generic [ref=e5281]: "Durusa SummerHills #12 - WARM UP PARTY"
+          - generic [ref=e5282]: Durusa, judet Maramures, 1 mai 2026, 16:00
+        - link "Bilete" [ref=e5284] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36873/durusa-summerhills-12-warm-up-party-1-mai-2026-durusa-judet-maramures.html
+      - generic [ref=e5287]:
+        - generic [ref=e5289]:
+          - generic [ref=e5290]: "1"
+          - generic [ref=e5291]: mai
+        - generic [ref=e5292]:
+          - generic [ref=e5293]: CONSTANTA O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e5294]: Casa de Cultura a Sindicatelor, Constanta, 1 mai 2026, 18:00
+        - link "Bilete" [ref=e5296] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36189/constanta-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-1-mai-2026-casa-de-cultura-a-sindicatelor-constanta.html
+      - generic [ref=e5299]:
+        - generic [ref=e5301]:
+          - generic [ref=e5302]: "1"
+          - generic [ref=e5303]: mai
+        - generic [ref=e5304]:
+          - generic [ref=e5305]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5306]: Deva Shopping City, Deva, 1 mai 2026, 18:00
+        - link "Bilete" [ref=e5308] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36975/circul-circo-bellucci-deva-1-mai-2026-deva-shopping-city-deva.html
+      - generic [ref=e5311]:
+        - generic [ref=e5313]:
+          - generic [ref=e5314]: "1"
+          - generic [ref=e5315]: mai
+        - generic [ref=e5316]:
+          - generic [ref=e5317]: CRED IN UNICORNI
+          - generic [ref=e5318]: Teatrul Ion Creanga SALA MARE, Bucuresti, 1 mai 2026, 18:00
+        - link "Bilete" [ref=e5320] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36761/cred-in-unicorni-1-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5323]:
+        - generic [ref=e5325]:
+          - generic [ref=e5326]: "1"
+          - generic [ref=e5327]: mai
+        - generic [ref=e5328]:
+          - generic [ref=e5329]: Gaițele
+          - generic [ref=e5330]: Teatrul Toma Caragiu, Ploiesti, 1 mai 2026, 18:30
+        - link "Bilete" [ref=e5332] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35256/gaiele-1-mai-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e5335]:
+        - generic [ref=e5337]:
+          - generic [ref=e5338]: "1"
+          - generic [ref=e5339]: mai
+        - generic [ref=e5340]:
+          - generic [ref=e5341]: "FINAL JOURNEY | Concert simfonic Deschiderea Festivalului Internațional „Timișoara Muzicală”, ediția a L-a Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: Stefan Geiger"
+          - generic [ref=e5342]: Sala Capitol, Timisoara, 1 mai 2026, 19:00
+        - link "Bilete" [ref=e5344] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34395/final-journey-concert-simfonic-deschiderea-festivalului-internaional-timioara-muzical-ediia-a-l-a-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-stefan-geiger-1-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e5347]:
+        - generic [ref=e5349]:
+          - generic [ref=e5350]: "1"
+          - generic [ref=e5351]: mai
+        - generic [ref=e5352]:
+          - generic [ref=e5353]: DIGUL SI ALTE POVESTIRI
+          - generic [ref=e5354]: Sala de Teatru la CUB, Iasi, 1 mai 2026, 19:00
+        - link "Bilete" [ref=e5356] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36560/digul-si-alte-povestiri-1-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e5359]:
+        - generic [ref=e5361]:
+          - generic [ref=e5362]: "1"
+          - generic [ref=e5363]: mai
+        - generic [ref=e5364]:
+          - generic [ref=e5365]: FAUST
+          - generic [ref=e5366]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 1 mai 2026, 19:00
+        - link "Bilete" [ref=e5368] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36592/faust-1-mai-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e5371]:
+        - generic [ref=e5373]:
+          - generic [ref=e5374]: "1"
+          - generic [ref=e5375]: mai
+        - generic [ref=e5376]:
+          - generic [ref=e5377]: DRAMA NIGHT 1
+          - generic [ref=e5378]: Teatrul German de Stat , Timisoara, 1 mai 2026, 19:30
+        - link "Bilete" [ref=e5380] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36911/drama-night-1-1-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5383]:
+        - generic [ref=e5385]:
+          - generic [ref=e5386]: "2"
+          - generic [ref=e5387]: mai
+        - generic [ref=e5388]:
+          - generic [ref=e5389]: Sâmbătă, 2 mai - Capra cu trei iezi
+          - generic [ref=e5390]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 2 mai 2026, 11:00
+        - link "Bilete" [ref=e5392] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36497/smbt-2-mai-capra-cu-trei-iezi-2-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e5395]:
+        - generic [ref=e5397]:
+          - generic [ref=e5398]: "2"
+          - generic [ref=e5399]: mai
+        - generic [ref=e5400]:
+          - generic [ref=e5401]: URSUL PACALIT DE VULPE
+          - generic [ref=e5402]: Teatrul Ion Creanga SALA MARE, Bucuresti, 2 mai 2026, 11:00
+        - link "Bilete" [ref=e5404] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36768/ursul-pacalit-de-vulpe-2-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5407]:
+        - generic [ref=e5409]:
+          - generic [ref=e5410]: "2"
+          - generic [ref=e5411]: mai
+        - generic [ref=e5412]:
+          - generic [ref=e5413]: Best of Metropolitan
+          - generic [ref=e5414]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 2 mai 2026, 11:00
+        - link "Bilete" [ref=e5416] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36540/best-of-metropolitan-2-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e5419]:
+        - generic [ref=e5421]:
+          - generic [ref=e5422]: "2"
+          - generic [ref=e5423]: mai
+        - generic [ref=e5424]:
+          - generic [ref=e5425]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5426]: Deva Shopping City, Deva, 2 mai 2026, 15:00
+        - link "Bilete" [ref=e5428] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36978/circul-circo-bellucci-deva-2-mai-2026-deva-shopping-city-deva.html
+      - generic [ref=e5431]:
+        - generic [ref=e5433]:
+          - generic [ref=e5434]: "2"
+          - generic [ref=e5435]: mai
+        - generic [ref=e5436]:
+          - generic [ref=e5437]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5438]: Deva Shopping City, Deva, 2 mai 2026, 18:00
+        - link "Bilete" [ref=e5440] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36976/circul-circo-bellucci-deva-2-mai-2026-deva-shopping-city-deva.html
+      - generic [ref=e5443]:
+        - generic [ref=e5445]:
+          - generic [ref=e5446]: "2"
+          - generic [ref=e5447]: mai
+        - generic [ref=e5448]:
+          - generic [ref=e5449]: AMINTIRI DIN COPILĂRIE
+          - generic [ref=e5450]: Teatrul Ion Creanga SALA MARE, Bucuresti, 2 mai 2026, 18:00
+        - link "Bilete" [ref=e5452] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36763/amintiri-din-copilrie-2-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5455]:
+        - generic [ref=e5457]:
+          - generic [ref=e5458]: "2"
+          - generic [ref=e5459]: mai
+        - generic [ref=e5460]:
+          - generic [ref=e5461]: Birlic
+          - generic [ref=e5462]: Teatrul Toma Caragiu, Ploiesti, 2 mai 2026, 18:30
+        - link "Bilete" [ref=e5464] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36647/birlic-2-mai-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e5467]:
+        - generic [ref=e5469]:
+          - generic [ref=e5470]: "2"
+          - generic [ref=e5471]: mai
+        - generic [ref=e5472]:
+          - generic [ref=e5473]: DIGUL SI ALTE POVESTIRI
+          - generic [ref=e5474]: Sala de Teatru la CUB, Iasi, 2 mai 2026, 19:00
+        - link "Bilete" [ref=e5476] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36561/digul-si-alte-povestiri-2-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e5479]:
+        - generic [ref=e5481]:
+          - generic [ref=e5482]: "2"
+          - generic [ref=e5483]: mai
+        - generic [ref=e5484]:
+          - generic [ref=e5485]: FAUST
+          - generic [ref=e5486]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 2 mai 2026, 19:00
+        - link "Bilete" [ref=e5488] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36593/faust-2-mai-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e5491]:
+        - generic [ref=e5493]:
+          - generic [ref=e5494]: "2"
+          - generic [ref=e5495]: mai
+        - generic [ref=e5496]:
+          - generic [ref=e5497]: DRAMA NIGHT 2
+          - generic [ref=e5498]: Teatrul German de Stat , Timisoara, 2 mai 2026, 19:30
+        - link "Bilete" [ref=e5500] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36912/drama-night-2-2-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5503]:
+        - generic [ref=e5505]:
+          - generic [ref=e5506]: "3"
+          - generic [ref=e5507]: mai
+        - generic [ref=e5508]:
+          - generic [ref=e5509]: Dumbo cel isteț @ Muse Country Club Mogoșoaia
+          - generic [ref=e5510]: Muse Country Club, Mogosoaia, 3 mai 2026, 11:00
+        - link "Bilete" [ref=e5512] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36615/dumbo-cel-iste-muse-country-club-mogooaia-3-mai-2026-muse-country-club-mogosoaia.html
+      - generic [ref=e5515]:
+        - generic [ref=e5517]:
+          - generic [ref=e5518]: "3"
+          - generic [ref=e5519]: mai
+        - generic [ref=e5520]:
+          - generic [ref=e5521]: DE-A MICUL PRINT
+          - generic [ref=e5522]: Teatrul Ion Creanga SALA MARE, Bucuresti, 3 mai 2026, 11:00
+        - link "Bilete" [ref=e5524] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36769/de-a-micul-print-3-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5527]:
+        - generic [ref=e5529]:
+          - generic [ref=e5530]: "3"
+          - generic [ref=e5531]: mai
+        - generic [ref=e5532]:
+          - generic [ref=e5533]: ABC-UL CIRCULUI
+          - generic [ref=e5534]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 3 mai 2026, 11:00
+        - link "Bilete" [ref=e5536] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36535/abc-ul-circului-3-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e5539]:
+        - generic [ref=e5541]:
+          - generic [ref=e5542]: "3"
+          - generic [ref=e5543]: mai
+        - generic [ref=e5544]:
+          - generic [ref=e5545]: Ispravile Motanului Incaltat @ Hanu’ lui Manuc
+          - generic [ref=e5546]: Hanu' lui Manuc, Bucuresti, 3 mai 2026, 11:00
+        - link "Bilete" [ref=e5548] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36033/ispravile-motanului-incaltat-hanu-lui-manuc-3-mai-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e5551]:
+        - generic [ref=e5553]:
+          - generic [ref=e5554]: "3"
+          - generic [ref=e5555]: mai
+        - generic [ref=e5556]:
+          - generic [ref=e5557]: Cartea Junglei
+          - generic [ref=e5558]: Teatrul de Animatie Imaginario, Ploiesti, 3 mai 2026, 11:00
+        - link "Bilete" [ref=e5560] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36860/cartea-junglei-3-mai-2026-teatrul-de-animatie-imaginario-ploiesti.html
+      - generic [ref=e5563]:
+        - generic [ref=e5565]:
+          - generic [ref=e5566]: "3"
+          - generic [ref=e5567]: mai
+        - generic [ref=e5568]:
+          - generic [ref=e5569]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5570]: Deva Shopping City, Deva, 3 mai 2026, 11:30
+        - link "Bilete" [ref=e5572] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36982/circul-circo-bellucci-deva-3-mai-2026-deva-shopping-city-deva.html
+      - generic [ref=e5575]:
+        - generic [ref=e5577]:
+          - generic [ref=e5578]: "3"
+          - generic [ref=e5579]: mai
+        - generic [ref=e5580]:
+          - generic [ref=e5581]: Circul - Circo Bellucci - Deva
+          - generic [ref=e5582]: Deva Shopping City, Deva, 3 mai 2026, 15:00
+        - link "Bilete" [ref=e5584] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36977/circul-circo-bellucci-deva-3-mai-2026-deva-shopping-city-deva.html
+      - generic [ref=e5587]:
+        - generic [ref=e5589]:
+          - generic [ref=e5590]: "3"
+          - generic [ref=e5591]: mai
+        - generic [ref=e5592]:
+          - generic [ref=e5593]: CALARASI O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e5594]: Centrul Cultural Sala Barbu Stirbei, Calarasi, 3 mai 2026, 17:00
+        - link "Bilete" [ref=e5596] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36172/calarasi-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-3-mai-2026-centrul-cultural-sala-barbu-stirbei-calarasi.html
+      - generic [ref=e5599]:
+        - generic [ref=e5601]:
+          - generic [ref=e5602]: "3"
+          - generic [ref=e5603]: mai
+        - generic [ref=e5604]:
+          - generic [ref=e5605]: PETER PAN
+          - generic [ref=e5606]: Teatrul Ion Creanga SALA MARE, Bucuresti, 3 mai 2026, 18:00
+        - link "Bilete" [ref=e5608] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35193/peter-pan-3-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5611]:
+        - generic [ref=e5613]:
+          - generic [ref=e5614]: "3"
+          - generic [ref=e5615]: mai
+        - generic [ref=e5616]:
+          - generic [ref=e5617]: Floare de cactus
+          - generic [ref=e5618]: Teatrul Toma Caragiu, Ploiesti, 3 mai 2026, 18:30
+        - link "Bilete" [ref=e5620] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36648/floare-de-cactus-3-mai-2026-teatrul-toma-caragiu-ploiesti.html
+      - generic [ref=e5623]:
+        - generic [ref=e5625]:
+          - generic [ref=e5626]: "3"
+          - generic [ref=e5627]: mai
+        - generic [ref=e5628]:
+          - generic [ref=e5629]: Duminică, 3 mai - Domnișoara Nastasia
+          - generic [ref=e5630]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 3 mai 2026, 19:00
+        - link "Bilete" [ref=e5632] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36498/duminic-3-mai-domnioara-nastasia-3-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e5635]:
+        - generic [ref=e5637]:
+          - generic [ref=e5638]: "3"
+          - generic [ref=e5639]: mai
+        - generic [ref=e5640]:
+          - generic [ref=e5641]: DIGUL SI ALTE POVESTIRI
+          - generic [ref=e5642]: Sala de Teatru la CUB, Iasi, 3 mai 2026, 19:00
+        - link "Bilete" [ref=e5644] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36562/digul-si-alte-povestiri-3-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e5647]:
+        - generic [ref=e5649]:
+          - generic [ref=e5650]: "3"
+          - generic [ref=e5651]: mai
+        - generic [ref=e5652]:
+          - generic [ref=e5653]: Nopti albe
+          - generic [ref=e5654]: Teatrul Amzei, Bucuresti, 3 mai 2026, 20:00
+        - link "Bilete" [ref=e5656] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36661/nopti-albe-3-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e5659]:
+        - generic [ref=e5661]:
+          - generic [ref=e5662]: "4"
+          - generic [ref=e5663]: mai
+        - generic [ref=e5664]:
+          - generic [ref=e5665]: Cheers to Beauty
+          - generic [ref=e5666]: Riverside Events, Galati, 4 mai 2026, 18:00
+        - link "Bilete" [ref=e5668] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36514/cheers-to-beauty-4-mai-2026-riverside-events-galati.html
+      - generic [ref=e5671]:
+        - generic [ref=e5673]:
+          - generic [ref=e5674]: "4"
+          - generic [ref=e5675]: mai
+        - generic [ref=e5676]:
+          - generic [ref=e5677]: MARIA
+          - generic [ref=e5678]: Teatrul German de Stat, Timisoara, 4 mai 2026, 19:30
+        - link "Bilete" [ref=e5680] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36913/maria-4-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5683]:
+        - generic [ref=e5685]:
+          - generic [ref=e5686]: "5"
+          - generic [ref=e5687]: mai
+        - generic [ref=e5688]:
+          - generic [ref=e5689]: Gradus ad Parnassum II
+          - generic [ref=e5690]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 5 mai 2026, 19:00
+        - link "Bilete" [ref=e5692] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35668/gradus-ad-parnassum-ii-5-mai-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e5695]:
+        - generic [ref=e5697]:
+          - generic [ref=e5698]: "5"
+          - generic [ref=e5699]: mai
+        - generic [ref=e5700]:
+          - generic [ref=e5701]: Imagine Universe - Sinziana Mircea & Friends
+          - generic [ref=e5702]: SALA RADIO, Bucuresti, 5 mai 2026, 19:00
+        - link "Bilete" [ref=e5704] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35474/imagine-universe-sinziana-mircea-friends-5-mai-2026-sala-radio-bucuresti.html
+      - generic [ref=e5707]:
+        - generic [ref=e5709]:
+          - generic [ref=e5710]: "5"
+          - generic [ref=e5711]: mai
+        - generic [ref=e5712]:
+          - generic [ref=e5713]: SISTER ACT
+          - generic [ref=e5714]: Teatrul German de Stat, Timisoara, 5 mai 2026, 19:30
+        - link "Bilete" [ref=e5716] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36914/sister-act-5-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5719]:
+        - generic [ref=e5721]:
+          - generic [ref=e5722]: "6"
+          - generic [ref=e5723]: mai
+        - generic [ref=e5724]:
+          - generic [ref=e5725]: BRASOV ENTREPRENEURS SUMMIT 2026
+          - generic [ref=e5726]: Hotel Kronwell, Brasov, 6 mai 2026
+        - link "Bilete" [ref=e5728] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32861/brasov-entrepreneurs-summit-2026-6-mai-2026-hotel-kronwell-brasov.html
+      - generic [ref=e5731]:
+        - generic [ref=e5733]:
+          - generic [ref=e5734]: "6"
+          - generic [ref=e5735]: mai
+        - generic [ref=e5736]:
+          - generic [ref=e5737]: SISTER ACT
+          - generic [ref=e5738]: Teatrul German de Stat, Timisoara, 6 mai 2026, 19:30
+        - link "Bilete" [ref=e5740] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36915/sister-act-6-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e5743]:
+        - generic [ref=e5745]:
+          - generic [ref=e5746]: "7"
+          - generic [ref=e5747]: mai
+        - generic [ref=e5748]:
+          - generic [ref=e5749]: WINTERREISE | Recital vocal | Liviu Holender (bariton), Lukas Rommelspacher (pian)
+          - generic [ref=e5750]: Sala ARChA, UPT, Timisoara, 7 mai 2026, 19:00
+        - link "Bilete" [ref=e5752] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37000/winterreise-recital-vocal-liviu-holender-bariton-lukas-rommelspacher-pian-7-mai-2026-sala-archa-upt-timisoara.html
+      - generic [ref=e5755]:
+        - generic [ref=e5757]:
+          - generic [ref=e5758]: "7"
+          - generic [ref=e5759]: mai
+        - generic [ref=e5760]:
+          - generic [ref=e5761]: FEMEIA- CAMP DE LUPTA
+          - generic [ref=e5762]: Sala de Teatru la CUB, Iasi, 7 mai 2026, 19:00
+        - link "Bilete" [ref=e5764] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36564/femeia-camp-de-lupta-7-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e5767]:
+        - generic [ref=e5769]:
+          - generic [ref=e5770]: "8"
+          - generic [ref=e5771]: mai
+        - generic [ref=e5772]:
+          - generic [ref=e5773]: TIMISOARA ENTREPRENEURS SUMMIT 2026
+          - generic [ref=e5774]: Hotel Timisoara, Timisoara, 8 mai 2026
+        - link "Bilete" [ref=e5776] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32862/timisoara-entrepreneurs-summit-2026-8-mai-2026-hotel-timisoara-timisoara.html
+      - generic [ref=e5779]:
+        - generic [ref=e5781]:
+          - generic [ref=e5782]: "8"
+          - generic [ref=e5783]: mai
+        - generic [ref=e5784]:
+          - generic [ref=e5785]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e5786]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 8 mai 2026, 18:00
+        - link "Bilete" [ref=e5788] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36996/circul-circo-bellucci-rm-valcea-8-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e5791]:
+        - generic [ref=e5793]:
+          - generic [ref=e5794]: "8"
+          - generic [ref=e5795]: mai
+        - generic [ref=e5796]:
+          - generic [ref=e5797]: FATA BABEI SI FATA MOSULUI
+          - generic [ref=e5798]: Teatrul Ion Creanga SALA MARE, Bucuresti, 8 mai 2026, 18:00
+        - link "Bilete" [ref=e5800] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36772/fata-babei-si-fata-mosului-8-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5803]:
+        - generic [ref=e5805]:
+          - generic [ref=e5806]: "8"
+          - generic [ref=e5807]: mai
+        - generic [ref=e5808]:
+          - generic [ref=e5809]: Concert simfonic – dirijor Gabriel Bebeselea
+          - generic [ref=e5810]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 8 mai 2026, 19:00
+        - link "Bilete" [ref=e5812] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35669/concert-simfonic-dirijor-gabriel-bebeselea-8-mai-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e5815]:
+        - generic [ref=e5817]:
+          - generic [ref=e5818]: "8"
+          - generic [ref=e5819]: mai
+        - generic [ref=e5820]:
+          - generic [ref=e5821]: "IMPERIAL | Concert simfonic Orchestra simfonică a Filarmonicii Banatul Dirijor: Lawrence Foster Solist: Alexei Volodin – pian"
+          - generic [ref=e5822]: Sala Capitol, Timisoara, 8 mai 2026, 19:00
+        - link "Bilete" [ref=e5824] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34396/imperial-concert-simfonic-orchestra-simfonic-a-filarmonicii-banatul-dirijor-lawrence-foster-solist-alexei-volodin-pian-8-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e5827]:
+        - generic [ref=e5829]:
+          - generic [ref=e5830]: "8"
+          - generic [ref=e5831]: mai
+        - generic [ref=e5832]:
+          - generic [ref=e5833]: PIATRA NEAMT O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e5834]: Cinema Mon Amour, Piatra Neamt, 8 mai 2026, 19:00
+        - link "Bilete" [ref=e5836] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36190/piatra-neamt-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-8-mai-2026-cinema-mon-amour-piatra-neamt.html
+      - generic [ref=e5839]:
+        - generic [ref=e5841]:
+          - generic [ref=e5842]: "8"
+          - generic [ref=e5843]: mai
+        - generic [ref=e5844]:
+          - generic [ref=e5845]: Vineri, 8 mai - Uzina artiștilor
+          - generic [ref=e5846]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 8 mai 2026, 19:00
+        - link "Bilete" [ref=e5848] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36500/vineri-8-mai-uzina-artitilor-8-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e5851]:
+        - generic [ref=e5853]:
+          - generic [ref=e5854]: "8"
+          - generic [ref=e5855]: mai
+        - generic [ref=e5856]:
+          - generic [ref=e5857]: FEMEIA- CAMP DE LUPTA
+          - generic [ref=e5858]: Sala de Teatru la CUB, Iasi, 8 mai 2026, 19:00
+        - link "Bilete" [ref=e5860] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36565/femeia-camp-de-lupta-8-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e5863]:
+        - generic [ref=e5865]:
+          - generic [ref=e5866]: "9"
+          - generic [ref=e5867]: mai
+        - generic [ref=e5868]:
+          - generic [ref=e5869]: PLOIESTI “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e5870]: Casa de Cultura a Sindicatelor, Ploiesti, 9 mai 2026, 11:00
+        - link "Bilete" [ref=e5872] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35685/ploiesti-seful-casei-gasca-zurli-si-antonia-9-mai-2026-casa-de-cultura-a-sindicatelor-ploiesti.html
+      - generic [ref=e5875]:
+        - generic [ref=e5877]:
+          - generic [ref=e5878]: "9"
+          - generic [ref=e5879]: mai
+        - generic [ref=e5880]:
+          - generic [ref=e5881]: POVESTEA REGELUI LEAR
+          - generic [ref=e5882]: Teatrul Gong - Sala Parter, Sibiu, 9 mai 2026, 11:00
+        - link "Bilete" [ref=e5884] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36739/povestea-regelui-lear-9-mai-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e5887]:
+        - generic [ref=e5889]:
+          - generic [ref=e5890]: "9"
+          - generic [ref=e5891]: mai
+        - generic [ref=e5892]:
+          - generic [ref=e5893]: Sâmbătă, 9 mai - Scufița rosie
+          - generic [ref=e5894]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 9 mai 2026, 11:00
+        - link "Bilete" [ref=e5896] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36501/smbt-9-mai-scufia-rosie-9-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e5899]:
+        - generic [ref=e5901]:
+          - generic [ref=e5902]: "9"
+          - generic [ref=e5903]: mai
+        - generic [ref=e5904]:
+          - generic [ref=e5905]: ALBA CA ZAPADA
+          - generic [ref=e5906]: Teatrul Ion Creanga SALA MARE, Bucuresti, 9 mai 2026, 11:00
+        - link "Bilete" [ref=e5908] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36773/alba-ca-zapada-9-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5911]:
+        - generic [ref=e5913]:
+          - generic [ref=e5914]: "9"
+          - generic [ref=e5915]: mai
+        - generic [ref=e5916]:
+          - generic [ref=e5917]: ACROGRAFICA
+          - generic [ref=e5918]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 9 mai 2026, 11:00
+        - link "Bilete" [ref=e5920] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36550/acrografica-9-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e5923]:
+        - generic [ref=e5925]:
+          - generic [ref=e5926]: "9"
+          - generic [ref=e5927]: mai
+        - generic [ref=e5928]:
+          - generic [ref=e5929]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e5930]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 9 mai 2026, 15:00
+        - link "Bilete" [ref=e5932] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36991/circul-circo-bellucci-rm-valcea-9-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e5935]:
+        - generic [ref=e5937]:
+          - generic [ref=e5938]: "9"
+          - generic [ref=e5939]: mai
+        - generic [ref=e5940]:
+          - generic [ref=e5941]: DayDreaming Experience
+          - generic [ref=e5942]: Iulius Mall Rooftop, Cluj-Napoca, 9 mai 2026, 16:00
+        - link "Bilete" [ref=e5944] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36553/daydreaming-experience-9-mai-2026-iulius-mall-rooftop-cluj-napoca.html
+      - generic [ref=e5947]:
+        - generic [ref=e5949]:
+          - generic [ref=e5950]: "9"
+          - generic [ref=e5951]: mai
+        - generic [ref=e5952]:
+          - generic [ref=e5953]: MOINESTI O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e5954]: CENTRUL CULTURAL LIRA , Moinesti, jud. Bacau, 9 mai 2026, 17:00
+        - link "Bilete" [ref=e5956] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36347/moinesti-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-9-mai-2026-centrul-cultural-lira-moinesti-jud-bacau.html
+      - generic [ref=e5959]:
+        - generic [ref=e5961]:
+          - generic [ref=e5962]: "9"
+          - generic [ref=e5963]: mai
+        - generic [ref=e5964]:
+          - generic [ref=e5965]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e5966]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 9 mai 2026, 18:00
+        - link "Bilete" [ref=e5968] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36985/circul-circo-bellucci-rm-valcea-9-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e5971]:
+        - generic [ref=e5973]:
+          - generic [ref=e5974]: "9"
+          - generic [ref=e5975]: mai
+        - generic [ref=e5976]:
+          - generic [ref=e5977]: POVESTEA REGELUI LEAR
+          - generic [ref=e5978]: Teatrul Gong - Sala Parter, Sibiu, 9 mai 2026, 18:00
+        - link "Bilete" [ref=e5980] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36740/povestea-regelui-lear-9-mai-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e5983]:
+        - generic [ref=e5985]:
+          - generic [ref=e5986]: "9"
+          - generic [ref=e5987]: mai
+        - generic [ref=e5988]:
+          - generic [ref=e5989]: CALATORII PRIN GALAXII
+          - generic [ref=e5990]: Teatrul Ion Creanga SALA MARE, Bucuresti, 9 mai 2026, 18:00
+        - link "Bilete" [ref=e5992] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36774/calatorii-prin-galaxii-9-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e5995]:
+        - generic [ref=e5997]:
+          - generic [ref=e5998]: "9"
+          - generic [ref=e5999]: mai
+        - generic [ref=e6000]:
+          - generic [ref=e6001]: PEER GYNT
+          - generic [ref=e6002]: Sala Palatului, Bucuresti, 9 mai 2026, 19:00
+        - link "Bilete" [ref=e6004] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33202/peer-gynt-9-mai-2026-sala-palatului-bucuresti.html
+      - generic [ref=e6007]:
+        - generic [ref=e6009]:
+          - generic [ref=e6010]: 10-12
+          - generic [ref=e6011]: mai
+        - generic [ref=e6012]:
+          - generic [ref=e6013]: SPE Tech Days
+          - generic [ref=e6014]: Pullman Bucharest World Trade Center, Bucharest, 10 - 12 mai 2026, 08:30
+        - link "Bilete" [ref=e6016] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36239/spe-tech-days-10-12-mai-2026-pullman-bucharest-world-trade-center-bucharest.html
+      - generic [ref=e6019]:
+        - generic [ref=e6021]:
+          - generic [ref=e6022]: "10"
+          - generic [ref=e6023]: mai
+        - generic [ref=e6024]:
+          - generic [ref=e6025]: Tom degetel @ Nest Hub Baicului
+          - generic [ref=e6026]: Nest Hub Baicului, Bucuresti, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6028] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34894/tom-degetel-nest-hub-baicului-10-mai-2026-nest-hub-baicului-bucuresti.html
+      - generic [ref=e6031]:
+        - generic [ref=e6033]:
+          - generic [ref=e6034]: "10"
+          - generic [ref=e6035]: mai
+        - generic [ref=e6036]:
+          - generic [ref=e6037]: Lupul Buclucas @ Hanu’ lui Manuc
+          - generic [ref=e6038]: Hanu' lui Manuc, Bucuresti, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6040] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34912/lupul-buclucas-hanu-lui-manuc-10-mai-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e6043]:
+        - generic [ref=e6045]:
+          - generic [ref=e6046]: "10"
+          - generic [ref=e6047]: mai
+        - generic [ref=e6048]:
+          - generic [ref=e6049]: TARGU MURES “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e6050]: Sala Ansamblului Muresul, Targu Mures, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6052] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35686/targu-mures-seful-casei-gasca-zurli-si-antonia-10-mai-2026-sala-ansamblului-muresul-targu-mures.html
+      - generic [ref=e6055]:
+        - generic [ref=e6057]:
+          - generic [ref=e6058]: "10"
+          - generic [ref=e6059]: mai
+        - generic [ref=e6060]:
+          - generic [ref=e6061]: POVESTEA REGELUI LEAR
+          - generic [ref=e6062]: Teatrul Gong - Sala Parter, Sibiu, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6064] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36741/povestea-regelui-lear-10-mai-2026-teatrul-gong-sala-parter-sibiu.html
+      - generic [ref=e6067]:
+        - generic [ref=e6069]:
+          - generic [ref=e6070]: "10"
+          - generic [ref=e6071]: mai
+        - generic [ref=e6072]:
+          - generic [ref=e6073]: MOTANUL INCALTAT
+          - generic [ref=e6074]: Teatrul Ion Creanga SALA MARE, Bucuresti, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6076] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36775/motanul-incaltat-10-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6079]:
+        - generic [ref=e6081]:
+          - generic [ref=e6082]: "10"
+          - generic [ref=e6083]: mai
+        - generic [ref=e6084]:
+          - generic [ref=e6085]: HAI LA CIRC SA POVESTIM!
+          - generic [ref=e6086]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 10 mai 2026, 11:00
+        - link "Bilete" [ref=e6088] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36532/hai-la-circ-sa-povestim-10-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e6091]:
+        - generic [ref=e6093]:
+          - generic [ref=e6094]: "10"
+          - generic [ref=e6095]: mai
+        - generic [ref=e6096]:
+          - generic [ref=e6097]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6098]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 10 mai 2026, 11:30
+        - link "Bilete" [ref=e6100] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36995/circul-circo-bellucci-rm-valcea-10-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6103]:
+        - generic [ref=e6105]:
+          - generic [ref=e6106]: "10"
+          - generic [ref=e6107]: mai
+        - generic [ref=e6108]:
+          - generic [ref=e6109]: Ursul păcălit de vulpe
+          - generic [ref=e6110]: Teatrul Amzei, Bucuresti, 10 mai 2026, 12:00
+        - link "Bilete" [ref=e6112] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36664/ursul-pclit-de-vulpe-10-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e6115]:
+        - generic [ref=e6117]:
+          - generic [ref=e6118]: "10"
+          - generic [ref=e6119]: mai
+        - generic [ref=e6120]:
+          - generic [ref=e6121]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6122]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 10 mai 2026, 15:00
+        - link "Bilete" [ref=e6124] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36990/circul-circo-bellucci-rm-valcea-10-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6127]:
+        - generic [ref=e6129]:
+          - generic [ref=e6130]: "10"
+          - generic [ref=e6131]: mai
+        - generic [ref=e6132]:
+          - generic [ref=e6133]: ONESTI O seara de neuitat - Mirabela Dauer & Gheorghe Gheorghiu
+          - generic [ref=e6134]: Cinema Capitol, Onesti, 10 mai 2026, 17:00
+        - link "Bilete" [ref=e6136] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36353/onesti-o-seara-de-neuitat-mirabela-dauer-gheorghe-gheorghiu-10-mai-2026-cinema-capitol-onesti.html
+      - generic [ref=e6139]:
+        - generic [ref=e6141]:
+          - generic [ref=e6142]: "10"
+          - generic [ref=e6143]: mai
+        - generic [ref=e6144]:
+          - generic [ref=e6145]: CRED IN UNICORNI - PREMIERA
+          - generic [ref=e6146]: Teatrul Ion Creanga SALA MARE, Bucuresti, 10 mai 2026, 18:00
+        - link "Bilete" [ref=e6148] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35195/cred-in-unicorni-premiera-10-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6151]:
+        - generic [ref=e6153]:
+          - generic [ref=e6154]: "10"
+          - generic [ref=e6155]: mai
+        - generic [ref=e6156]:
+          - generic [ref=e6157]: Duminică, 10 mai - O poveste super fericita (despre cum e sa fii trist)
+          - generic [ref=e6158]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 10 mai 2026, 19:00
+        - link "Bilete" [ref=e6160] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36510/duminic-10-mai-o-poveste-super-fericita-despre-cum-e-sa-fii-trist-10-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e6163]:
+        - generic [ref=e6165]:
+          - generic [ref=e6166]: "10"
+          - generic [ref=e6167]: mai
+        - generic [ref=e6168]:
+          - generic [ref=e6169]: ZI DE BUCURIE
+          - generic [ref=e6170]: Sala de Teatru la CUB, Iasi, 10 mai 2026, 19:00
+        - link "Bilete" [ref=e6172] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36563/zi-de-bucurie-10-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e6175]:
+        - generic [ref=e6177]:
+          - generic [ref=e6178]: "11"
+          - generic [ref=e6179]: mai
+        - generic [ref=e6180]:
+          - generic [ref=e6181]: CLUJ-NAPOCA ENTREPRENEURS SUMMIT 2026
+          - generic [ref=e6182]: Grand Hotel Italia, Cluj-Napoca, 11 mai 2026
+        - link "Bilete" [ref=e6184] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32860/cluj-napoca-entrepreneurs-summit-2026-11-mai-2026-grand-hotel-italia-cluj-napoca.html
+      - generic [ref=e6187]:
+        - generic [ref=e6189]:
+          - generic [ref=e6190]: "11"
+          - generic [ref=e6191]: mai
+        - generic [ref=e6192]:
+          - generic [ref=e6193]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6194]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 11 mai 2026, 18:00
+        - link "Bilete" [ref=e6196] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36986/circul-circo-bellucci-rm-valcea-11-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6199]:
+        - generic [ref=e6201]:
+          - generic [ref=e6202]: "12"
+          - generic [ref=e6203]: mai
+        - generic [ref=e6204]:
+          - generic [ref=e6205]: Forbes Business Fest
+          - generic [ref=e6206]: Hotel Crowne Plaza, Bucuresti, 12 mai 2026, 09:00
+        - link "Bilete" [ref=e6208] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35815/forbes-business-fest-12-mai-2026-hotel-crowne-plaza-bucuresti.html
+      - generic [ref=e6211]:
+        - generic [ref=e6213]:
+          - generic [ref=e6214]: "13"
+          - generic [ref=e6215]: mai
+        - generic [ref=e6216]:
+          - generic [ref=e6217]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6218]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 13 mai 2026, 18:00
+        - link "Bilete" [ref=e6220] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36997/circul-circo-bellucci-rm-valcea-13-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6223]:
+        - generic [ref=e6225]:
+          - generic [ref=e6226]: "13"
+          - generic [ref=e6227]: mai
+        - generic [ref=e6228]:
+          - generic [ref=e6229]: Europa/ Europa/ Europe
+          - generic [ref=e6230]: Teatrul German de Stat , Timisoara, 13 mai 2026, 19:00
+        - link "Bilete" [ref=e6232] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36916/europa-europa-europe-13-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e6235]:
+        - generic [ref=e6237]:
+          - generic [ref=e6238]: "13"
+          - generic [ref=e6239]: mai
+        - generic [ref=e6240]:
+          - generic [ref=e6241]: CC Catch & Joy – Golden Disco Legends
+          - generic [ref=e6242]: Sala Palatului, Bucuresti, 13 mai 2026, 19:30
+        - link "Bilete" [ref=e6244] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32142/cc-catch-joy-golden-disco-legends-13-mai-2026-sala-palatului-bucuresti.html
+      - generic [ref=e6247]:
+        - generic [ref=e6249]:
+          - generic [ref=e6250]: "14"
+          - generic [ref=e6251]: mai
+        - generic [ref=e6252]:
+          - generic [ref=e6253]: IASI ENTREPRENEURS SUMMIT 2026
+          - generic [ref=e6254]: TBA , IASI, 14 mai 2026
+        - link "Bilete" [ref=e6256] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30159/iasi-entrepreneurs-summit-2026-14-mai-2026-tba-iasi.html
+      - generic [ref=e6259]:
+        - generic [ref=e6261]:
+          - generic [ref=e6262]: "14"
+          - generic [ref=e6263]: mai
+        - generic [ref=e6264]:
+          - generic [ref=e6265]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6266]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 14 mai 2026, 18:00
+        - link "Bilete" [ref=e6268] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36988/circul-circo-bellucci-rm-valcea-14-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6271]:
+        - generic [ref=e6273]:
+          - generic [ref=e6274]: "14"
+          - generic [ref=e6275]: mai
+        - generic [ref=e6276]:
+          - generic [ref=e6277]: TULCEA O seara de neuitat - Irina Loghin si Mioara Velicu
+          - generic [ref=e6278]: Casa de Cultura a Sindicatelor, Tulcea, 14 mai 2026, 19:00
+        - link "Bilete" [ref=e6280] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36170/tulcea-o-seara-de-neuitat-irina-loghin-si-mioara-velicu-14-mai-2026-casa-de-cultura-a-sindicatelor-tulcea.html
+      - generic [ref=e6283]:
+        - generic [ref=e6285]:
+          - generic [ref=e6286]: "15"
+          - generic [ref=e6287]: mai
+        - generic [ref=e6288]:
+          - generic [ref=e6289]: DROBETA TURNU SEVERIN “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e6290]: Palatul Cultural Teodor Costescu, Drobeta Turnu Severin, 15 mai 2026, 18:00
+        - link "Bilete" [ref=e6292] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35688/drobeta-turnu-severin-seful-casei-gasca-zurli-si-antonia-15-mai-2026-palatul-cultural-teodor-costescu-drobeta-turnu-severin.html
+      - generic [ref=e6295]:
+        - generic [ref=e6297]:
+          - generic [ref=e6298]: "15"
+          - generic [ref=e6299]: mai
+        - generic [ref=e6300]:
+          - generic [ref=e6301]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6302]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 15 mai 2026, 18:00
+        - link "Bilete" [ref=e6304] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36989/circul-circo-bellucci-rm-valcea-15-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6307]:
+        - generic [ref=e6309]:
+          - generic [ref=e6310]: "15"
+          - generic [ref=e6311]: mai
+        - generic [ref=e6312]:
+          - generic [ref=e6313]: Colosseum Tournament | Dragomir vs. Marinescu
+          - generic [ref=e6314]: Sala Sporturilor Olimpia, Ploiesti, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6316] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34610/colosseum-tournament-dragomir-vs-marinescu-15-mai-2026-sala-sporturilor-olimpia-ploiesti.html
+      - generic [ref=e6319]:
+        - generic [ref=e6321]:
+          - generic [ref=e6322]: "15"
+          - generic [ref=e6323]: mai
+        - generic [ref=e6324]:
+          - generic [ref=e6325]: MEDGIDIA O seara de neuitat - Irina Loghin
+          - generic [ref=e6326]: Casa de Cultura a Sindicatelor, Medgidia, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6328] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36168/medgidia-o-seara-de-neuitat-irina-loghin-15-mai-2026-casa-de-cultura-a-sindicatelor-medgidia.html
+      - generic [ref=e6331]:
+        - generic [ref=e6333]:
+          - generic [ref=e6334]: "15"
+          - generic [ref=e6335]: mai
+        - generic [ref=e6336]:
+          - generic [ref=e6337]: "THE LIGHT BEYOND | Orchestra simfonică și Corul Filarmonicii Banatul, Orchestra și Corul Filarmonicii Arad | Dirijor: Gabriel Bebeșelea | Soliști: Nadine Koutcher– soprană, Jungrae Noah Kim – bariton"
+          - generic [ref=e6338]: Sala Capitol, Timisoara, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6340] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34397/the-light-beyond-orchestra-simfonic-i-corul-filarmonicii-banatul-orchestra-i-corul-filarmonicii-arad-dirijor-gabriel-bebeelea-soliti-nadine-koutcher-sopran-jungrae-noah-kim-bariton-15-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e6343]:
+        - generic [ref=e6345]:
+          - generic [ref=e6346]: "15"
+          - generic [ref=e6347]: mai
+        - generic [ref=e6348]:
+          - generic [ref=e6349]: Concert simfonic extraordinar – dirijor Jean-Claude Casadesus
+          - generic [ref=e6350]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6352] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35707/concert-simfonic-extraordinar-dirijor-jean-claude-casadesus-15-mai-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e6355]:
+        - generic [ref=e6357]:
+          - generic [ref=e6358]: "15"
+          - generic [ref=e6359]: mai
+        - generic [ref=e6360]:
+          - generic [ref=e6361]: Faust de Johann Wolfgang von Goethe
+          - generic [ref=e6362]: Teatrul INFINIT, Bucuresti, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6364] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35762/faust-de-johann-wolfgang-von-goethe-15-mai-2026-teatrul-infinit-bucuresti.html
+      - generic [ref=e6367]:
+        - generic [ref=e6369]:
+          - generic [ref=e6370]: "15"
+          - generic [ref=e6371]: mai
+        - generic [ref=e6372]:
+          - generic [ref=e6373]: ZESTREA
+          - generic [ref=e6374]: Sala Palatului, Bucuresti, 15 mai 2026, 19:00
+        - link "Bilete" [ref=e6376] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30196/zestrea-15-mai-2026-sala-palatului-bucuresti.html
+      - generic [ref=e6379]:
+        - generic [ref=e6381]:
+          - generic [ref=e6382]: "15"
+          - generic [ref=e6383]: mai
+        - generic [ref=e6384]:
+          - generic [ref=e6385]: Der Sohn/ Fiul/ The Son
+          - generic [ref=e6386]: Teatrul German de Stat, Timisoara, 15 mai 2026, 19:30
+        - link "Bilete" [ref=e6388] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36917/der-sohn-fiul-the-son-15-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e6391]:
+        - generic [ref=e6393]:
+          - generic [ref=e6394]: "16"
+          - generic [ref=e6395]: mai
+        - generic [ref=e6396]:
+          - generic [ref=e6397]: DEVA “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e6398]: Centrul Cultural Dragan Muntean, Deva, 16 mai 2026, 11:00
+        - link "Bilete" [ref=e6400] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35689/deva-seful-casei-gasca-zurli-si-antonia-16-mai-2026-centrul-cultural-dragan-muntean-deva.html
+      - generic [ref=e6403]:
+        - generic [ref=e6405]:
+          - generic [ref=e6406]: "16"
+          - generic [ref=e6407]: mai
+        - generic [ref=e6408]:
+          - generic [ref=e6409]: Sâmbătă, 16 mai - Ursul păcălit de vulpe
+          - generic [ref=e6410]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 16 mai 2026, 11:00
+        - link "Bilete" [ref=e6412] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36504/smbt-16-mai-ursul-pclit-de-vulpe-16-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e6415]:
+        - generic [ref=e6417]:
+          - generic [ref=e6418]: "16"
+          - generic [ref=e6419]: mai
+        - generic [ref=e6420]:
+          - generic [ref=e6421]: CEI TREI PURCELUSI
+          - generic [ref=e6422]: Teatrul Ion Creanga SALA MARE, Bucuresti, 16 mai 2026, 11:00
+        - link "Bilete" [ref=e6424] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36781/cei-trei-purcelusi-16-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6427]:
+        - generic [ref=e6429]:
+          - generic [ref=e6430]: "16"
+          - generic [ref=e6431]: mai
+        - generic [ref=e6432]:
+          - generic [ref=e6433]: AEROFONIK
+          - generic [ref=e6434]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 16 mai 2026, 11:00
+        - link "Bilete" [ref=e6436] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36546/aerofonik-16-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e6439]:
+        - generic [ref=e6441]:
+          - generic [ref=e6442]: "16"
+          - generic [ref=e6443]: mai
+        - generic [ref=e6444]:
+          - generic [ref=e6445]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6446]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 16 mai 2026, 15:00
+        - link "Bilete" [ref=e6448] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36993/circul-circo-bellucci-rm-valcea-16-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6451]:
+        - generic [ref=e6453]:
+          - generic [ref=e6454]: "16"
+          - generic [ref=e6455]: mai
+        - generic [ref=e6456]:
+          - generic [ref=e6457]: "Hazardance Battle #5 [RCW]"
+          - generic [ref=e6458]: Esplanada CUB, Scena Porta Voce, Iasi, 16 mai 2026, 16:00
+        - link "Bilete" [ref=e6460] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36956/hazardance-battle-5-rcw-16-mai-2026-esplanada-cub-scena-porta-voce-iasi.html
+      - generic [ref=e6463]:
+        - generic [ref=e6465]:
+          - generic [ref=e6466]: "16"
+          - generic [ref=e6467]: mai
+        - generic [ref=e6468]:
+          - generic [ref=e6469]: CALARASI O seara de neuitat - Irina Loghin si Mioara Velicu
+          - generic [ref=e6470]: Centrul Cultural Sala Barbu Stirbei, Calarasi, 16 mai 2026, 17:00
+        - link "Bilete" [ref=e6472] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36169/calarasi-o-seara-de-neuitat-irina-loghin-si-mioara-velicu-16-mai-2026-centrul-cultural-sala-barbu-stirbei-calarasi.html
+      - generic [ref=e6475]:
+        - generic [ref=e6477]:
+          - generic [ref=e6478]: "16"
+          - generic [ref=e6479]: mai
+        - generic [ref=e6480]:
+          - generic [ref=e6481]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6482]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 16 mai 2026, 18:00
+        - link "Bilete" [ref=e6484] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36987/circul-circo-bellucci-rm-valcea-16-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6487]:
+        - generic [ref=e6489]:
+          - generic [ref=e6490]: "16"
+          - generic [ref=e6491]: mai
+        - generic [ref=e6492]:
+          - generic [ref=e6493]: AMINTIRI INTR-O VALIZA
+          - generic [ref=e6494]: Teatrul Ion Creanga SALA MARE, Bucuresti, 16 mai 2026, 18:00
+        - link "Bilete" [ref=e6496] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36782/amintiri-intr-o-valiza-16-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6499]:
+        - generic [ref=e6501]:
+          - generic [ref=e6502]: "16"
+          - generic [ref=e6503]: mai
+        - generic [ref=e6504]:
+          - generic [ref=e6505]: SISTER ACT
+          - generic [ref=e6506]: Teatrul German de Stat, Timisoara, 16 mai 2026, 19:30
+        - link "Bilete" [ref=e6508] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36918/sister-act-16-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e6511]:
+        - generic [ref=e6513]:
+          - generic [ref=e6514]: "17"
+          - generic [ref=e6515]: mai
+        - generic [ref=e6516]:
+          - generic [ref=e6517]: BUZAU Crede in tine - Alina Sorescu
+          - generic [ref=e6518]: Sala Mare a Consiliul Judetean, Buzau, 17 mai 2026, 10:00
+        - link "Bilete" [ref=e6520] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36352/buzau-crede-in-tine-alina-sorescu-17-mai-2026-sala-mare-a-consiliul-judetean-buzau.html
+      - generic [ref=e6523]:
+        - generic [ref=e6525]:
+          - generic [ref=e6526]: "17"
+          - generic [ref=e6527]: mai
+        - generic [ref=e6528]:
+          - generic [ref=e6529]: O LUME DE LA ZERO
+          - generic [ref=e6530]: Teatrul Ion Creanga SALA MARE, Bucuresti, 17 mai 2026, 10:00
+        - link "Bilete" [ref=e6532] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36783/o-lume-de-la-zero-17-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6535]:
+        - generic [ref=e6537]:
+          - generic [ref=e6538]: "17"
+          - generic [ref=e6539]: mai
+        - generic [ref=e6540]:
+          - generic [ref=e6541]: Povestea Scufiței Roșii @ Muse Country Club Mogoșoaia
+          - generic [ref=e6542]: Muse Country Club, Mogosoaia, 17 mai 2026, 11:00
+        - link "Bilete" [ref=e6544] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36617/povestea-scufiei-roii-muse-country-club-mogooaia-17-mai-2026-muse-country-club-mogosoaia.html
+      - generic [ref=e6547]:
+        - generic [ref=e6549]:
+          - generic [ref=e6550]: "17"
+          - generic [ref=e6551]: mai
+        - generic [ref=e6552]:
+          - generic [ref=e6553]: CRAIOVA “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e6554]: Filarmonica Oltenia, Craiova, 17 mai 2026, 11:00
+        - link "Bilete" [ref=e6556] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35691/craiova-seful-casei-gasca-zurli-si-antonia-17-mai-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e6559]:
+        - generic [ref=e6561]:
+          - generic [ref=e6562]: "17"
+          - generic [ref=e6563]: mai
+        - generic [ref=e6564]:
+          - generic [ref=e6565]: Best of Metropolitan
+          - generic [ref=e6566]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 17 mai 2026, 11:00
+        - link "Bilete" [ref=e6568] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36542/best-of-metropolitan-17-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e6571]:
+        - generic [ref=e6573]:
+          - generic [ref=e6574]: "17"
+          - generic [ref=e6575]: mai
+        - generic [ref=e6576]:
+          - generic [ref=e6577]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6578]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 17 mai 2026, 11:30
+        - link "Bilete" [ref=e6580] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36994/circul-circo-bellucci-rm-valcea-17-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6583]:
+        - generic [ref=e6585]:
+          - generic [ref=e6586]: "17"
+          - generic [ref=e6587]: mai
+        - generic [ref=e6588]:
+          - generic [ref=e6589]: O LUME DE LA ZERO
+          - generic [ref=e6590]: Teatrul Ion Creanga SALA MARE, Bucuresti, 17 mai 2026, 12:00
+        - link "Bilete" [ref=e6592] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36784/o-lume-de-la-zero-17-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6595]:
+        - generic [ref=e6597]:
+          - generic [ref=e6598]: "17"
+          - generic [ref=e6599]: mai
+        - generic [ref=e6600]:
+          - generic [ref=e6601]: CRAIOVA “ Seful Casei” Gasca Zurli si Antonia
+          - generic [ref=e6602]: Filarmonica Oltenia, Craiova, 17 mai 2026, 14:00
+        - link "Bilete" [ref=e6604] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36333/craiova-seful-casei-gasca-zurli-si-antonia-17-mai-2026-filarmonica-oltenia-craiova.html
+      - generic [ref=e6607]:
+        - generic [ref=e6609]:
+          - generic [ref=e6610]: "17"
+          - generic [ref=e6611]: mai
+        - generic [ref=e6612]:
+          - generic [ref=e6613]: Circul - Circo Bellucci - RM Valcea
+          - generic [ref=e6614]: Ramnicu Valcea Shopping City, Ramnicu Valcea, 17 mai 2026, 15:00
+        - link "Bilete" [ref=e6616] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36992/circul-circo-bellucci-rm-valcea-17-mai-2026-ramnicu-valcea-shopping-city-ramnicu-valcea.html
+      - generic [ref=e6619]:
+        - generic [ref=e6621]:
+          - generic [ref=e6622]: "17"
+          - generic [ref=e6623]: mai
+        - generic [ref=e6624]:
+          - generic [ref=e6625]: DE-A MICUL PRINT
+          - generic [ref=e6626]: Teatrul Ion Creanga SALA MARE, Bucuresti, 17 mai 2026, 18:00
+        - link "Bilete" [ref=e6628] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36785/de-a-micul-print-17-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e6631]:
+        - generic [ref=e6633]:
+          - generic [ref=e6634]: "17"
+          - generic [ref=e6635]: mai
+        - generic [ref=e6636]:
+          - generic [ref=e6637]: Duminică, 17 mai - D-ale carnavalului, o piesa oropsită
+          - generic [ref=e6638]: Teatrul Municipal Bacovia - Sala Mare, Bacau, 17 mai 2026, 19:00
+        - link "Bilete" [ref=e6640] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36502/duminic-17-mai-d-ale-carnavalului-o-piesa-oropsit-17-mai-2026-teatrul-municipal-bacovia-sala-mare-bacau.html
+      - generic [ref=e6643]:
+        - generic [ref=e6645]:
+          - generic [ref=e6646]: "17"
+          - generic [ref=e6647]: mai
+        - generic [ref=e6648]:
+          - generic [ref=e6649]: SISTER ACT
+          - generic [ref=e6650]: Teatrul German de Stat, Timisoara, 17 mai 2026, 19:30
+        - link "Bilete" [ref=e6652] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36919/sister-act-17-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e6655]:
+        - generic [ref=e6657]:
+          - generic [ref=e6658]: "17"
+          - generic [ref=e6659]: mai
+        - generic [ref=e6660]:
+          - generic [ref=e6661]: 5+3=9 [RCW]
+          - generic [ref=e6662]: Sala de Teatru la CUB, Iasi, 17 mai 2026, 20:00
+        - link "Bilete" [ref=e6664] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36193/5-3-9-rcw-17-mai-2026-sala-de-teatru-la-cub-iasi.html
+      - generic [ref=e6667]:
+        - generic [ref=e6669]:
+          - generic [ref=e6670]: "18"
+          - generic [ref=e6671]: mai
+        - generic [ref=e6672]:
+          - generic [ref=e6673]: Fade to Grey [RCW]
+          - generic [ref=e6674]: Uzina cu teatru, Iasi, 18 mai 2026, 19:00
+        - link "Bilete" [ref=e6676] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36194/fade-to-grey-rcw-18-mai-2026-uzina-cu-teatru-iasi.html
+      - generic [ref=e6679]:
+        - generic [ref=e6681]:
+          - generic [ref=e6682]: "19"
+          - generic [ref=e6683]: mai
+        - generic [ref=e6684]:
+          - generic [ref=e6685]: L’heure du the [RCW]
+          - generic [ref=e6686]: Uzina cu teatru, Iasi, 19 mai 2026, 18:00
+        - link "Bilete" [ref=e6688] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36942/l-heure-du-the-rcw-19-mai-2026-uzina-cu-teatru-iasi.html
+      - generic [ref=e6691]:
+        - generic [ref=e6693]:
+          - generic [ref=e6694]: "19"
+          - generic [ref=e6695]: mai
+        - generic [ref=e6696]:
+          - generic [ref=e6697]: L’heure du the [RCW]
+          - generic [ref=e6698]: Uzina cu teatru, Iasi, 19 mai 2026, 20:00
+        - link "Bilete" [ref=e6700] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36943/l-heure-du-the-rcw-19-mai-2026-uzina-cu-teatru-iasi.html
+      - generic [ref=e6703]:
+        - generic [ref=e6705]:
+          - generic [ref=e6706]: "20"
+          - generic [ref=e6707]: mai
+        - generic [ref=e6708]:
+          - generic [ref=e6709]: Arta de a construi relatii sanatoase la locul de munca
+          - generic [ref=e6710]: Impact HUB Universitate, Bucuresti, 20 mai 2026, 10:00
+        - link "Bilete" [ref=e6712] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36566/arta-de-a-construi-relatii-sanatoase-la-locul-de-munca-20-mai-2026-impact-hub-universitate-bucuresti.html
+      - generic [ref=e6715]:
+        - generic [ref=e6717]:
+          - generic [ref=e6718]: "20"
+          - generic [ref=e6719]: mai
+        - generic [ref=e6720]:
+          - generic [ref=e6721]: HazarDance Showcase [RCW]
+          - generic [ref=e6722]: Teatrul 'Luceafarul', Iasi, 20 mai 2026, 20:00
+        - link "Bilete" [ref=e6724] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36955/hazardance-showcase-rcw-20-mai-2026-teatrul-luceafarul-iasi.html
+      - generic [ref=e6727]:
+        - generic [ref=e6729]:
+          - generic [ref=e6730]: 21-31
+          - generic [ref=e6731]: mai
+        - generic [ref=e6732]:
+          - generic [ref=e6733]: Shakespeare Festival - Sala Amza Pellea Pass (Abonament)
+          - generic [ref=e6734]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 21 - 31 mai 2026
+        - link "Bilete" [ref=e6736] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36745/shakespeare-festival-sala-amza-pellea-pass-abonament-21-31-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e6739]:
+        - generic [ref=e6741]:
+          - generic [ref=e6742]: 21-31
+          - generic [ref=e6743]: mai
+        - generic [ref=e6744]:
+          - generic [ref=e6745]: Shakespeare Festival - Cross Pass (Abonament)
+          - generic [ref=e6746]: Shakespeare Festival, Craiova, 21 - 31 mai 2026
+        - link "Bilete" [ref=e6748] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36746/shakespeare-festival-cross-pass-abonament-21-31-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e6751]:
+        - generic [ref=e6753]:
+          - generic [ref=e6754]: 21-31
+          - generic [ref=e6755]: mai
+        - generic [ref=e6756]:
+          - generic [ref=e6757]: Shakespeare Village - Full Pass
+          - generic [ref=e6758]: Shakespeare Festival, Craiova, 21 - 31 mai 2026
+        - link "Bilete" [ref=e6760] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36760/shakespeare-village-full-pass-21-31-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e6763]:
+        - generic [ref=e6765]:
+          - generic [ref=e6766]: "21"
+          - generic [ref=e6767]: mai
+        - generic [ref=e6768]:
+          - generic [ref=e6769]: IMPUTERNICITE - e seara in care te regasesti. Te ridici. Infloresti
+          - generic [ref=e6770]: Wonderland - Sala Grande Vista, Feleacu, judetul Cluj, 21 mai 2026, 18:00
+        - link "Bilete" [ref=e6772] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36958/imputernicite-e-seara-in-care-te-regasesti-te-ridici-infloresti-21-mai-2026-wonderland-sala-grande-vista-feleacu-judetul-cluj.html
+      - generic [ref=e6775]:
+        - generic [ref=e6777]:
+          - generic [ref=e6778]: "21"
+          - generic [ref=e6779]: mai
+        - generic [ref=e6780]:
+          - generic [ref=e6781]: "TRADITII CLUJENE DE ISPAS: Spectacol extraordinar – Omul bun cu suflet mare!"
+          - generic [ref=e6782]: Academia de Muzica Gheorghe Dima - Sala Héritage, Cluj-Napoca, 21 mai 2026, 18:00
+        - link "Bilete" [ref=e6784] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35796/traditii-clujene-de-ispas-spectacol-extraordinar-omul-bun-cu-suflet-mare-21-mai-2026-academia-de-muzica-gheorghe-dima-sala-hritage-cluj-napoca.html
+      - generic [ref=e6787]:
+        - generic [ref=e6789]:
+          - generic [ref=e6790]: "21"
+          - generic [ref=e6791]: mai
+        - generic [ref=e6792]:
+          - generic [ref=e6793]: "Titus Andronicus: Reborn/Titus Andronicus: Renăscut(JPN)"
+          - generic [ref=e6794]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 21 mai 2026, 19:00
+        - link "Bilete" [ref=e6796] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36672/titus-andronicus-reborn-titus-andronicus-renscut-jpn-21-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e6799]:
+        - generic [ref=e6801]:
+          - generic [ref=e6802]: "21"
+          - generic [ref=e6803]: mai
+        - generic [ref=e6804]:
+          - generic [ref=e6805]: Muerta de Amor [RCW]
+          - generic [ref=e6806]: Teatrul National 'Vasile Alecsandri', Iasi, 21 mai 2026, 20:00
+        - link "Bilete" [ref=e6808] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36195/muerta-de-amor-rcw-21-mai-2026-teatrul-national-vasile-alecsandri-iasi.html
+      - generic [ref=e6811]:
+        - generic [ref=e6813]:
+          - generic [ref=e6814]: "22"
+          - generic [ref=e6815]: mai
+        - generic [ref=e6816]:
+          - generic [ref=e6817]: Shakespeare Village Day Pass · Vineri, 22 Mai
+          - generic [ref=e6818]: Shakespeare Festival, Craiova, 22 mai 2026
+        - link "Bilete" [ref=e6820] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36747/shakespeare-village-day-pass-vineri-22-mai-22-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e6823]:
+        - generic [ref=e6825]:
+          - generic [ref=e6826]: 22-24
+          - generic [ref=e6827]: mai
+        - generic [ref=e6828]:
+          - generic [ref=e6829]: Shakespeare Village - Weekend 1 Pass
+          - generic [ref=e6830]: Shakespeare Festival, Craiova, 22 - 24 mai 2026
+        - link "Bilete" [ref=e6832] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36757/shakespeare-village-weekend-1-pass-22-24-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e6835]:
+        - generic [ref=e6837]:
+          - generic [ref=e6838]: 22-24
+          - generic [ref=e6839]: mai
+        - generic [ref=e6840]:
+          - generic [ref=e6841]: ROWINE SPRING EDITION BUCHAREST 2026 - 22-24 mai
+          - generic [ref=e6842]: Fratelli Studio 1, Bucuresti, 22 - 24 mai 2026, 14:00
+        - link "Bilete" [ref=e6844] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34302/rowine-spring-edition-bucharest-2026-22-24-mai-22-24-mai-2026-fratelli-studio-1-bucuresti.html
+      - generic [ref=e6847]:
+        - generic [ref=e6849]:
+          - generic [ref=e6850]: "22"
+          - generic [ref=e6851]: mai
+        - generic [ref=e6852]:
+          - generic [ref=e6853]: HAMLET｜TOILET (JPN)
+          - generic [ref=e6854]: Ramada - Sala Brancusi, Craiova, 22 mai 2026, 16:00
+        - link "Bilete" [ref=e6856] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36671/hamlet-toilet-jpn-22-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e6859]:
+        - generic [ref=e6861]:
+          - generic [ref=e6862]: "22"
+          - generic [ref=e6863]: mai
+        - generic [ref=e6864]:
+          - generic [ref=e6865]: Ophelia-s (BEL)
+          - generic [ref=e6866]: Teatrul Colibri, Craiova, 22 mai 2026, 18:00
+        - link "Bilete" [ref=e6868] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36691/ophelia-s-bel-22-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e6871]:
+        - generic [ref=e6873]:
+          - generic [ref=e6874]: "22"
+          - generic [ref=e6875]: mai
+        - generic [ref=e6876]:
+          - generic [ref=e6877]: APOLODOR - un pinguin călător
+          - generic [ref=e6878]: Circul Metropolitan Bucuresti, Bucuresti, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6880] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34589/apolodor-un-pinguin-cltor-22-mai-2026-circul-metropolitan-bucuresti-bucuresti.html
+      - generic [ref=e6883]:
+        - generic [ref=e6885]:
+          - generic [ref=e6886]: "22"
+          - generic [ref=e6887]: mai
+        - generic [ref=e6888]:
+          - generic [ref=e6889]: II (ZAF)
+          - generic [ref=e6890]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6892] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36692/ii-zaf-22-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e6895]:
+        - generic [ref=e6897]:
+          - generic [ref=e6898]: "22"
+          - generic [ref=e6899]: mai
+        - generic [ref=e6900]:
+          - generic [ref=e6901]: Kurtág 100
+          - generic [ref=e6902]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6904] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35670/kurtg-100-22-mai-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e6907]:
+        - generic [ref=e6909]:
+          - generic [ref=e6910]: "22"
+          - generic [ref=e6911]: mai
+        - generic [ref=e6912]:
+          - generic [ref=e6913]: "KINDRED VOICES | Concert simfonic Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: Radu Popa Soliști: Suyeon Kang – vioarăVlad Popescu – vioară"
+          - generic [ref=e6914]: Sala Capitol, Timisoara, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6916] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34398/kindred-voices-concert-simfonic-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-radu-popa-soliti-suyeon-kang-vioarvlad-popescu-vioar-22-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e6919]:
+        - generic [ref=e6921]:
+          - generic [ref=e6922]: "22"
+          - generic [ref=e6923]: mai
+        - generic [ref=e6924]:
+          - generic [ref=e6925]: Otello (ROU)
+          - generic [ref=e6926]: Cercul Militar (Casa Armatei), Craiova, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6928] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36704/otello-rou-22-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e6931]:
+        - generic [ref=e6933]:
+          - generic [ref=e6934]: "22"
+          - generic [ref=e6935]: mai
+        - generic [ref=e6936]:
+          - generic [ref=e6937]: Romeo and Juliet/Romeo și Julieta (JPN)
+          - generic [ref=e6938]: Casa de Cultura a Studentilor, Craiova, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6940] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36705/romeo-and-juliet-romeo-i-julieta-jpn-22-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e6943]:
+        - generic [ref=e6945]:
+          - generic [ref=e6946]: "22"
+          - generic [ref=e6947]: mai
+        - generic [ref=e6948]:
+          - generic [ref=e6949]: FAUST
+          - generic [ref=e6950]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 22 mai 2026, 19:00
+        - link "Bilete" [ref=e6952] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36594/faust-22-mai-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e6955]:
+        - generic [ref=e6957]:
+          - generic [ref=e6958]: "22"
+          - generic [ref=e6959]: mai
+        - generic [ref=e6960]:
+          - generic [ref=e6961]: HAMLET｜TOILET (JPN)
+          - generic [ref=e6962]: Ramada - Sala Brancusi, Craiova, 22 mai 2026, 20:00
+        - link "Bilete" [ref=e6964] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36674/hamlet-toilet-jpn-22-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e6967]:
+        - generic [ref=e6969]:
+          - generic [ref=e6970]: "22"
+          - generic [ref=e6971]: mai
+        - generic [ref=e6972]:
+          - generic [ref=e6973]: "Titus Andronicus: Reborn/Titus Andronicus: Renăscut(JPN)"
+          - generic [ref=e6974]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 22 mai 2026, 20:30
+        - link "Bilete" [ref=e6976] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36673/titus-andronicus-reborn-titus-andronicus-renscut-jpn-22-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e6979]:
+        - generic [ref=e6981]:
+          - generic [ref=e6982]: "23"
+          - generic [ref=e6983]: mai
+        - generic [ref=e6984]:
+          - generic [ref=e6985]: Shakespeare Village Day Pass · Sâmbătă, 23 Mai
+          - generic [ref=e6986]: Shakespeare Festival, Craiova, 23 mai 2026
+        - link "Bilete" [ref=e6988] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36749/shakespeare-village-day-pass-smbt-23-mai-23-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e6991]:
+        - generic [ref=e6993]:
+          - generic [ref=e6994]: "23"
+          - generic [ref=e6995]: mai
+        - generic [ref=e6996]:
+          - generic [ref=e6997]: "Prichi Stories: Educatie sexuala pentru parinti constienti"
+          - generic [ref=e6998]: West City Hotel , Floresti, 23 mai 2026, 09:00
+        - link "Bilete" [ref=e7000] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36380/prichi-stories-educatie-sexuala-pentru-parinti-constienti-23-mai-2026-west-city-hotel-floresti.html
+      - generic [ref=e7003]:
+        - generic [ref=e7005]:
+          - generic [ref=e7006]: 23-24
+          - generic [ref=e7007]: mai
+        - generic [ref=e7008]:
+          - generic [ref=e7009]: Anti-Aging Festival 2026
+          - generic [ref=e7010]: Palatul Bragadiru, Bucuresti, 23 - 24 mai 2026, 10:00
+        - link "Bilete" [ref=e7012] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34090/anti-aging-festival-2026-23-24-mai-2026-palatul-bragadiru-bucuresti.html
+      - generic [ref=e7015]:
+        - generic [ref=e7017]:
+          - generic [ref=e7018]: "23"
+          - generic [ref=e7019]: mai
+        - generic [ref=e7020]:
+          - generic [ref=e7021]: Greierele și Furnica
+          - generic [ref=e7022]: Teatrul Amzei, Bucuresti, 23 mai 2026, 10:00
+        - link "Bilete" [ref=e7024] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36731/greierele-i-furnica-23-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7027]:
+        - generic [ref=e7029]:
+          - generic [ref=e7030]: "23"
+          - generic [ref=e7031]: mai
+        - generic [ref=e7032]:
+          - generic [ref=e7033]: RECITAL EDUCATIV | Muzică din desene animate (2–7 ani)
+          - generic [ref=e7034]: Sala Capitol, Timisoara, 23 mai 2026, 11:00
+        - link "Bilete" [ref=e7036] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34399/recital-educativ-muzic-din-desene-animate-2-7-ani-23-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e7039]:
+        - generic [ref=e7041]:
+          - generic [ref=e7042]: "23"
+          - generic [ref=e7043]: mai
+        - generic [ref=e7044]:
+          - generic [ref=e7045]: AMINTIRI INTR-O VALIZA
+          - generic [ref=e7046]: Teatrul Ion Creanga SALA MARE, Bucuresti, 23 mai 2026, 11:00
+        - link "Bilete" [ref=e7048] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36792/amintiri-intr-o-valiza-23-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7051]:
+        - generic [ref=e7053]:
+          - generic [ref=e7054]: "23"
+          - generic [ref=e7055]: mai
+        - generic [ref=e7056]:
+          - generic [ref=e7057]: Greierele și Furnica
+          - generic [ref=e7058]: Teatrul Amzei, Bucuresti, 23 mai 2026, 11:30
+        - link "Bilete" [ref=e7060] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36872/greierele-i-furnica-23-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7063]:
+        - generic [ref=e7065]:
+          - generic [ref=e7066]: "23"
+          - generic [ref=e7067]: mai
+        - generic [ref=e7068]:
+          - generic [ref=e7069]: INFINITY presents ZENA
+          - generic [ref=e7070]: Cetatea Rasnov, Brasov, 23 mai 2026, 18:00
+        - link "Bilete" [ref=e7072] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36396/infinity-presents-zena-23-mai-2026-cetatea-rasnov-brasov.html
+      - generic [ref=e7075]:
+        - generic [ref=e7077]:
+          - generic [ref=e7078]: "23"
+          - generic [ref=e7079]: mai
+        - generic [ref=e7080]:
+          - generic [ref=e7081]: Petty Men/Bărbați de nimic (GBR)
+          - generic [ref=e7082]: Ramada - Sala Brancusi, Craiova, 23 mai 2026, 18:00
+        - link "Bilete" [ref=e7084] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36676/petty-men-brbai-de-nimic-gbr-23-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7087]:
+        - generic [ref=e7089]:
+          - generic [ref=e7090]: "23"
+          - generic [ref=e7091]: mai
+        - generic [ref=e7092]:
+          - generic [ref=e7093]: Ofelia.Afterlife (ROU)
+          - generic [ref=e7094]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 23 mai 2026, 18:00
+        - link "Bilete" [ref=e7096] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36694/ofelia-afterlife-rou-23-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e7099]:
+        - generic [ref=e7101]:
+          - generic [ref=e7102]: "23"
+          - generic [ref=e7103]: mai
+        - generic [ref=e7104]:
+          - generic [ref=e7105]: CEI TREI PURCELUSI
+          - generic [ref=e7106]: Teatrul Ion Creanga SALA MARE, Bucuresti, 23 mai 2026, 18:00
+        - link "Bilete" [ref=e7108] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36793/cei-trei-purcelusi-23-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7111]:
+        - generic [ref=e7113]:
+          - generic [ref=e7114]: "23"
+          - generic [ref=e7115]: mai
+        - generic [ref=e7116]:
+          - generic [ref=e7117]: FAUST
+          - generic [ref=e7118]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 23 mai 2026, 19:00
+        - link "Bilete" [ref=e7120] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36595/faust-23-mai-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e7123]:
+        - generic [ref=e7125]:
+          - generic [ref=e7126]: "23"
+          - generic [ref=e7127]: mai
+        - generic [ref=e7128]:
+          - generic [ref=e7129]: PREMIERE/PREMIERĂ ZAUBERBERG / MUNTELE VRĂJIT / MAGIC MOUNTAIN
+          - generic [ref=e7130]: Teatrul German de Stat, Timisoara, 23 mai 2026, 19:30
+        - link "Bilete" [ref=e7132] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36920/premiere-premier-zauberberg-muntele-vrjit-magic-mountain-23-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e7135]:
+        - generic [ref=e7137]:
+          - generic [ref=e7138]: "23"
+          - generic [ref=e7139]: mai
+        - generic [ref=e7140]:
+          - generic [ref=e7141]: King Lear/Regele Lear (ROU)
+          - generic [ref=e7142]: Sala Regele Lear Amza Pellea, Craiova, 23 mai 2026, 20:00
+        - link "Bilete" [ref=e7144] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36742/king-lear-regele-lear-rou-23-mai-2026-sala-regele-lear-amza-pellea-craiova.html
+      - generic [ref=e7147]:
+        - generic [ref=e7149]:
+          - generic [ref=e7150]: "24"
+          - generic [ref=e7151]: mai
+        - generic [ref=e7152]:
+          - generic [ref=e7153]: Shakespeare Village Day Pass · Duminică, 24 Mai
+          - generic [ref=e7154]: Shakespeare Festival, Craiova, 24 mai 2026
+        - link "Bilete" [ref=e7156] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36748/shakespeare-village-day-pass-duminic-24-mai-24-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7159]:
+        - generic [ref=e7161]:
+          - generic [ref=e7162]: "24"
+          - generic [ref=e7163]: mai
+        - generic [ref=e7164]:
+          - generic [ref=e7165]: Scufita rosie si aventurile ei
+          - generic [ref=e7166]: Teatrul Amzei, Bucuresti, 24 mai 2026, 10:00
+        - link "Bilete" [ref=e7168] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36666/scufita-rosie-si-aventurile-ei-24-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7171]:
+        - generic [ref=e7173]:
+          - generic [ref=e7174]: "24"
+          - generic [ref=e7175]: mai
+        - generic [ref=e7176]:
+          - generic [ref=e7177]: Printesa si Broscoiul @ Hanu’ lui Manuc
+          - generic [ref=e7178]: Hanu' lui Manuc, Bucuresti, 24 mai 2026, 11:00
+        - link "Bilete" [ref=e7180] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36025/printesa-si-broscoiul-hanu-lui-manuc-24-mai-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e7183]:
+        - generic [ref=e7185]:
+          - generic [ref=e7186]: "24"
+          - generic [ref=e7187]: mai
+        - generic [ref=e7188]:
+          - generic [ref=e7189]: DE-A MICUL PRINT
+          - generic [ref=e7190]: Teatrul Ion Creanga SALA MARE, Bucuresti, 24 mai 2026, 11:00
+        - link "Bilete" [ref=e7192] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36794/de-a-micul-print-24-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7195]:
+        - generic [ref=e7197]:
+          - generic [ref=e7198]: "24"
+          - generic [ref=e7199]: mai
+        - generic [ref=e7200]:
+          - generic [ref=e7201]: Ursul păcălit de vulpe
+          - generic [ref=e7202]: Teatrul Amzei, Bucuresti, 24 mai 2026, 12:00
+        - link "Bilete" [ref=e7204] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36665/ursul-pclit-de-vulpe-24-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7207]:
+        - generic [ref=e7209]:
+          - generic [ref=e7210]: "24"
+          - generic [ref=e7211]: mai
+        - generic [ref=e7212]:
+          - generic [ref=e7213]: King Lear/Regele Lear (ROU)
+          - generic [ref=e7214]: Sala Regele Lear Amza Pellea, Craiova, 24 mai 2026, 14:00
+        - link "Bilete" [ref=e7216] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36743/king-lear-regele-lear-rou-24-mai-2026-sala-regele-lear-amza-pellea-craiova.html
+      - generic [ref=e7219]:
+        - generic [ref=e7221]:
+          - generic [ref=e7222]: "24"
+          - generic [ref=e7223]: mai
+        - generic [ref=e7224]:
+          - generic [ref=e7225]: Macbeth Muet/Macbeth Mut (CAN)
+          - generic [ref=e7226]: Ramada - Sala Brancusi, Craiova, 24 mai 2026, 18:00
+        - link "Bilete" [ref=e7228] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36678/macbeth-muet-macbeth-mut-can-24-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7231]:
+        - generic [ref=e7233]:
+          - generic [ref=e7234]: "24"
+          - generic [ref=e7235]: mai
+        - generic [ref=e7236]:
+          - generic [ref=e7237]: PUNGUTA CU DOI BANI
+          - generic [ref=e7238]: Teatrul Ion Creanga SALA MARE, Bucuresti, 24 mai 2026, 18:00
+        - link "Bilete" [ref=e7240] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36795/punguta-cu-doi-bani-24-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7243]:
+        - generic [ref=e7245]:
+          - generic [ref=e7246]: "24"
+          - generic [ref=e7247]: mai
+        - generic [ref=e7248]:
+          - generic [ref=e7249]: Othello (HKG)
+          - generic [ref=e7250]: Teatrul Colibri, Craiova, 24 mai 2026, 19:00
+        - link "Bilete" [ref=e7252] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36693/othello-hkg-24-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7255]:
+        - generic [ref=e7257]:
+          - generic [ref=e7258]: "24"
+          - generic [ref=e7259]: mai
+        - generic [ref=e7260]:
+          - generic [ref=e7261]: A MIDSUMMER NIGHT’S DREAM/VISUL UNEI NOPȚI DE VARĂ (MDA)
+          - generic [ref=e7262]: Casa de Cultura a Studentilor, Craiova, 24 mai 2026, 19:00
+        - link "Bilete" [ref=e7264] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36706/a-midsummer-night-s-dream-visul-unei-nopi-de-var-mda-24-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7267]:
+        - generic [ref=e7269]:
+          - generic [ref=e7270]: "24"
+          - generic [ref=e7271]: mai
+        - generic [ref=e7272]:
+          - generic [ref=e7273]: MERCUTIO (FRA)
+          - generic [ref=e7274]: Cercul Militar (Casa Armatei), Craiova, 24 mai 2026, 19:00
+        - link "Bilete" [ref=e7276] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36708/mercutio-fra-24-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7279]:
+        - generic [ref=e7281]:
+          - generic [ref=e7282]: "24"
+          - generic [ref=e7283]: mai
+        - generic [ref=e7284]:
+          - generic [ref=e7285]: King Lear/Regele Lear (ROU)
+          - generic [ref=e7286]: Sala Regele Lear Amza Pellea, Craiova, 24 mai 2026, 20:00
+        - link "Bilete" [ref=e7288] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36744/king-lear-regele-lear-rou-24-mai-2026-sala-regele-lear-amza-pellea-craiova.html
+      - generic [ref=e7291]:
+        - generic [ref=e7293]:
+          - generic [ref=e7294]: "24"
+          - generic [ref=e7295]: mai
+        - generic [ref=e7296]:
+          - generic [ref=e7297]: O cina cu bucluc
+          - generic [ref=e7298]: Teatrul Amzei, Bucuresti, 24 mai 2026, 20:00
+        - link "Bilete" [ref=e7300] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37006/o-cina-cu-bucluc-24-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7303]:
+        - generic [ref=e7305]:
+          - generic [ref=e7306]: "24"
+          - generic [ref=e7307]: mai
+        - generic [ref=e7308]:
+          - generic [ref=e7309]: Macbeth Muet/Macbeth Mut (CAN)
+          - generic [ref=e7310]: Ramada - Sala Brancusi, Craiova, 24 mai 2026, 21:00
+        - link "Bilete" [ref=e7312] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36679/macbeth-muet-macbeth-mut-can-24-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7315]:
+        - generic [ref=e7317]:
+          - generic [ref=e7318]: "25"
+          - generic [ref=e7319]: mai
+        - generic [ref=e7320]:
+          - generic [ref=e7321]: Shakespeare Village Day Pass · Luni, 25 Mai
+          - generic [ref=e7322]: Shakespeare Festival, Craiova, 25 mai 2026
+        - link "Bilete" [ref=e7324] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36750/shakespeare-village-day-pass-luni-25-mai-25-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7327]:
+        - generic [ref=e7329]:
+          - generic [ref=e7330]: 25-28
+          - generic [ref=e7331]: mai
+        - generic [ref=e7332]:
+          - generic [ref=e7333]: Shakespeare Village - Weekdays Pass
+          - generic [ref=e7334]: Shakespeare Festival, Craiova, 25 - 28 mai 2026
+        - link "Bilete" [ref=e7336] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36759/shakespeare-village-weekdays-pass-25-28-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7339]:
+        - generic [ref=e7341]:
+          - generic [ref=e7342]: "25"
+          - generic [ref=e7343]: mai
+        - generic [ref=e7344]:
+          - generic [ref=e7345]: Card Rapidist - Sezon 2025-2026
+          - generic [ref=e7346]: Stadion Rapid - Giulesti, Bucuresti, 25 mai 2026
+        - link "Bilete" [ref=e7348] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30936/card-rapidist-sezon-2025-2026-25-mai-2026-stadion-rapid-giulesti-bucuresti.html
+      - generic [ref=e7351]:
+        - generic [ref=e7353]:
+          - generic [ref=e7354]: "25"
+          - generic [ref=e7355]: mai
+        - generic [ref=e7356]:
+          - generic [ref=e7357]: Conferinta Strategii de Infrumusetare
+          - generic [ref=e7358]: Grand Hotel Bucharest , Bucuresti, 25 mai 2026, 10:00
+        - link "Bilete" [ref=e7360] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36308/conferinta-strategii-de-infrumusetare-25-mai-2026-grand-hotel-bucharest-bucuresti.html
+      - generic [ref=e7363]:
+        - generic [ref=e7365]:
+          - generic [ref=e7366]: "25"
+          - generic [ref=e7367]: mai
+        - generic [ref=e7368]:
+          - generic [ref=e7369]: Alchemy of a Gender’s Archival /Alchimia arhivei de gen (USA)
+          - generic [ref=e7370]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 25 mai 2026, 17:00
+        - link "Bilete" [ref=e7372] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36695/alchemy-of-a-gender-s-archival-alchimia-arhivei-de-gen-usa-25-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e7375]:
+        - generic [ref=e7377]:
+          - generic [ref=e7378]: "25"
+          - generic [ref=e7379]: mai
+        - generic [ref=e7380]:
+          - generic [ref=e7381]: Hamlet (ROU)
+          - generic [ref=e7382]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 25 mai 2026, 19:00
+        - link "Bilete" [ref=e7384] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36675/hamlet-rou-25-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e7387]:
+        - generic [ref=e7389]:
+          - generic [ref=e7390]: "25"
+          - generic [ref=e7391]: mai
+        - generic [ref=e7392]:
+          - generic [ref=e7393]: Othello (HKG)
+          - generic [ref=e7394]: Teatrul Colibri, Craiova, 25 mai 2026, 19:00
+        - link "Bilete" [ref=e7396] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36696/othello-hkg-25-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7399]:
+        - generic [ref=e7401]:
+          - generic [ref=e7402]: "25"
+          - generic [ref=e7403]: mai
+        - generic [ref=e7404]:
+          - generic [ref=e7405]: HA*L*T (UKR)
+          - generic [ref=e7406]: Casa de Cultura a Studentilor, Craiova, 25 mai 2026, 19:00
+        - link "Bilete" [ref=e7408] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36707/ha-l-t-ukr-25-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7411]:
+        - generic [ref=e7413]:
+          - generic [ref=e7414]: "25"
+          - generic [ref=e7415]: mai
+        - generic [ref=e7416]:
+          - generic [ref=e7417]: Hamlet - La fin d'une enfance/Hamlet - Sfârșitul copilăriei (FRA)
+          - generic [ref=e7418]: Cercul Militar (Casa Armatei), Craiova, 25 mai 2026, 19:00
+        - link "Bilete" [ref=e7420] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36710/hamlet-la-fin-d-une-enfance-hamlet-sfritul-copilriei-fra-25-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7423]:
+        - generic [ref=e7425]:
+          - generic [ref=e7426]: "25"
+          - generic [ref=e7427]: mai
+        - generic [ref=e7428]:
+          - generic [ref=e7429]: Lear? (FRA)
+          - generic [ref=e7430]: Ramada - Sala Brancusi, Craiova, 25 mai 2026, 20:00
+        - link "Bilete" [ref=e7432] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36682/lear-fra-25-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7435]:
+        - generic [ref=e7437]:
+          - generic [ref=e7438]: "26"
+          - generic [ref=e7439]: mai
+        - generic [ref=e7440]:
+          - generic [ref=e7441]: Shakespeare Village Day Pass · Marți, 26 Mai
+          - generic [ref=e7442]: Shakespeare Festival, Craiova, 26 mai 2026
+        - link "Bilete" [ref=e7444] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36751/shakespeare-village-day-pass-mari-26-mai-26-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7447]:
+        - generic [ref=e7449]:
+          - generic [ref=e7450]: "26"
+          - generic [ref=e7451]: mai
+        - generic [ref=e7452]:
+          - generic [ref=e7453]: Antonio and Cleopatra 2.0/Antoniu și Cleopatra 2.0 (ROU)
+          - generic [ref=e7454]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 26 mai 2026, 18:00
+        - link "Bilete" [ref=e7456] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36697/antonio-and-cleopatra-2-0-antoniu-i-cleopatra-2-0-rou-26-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e7459]:
+        - generic [ref=e7461]:
+          - generic [ref=e7462]: "26"
+          - generic [ref=e7463]: mai
+        - generic [ref=e7464]:
+          - generic [ref=e7465]: Macbeth (FRA)
+          - generic [ref=e7466]: Cercul Militar (Casa Armatei), Craiova, 26 mai 2026, 18:00
+        - link "Bilete" [ref=e7468] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36711/macbeth-fra-26-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7471]:
+        - generic [ref=e7473]:
+          - generic [ref=e7474]: "26"
+          - generic [ref=e7475]: mai
+        - generic [ref=e7476]:
+          - generic [ref=e7477]: The Story of King Lear. A tale for parents who don't listen to their children./Povestea Regelui Lear. O poveste pentru părinții care nu ascultă de copii (ROU)
+          - generic [ref=e7478]: Teatrul Colibri, Craiova, 26 mai 2026, 19:00
+        - link "Bilete" [ref=e7480] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36698/the-story-of-king-lear-a-tale-for-parents-who-don-t-listen-to-their-children-povestea-regelui-lear-o-poveste-pentru-prinii-care-nu-ascult-de-copii-rou-26-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7483]:
+        - generic [ref=e7485]:
+          - generic [ref=e7486]: "26"
+          - generic [ref=e7487]: mai
+        - generic [ref=e7488]:
+          - generic [ref=e7489]: OTHELLO (GEO)
+          - generic [ref=e7490]: Casa de Cultura a Studentilor, Craiova, 26 mai 2026, 19:00
+        - link "Bilete" [ref=e7492] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36709/othello-geo-26-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7495]:
+        - generic [ref=e7497]:
+          - generic [ref=e7498]: "26"
+          - generic [ref=e7499]: mai
+        - generic [ref=e7500]:
+          - generic [ref=e7501]: The Tiger Lilies in A Macbeth Song/The Tiger Lillies într-un cântec Macbeth (ESP)
+          - generic [ref=e7502]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 26 mai 2026, 20:00
+        - link "Bilete" [ref=e7504] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36677/the-tiger-lilies-in-a-macbeth-song-the-tiger-lillies-ntr-un-cntec-macbeth-esp-26-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e7507]:
+        - generic [ref=e7509]:
+          - generic [ref=e7510]: "26"
+          - generic [ref=e7511]: mai
+        - generic [ref=e7512]:
+          - generic [ref=e7513]: Macbeth.O (ROU)
+          - generic [ref=e7514]: Ramada - Sala Brancusi, Craiova, 26 mai 2026, 20:00
+        - link "Bilete" [ref=e7516] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36680/macbeth-o-rou-26-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7519]:
+        - generic [ref=e7521]:
+          - generic [ref=e7522]: "27"
+          - generic [ref=e7523]: mai
+        - generic [ref=e7524]:
+          - generic [ref=e7525]: Shakespeare Village Day Pass · Miercuri, 27 Mai
+          - generic [ref=e7526]: Shakespeare Festival, Craiova, 27 mai 2026
+        - link "Bilete" [ref=e7528] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36752/shakespeare-village-day-pass-miercuri-27-mai-27-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7531]:
+        - generic [ref=e7533]:
+          - generic [ref=e7534]: "27"
+          - generic [ref=e7535]: mai
+        - generic [ref=e7536]:
+          - generic [ref=e7537]: Timon of Athens/Timon din Atena (ROU)
+          - generic [ref=e7538]: Ramada - Sala Brancusi, Craiova, 27 mai 2026, 18:00
+        - link "Bilete" [ref=e7540] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36683/timon-of-athens-timon-din-atena-rou-27-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7543]:
+        - generic [ref=e7545]:
+          - generic [ref=e7546]: "27"
+          - generic [ref=e7547]: mai
+        - generic [ref=e7548]:
+          - generic [ref=e7549]: TSCHICK / TSCHICK. DE CE AM FURAT MAȘINA / TSCHICK. WHY WE TOOK THE CAR
+          - generic [ref=e7550]: Teatrul de Vest, Resita, 27 mai 2026, 18:30
+        - link "Bilete" [ref=e7552] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36921/tschick-tschick-de-ce-am-furat-maina-tschick-why-we-took-the-car-27-mai-2026-teatrul-de-vest-resita.html
+      - generic [ref=e7555]:
+        - generic [ref=e7557]:
+          - generic [ref=e7558]: "27"
+          - generic [ref=e7559]: mai
+        - generic [ref=e7560]:
+          - generic [ref=e7561]: The Taming of the Shrew/Îmblânzirea scorpiei (ITA)
+          - generic [ref=e7562]: Casa de Cultura a Studentilor, Craiova, 27 mai 2026, 19:00
+        - link "Bilete" [ref=e7564] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36713/the-taming-of-the-shrew-mblnzirea-scorpiei-ita-27-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7567]:
+        - generic [ref=e7569]:
+          - generic [ref=e7570]: "27"
+          - generic [ref=e7571]: mai
+        - generic [ref=e7572]:
+          - generic [ref=e7573]: COJO Live | Rockstadt
+          - generic [ref=e7574]: Rockstadt, Brasov, 27 mai 2026, 20:00
+        - link "Bilete" [ref=e7576] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36378/cojo-live-rockstadt-27-mai-2026-rockstadt-brasov.html
+      - generic [ref=e7579]:
+        - generic [ref=e7581]:
+          - generic [ref=e7582]: "27"
+          - generic [ref=e7583]: mai
+        - generic [ref=e7584]:
+          - generic [ref=e7585]: KING LEAR(USA)
+          - generic [ref=e7586]: Teatrul Colibri, Craiova, 27 mai 2026, 20:00
+        - link "Bilete" [ref=e7588] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36925/king-lear-usa-27-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7591]:
+        - generic [ref=e7593]:
+          - generic [ref=e7594]: "27"
+          - generic [ref=e7595]: mai
+        - generic [ref=e7596]:
+          - generic [ref=e7597]: Richard III (FRA)
+          - generic [ref=e7598]: Cercul Militar (Casa Armatei), Craiova, 27 mai 2026, 20:00
+        - link "Bilete" [ref=e7600] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36712/richard-iii-fra-27-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7603]:
+        - generic [ref=e7605]:
+          - generic [ref=e7606]: "28"
+          - generic [ref=e7607]: mai
+        - generic [ref=e7608]:
+          - generic [ref=e7609]: Shakespeare Village Day Pass · Joi, 28 Mai
+          - generic [ref=e7610]: Shakespeare Festival, Craiova, 28 mai 2026
+        - link "Bilete" [ref=e7612] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36753/shakespeare-village-day-pass-joi-28-mai-28-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7615]:
+        - generic [ref=e7617]:
+          - generic [ref=e7618]: "28"
+          - generic [ref=e7619]: mai
+        - generic [ref=e7620]:
+          - generic [ref=e7621]: Two gentlemen of Verona/Doi tineri din Verona(ESP)
+          - generic [ref=e7622]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 28 mai 2026, 14:00
+        - link "Bilete" [ref=e7624] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36681/two-gentlemen-of-verona-doi-tineri-din-verona-esp-28-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e7627]:
+        - generic [ref=e7629]:
+          - generic [ref=e7630]: "28"
+          - generic [ref=e7631]: mai
+        - generic [ref=e7632]:
+          - generic [ref=e7633]: Intre sine si bani
+          - generic [ref=e7634]: Teatrul Jean Bart, Tulcea, 28 mai 2026, 18:00
+        - link "Bilete" [ref=e7636] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36858/intre-sine-si-bani-28-mai-2026-teatrul-jean-bart-tulcea.html
+      - generic [ref=e7639]:
+        - generic [ref=e7641]:
+          - generic [ref=e7642]: "28"
+          - generic [ref=e7643]: mai
+        - generic [ref=e7644]:
+          - generic [ref=e7645]: KING LEAR(USA)
+          - generic [ref=e7646]: Teatrul Colibri, Craiova, 28 mai 2026, 19:00
+        - link "Bilete" [ref=e7648] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36926/king-lear-usa-28-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7651]:
+        - generic [ref=e7653]:
+          - generic [ref=e7654]: "28"
+          - generic [ref=e7655]: mai
+        - generic [ref=e7656]:
+          - generic [ref=e7657]: Regele Ioan(CZE)
+          - generic [ref=e7658]: Casa de Cultura a Studentilor, Craiova, 28 mai 2026, 19:00
+        - link "Bilete" [ref=e7660] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36714/regele-ioan-cze-28-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7663]:
+        - generic [ref=e7665]:
+          - generic [ref=e7666]: "28"
+          - generic [ref=e7667]: mai
+        - generic [ref=e7668]:
+          - generic [ref=e7669]: Romeo and Juliet/Romeo și Julieta (JPN)
+          - generic [ref=e7670]: Cercul Militar (Casa Armatei), Craiova, 28 mai 2026, 19:00
+        - link "Bilete" [ref=e7672] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36715/romeo-and-juliet-romeo-i-julieta-jpn-28-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7675]:
+        - generic [ref=e7677]:
+          - generic [ref=e7678]: "28"
+          - generic [ref=e7679]: mai
+        - generic [ref=e7680]:
+          - generic [ref=e7681]: Two gentlemen of Verona/Doi tineri din Verona(ESP)
+          - generic [ref=e7682]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 28 mai 2026, 20:00
+        - link "Bilete" [ref=e7684] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36684/two-gentlemen-of-verona-doi-tineri-din-verona-esp-28-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e7687]:
+        - generic [ref=e7689]:
+          - generic [ref=e7690]: "28"
+          - generic [ref=e7691]: mai
+        - generic [ref=e7692]:
+          - generic [ref=e7693]: Hamlet Puppet(ITA)
+          - generic [ref=e7694]: Ramada - Sala Brancusi, Craiova, 28 mai 2026, 20:00
+        - link "Bilete" [ref=e7696] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36686/hamlet-puppet-ita-28-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7699]:
+        - generic [ref=e7701]:
+          - generic [ref=e7702]: "28"
+          - generic [ref=e7703]: mai
+        - generic [ref=e7704]:
+          - generic [ref=e7705]: Frizzy P & Mr. Cole @ Control
+          - generic [ref=e7706]: Club Control, Bucuresti, 28 mai 2026, 21:00
+        - link "Bilete" [ref=e7708] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35591/frizzy-p-mr-cole-control-28-mai-2026-club-control-bucuresti.html
+      - generic [ref=e7711]:
+        - generic [ref=e7713]:
+          - generic [ref=e7714]: "29"
+          - generic [ref=e7715]: mai
+        - generic [ref=e7716]:
+          - generic [ref=e7717]: Shakespeare Village Day Pass · Vineri, 29 Mai
+          - generic [ref=e7718]: Shakespeare Festival, Craiova, 29 mai 2026
+        - link "Bilete" [ref=e7720] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36754/shakespeare-village-day-pass-vineri-29-mai-29-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7723]:
+        - generic [ref=e7725]:
+          - generic [ref=e7726]: 29-31
+          - generic [ref=e7727]: mai
+        - generic [ref=e7728]:
+          - generic [ref=e7729]: Shakespeare Village - Weekend 2 Pass
+          - generic [ref=e7730]: Shakespeare Festival, Craiova, 29 - 31 mai 2026
+        - link "Bilete" [ref=e7732] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36758/shakespeare-village-weekend-2-pass-29-31-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7735]:
+        - generic [ref=e7737]:
+          - generic [ref=e7738]: 29-31
+          - generic [ref=e7739]: mai
+        - generic [ref=e7740]:
+          - generic [ref=e7741]: Taste of Transylvania Boutique 2026 - Gilău (Cluj)
+          - generic [ref=e7742]: Castelul Rákóczi-Bánffy, Gilau, 29 - 31 mai 2026, 17:00
+        - link "Bilete" [ref=e7744] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36110/taste-of-transylvania-boutique-2026-gilu-cluj-29-31-mai-2026-castelul-rkczi-bnffy-gilau.html
+      - generic [ref=e7747]:
+        - generic [ref=e7749]:
+          - generic [ref=e7750]: "29"
+          - generic [ref=e7751]: mai
+        - generic [ref=e7752]:
+          - generic [ref=e7753]: Yorick, or the Skull/Yorick, sau Craniul(GBA)
+          - generic [ref=e7754]: Ramada - Sala Brancusi, Craiova, 29 mai 2026, 18:00
+        - link "Bilete" [ref=e7756] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36687/yorick-or-the-skull-yorick-sau-craniul-gba-29-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e7759]:
+        - generic [ref=e7761]:
+          - generic [ref=e7762]: "29"
+          - generic [ref=e7763]: mai
+        - generic [ref=e7764]:
+          - generic [ref=e7765]: I Remember A Midsummer Night’s Dream Variation/Îmi amintesc - o variațiune după Visul unei nopți de vară(FRA)
+          - generic [ref=e7766]: Cercul Militar (Casa Armatei), Craiova, 29 mai 2026, 18:00
+        - link "Bilete" [ref=e7768] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36717/i-remember-a-midsummer-night-s-dream-variation-mi-amintesc-o-variaiune-dup-visul-unei-nopi-de-var-fra-29-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7771]:
+        - generic [ref=e7773]:
+          - generic [ref=e7774]: "29"
+          - generic [ref=e7775]: mai
+        - generic [ref=e7776]:
+          - generic [ref=e7777]: TRANSYLVANIA FIGHTING CHAMPIONSHIP
+          - generic [ref=e7778]: BT Arena - Sala Polivalenta, Cluj Napoca, 29 mai 2026, 18:00
+        - link "Bilete" [ref=e7780] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36517/transylvania-fighting-championship-29-mai-2026-bt-arena-sala-polivalenta-cluj-napoca.html
+      - generic [ref=e7783]:
+        - generic [ref=e7785]:
+          - generic [ref=e7786]: "29"
+          - generic [ref=e7787]: mai
+        - generic [ref=e7788]:
+          - generic [ref=e7789]: CALUGARITA FEMINISTA si MISOGINUL MODERNIST
+          - generic [ref=e7790]: Teatrul Amzei, Bucuresti, 29 mai 2026, 18:30
+        - link "Bilete" [ref=e7792] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37007/calugarita-feminista-si-misoginul-modernist-29-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7795]:
+        - generic [ref=e7797]:
+          - generic [ref=e7798]: "29"
+          - generic [ref=e7799]: mai
+        - generic [ref=e7800]:
+          - generic [ref=e7801]: Concert vocal-simfonic – dirijor Lawrence Foster
+          - generic [ref=e7802]: Casa Universitarilor, Sala Auditorium Maximum, Cluj-Napoca, 29 mai 2026, 19:00
+        - link "Bilete" [ref=e7804] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35671/concert-vocal-simfonic-dirijor-lawrence-foster-29-mai-2026-casa-universitarilor-sala-auditorium-maximum-cluj-napoca.html
+      - generic [ref=e7807]:
+        - generic [ref=e7809]:
+          - generic [ref=e7810]: "29"
+          - generic [ref=e7811]: mai
+        - generic [ref=e7812]:
+          - generic [ref=e7813]: Macbeth(DEU)
+          - generic [ref=e7814]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 29 mai 2026, 19:00
+        - link "Bilete" [ref=e7816] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36699/macbeth-deu-29-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e7819]:
+        - generic [ref=e7821]:
+          - generic [ref=e7822]: "29"
+          - generic [ref=e7823]: mai
+        - generic [ref=e7824]:
+          - generic [ref=e7825]: "AWAKENING | Concert simfonic Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: Leo Hussain Soliști: Alexandra Conunova – vioară Valentin Răduțiu – violoncel"
+          - generic [ref=e7826]: Sala Capitol, Timisoara, 29 mai 2026, 19:00
+        - link "Bilete" [ref=e7828] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34400/awakening-concert-simfonic-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-leo-hussain-soliti-alexandra-conunova-vioar-valentin-rduiu-violoncel-29-mai-2026-sala-capitol-timisoara.html
+      - generic [ref=e7831]:
+        - generic [ref=e7833]:
+          - generic [ref=e7834]: "29"
+          - generic [ref=e7835]: mai
+        - generic [ref=e7836]:
+          - generic [ref=e7837]: Richard al III-lea(MDA)
+          - generic [ref=e7838]: Casa de Cultura a Studentilor, Craiova, 29 mai 2026, 19:00
+        - link "Bilete" [ref=e7840] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36716/richard-al-iii-lea-mda-29-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7843]:
+        - generic [ref=e7845]:
+          - generic [ref=e7846]: "29"
+          - generic [ref=e7847]: mai
+        - generic [ref=e7848]:
+          - generic [ref=e7849]: NOTHING in the name of the father, the son and freedom/NIMIC în numele tatălui, al fiului și al libertății(ITA)
+          - generic [ref=e7850]: Teatrul Colibri, Craiova, 29 mai 2026, 20:00
+        - link "Bilete" [ref=e7852] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36700/nothing-in-the-name-of-the-father-the-son-and-freedom-nimic-n-numele-tatlui-al-fiului-i-al-libertii-ita-29-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e7855]:
+        - generic [ref=e7857]:
+          - generic [ref=e7858]: "29"
+          - generic [ref=e7859]: mai
+        - generic [ref=e7860]:
+          - generic [ref=e7861]: "Soul Serenade #LiveSessions"
+          - generic [ref=e7862]: Trattoria Monza, Bucuresti, 29 mai 2026, 20:00
+        - link "Bilete" [ref=e7864] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36330/soul-serenade-livesessions-29-mai-2026-trattoria-monza-bucuresti.html
+      - generic [ref=e7867]:
+        - generic [ref=e7869]:
+          - generic [ref=e7870]: "30"
+          - generic [ref=e7871]: mai
+        - generic [ref=e7872]:
+          - generic [ref=e7873]: Shakespeare Village Day Pass · Sâmbătă, 30 Mai
+          - generic [ref=e7874]: Shakespeare Festival, Craiova, 30 mai 2026
+        - link "Bilete" [ref=e7876] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36755/shakespeare-village-day-pass-smbt-30-mai-30-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e7879]:
+        - generic [ref=e7881]:
+          - generic [ref=e7882]: "30"
+          - generic [ref=e7883]: mai
+        - generic [ref=e7884]:
+          - generic [ref=e7885]: O fetita curajoasa
+          - generic [ref=e7886]: Teatrul Amzei, Bucuresti, 30 mai 2026, 10:00
+        - link "Bilete" [ref=e7888] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37004/o-fetita-curajoasa-30-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7891]:
+        - generic [ref=e7893]:
+          - generic [ref=e7894]: "30"
+          - generic [ref=e7895]: mai
+        - generic [ref=e7896]:
+          - generic [ref=e7897]: ABC-UL CIRCULUI
+          - generic [ref=e7898]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 30 mai 2026, 11:00
+        - link "Bilete" [ref=e7900] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36536/abc-ul-circului-30-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e7903]:
+        - generic [ref=e7905]:
+          - generic [ref=e7906]: "30"
+          - generic [ref=e7907]: mai
+        - generic [ref=e7908]:
+          - generic [ref=e7909]: Doi soricei cocheti
+          - generic [ref=e7910]: Teatrul Amzei, Bucuresti, 30 mai 2026, 11:30
+        - link "Bilete" [ref=e7912] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/37005/doi-soricei-cocheti-30-mai-2026-teatrul-amzei-bucuresti.html
+      - generic [ref=e7915]:
+        - generic [ref=e7917]:
+          - generic [ref=e7918]: "30"
+          - generic [ref=e7919]: mai
+        - generic [ref=e7920]:
+          - generic [ref=e7921]: IMPRELUNA
+          - generic [ref=e7922]: Teatrul Ion Creanga SALA MARE, Bucuresti, 30 mai 2026, 16:00
+        - link "Bilete" [ref=e7924] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36801/impreluna-30-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7927]:
+        - generic [ref=e7929]:
+          - generic [ref=e7930]: "30"
+          - generic [ref=e7931]: mai
+        - generic [ref=e7932]:
+          - generic [ref=e7933]: Richard 3. The Man/Richard 3. Omul(ROU)
+          - generic [ref=e7934]: Sala Ion D. Sîrbu - Teatrul National Craiova, Craiova, 30 mai 2026, 18:00
+        - link "Bilete" [ref=e7936] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36701/richard-3-the-man-richard-3-omul-rou-30-mai-2026-sala-ion-d-srbu-teatrul-national-craiova-craiova.html
+      - generic [ref=e7939]:
+        - generic [ref=e7941]:
+          - generic [ref=e7942]: "30"
+          - generic [ref=e7943]: mai
+        - generic [ref=e7944]:
+          - generic [ref=e7945]: Comedy or Errors/Comedia Erorilor(ROU)
+          - generic [ref=e7946]: Casa de Cultura a Studentilor, Craiova, 30 mai 2026, 18:00
+        - link "Bilete" [ref=e7948] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36718/comedy-or-errors-comedia-erorilor-rou-30-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e7951]:
+        - generic [ref=e7953]:
+          - generic [ref=e7954]: "30"
+          - generic [ref=e7955]: mai
+        - generic [ref=e7956]:
+          - generic [ref=e7957]: IMPRELUNA
+          - generic [ref=e7958]: Teatrul Ion Creanga SALA MARE, Bucuresti, 30 mai 2026, 18:00
+        - link "Bilete" [ref=e7960] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36802/impreluna-30-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e7963]:
+        - generic [ref=e7965]:
+          - generic [ref=e7966]: "30"
+          - generic [ref=e7967]: mai
+        - generic [ref=e7968]:
+          - generic [ref=e7969]: Romeo and Juliette...OR ALMOST/Romeo și Julieta… SAU APROAPE(FRA)
+          - generic [ref=e7970]: Cercul Militar (Casa Armatei), Craiova, 30 mai 2026, 19:00
+        - link "Bilete" [ref=e7972] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36720/romeo-and-juliette-or-almost-romeo-i-julieta-sau-aproape-fra-30-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e7975]:
+        - generic [ref=e7977]:
+          - generic [ref=e7978]: "30"
+          - generic [ref=e7979]: mai
+        - generic [ref=e7980]:
+          - generic [ref=e7981]: ZAUBERBERG / MUNTELE VRĂJIT / MAGIC MOUNTAIN
+          - generic [ref=e7982]: Teatrul German de Stat, Timisoara, 30 mai 2026, 19:30
+        - link "Bilete" [ref=e7984] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36922/zauberberg-muntele-vrjit-magic-mountain-30-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e7987]:
+        - generic [ref=e7989]:
+          - generic [ref=e7990]: "30"
+          - generic [ref=e7991]: mai
+        - generic [ref=e7992]:
+          - generic [ref=e7993]: Richard the IIIrd/Richard al III-lea(ISR)
+          - generic [ref=e7994]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 30 mai 2026, 20:00
+        - link "Bilete" [ref=e7996] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36685/richard-the-iiird-richard-al-iii-lea-isr-30-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e7999]:
+        - generic [ref=e8001]:
+          - generic [ref=e8002]: "30"
+          - generic [ref=e8003]: mai
+        - generic [ref=e8004]:
+          - generic [ref=e8005]: To bitch or not to bitch(POL)
+          - generic [ref=e8006]: Ramada - Sala Brancusi, Craiova, 30 mai 2026, 20:30
+        - link "Bilete" [ref=e8008] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36688/to-bitch-or-not-to-bitch-pol-30-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e8011]:
+        - generic [ref=e8013]:
+          - generic [ref=e8014]: "31"
+          - generic [ref=e8015]: mai
+        - generic [ref=e8016]:
+          - generic [ref=e8017]: Shakespeare Village Day Pass · Duminică, 31 Mai
+          - generic [ref=e8018]: Shakespeare Festival, Craiova, 31 mai 2026
+        - link "Bilete" [ref=e8020] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36756/shakespeare-village-day-pass-duminic-31-mai-31-mai-2026-shakespeare-festival-craiova.html
+      - generic [ref=e8023]:
+        - generic [ref=e8025]:
+          - generic [ref=e8026]: "31"
+          - generic [ref=e8027]: mai
+        - generic [ref=e8028]:
+          - generic [ref=e8029]: PERNUTA SOMNOROASA
+          - generic [ref=e8030]: Teatrul Ion Creanga SALA MARE, Bucuresti, 31 mai 2026, 10:00
+        - link "Bilete" [ref=e8032] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36803/pernuta-somnoroasa-31-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8035]:
+        - generic [ref=e8037]:
+          - generic [ref=e8038]: "31"
+          - generic [ref=e8039]: mai
+        - generic [ref=e8040]:
+          - generic [ref=e8041]: Capra cu trei iezi @ Hanu' lui Manuc
+          - generic [ref=e8042]: Hanu' lui Manuc, Bucuresti, 31 mai 2026, 11:00
+        - link "Bilete" [ref=e8044] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34916/capra-cu-trei-iezi-hanu-lui-manuc-31-mai-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e8047]:
+        - generic [ref=e8049]:
+          - generic [ref=e8050]: "31"
+          - generic [ref=e8051]: mai
+        - generic [ref=e8052]:
+          - generic [ref=e8053]: Best of Metropolitan
+          - generic [ref=e8054]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 31 mai 2026, 11:00
+        - link "Bilete" [ref=e8056] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36543/best-of-metropolitan-31-mai-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8059]:
+        - generic [ref=e8061]:
+          - generic [ref=e8062]: "31"
+          - generic [ref=e8063]: mai
+        - generic [ref=e8064]:
+          - generic [ref=e8065]: PERNUTA SOMNOROASA
+          - generic [ref=e8066]: Teatrul Ion Creanga SALA MARE, Bucuresti, 31 mai 2026, 12:00
+        - link "Bilete" [ref=e8068] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36804/pernuta-somnoroasa-31-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8071]:
+        - generic [ref=e8073]:
+          - generic [ref=e8074]: "31"
+          - generic [ref=e8075]: mai
+        - generic [ref=e8076]:
+          - generic [ref=e8077]: Venus & Adonis(GBR)
+          - generic [ref=e8078]: Teatrul Colibri, Craiova, 31 mai 2026, 14:00
+        - link "Bilete" [ref=e8080] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36702/venus-adonis-gbr-31-mai-2026-teatrul-colibri-craiova.html
+      - generic [ref=e8083]:
+        - generic [ref=e8085]:
+          - generic [ref=e8086]: "31"
+          - generic [ref=e8087]: mai
+        - generic [ref=e8088]:
+          - generic [ref=e8089]: POVESTI CU FIRE
+          - generic [ref=e8090]: Teatrul Ion Creanga SALA MARE, Bucuresti, 31 mai 2026, 16:00
+        - link "Bilete" [ref=e8092] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36805/povesti-cu-fire-31-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8095]:
+        - generic [ref=e8097]:
+          - generic [ref=e8098]: "31"
+          - generic [ref=e8099]: mai
+        - generic [ref=e8100]:
+          - generic [ref=e8101]: Pericles(ROU)
+          - generic [ref=e8102]: Casa de Cultura a Studentilor, Craiova, 31 mai 2026, 18:00
+        - link "Bilete" [ref=e8104] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36719/pericles-rou-31-mai-2026-casa-de-cultura-a-studentilor-craiova.html
+      - generic [ref=e8107]:
+        - generic [ref=e8109]:
+          - generic [ref=e8110]: "31"
+          - generic [ref=e8111]: mai
+        - generic [ref=e8112]:
+          - generic [ref=e8113]: POVESTI CU FIRE
+          - generic [ref=e8114]: Teatrul Ion Creanga SALA MARE, Bucuresti, 31 mai 2026, 18:00
+        - link "Bilete" [ref=e8116] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36806/povesti-cu-fire-31-mai-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8119]:
+        - generic [ref=e8121]:
+          - generic [ref=e8122]: "31"
+          - generic [ref=e8123]: mai
+        - generic [ref=e8124]:
+          - generic [ref=e8125]: Richard the IIIrd/Richard the IIIrd(ISR)
+          - generic [ref=e8126]: Teatrul National Marin Sorescu - Sala Amza Pellea, Craiova, 31 mai 2026, 19:00
+        - link "Bilete" [ref=e8128] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36689/richard-the-iiird-richard-the-iiird-isr-31-mai-2026-teatrul-national-marin-sorescu-sala-amza-pellea-craiova.html
+      - generic [ref=e8131]:
+        - generic [ref=e8133]:
+          - generic [ref=e8134]: "31"
+          - generic [ref=e8135]: mai
+        - generic [ref=e8136]:
+          - generic [ref=e8137]: Hamlet Take Away(ITA)
+          - generic [ref=e8138]: Cercul Militar (Casa Armatei), Craiova, 31 mai 2026, 19:00
+        - link "Bilete" [ref=e8140] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36721/hamlet-take-away-ita-31-mai-2026-cercul-militar-casa-armatei-craiova.html
+      - generic [ref=e8143]:
+        - generic [ref=e8145]:
+          - generic [ref=e8146]: "31"
+          - generic [ref=e8147]: mai
+        - generic [ref=e8148]:
+          - generic [ref=e8149]: ZAUBERBERG / MUNTELE VRĂJIT / MAGIC MOUNTAIN
+          - generic [ref=e8150]: Teatrul German de Stat, Timisoara, 31 mai 2026, 19:30
+        - link "Bilete" [ref=e8152] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36923/zauberberg-muntele-vrjit-magic-mountain-31-mai-2026-teatrul-german-de-stat-timisoara.html
+      - generic [ref=e8155]:
+        - generic [ref=e8157]:
+          - generic [ref=e8158]: "31"
+          - generic [ref=e8159]: mai
+        - generic [ref=e8160]:
+          - generic [ref=e8161]: Hamlet(ITA)
+          - generic [ref=e8162]: Ramada - Sala Brancusi, Craiova, 31 mai 2026, 20:30
+        - link "Bilete" [ref=e8164] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36690/hamlet-ita-31-mai-2026-ramada-sala-brancusi-craiova.html
+      - generic [ref=e8167]:
+        - generic [ref=e8169]:
+          - generic [ref=e8170]: "1"
+          - generic [ref=e8171]: iun
+        - generic [ref=e8172]:
+          - generic [ref=e8173]: Ursul pacalit de vulpe @ Hanu' lui Manuc
+          - generic [ref=e8174]: Hanu' lui Manuc, Bucuresti, 1 iunie 2026, 10:30
+        - link "Bilete" [ref=e8176] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36034/ursul-pacalit-de-vulpe-hanu-lui-manuc-1-iunie-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e8179]:
+        - generic [ref=e8181]:
+          - generic [ref=e8182]: 5-7
+          - generic [ref=e8183]: iun
+        - generic [ref=e8184]:
+          - generic [ref=e8185]: The INNER Cluj-Napoca 2026
+          - generic [ref=e8186]: Cluj-Napoca, Cluj, 5 - 7 iunie 2026
+        - link "Bilete" [ref=e8188] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/30705/the-inner-cluj-napoca-2026-5-7-iunie-2026-cluj-napoca-cluj.html
+      - generic [ref=e8191]:
+        - generic [ref=e8193]:
+          - generic [ref=e8194]: "5"
+          - generic [ref=e8195]: iun
+        - generic [ref=e8196]:
+          - generic [ref=e8197]: "FRENCH EVENING | Concert simfonic Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: David Crescenzi Solistă: Selina Ott – trompetă"
+          - generic [ref=e8198]: Sala Capitol, Timisoara, 5 iunie 2026, 19:00
+        - link "Bilete" [ref=e8200] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34401/french-evening-concert-simfonic-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-david-crescenzi-solist-selina-ott-trompet-5-iunie-2026-sala-capitol-timisoara.html
+      - generic [ref=e8203]:
+        - generic [ref=e8205]:
+          - generic [ref=e8206]: "5"
+          - generic [ref=e8207]: iun
+        - generic [ref=e8208]:
+          - generic [ref=e8209]: Concert de Kirtan cu Punnu Wasu
+          - generic [ref=e8210]: Cluj-Napoca, Cluj, 5 iunie 2026, 20:30
+        - link "Bilete" [ref=e8212] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36373/concert-de-kirtan-cu-punnu-wasu-5-iunie-2026-cluj-napoca-cluj.html
+      - generic [ref=e8215]:
+        - generic [ref=e8217]:
+          - generic [ref=e8218]: "6"
+          - generic [ref=e8219]: iun
+        - generic [ref=e8220]:
+          - generic [ref=e8221]: ACROGRAFICA
+          - generic [ref=e8222]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 6 iunie 2026, 11:00
+        - link "Bilete" [ref=e8224] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36551/acrografica-6-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8227]:
+        - generic [ref=e8229]:
+          - generic [ref=e8230]: "6"
+          - generic [ref=e8231]: iun
+        - generic [ref=e8232]:
+          - generic [ref=e8233]: CRED IN UNICORNI
+          - generic [ref=e8234]: Teatrul Ion Creanga SALA MARE, Bucuresti, 6 iunie 2026, 11:00
+        - link "Bilete" [ref=e8236] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36816/cred-in-unicorni-6-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8239]:
+        - generic [ref=e8241]:
+          - generic [ref=e8242]: "6"
+          - generic [ref=e8243]: iun
+        - generic [ref=e8244]:
+          - generic [ref=e8245]: VISUL UNEI NOPTI DE VARA
+          - generic [ref=e8246]: Teatrul Ion Creanga SALA MARE, Bucuresti, 6 iunie 2026, 18:00
+        - link "Bilete" [ref=e8248] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36818/visul-unei-nopti-de-vara-6-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8251]:
+        - generic [ref=e8253]:
+          - generic [ref=e8254]: "7"
+          - generic [ref=e8255]: iun
+        - generic [ref=e8256]:
+          - generic [ref=e8257]: Cenusareasa @ Hanu' lui Manuc
+          - generic [ref=e8258]: Hanu' lui Manuc, Bucuresti, 7 iunie 2026, 10:30
+        - link "Bilete" [ref=e8260] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36027/cenusareasa-hanu-lui-manuc-7-iunie-2026-hanu-lui-manuc-bucuresti.html
+      - generic [ref=e8263]:
+        - generic [ref=e8265]:
+          - generic [ref=e8266]: "7"
+          - generic [ref=e8267]: iun
+        - generic [ref=e8268]:
+          - generic [ref=e8269]: AEROFONIK
+          - generic [ref=e8270]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 7 iunie 2026, 11:00
+        - link "Bilete" [ref=e8272] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36547/aerofonik-7-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8275]:
+        - generic [ref=e8277]:
+          - generic [ref=e8278]: "7"
+          - generic [ref=e8279]: iun
+        - generic [ref=e8280]:
+          - generic [ref=e8281]: DE-A MICUL PRINT
+          - generic [ref=e8282]: Teatrul Ion Creanga SALA MARE, Bucuresti, 7 iunie 2026, 11:00
+        - link "Bilete" [ref=e8284] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36819/de-a-micul-print-7-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8287]:
+        - generic [ref=e8289]:
+          - generic [ref=e8290]: "7"
+          - generic [ref=e8291]: iun
+        - generic [ref=e8292]:
+          - generic [ref=e8293]: MICA SIRENA
+          - generic [ref=e8294]: Teatrul Ion Creanga SALA MARE, Bucuresti, 7 iunie 2026, 18:00
+        - link "Bilete" [ref=e8296] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36820/mica-sirena-7-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8299]:
+        - generic [ref=e8301]:
+          - generic [ref=e8302]: "7"
+          - generic [ref=e8303]: iun
+        - generic [ref=e8304]:
+          - generic [ref=e8305]: Concert Lubiana
+          - generic [ref=e8306]: Cluj-Napoca, Cluj-Napoca, 7 iunie 2026, 20:00
+        - link "Bilete" [ref=e8308] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34859/concert-lubiana-7-iunie-2026-cluj-napoca-cluj-napoca.html
+      - generic [ref=e8311]:
+        - generic [ref=e8313]:
+          - generic [ref=e8314]: "11"
+          - generic [ref=e8315]: iun
+        - generic [ref=e8316]:
+          - generic [ref=e8317]: TRICKY Live @Club Guesthouse, Bucuresti
+          - generic [ref=e8318]: Guesthouse, Bucuresti, 11 iunie 2026
+        - link "Bilete" [ref=e8320] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34962/tricky-live-club-guesthouse-bucuresti-11-iunie-2026-guesthouse-bucuresti.html
+      - generic [ref=e8323]:
+        - generic [ref=e8325]:
+          - generic [ref=e8326]: "11"
+          - generic [ref=e8327]: iun
+        - generic [ref=e8328]:
+          - generic [ref=e8329]: FAUST
+          - generic [ref=e8330]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 11 iunie 2026, 19:00
+        - link "Bilete" [ref=e8332] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36596/faust-11-iunie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e8335]:
+        - generic [ref=e8337]:
+          - generic [ref=e8338]: "12"
+          - generic [ref=e8339]: iun
+        - generic [ref=e8340]:
+          - generic [ref=e8341]: ZIUA 1 - Festival MAMAZ
+          - generic [ref=e8342]: Cercul Militar, Bucuresti, 12 iunie 2026, 09:30
+        - link "Bilete" [ref=e8344] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35967/ziua-1-festival-mamaz-12-iunie-2026-cercul-militar-bucuresti.html
+      - generic [ref=e8347]:
+        - generic [ref=e8349]:
+          - generic [ref=e8350]: "12"
+          - generic [ref=e8351]: iun
+        - generic [ref=e8352]:
+          - generic [ref=e8353]: ZIUA 1 - Festival MAMAZ - WORKSHOP
+          - generic [ref=e8354]: Cercul Militar - Workshopuri, Bucuresti, 12 iunie 2026, 14:30
+        - link "Bilete" [ref=e8356] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35969/ziua-1-festival-mamaz-workshop-12-iunie-2026-cercul-militar-workshopuri-bucuresti.html
+      - generic [ref=e8359]:
+        - generic [ref=e8361]:
+          - generic [ref=e8362]: 12-14
+          - generic [ref=e8363]: iun
+        - generic [ref=e8364]:
+          - generic [ref=e8365]: MandrIE maramureseana
+          - generic [ref=e8366]: Muzeul Satului, Baia Mare, 12 - 14 iunie 2026, 17:30
+        - link "Bilete" [ref=e8368] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36623/mandrie-maramureseana-12-14-iunie-2026-muzeul-satului-baia-mare.html
+      - generic [ref=e8371]:
+        - generic [ref=e8373]:
+          - generic [ref=e8374]: "12"
+          - generic [ref=e8375]: iun
+        - generic [ref=e8376]:
+          - generic [ref=e8377]: AMINTIRI DIN COPILARIE
+          - generic [ref=e8378]: Teatrul Ion Creanga SALA MARE, Bucuresti, 12 iunie 2026, 18:00
+        - link "Bilete" [ref=e8380] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36824/amintiri-din-copilarie-12-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8383]:
+        - generic [ref=e8385]:
+          - generic [ref=e8386]: "12"
+          - generic [ref=e8387]: iun
+        - generic [ref=e8388]:
+          - generic [ref=e8389]: "VARIATIONS OF TIME | Concert simfonic Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: Radu Popa Solist: Jan Sekaci – violoncel"
+          - generic [ref=e8390]: Sala Capitol, Timisoara, 12 iunie 2026, 19:00
+        - link "Bilete" [ref=e8392] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34402/variations-of-time-concert-simfonic-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-radu-popa-solist-jan-sekaci-violoncel-12-iunie-2026-sala-capitol-timisoara.html
+      - generic [ref=e8395]:
+        - generic [ref=e8397]:
+          - generic [ref=e8398]: "12"
+          - generic [ref=e8399]: iun
+        - generic [ref=e8400]:
+          - generic [ref=e8401]: FAUST
+          - generic [ref=e8402]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 12 iunie 2026, 19:00
+        - link "Bilete" [ref=e8404] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36597/faust-12-iunie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e8407]:
+        - generic [ref=e8409]:
+          - generic [ref=e8410]: "13"
+          - generic [ref=e8411]: iun
+        - generic [ref=e8412]:
+          - generic [ref=e8413]: ZIUA 2 - Festival MAMAZ
+          - generic [ref=e8414]: Cercul Militar, Bucuresti, 13 iunie 2026, 09:30
+        - link "Bilete" [ref=e8416] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35968/ziua-2-festival-mamaz-13-iunie-2026-cercul-militar-bucuresti.html
+      - generic [ref=e8419]:
+        - generic [ref=e8421]:
+          - generic [ref=e8422]: "13"
+          - generic [ref=e8423]: iun
+        - generic [ref=e8424]:
+          - generic [ref=e8425]: Best of Metropolitan
+          - generic [ref=e8426]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 13 iunie 2026, 11:00
+        - link "Bilete" [ref=e8428] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36544/best-of-metropolitan-13-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8431]:
+        - generic [ref=e8433]:
+          - generic [ref=e8434]: "13"
+          - generic [ref=e8435]: iun
+        - generic [ref=e8436]:
+          - generic [ref=e8437]: HAINELE CELE NOI ALE IMPARATULUI
+          - generic [ref=e8438]: Teatrul Ion Creanga SALA MARE, Bucuresti, 13 iunie 2026, 11:00
+        - link "Bilete" [ref=e8440] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36826/hainele-cele-noi-ale-imparatului-13-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8443]:
+        - generic [ref=e8445]:
+          - generic [ref=e8446]: "13"
+          - generic [ref=e8447]: iun
+        - generic [ref=e8448]:
+          - generic [ref=e8449]: ZIUA 2 - Festival MAMAZ - WORKSHOP
+          - generic [ref=e8450]: Cercul Militar - Workshopuri Ziua 2, Bucuresti, 13 iunie 2026, 15:30
+        - link "Bilete" [ref=e8452] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35992/ziua-2-festival-mamaz-workshop-13-iunie-2026-cercul-militar-workshopuri-ziua-2-bucuresti.html
+      - generic [ref=e8455]:
+        - generic [ref=e8457]:
+          - generic [ref=e8458]: "13"
+          - generic [ref=e8459]: iun
+        - generic [ref=e8460]:
+          - generic [ref=e8461]: Simona Halep - Evenimentul oficial de retragere
+          - generic [ref=e8462]: BT Arena, Cluj-Napoca, 13 iunie 2026, 17:00
+        - link "Bilete" [ref=e8464] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33526/simona-halep-evenimentul-oficial-de-retragere-13-iunie-2026-bt-arena-cluj-napoca.html
+      - generic [ref=e8467]:
+        - generic [ref=e8469]:
+          - generic [ref=e8470]: "13"
+          - generic [ref=e8471]: iun
+        - generic [ref=e8472]:
+          - generic [ref=e8473]: ALBA CA ZAPADA
+          - generic [ref=e8474]: Teatrul Ion Creanga SALA MARE, Bucuresti, 13 iunie 2026, 18:00
+        - link "Bilete" [ref=e8476] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36827/alba-ca-zapada-13-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8479]:
+        - generic [ref=e8481]:
+          - generic [ref=e8482]: "14"
+          - generic [ref=e8483]: iun
+        - generic [ref=e8484]:
+          - generic [ref=e8485]: EMPIRE OF THE SUN - VIP
+          - generic [ref=e8486]: Arenele Romane, Bucuresti, 14 iunie 2026
+        - link "Bilete" [ref=e8488] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34798/empire-of-the-sun-vip-14-iunie-2026-arenele-romane-bucuresti.html
+      - generic [ref=e8491]:
+        - generic [ref=e8493]:
+          - generic [ref=e8494]: "14"
+          - generic [ref=e8495]: iun
+        - generic [ref=e8496]:
+          - generic [ref=e8497]: EMPIRE OF THE SUN
+          - generic [ref=e8498]: Arenele Romane, Bucuresti, 14 iunie 2026
+        - link "Bilete" [ref=e8500] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34806/empire-of-the-sun-14-iunie-2026-arenele-romane-bucuresti.html
+      - generic [ref=e8503]:
+        - generic [ref=e8505]:
+          - generic [ref=e8506]: "14"
+          - generic [ref=e8507]: iun
+        - generic [ref=e8508]:
+          - generic [ref=e8509]: CUTInE
+          - generic [ref=e8510]: Teatrul Ion Creanga SALA MARE, Bucuresti, 14 iunie 2026, 10:00
+        - link "Bilete" [ref=e8512] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36829/cutine-14-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8515]:
+        - generic [ref=e8517]:
+          - generic [ref=e8518]: "14"
+          - generic [ref=e8519]: iun
+        - generic [ref=e8520]:
+          - generic [ref=e8521]: ABC-UL CIRCULUI
+          - generic [ref=e8522]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 14 iunie 2026, 11:00
+        - link "Bilete" [ref=e8524] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36539/abc-ul-circului-14-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8527]:
+        - generic [ref=e8529]:
+          - generic [ref=e8530]: "14"
+          - generic [ref=e8531]: iun
+        - generic [ref=e8532]:
+          - generic [ref=e8533]: CUTInE
+          - generic [ref=e8534]: Teatrul Ion Creanga SALA MARE, Bucuresti, 14 iunie 2026, 12:00
+        - link "Bilete" [ref=e8536] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36830/cutine-14-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8539]:
+        - generic [ref=e8541]:
+          - generic [ref=e8542]: "15"
+          - generic [ref=e8543]: iun
+        - generic [ref=e8544]:
+          - generic [ref=e8545]: HIGH VIS Live la Expirat
+          - generic [ref=e8546]: Expirat Halele Carol, Bucuresti, 15 iunie 2026
+        - link "Bilete" [ref=e8548] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36620/high-vis-live-la-expirat-15-iunie-2026-expirat-halele-carol-bucuresti.html
+      - generic [ref=e8551]:
+        - generic [ref=e8553]:
+          - generic [ref=e8554]: 19-21
+          - generic [ref=e8555]: iun
+        - generic [ref=e8556]:
+          - generic [ref=e8557]: Rocanotherworld 2026
+          - generic [ref=e8558]: Crama Gramma, Sat Visan, Comuna Barnova, Judetul Iasi, 19 - 21 iunie 2026
+        - link "Bilete" [ref=e8560] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34366/rocanotherworld-2026-19-21-iunie-2026-crama-gramma-sat-visan-comuna-barnova-judetul-iasi.html
+      - generic [ref=e8563]:
+        - generic [ref=e8565]:
+          - generic [ref=e8566]: 19-21
+          - generic [ref=e8567]: iun
+        - generic [ref=e8568]:
+          - generic [ref=e8569]: Taste of Transylvania Boutique 2026 - Târgu Mureș
+          - generic [ref=e8570]: Cetatea Targu Mures, Targu Mures, 19 - 21 iunie 2026, 17:00
+        - link "Bilete" [ref=e8572] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36118/taste-of-transylvania-boutique-2026-trgu-mure-19-21-iunie-2026-cetatea-targu-mures-targu-mures.html
+      - generic [ref=e8575]:
+        - generic [ref=e8577]:
+          - generic [ref=e8578]: "19"
+          - generic [ref=e8579]: iun
+        - generic [ref=e8580]:
+          - generic [ref=e8581]: IMPRELUNA
+          - generic [ref=e8582]: Teatrul Ion Creanga SALA MARE, Bucuresti, 19 iunie 2026, 18:00
+        - link "Bilete" [ref=e8584] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36832/impreluna-19-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8587]:
+        - generic [ref=e8589]:
+          - generic [ref=e8590]: "19"
+          - generic [ref=e8591]: iun
+        - generic [ref=e8592]:
+          - generic [ref=e8593]: "HARMONIES OF NATURE | Concert simfonic Orchestra simfonică „Remus Georgescu” a Filarmonicii Banatul Dirijor: Rumon Gamba Solist: Timothy Ridout – violă"
+          - generic [ref=e8594]: Sala Capitol, Timisoara, 19 iunie 2026, 19:00
+        - link "Bilete" [ref=e8596] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34403/harmonies-of-nature-concert-simfonic-orchestra-simfonic-remus-georgescu-a-filarmonicii-banatul-dirijor-rumon-gamba-solist-timothy-ridout-viol-19-iunie-2026-sala-capitol-timisoara.html
+      - generic [ref=e8599]:
+        - generic [ref=e8601]:
+          - generic [ref=e8602]: 20-21
+          - generic [ref=e8603]: iun
+        - generic [ref=e8604]:
+          - generic [ref=e8605]: The INNER Oradea 2026
+          - generic [ref=e8606]: Oradea, Oradea, 20 - 21 iunie 2026
+        - link "Bilete" [ref=e8608] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36738/the-inner-oradea-2026-20-21-iunie-2026-oradea-oradea.html
+      - generic [ref=e8611]:
+        - generic [ref=e8613]:
+          - generic [ref=e8614]: "20"
+          - generic [ref=e8615]: iun
+        - generic [ref=e8616]:
+          - generic [ref=e8617]: POVESTI CU FIRE
+          - generic [ref=e8618]: Teatrul Ion Creanga SALA MARE, Bucuresti, 20 iunie 2026, 10:00
+        - link "Bilete" [ref=e8620] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36833/povesti-cu-fire-20-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8623]:
+        - generic [ref=e8625]:
+          - generic [ref=e8626]: "20"
+          - generic [ref=e8627]: iun
+        - generic [ref=e8628]:
+          - generic [ref=e8629]: HAI LA CIRC SA POVESTIM!
+          - generic [ref=e8630]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 20 iunie 2026, 11:00
+        - link "Bilete" [ref=e8632] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36533/hai-la-circ-sa-povestim-20-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8635]:
+        - generic [ref=e8637]:
+          - generic [ref=e8638]: "20"
+          - generic [ref=e8639]: iun
+        - generic [ref=e8640]:
+          - generic [ref=e8641]: POVESTI CU FIRE
+          - generic [ref=e8642]: Teatrul Ion Creanga SALA MARE, Bucuresti, 20 iunie 2026, 12:00
+        - link "Bilete" [ref=e8644] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36836/povesti-cu-fire-20-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8647]:
+        - generic [ref=e8649]:
+          - generic [ref=e8650]: "20"
+          - generic [ref=e8651]: iun
+        - generic [ref=e8652]:
+          - generic [ref=e8653]: PINOCCHIO
+          - generic [ref=e8654]: Teatrul Ion Creanga SALA MARE, Bucuresti, 20 iunie 2026, 18:00
+        - link "Bilete" [ref=e8656] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36840/pinocchio-20-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8659]:
+        - generic [ref=e8661]:
+          - generic [ref=e8662]: "20"
+          - generic [ref=e8663]: iun
+        - generic [ref=e8664]:
+          - generic [ref=e8665]: MARI FROES la Fratelli Studio 1
+          - generic [ref=e8666]: Fratelli Studio 1, Bucuresti, 20 iunie 2026, 21:30
+        - link "Bilete" [ref=e8668] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35590/mari-froes-la-fratelli-studio-1-20-iunie-2026-fratelli-studio-1-bucuresti.html
+      - generic [ref=e8671]:
+        - generic [ref=e8673]:
+          - generic [ref=e8674]: "21"
+          - generic [ref=e8675]: iun
+        - generic [ref=e8676]:
+          - generic [ref=e8677]: Ariciul si Testoasa Uriasa @ Nest Hub Baicului
+          - generic [ref=e8678]: Nest Hub Baicului, Bucuresti, 21 iunie 2026, 11:00
+        - link "Bilete" [ref=e8680] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34893/ariciul-si-testoasa-uriasa-nest-hub-baicului-21-iunie-2026-nest-hub-baicului-bucuresti.html
+      - generic [ref=e8683]:
+        - generic [ref=e8685]:
+          - generic [ref=e8686]: "21"
+          - generic [ref=e8687]: iun
+        - generic [ref=e8688]:
+          - generic [ref=e8689]: ACROGRAFICA
+          - generic [ref=e8690]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 21 iunie 2026, 11:00
+        - link "Bilete" [ref=e8692] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36552/acrografica-21-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8695]:
+        - generic [ref=e8697]:
+          - generic [ref=e8698]: "21"
+          - generic [ref=e8699]: iun
+        - generic [ref=e8700]:
+          - generic [ref=e8701]: MOTANUL INCALTAT
+          - generic [ref=e8702]: Teatrul Ion Creanga SALA MARE, Bucuresti, 21 iunie 2026, 11:00
+        - link "Bilete" [ref=e8704] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36842/motanul-incaltat-21-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8707]:
+        - generic [ref=e8709]:
+          - generic [ref=e8710]: "21"
+          - generic [ref=e8711]: iun
+        - generic [ref=e8712]:
+          - generic [ref=e8713]: RENAISSANCE BEAUTY SHOW
+          - generic [ref=e8714]: Riverside Events, Galati, 21 iunie 2026, 18:00
+        - link "Bilete" [ref=e8716] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36309/renaissance-beauty-show-21-iunie-2026-riverside-events-galati.html
+      - generic [ref=e8719]:
+        - generic [ref=e8721]:
+          - generic [ref=e8722]: "21"
+          - generic [ref=e8723]: iun
+        - generic [ref=e8724]:
+          - generic [ref=e8725]: FATA BABEI SI FATA MOSULUI
+          - generic [ref=e8726]: Teatrul Ion Creanga SALA MARE, Bucuresti, 21 iunie 2026, 18:00
+        - link "Bilete" [ref=e8728] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36844/fata-babei-si-fata-mosului-21-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8731]:
+        - generic [ref=e8733]:
+          - generic [ref=e8734]: "23"
+          - generic [ref=e8735]: iun
+        - generic [ref=e8736]:
+          - generic [ref=e8737]: CHRIS ISAAK
+          - generic [ref=e8738]: Sala Palatului, Bucuresti, 23 iunie 2026, 20:00
+        - link "Bilete" [ref=e8740] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34129/chris-isaak-23-iunie-2026-sala-palatului-bucuresti.html
+      - generic [ref=e8743]:
+        - generic [ref=e8745]:
+          - generic [ref=e8746]: 25-28
+          - generic [ref=e8747]: iun
+        - generic [ref=e8748]:
+          - generic [ref=e8749]: Nostalgia Festival 2026
+          - generic [ref=e8750]: Federatia Romana de Tir Sportiv, Baneasa, 25 - 28 iunie 2026
+        - link "Bilete" [ref=e8752] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33335/nostalgia-festival-2026-25-28-iunie-2026-federatia-romana-de-tir-sportiv-baneasa.html
+      - generic [ref=e8755]:
+        - generic [ref=e8757]:
+          - generic [ref=e8758]: "25"
+          - generic [ref=e8759]: iun
+        - generic [ref=e8760]:
+          - generic [ref=e8761]: Minunata Lume Nouă - byron simfonic
+          - generic [ref=e8762]: Casa de Cultura a Sindicatelor, Ploiesti, 25 iunie 2026, 19:00
+        - link "Bilete" [ref=e8764] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35993/minunata-lume-nou-byron-simfonic-25-iunie-2026-casa-de-cultura-a-sindicatelor-ploiesti.html
+      - generic [ref=e8767]:
+        - generic [ref=e8769]:
+          - generic [ref=e8770]: "26"
+          - generic [ref=e8771]: iun
+        - generic [ref=e8772]:
+          - generic [ref=e8773]: PETER PAN
+          - generic [ref=e8774]: Teatrul Ion Creanga SALA MARE, Bucuresti, 26 iunie 2026, 18:00
+        - link "Bilete" [ref=e8776] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36845/peter-pan-26-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8779]:
+        - generic [ref=e8781]:
+          - generic [ref=e8782]: "26"
+          - generic [ref=e8783]: iun
+        - generic [ref=e8784]:
+          - generic [ref=e8785]: "Messa per Rossini | Concert vocal-simfonic extraordinar | Orchestra și Corul Filarmonicii Banatul Timișoara | Dirijor: Gabriel Bebeșelea"
+          - generic [ref=e8786]: Sala Capitol, Timisoara, 26 iunie 2026, 19:00
+        - link "Bilete" [ref=e8788] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36037/messa-per-rossini-concert-vocal-simfonic-extraordinar-orchestra-i-corul-filarmonicii-banatul-timioara-dirijor-gabriel-bebeelea-26-iunie-2026-sala-capitol-timisoara.html
+      - generic [ref=e8791]:
+        - generic [ref=e8793]:
+          - generic [ref=e8794]: "27"
+          - generic [ref=e8795]: iun
+        - generic [ref=e8796]:
+          - generic [ref=e8797]: PERNUTA SOMNOROASA
+          - generic [ref=e8798]: Teatrul Ion Creanga SALA MARE, Bucuresti, 27 iunie 2026, 10:00
+        - link "Bilete" [ref=e8800] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36839/pernuta-somnoroasa-27-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8803]:
+        - generic [ref=e8805]:
+          - generic [ref=e8806]: "27"
+          - generic [ref=e8807]: iun
+        - generic [ref=e8808]:
+          - generic [ref=e8809]: Best of Metropolitan
+          - generic [ref=e8810]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 27 iunie 2026, 11:00
+        - link "Bilete" [ref=e8812] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36545/best-of-metropolitan-27-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8815]:
+        - generic [ref=e8817]:
+          - generic [ref=e8818]: "27"
+          - generic [ref=e8819]: iun
+        - generic [ref=e8820]:
+          - generic [ref=e8821]: PERNUTA SOMNOROASA
+          - generic [ref=e8822]: Teatrul Ion Creanga SALA MARE, Bucuresti, 27 iunie 2026, 12:00
+        - link "Bilete" [ref=e8824] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36848/pernuta-somnoroasa-27-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8827]:
+        - generic [ref=e8829]:
+          - generic [ref=e8830]: "27"
+          - generic [ref=e8831]: iun
+        - generic [ref=e8832]:
+          - generic [ref=e8833]: AMINTIRI DIN COPILARIE
+          - generic [ref=e8834]: Teatrul Ion Creanga SALA MARE, Bucuresti, 27 iunie 2026, 18:00
+        - link "Bilete" [ref=e8836] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36849/amintiri-din-copilarie-27-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8839]:
+        - generic [ref=e8841]:
+          - generic [ref=e8842]: "28"
+          - generic [ref=e8843]: iun
+        - generic [ref=e8844]:
+          - generic [ref=e8845]: AEROFONIK
+          - generic [ref=e8846]: Circul Metropolitan Bucuresti SPECTACOL IN SALA, Bucuresti, 28 iunie 2026, 11:00
+        - link "Bilete" [ref=e8848] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36549/aerofonik-28-iunie-2026-circul-metropolitan-bucuresti-spectacol-in-sala-bucuresti.html
+      - generic [ref=e8851]:
+        - generic [ref=e8853]:
+          - generic [ref=e8854]: "28"
+          - generic [ref=e8855]: iun
+        - generic [ref=e8856]:
+          - generic [ref=e8857]: O MIE SI UNA DE NOPTI – LAMPA LUI ALADIN
+          - generic [ref=e8858]: Teatrul Ion Creanga SALA MARE, Bucuresti, 28 iunie 2026, 11:00
+        - link "Bilete" [ref=e8860] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36850/o-mie-si-una-de-nopti-lampa-lui-aladin-28-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8863]:
+        - generic [ref=e8865]:
+          - generic [ref=e8866]: "28"
+          - generic [ref=e8867]: iun
+        - generic [ref=e8868]:
+          - generic [ref=e8869]: IMPRELUNA
+          - generic [ref=e8870]: Teatrul Ion Creanga SALA MARE, Bucuresti, 28 iunie 2026, 16:00
+        - link "Bilete" [ref=e8872] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36851/impreluna-28-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8875]:
+        - generic [ref=e8877]:
+          - generic [ref=e8878]: "28"
+          - generic [ref=e8879]: iun
+        - generic [ref=e8880]:
+          - generic [ref=e8881]: IMPRELUNA
+          - generic [ref=e8882]: Teatrul Ion Creanga SALA MARE, Bucuresti, 28 iunie 2026, 18:00
+        - link "Bilete" [ref=e8884] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36852/impreluna-28-iunie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8887]:
+        - generic [ref=e8889]:
+          - generic [ref=e8890]: "4"
+          - generic [ref=e8891]: iul
+        - generic [ref=e8892]:
+          - generic [ref=e8893]: PUNGUTA CU DOI BANI
+          - generic [ref=e8894]: Teatrul Ion Creanga SALA MARE, Bucuresti, 4 iulie 2026, 18:00
+        - link "Bilete" [ref=e8896] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36853/punguta-cu-doi-bani-4-iulie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8899]:
+        - generic [ref=e8901]:
+          - generic [ref=e8902]: 5-12
+          - generic [ref=e8903]: iul
+        - generic [ref=e8904]:
+          - generic [ref=e8905]: Concord Iasi Open powered by MET - Abonamente
+          - generic [ref=e8906]: Baza Sportiva Ciric, Iasi, 5 - 12 iulie 2026
+        - link "Bilete" [ref=e8908] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34334/concord-iasi-open-powered-by-met-abonamente-5-12-iulie-2026-baza-sportiva-ciric-iasi.html
+      - generic [ref=e8911]:
+        - generic [ref=e8913]:
+          - generic [ref=e8914]: "5"
+          - generic [ref=e8915]: iul
+        - generic [ref=e8916]:
+          - generic [ref=e8917]: PINOCCHIO
+          - generic [ref=e8918]: Teatrul Ion Creanga SALA MARE, Bucuresti, 5 iulie 2026, 11:00
+        - link "Bilete" [ref=e8920] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36854/pinocchio-5-iulie-2026-teatrul-ion-creanga-sala-mare-bucuresti.html
+      - generic [ref=e8923]:
+        - generic [ref=e8925]:
+          - generic [ref=e8926]: 9-12
+          - generic [ref=e8927]: iul
+        - generic [ref=e8928]:
+          - generic [ref=e8929]: Gărâna Jazz Festival XXX
+          - generic [ref=e8930]: Garana, Garana, 9 - 12 iulie 2026
+        - link "Bilete" [ref=e8932] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34300/grna-jazz-festival-xxx-9-12-iulie-2026-garana-garana.html
+      - generic [ref=e8935]:
+        - generic [ref=e8937]:
+          - generic [ref=e8938]: "10"
+          - generic [ref=e8939]: iul
+        - generic [ref=e8940]:
+          - generic [ref=e8941]: FAUST
+          - generic [ref=e8942]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 10 iulie 2026, 19:00
+        - link "Bilete" [ref=e8944] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36598/faust-10-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e8947]:
+        - generic [ref=e8949]:
+          - generic [ref=e8950]: "11"
+          - generic [ref=e8951]: iul
+        - generic [ref=e8952]:
+          - generic [ref=e8953]: FAUST
+          - generic [ref=e8954]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 11 iulie 2026, 19:00
+        - link "Bilete" [ref=e8956] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36599/faust-11-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e8959]:
+        - generic [ref=e8961]:
+          - generic [ref=e8962]: 12-19
+          - generic [ref=e8963]: iul
+        - generic [ref=e8964]:
+          - generic [ref=e8965]: UniCredit Iasi Open - Abonamente
+          - generic [ref=e8966]: Baza Sportiva Ciric, Iasi, 12 - 19 iulie 2026
+        - link "Bilete" [ref=e8968] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34333/unicredit-iasi-open-abonamente-12-19-iulie-2026-baza-sportiva-ciric-iasi.html
+      - generic [ref=e8971]:
+        - generic [ref=e8973]:
+          - generic [ref=e8974]: 12-13
+          - generic [ref=e8975]: iul
+        - generic [ref=e8976]:
+          - generic [ref=e8977]: Turneul National de Table - Edita de Vara
+          - generic [ref=e8978]: Piata George Enescu, Bucuresti, 12 - 13 iulie 2026, 09:00
+        - link "Bilete" [ref=e8980] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34297/turneul-national-de-table-edita-de-vara-12-13-iulie-2026-piata-george-enescu-bucuresti.html
+      - generic [ref=e8983]:
+        - generic [ref=e8985]:
+          - generic [ref=e8986]: 16-19
+          - generic [ref=e8987]: iul
+        - generic [ref=e8988]:
+          - generic [ref=e8989]: ELECTRIC CASTLE 2026
+          - generic [ref=e8990]: Banffy Castle, Bontida, Cluj, 16 - 19 iulie 2026
+        - link "Bilete" [ref=e8992] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33517/electric-castle-2026-16-19-iulie-2026-banffy-castle-bontida-cluj.html
+      - generic [ref=e8995]:
+        - generic [ref=e8997]:
+          - generic [ref=e8998]: "17"
+          - generic [ref=e8999]: iul
+        - generic [ref=e9000]:
+          - generic [ref=e9001]: FAUST
+          - generic [ref=e9002]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 17 iulie 2026, 19:00
+        - link "Bilete" [ref=e9004] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36600/faust-17-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e9007]:
+        - generic [ref=e9009]:
+          - generic [ref=e9010]: 17-18
+          - generic [ref=e9011]: iul
+        - generic [ref=e9012]:
+          - generic [ref=e9013]: FESTIVALUL NAȚIONAL DE MUZICĂ FOLK „LA MALUL MĂRII” – EDIȚIA I
+          - generic [ref=e9014]: Teatrul de Vara, Neptun, 17 - 18 iulie 2026, 20:30
+        - link "Bilete" [ref=e9016] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36590/festivalul-naional-de-muzic-folk-la-malul-mrii-ediia-i-17-18-iulie-2026-teatrul-de-vara-neptun.html
+      - generic [ref=e9019]:
+        - generic [ref=e9021]:
+          - generic [ref=e9022]: "18"
+          - generic [ref=e9023]: iul
+        - generic [ref=e9024]:
+          - generic [ref=e9025]: FAUST
+          - generic [ref=e9026]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 18 iulie 2026, 19:00
+        - link "Bilete" [ref=e9028] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36601/faust-18-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e9031]:
+        - generic [ref=e9033]:
+          - generic [ref=e9034]: "22"
+          - generic [ref=e9035]: iul
+        - generic [ref=e9036]:
+          - generic [ref=e9037]: KRAFTWERK
+          - generic [ref=e9038]: Arenele Romane, Bucuresti, 22 iulie 2026
+        - link "Bilete" [ref=e9040] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34805/kraftwerk-22-iulie-2026-arenele-romane-bucuresti.html
+      - generic [ref=e9043]:
+        - generic [ref=e9045]:
+          - generic [ref=e9046]: 23-26
+          - generic [ref=e9047]: iul
+        - generic [ref=e9048]:
+          - generic [ref=e9049]: Everness Erdély
+          - generic [ref=e9050]: Complexul Weekend Târgu Mures / Weekend telep Marosvásárhely, , 23 - 26 iulie 2026, 10:00
+        - link "Bilete" [ref=e9052] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35386/everness-erdly-23-26-iulie-2026-complexul-weekend-trgu-mures-weekend-telep-marosvsrhely.html
+      - generic [ref=e9055]:
+        - generic [ref=e9057]:
+          - generic [ref=e9058]: "24"
+          - generic [ref=e9059]: iul
+        - generic [ref=e9060]:
+          - generic [ref=e9061]: FAUST
+          - generic [ref=e9062]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 24 iulie 2026, 19:00
+        - link "Bilete" [ref=e9064] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36602/faust-24-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e9067]:
+        - generic [ref=e9069]:
+          - generic [ref=e9070]: "25"
+          - generic [ref=e9071]: iul
+        - generic [ref=e9072]:
+          - generic [ref=e9073]: FAUST
+          - generic [ref=e9074]: Fabrica de Cultura - UniCredit (Sala Faust), Sibiu, 25 iulie 2026, 19:00
+        - link "Bilete" [ref=e9076] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36603/faust-25-iulie-2026-fabrica-de-cultura-unicredit-sala-faust-sibiu.html
+      - generic [ref=e9079]:
+        - generic [ref=e9081]:
+          - generic [ref=e9082]: "30"
+          - generic [ref=e9083]: iul
+        - generic [ref=e9084]:
+          - generic [ref=e9085]: RITA ORA
+          - generic [ref=e9086]: Arenele Romane, Bucuresti, 30 iulie 2026
+        - link "Bilete" [ref=e9088] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35599/rita-ora-30-iulie-2026-arenele-romane-bucuresti.html
+      - generic [ref=e9091]:
+        - generic [ref=e9093]:
+          - generic [ref=e9094]: 31 iul
+          - generic [ref=e9095]: 2 aug
+        - generic [ref=e9096]:
+          - generic [ref=e9097]: Wonder Family Fest – Editia a III-a
+          - generic [ref=e9098]: Wonderland Resort, Feleacu, judetul Cluj, 31 iul - 2 aug 2026
+        - link "Bilete" [ref=e9100] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31466/wonder-family-fest-editia-a-iii-a-31-iul-2-aug-2026-wonderland-resort-feleacu-judetul-cluj.html
+      - generic [ref=e9103]:
+        - generic [ref=e9105]:
+          - generic [ref=e9106]: 20-23
+          - generic [ref=e9107]: aug
+        - generic [ref=e9108]:
+          - generic [ref=e9109]: "Durusa SummerHills #12"
+          - generic [ref=e9110]: Durusa, judet Maramures, 20 - 23 august 2026, 12:00
+        - link "Bilete" [ref=e9112] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31931/durusa-summerhills-12-20-23-august-2026-durusa-judet-maramures.html
+      - generic [ref=e9115]:
+        - generic [ref=e9117]:
+          - generic [ref=e9118]: 3-6
+          - generic [ref=e9119]: sep
+        - generic [ref=e9120]:
+          - generic [ref=e9121]: Taste of Transylvania
+          - generic [ref=e9122]: Lunca de jos, Borsopataka, 3 - 6 septembrie 2026, 17:00
+        - link "Bilete" [ref=e9124] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32558/taste-of-transylvania-3-6-septembrie-2026-lunca-de-jos-borsopataka.html
+      - generic [ref=e9127]:
+        - generic [ref=e9129]:
+          - generic [ref=e9130]: 4-6
+          - generic [ref=e9131]: sep
+        - generic [ref=e9132]:
+          - generic [ref=e9133]: Transylvanian Arts Festival
+          - generic [ref=e9134]: Richis, Sibiu, 4 - 6 septembrie 2026, 09:00
+        - link "Bilete" [ref=e9136] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36063/transylvanian-arts-festival-4-6-septembrie-2026-richis-sibiu.html
+      - generic [ref=e9139]:
+        - generic [ref=e9141]:
+          - generic [ref=e9142]: 4-6
+          - generic [ref=e9143]: sep
+        - generic [ref=e9144]:
+          - generic [ref=e9145]: Festivalul POTECA VERDE
+          - generic [ref=e9146]: sat Tarsa , com Bosorod , 4 - 6 septembrie 2026, 11:00
+        - link "Bilete" [ref=e9148] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32171/festivalul-poteca-verde-4-6-septembrie-2026-sat-tarsa-com-bosorod.html
+      - generic [ref=e9151]:
+        - generic [ref=e9153]:
+          - generic [ref=e9154]: "5"
+          - generic [ref=e9155]: sep
+        - generic [ref=e9156]:
+          - generic [ref=e9157]: POTECA VERDE - viata in miscare
+          - generic [ref=e9158]: sat Tarsa , com Bosorod , 5 septembrie 2026, 10:00
+        - link "Bilete" [ref=e9160] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36245/poteca-verde-viata-in-miscare-5-septembrie-2026-sat-tarsa-com-bosorod.html
+      - generic [ref=e9163]:
+        - generic [ref=e9165]:
+          - generic [ref=e9166]: "20"
+          - generic [ref=e9167]: sep
+        - generic [ref=e9168]:
+          - generic [ref=e9169]: Isprăvile Motanului Încălțat @ Muse Country Club Mogoșoaia
+          - generic [ref=e9170]: Muse Country Club, Mogosoaia, 20 septembrie 2026, 11:00
+        - link "Bilete" [ref=e9172] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36614/isprvile-motanului-nclat-muse-country-club-mogooaia-20-septembrie-2026-muse-country-club-mogosoaia.html
+      - generic [ref=e9175]:
+        - generic [ref=e9177]:
+          - generic [ref=e9178]: 9-11
+          - generic [ref=e9179]: oct
+        - generic [ref=e9180]:
+          - generic [ref=e9181]: ROWINE AUTUMN EDITION BUCHAREST 2026 - 09-11 oct
+          - generic [ref=e9182]: Fratelli Studio 1, Bucuresti, 9 - 11 octombrie 2026, 14:00
+        - link "Bilete" [ref=e9184] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34296/rowine-autumn-edition-bucharest-2026-09-11-oct-9-11-octombrie-2026-fratelli-studio-1-bucuresti.html
+      - generic [ref=e9187]:
+        - generic [ref=e9189]:
+          - generic [ref=e9190]: "12"
+          - generic [ref=e9191]: oct
+        - generic [ref=e9192]:
+          - generic [ref=e9193]: GEORGIAN ROYAL BALLET
+          - generic [ref=e9194]: Sala Palatului, Bucuresti, 12 octombrie 2026, 19:30
+        - link "Bilete" [ref=e9196] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35022/georgian-royal-ballet-12-octombrie-2026-sala-palatului-bucuresti.html
+      - generic [ref=e9199]:
+        - generic [ref=e9201]:
+          - generic [ref=e9202]: "14"
+          - generic [ref=e9203]: oct
+        - generic [ref=e9204]:
+          - generic [ref=e9205]: Abeer Nehme Live in Concert
+          - generic [ref=e9206]: Sala Palatului, Bucuresti, 14 octombrie 2026, 19:00
+        - link "Bilete" [ref=e9208] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/32168/abeer-nehme-live-in-concert-14-octombrie-2026-sala-palatului-bucuresti.html
+      - generic [ref=e9211]:
+        - generic [ref=e9213]:
+          - generic [ref=e9214]: "15"
+          - generic [ref=e9215]: oct
+        - generic [ref=e9216]:
+          - generic [ref=e9217]: Seara asta facem show - Vladuta Lupau
+          - generic [ref=e9218]: BT Arena - Sala Polivalenta, Cluj Napoca, 15 octombrie 2026, 19:00
+        - link "Bilete" [ref=e9220] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35991/seara-asta-facem-show-vladuta-lupau-15-octombrie-2026-bt-arena-sala-polivalenta-cluj-napoca.html
+      - generic [ref=e9223]:
+        - generic [ref=e9225]:
+          - generic [ref=e9226]: "16"
+          - generic [ref=e9227]: oct
+        - generic [ref=e9228]:
+          - generic [ref=e9229]: Tender live - Expirat
+          - generic [ref=e9230]: Expirat Halele Carol, Bucuresti, 16 octombrie 2026
+        - link "Bilete" [ref=e9232] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35213/tender-live-expirat-16-octombrie-2026-expirat-halele-carol-bucuresti.html
+      - generic [ref=e9235]:
+        - generic [ref=e9237]:
+          - generic [ref=e9238]: "17"
+          - generic [ref=e9239]: oct
+        - generic [ref=e9240]:
+          - generic [ref=e9241]: Limitl3ss
+          - generic [ref=e9242]: Palatul Culturii, Targu Mures, 17 octombrie 2026, 10:00
+        - link "Bilete" [ref=e9244] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/36141/limitl3ss-17-octombrie-2026-palatul-culturii-targu-mures.html
+      - generic [ref=e9247]:
+        - generic [ref=e9249]:
+          - generic [ref=e9250]: "20"
+          - generic [ref=e9251]: oct
+        - generic [ref=e9252]:
+          - generic [ref=e9253]: Workshop Gelu Duminică – Diversitate, Echitate și Incluziune – motorul sustenabilității organizaționale și al dezvoltării personale
+          - generic [ref=e9254]: Sala Nexy, Bucuresti, 20 octombrie 2026, 09:00
+        - link "Bilete" [ref=e9256] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33586/workshop-gelu-duminic-diversitate-echitate-i-incluziune-motorul-sustenabilitii-organizaionale-i-al-dezvoltrii-personale-20-octombrie-2026-sala-nexy-bucuresti.html
+      - generic [ref=e9259]:
+        - generic [ref=e9261]:
+          - generic [ref=e9262]: "20"
+          - generic [ref=e9263]: oct
+        - generic [ref=e9264]:
+          - generic [ref=e9265]: Workshop Raluca Anton – Lead yourself to lead others (RO)
+          - generic [ref=e9266]: Sala Nexy, Bucuresti, 20 octombrie 2026, 14:00
+        - link "Bilete" [ref=e9268] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33585/workshop-raluca-anton-lead-yourself-to-lead-others-ro-20-octombrie-2026-sala-nexy-bucuresti.html
+      - generic [ref=e9271]:
+        - generic [ref=e9273]:
+          - generic [ref=e9274]: "21"
+          - generic [ref=e9275]: oct
+        - generic [ref=e9276]:
+          - generic [ref=e9277]: Psihologia Leadershipului
+          - generic [ref=e9278]: Sala Luceafarul, Bucuresti, 21 octombrie 2026, 09:00
+        - link "Bilete" [ref=e9280] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33403/psihologia-leadershipului-21-octombrie-2026-sala-luceafarul-bucuresti.html
+      - generic [ref=e9283]:
+        - generic [ref=e9285]:
+          - generic [ref=e9286]: "22"
+          - generic [ref=e9287]: oct
+        - generic [ref=e9288]:
+          - generic [ref=e9289]: Workshop Petrus Stuparu - The Bucket
+          - generic [ref=e9290]: Sala Nexy, Bucuresti, 22 octombrie 2026, 09:00
+        - link "Bilete" [ref=e9292] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35946/workshop-petrus-stuparu-the-bucket-22-octombrie-2026-sala-nexy-bucuresti.html
+      - generic [ref=e9295]:
+        - generic [ref=e9297]:
+          - generic [ref=e9298]: "5"
+          - generic [ref=e9299]: nov
+        - generic [ref=e9300]:
+          - generic [ref=e9301]: Oana Bozga-Pintea - Festivalul Folcloric TINERETE Editia a VI-a
+          - generic [ref=e9302]: BT Arena - Sala Polivalenta, Cluj Napoca, 5 noiembrie 2026, 19:00
+        - link "Bilete" [ref=e9304] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35430/oana-bozga-pintea-festivalul-folcloric-tinerete-editia-a-vi-a-5-noiembrie-2026-bt-arena-sala-polivalenta-cluj-napoca.html
+      - generic [ref=e9307]:
+        - generic [ref=e9309]:
+          - generic [ref=e9310]: "16"
+          - generic [ref=e9311]: nov
+        - generic [ref=e9312]:
+          - generic [ref=e9313]: EZHEL
+          - generic [ref=e9314]: Club Quantic, Bucuresti, 16 noiembrie 2026
+        - link "Bilete" [ref=e9316] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/34963/ezhel-16-noiembrie-2026-club-quantic-bucuresti.html
+      - generic [ref=e9319]:
+        - generic [ref=e9321]:
+          - generic [ref=e9322]: 20-21
+          - generic [ref=e9323]: nov
+        - generic [ref=e9324]:
+          - generic [ref=e9325]: WHISKY FEST ROMANIA 2026
+          - generic [ref=e9326]: Caro, Bucuresti, 20 - 21 noiembrie 2026
+        - link "Bilete" [ref=e9328] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/33807/whisky-fest-romania-2026-20-21-noiembrie-2026-caro-bucuresti.html
+      - generic [ref=e9331]:
+        - generic [ref=e9333]:
+          - generic [ref=e9334]: "30"
+          - generic [ref=e9335]: nov
+        - generic [ref=e9336]:
+          - generic [ref=e9337]: Spargatorul de nuci
+          - generic [ref=e9338]: Sala Palatului, Bucuresti, 30 noiembrie 2026, 19:30
+        - link "Bilete" [ref=e9340] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/35825/spargatorul-de-nuci-30-noiembrie-2026-sala-palatului-bucuresti.html
+      - generic [ref=e9343]:
+        - generic [ref=e9345]:
+          - generic [ref=e9346]: 1-30
+          - generic [ref=e9347]: sep
+        - generic [ref=e9348]:
+          - generic [ref=e9349]: Sense4Fit Summit 2026
+          - generic [ref=e9350]: TBA, Bucuresti, TBA
+        - link "Bilete" [ref=e9352] [cursor=pointer]:
+          - /url: https://www.entertix.ro/evenimente/31947/sense4fit-summit-2026-tba-tba-bucuresti.html
+    - generic [ref=e9358]:
+      - generic [ref=e9359]:
+        - generic [ref=e9360]: Tot ce te intereseaza, direct in inbox.
+        - generic [ref=e9361]: Aboneaza-te la newsletter-ul nostru, fii primul la care ajung evenimentele noi.
+        - generic [ref=e9364]:
+          - textbox "Introduceti adresa de e-mail" [ref=e9365]
+          - button [ref=e9367] [cursor=pointer]:
+            - generic [ref=e9368]: 
+        - generic [ref=e9370]:
+          - generic [ref=e9371]:
+            - link "Cum comand" [ref=e9372] [cursor=pointer]:
+              - /url: https://www.entertix.ro/cum-comand.html
+            - link "Metode plata" [ref=e9373] [cursor=pointer]:
+              - /url: https://www.entertix.ro/metode-de-plata.html
+            - link "Metode livrare" [ref=e9374] [cursor=pointer]:
+              - /url: https://www.entertix.ro/metode-de-livrare.html
+            - link "Magazine partenere" [ref=e9375] [cursor=pointer]:
+              - /url: https://www.entertix.ro/magazine-partenere.html
+            - link "Intrebari Frecvente - FAQ" [ref=e9376] [cursor=pointer]:
+              - /url: https://www.entertix.ro/intrebari-frecvente.html
+            - link "Termeni si Conditii" [ref=e9377] [cursor=pointer]:
+              - /url: https://www.entertix.ro/termeni-si-conditii.html
+            - link "ANPC" [ref=e9378] [cursor=pointer]:
+              - /url: https://anpc.ro/
+          - generic [ref=e9379]:
+            - link "Contact" [ref=e9380] [cursor=pointer]:
+              - /url: https://www.entertix.ro/contact.html
+            - link "Servicii Organizatori" [ref=e9381] [cursor=pointer]:
+              - /url: https://www.entertix.ro/servicii-organizatori.html
+            - link "Serviciul CareTix" [ref=e9382] [cursor=pointer]:
+              - /url: https://www.entertix.ro/serviciul-caretix.html
+            - link "Despre noi" [ref=e9383] [cursor=pointer]:
+              - /url: https://www.entertix.ro/despre-noi.html
+            - link "Politica Confidentialitate" [ref=e9384] [cursor=pointer]:
+              - /url: https://www.entertix.ro/politica-confidentialitate.html
+            - link "Politica Cookies" [ref=e9385] [cursor=pointer]:
+              - /url: https://www.entertix.ro/politica-cookie.html
+      - generic [ref=e9386]:
+        - generic [ref=e9387]: Nu ai gasit inca evenimentul tau?
+        - generic [ref=e9388]: Cauta aici dupa cuvinte cheie.
+        - generic [ref=e9390]:
+          - textbox "Cauta evenimente, sali, date sau artisti" [ref=e9391]
+          - button [ref=e9393] [cursor=pointer]:
+            - generic [ref=e9394]: 
+        - text: "Urmareste noutatile pe:"
+        - list [ref=e9396]:
+          - listitem [ref=e9397]:
+            - link " " [ref=e9398] [cursor=pointer]:
+              - /url: https://www.facebook.com/entertix.ro/
+              - generic [ref=e9399]:
+                - generic [ref=e9400]: 
+                - generic [ref=e9401]: 
+          - listitem [ref=e9402]:
+            - link " " [ref=e9403] [cursor=pointer]:
+              - /url: https://www.instagram.com/entertix.ro/
+              - generic [ref=e9404]:
+                - generic [ref=e9405]: 
+                - generic [ref=e9406]: 
+        - generic [ref=e9407]:
+          - link [ref=e9408] [cursor=pointer]:
+            - /url: https://anpc.ro/ce-este-sal/
+            - img [ref=e9409]
+          - link "xServers" [ref=e9410] [cursor=pointer]:
+            - /url: https://www.xservers.ro/
+            - img "xServers" [ref=e9411]
+  - iframe [ref=e9412]:
+    
+  - text: 
