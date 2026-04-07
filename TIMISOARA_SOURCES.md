@@ -170,14 +170,70 @@ Individual venue websites for events not always listed on aggregators.
 - **Priority:** ★★☆ Best source for community/tech/hobby meetups
 
 #### 18. Facebook Events
+- **Adapter:** `App\Services\Scraping\Adapters\FacebookEventsScraper` (adapter key: `facebook_events`)
 - **Coverage:** The single largest source of events in any city. Everything from house parties to major concerts. Many Timișoara events are ONLY posted on Facebook.
 - **Volume:** ~50–100+ events/week
-- **Scraping approach:** **Difficult.** Facebook aggressively blocks scraping. Options:
-  - Use the **Apify Facebook Events Scraper** (paid, ~$10/1000 events)
-  - Monitor specific Facebook pages/groups: "Evenimente Timisoara" (~12K followers), "Timisoara Events" group
-  - Use the **Google Events API** (via SerpApi) which indexes many Facebook events
-  - Accept that some Facebook-only events will be missed in MVP
+- **Enabled by default:** No — requires at least one strategy to be configured (see below).
 - **Priority:** ★☆☆ for MVP (too complex), ★★★ for Phase 2
+
+##### Multi-Strategy Approach
+
+The adapter runs two complementary strategies and merges + deduplicates results:
+
+**Strategy A — Apify Facebook Events Scraper (recommended, paid)**
+- Runs the `apify/facebook-events-scraper` actor for each query in `apify_queries`.
+- Polls until the actor run completes, then fetches the dataset items.
+- Cost: ~$1–5/day depending on query volume and result count. A daily budget cap (`APIFY_DAILY_BUDGET_USD`, default $5.00) is enforced — each run's cost is logged to `apify_usage_log` and queries stop once the daily total exceeds the budget.
+- Required: `APIFY_API_TOKEN` env var. Without it, Strategy A is skipped entirely.
+
+**Strategy B — `facebook-event-scraper` npm package (free, fragile)**
+- Runs a Node.js bridge script (`scripts/facebook-scraper.js`) that scrapes specific Facebook page event listings using the `facebook-event-scraper` npm package.
+- Free but fragile — Facebook HTML changes break it without notice.
+- Requires Node.js and the optional npm dependency: `npm install facebook-event-scraper`.
+- Enable per source with `'npm_scraper_enabled' => true` in the source params.
+
+##### Configuration
+
+In `config/eventpulse.php` under `cities.timisoara.sources`:
+```php
+[
+    'adapter' => 'facebook_events',
+    'enabled' => false,
+    'interval_hours' => 12,
+    'params' => [
+        'apify_actor' => 'apify/facebook-events-scraper',   // Apify actor ID
+        'apify_queries' => [                                 // One Apify run per query
+            'events in Timisoara',
+            'evenimente Timisoara',
+            'concerte Timisoara',
+            'petreceri Timisoara',
+        ],
+        'facebook_pages' => [                                // Pages for npm Strategy B
+            'https://www.facebook.com/evenimente.timis/events/',
+            'https://www.facebook.com/VisitTimisoara/events/',
+            // Add more pages here
+        ],
+        'npm_scraper_enabled' => true,                      // Set false to skip npm strategy
+    ],
+],
+```
+
+##### Adding More Facebook Pages
+
+Add any page URL ending in `/events/` to the `facebook_pages` array. The npm scraper scrapes the upcoming events list for each page. If a page is private or rate-limits requests, it will be skipped gracefully.
+
+##### Required Environment Variables
+```
+APIFY_API_TOKEN=apify_api_...     # Apify personal API token
+APIFY_DAILY_BUDGET_USD=5.00      # Maximum spend per day in USD (default 5.00)
+```
+
+##### Cost Expectations
+| Strategy | Cost | Reliability |
+|---|---|---|
+| Apify | ~$1–5/day | High — structured JSON, well-maintained |
+| npm facebook-event-scraper | Free | Low — breaks when Facebook changes HTML |
+| Google Events (SerpApi) | ~$0.01/query | Medium — indexes many FB events indirectly |
 
 ---
 

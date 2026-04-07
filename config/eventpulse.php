@@ -4,6 +4,7 @@ declare(strict_types=1);
 use App\Services\Scraping\Adapters\AllEventsScraper;
 use App\Services\Scraping\Adapters\EntertixScraper;
 use App\Services\Scraping\Adapters\EventbriteScraper;
+use App\Services\Scraping\Adapters\FacebookEventsScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
 use App\Services\Scraping\Adapters\GoogleEventsScraper;
 use App\Services\Scraping\Adapters\IaBiletScraper;
@@ -74,6 +75,7 @@ return [
         'meetup' => MeetupScraper::class,
         'visit_timisoara' => VisitTimisoaraScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
+        'facebook_events' => FacebookEventsScraper::class,
         'generic_html' => GenericHtmlScraper::class,
         'google_events' => GoogleEventsScraper::class,
     ],
@@ -103,6 +105,30 @@ return [
                 ['adapter' => 'visit_timisoara', 'url' => 'https://visit-timisoara.com/events-activities/',         'enabled' => false, 'interval_hours' => 12],
                 ['adapter' => 'radio_timisoara', 'url' => 'https://www.radiotimisoara.ro/agenda-evenimente',        'enabled' => false, 'interval_hours' => 12],
                 ['adapter' => 'meetup',          'url' => 'https://www.meetup.com/find/ro--timisoara/',             'enabled' => false, 'interval_hours' => 6],
+                [
+                    'adapter' => 'facebook_events',
+                    'enabled' => false,
+                    'interval_hours' => 12,
+                    'params' => [
+                        'apify_actor' => 'apify/facebook-events-scraper',
+                        'apify_queries' => [
+                            'events in Timisoara',
+                            'evenimente Timisoara',
+                            'concerte Timisoara',
+                            'petreceri Timisoara',
+                        ],
+                        'facebook_pages' => [
+                            'https://www.facebook.com/evenimente.timis/events/',
+                            'https://www.facebook.com/VisitTimisoara/events/',
+                            'https://www.facebook.com/FilarmonicaBanatul/events/',
+                            'https://www.facebook.com/OperaTimisoara/events/',
+                            'https://www.facebook.com/TeatrulNationalTimisoara/events/',
+                            'https://www.facebook.com/ArtEncounters/events/',
+                            'https://www.facebook.com/plaidefestival/events/',
+                        ],
+                        'npm_scraper_enabled' => true,
+                    ],
+                ],
             ],
         ],
     ],
@@ -110,6 +136,8 @@ return [
     'default_city' => env('EVENTPULSE_DEFAULT_CITY', 'timisoara'),
     'eventbrite_api_key' => env('EVENTBRITE_API_KEY'),
     'serpapi_api_key' => env('SERPAPI_API_KEY'),
+    'apify_api_token' => env('APIFY_API_TOKEN'),
+    'apify_daily_budget_usd' => (float) env('APIFY_DAILY_BUDGET_USD', 5.00),
     'notifications' => [
         'hour' => (int) env('EVENTPULSE_NOTIFICATION_HOUR', 8),
         'max_events_per_digest' => 10,
