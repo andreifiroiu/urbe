@@ -19,8 +19,6 @@ class SendNotificationJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'notifications';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
@@ -28,7 +26,9 @@ class SendNotificationJob implements ShouldQueue
 
     public function __construct(
         public readonly string $notificationId,
-    ) {}
+    ) {
+        $this->onQueue('notifications');
+    }
 
     public function handle(NotificationDispatcher $dispatcher): void
     {

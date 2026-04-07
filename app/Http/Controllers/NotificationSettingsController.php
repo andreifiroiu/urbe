@@ -26,15 +26,16 @@ class NotificationSettingsController extends Controller
 
     public function update(NotificationSettingsRequest $request): RedirectResponse
     {
-        /** @var array{channel: string, frequency: string} $validated */
+        /** @var array{channel: string, frequency: string, discovery_openness: float} $validated */
         $validated = $request->validated();
 
         $request->user()->update([
             'notification_channel' => NotificationChannel::from($validated['channel']),
             'notification_frequency' => NotificationFrequency::from($validated['frequency']),
+            'discovery_openness' => (float) $validated['discovery_openness'],
         ]);
 
-        return redirect()->route('settings.notifications')
+        return redirect()->route('profile.show')
             ->with('success', 'Notification settings updated.');
     }
 }

@@ -30,7 +30,7 @@ class FeedbackController extends Controller
             ],
         );
 
-        ProcessFeedbackJob::dispatch($userReaction);
+        ProcessFeedbackJob::dispatch($userReaction->id);
 
         return response()->json([
             'message' => 'Feedback recorded.',

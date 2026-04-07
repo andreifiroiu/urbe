@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('event_notifications', function (Blueprint $table) {
-            $table->uuid('id')->primary()->default(DB::raw('gen_random_uuid()'));
+            $table->uuid('id')->primary();
             $table->foreignUuid('user_id')->constrained()->cascadeOnDelete();
             $table->string('channel');
             $table->string('frequency');
-            $table->jsonb('event_ids')->default('[]');
-            $table->jsonb('discovery_event_ids')->default('[]');
+            $table->json('event_ids')->default('[]');
+            $table->json('discovery_event_ids')->default('[]');
             $table->text('subject')->nullable();
             $table->text('body_html')->nullable();
             $table->timestamp('sent_at')->nullable();

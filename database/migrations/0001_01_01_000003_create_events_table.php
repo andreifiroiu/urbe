@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->uuid('id')->primary()->default(DB::raw('gen_random_uuid()'));
+            $table->uuid('id')->primary();
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('source');
@@ -47,9 +47,11 @@ return new class extends Migration
             $table->index(['is_classified', 'is_geocoded', 'is_enriched']);
         });
 
-        // GIN index on tags JSONB column for fast tag queries
-        DB::statement('CREATE INDEX events_tags_gin ON events USING GIN (tags)');
-        DB::statement('CREATE INDEX events_metadata_gin ON events USING GIN (metadata)');
+        // GIN indexes on JSONB columns for fast queries (PostgreSQL only)
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement('CREATE INDEX events_tags_gin ON events USING GIN (tags)');
+            DB::statement('CREATE INDEX events_metadata_gin ON events USING GIN (metadata)');
+        }
     }
 
     public function down(): void

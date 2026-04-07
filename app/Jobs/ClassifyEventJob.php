@@ -11,6 +11,7 @@ use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\Middleware\RateLimited;
 use Illuminate\Queue\SerializesModels;
 
 class ClassifyEventJob implements ShouldBeUnique, ShouldQueue
@@ -20,8 +21,6 @@ class ClassifyEventJob implements ShouldBeUnique, ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'ai';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
@@ -29,7 +28,17 @@ class ClassifyEventJob implements ShouldBeUnique, ShouldQueue
 
     public function __construct(
         public readonly string $eventId,
-    ) {}
+    ) {
+        $this->onQueue('ai');
+    }
+
+    /**
+     * @return array<int, object>
+     */
+    public function middleware(): array
+    {
+        return [new RateLimited('anthropic-api')];
+    }
 
     public function handle(EventClassifier $classifier): void
     {

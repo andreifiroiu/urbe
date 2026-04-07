@@ -24,6 +24,7 @@ class NotificationSettingsRequest extends FormRequest
         return [
             'channel' => ['required', 'string', Rule::in(array_column(NotificationChannel::cases(), 'value'))],
             'frequency' => ['required', 'string', Rule::in(array_column(NotificationFrequency::cases(), 'value'))],
+            'discovery_openness' => ['required', 'numeric', 'min:0', 'max:1'],
         ];
     }
 }

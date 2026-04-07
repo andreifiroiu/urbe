@@ -6,68 +6,65 @@ namespace App\Services\Processing;
 
 use App\DTOs\RawEvent;
 use App\Models\Event;
+use Carbon\Carbon;
 
 class EventDeduplicator
 {
     /**
-     * Detects and prevents duplicate events from entering the system.
+     * Generate a deterministic fingerprint from a raw event.
      *
-     * Uses both exact fingerprint matching (for identical events from the
-     * same source) and fuzzy matching (for the same event listed on
-     * different sources with slightly different titles or times).
-     */
-    public function __construct() {}
-
-    /**
-     * Generate a deterministic fingerprint from a raw event for exact dedup.
-     *
-     * Combines the event's title, source URL, and start time into a
-     * normalized string and hashes it. Two RawEvents with the same title
-     * from the same URL starting at the same time will always produce the
-     * same fingerprint.
+     * Combines normalised title, source URL, and start time, then hashes.
      */
     public function generateFingerprint(RawEvent $event): string
     {
-        // TODO: Normalize the title: lowercase, trim whitespace, strip punctuation
-        // TODO: Normalize the source URL: lowercase, remove trailing slashes and query params
-        // TODO: Normalize startsAt: parse to Y-m-d H:i format (minute precision) or empty string if null
-        // TODO: Concatenate: "{normalizedTitle}|{normalizedUrl}|{normalizedStartsAt}"
-        // TODO: Return sha256 hash of the concatenated string
-        return '';
+        $title = mb_strtolower(trim(preg_replace('/[^\p{L}\p{N}\s]/u', '', $event->title)));
+        $url = mb_strtolower(rtrim(strtok($event->sourceUrl, '?'), '/'));
+
+        $startsAt = $event->startsAt
+            ? Carbon::parse($event->startsAt)->format('Y-m-d H:i')
+            : '';
+
+        return hash('sha256', "{$title}|{$url}|{$startsAt}");
     }
 
     /**
-     * Check if an event with the given fingerprint already exists in the database.
+     * Check if an event with this fingerprint already exists.
      */
     public function isDuplicate(string $fingerprint): bool
     {
-        // TODO: Query Event::where('fingerprint', $fingerprint)->exists()
-        // TODO: Return the boolean result
-        return false;
+        return Event::where('fingerprint', $fingerprint)->exists();
     }
 
     /**
-     * Fuzzy duplicate check using title similarity and date proximity.
-     *
-     * Finds events that are likely the same real-world event but scraped from
-     * a different source or with minor text variations. Uses title similarity
-     * (Levenshtein distance or PostgreSQL trigram similarity), date proximity
-     * (within 2 hours), and optional venue matching.
-     *
-     * @return Event|null The matching existing event, or null if no fuzzy match.
+     * Fuzzy duplicate: look for events with a very similar title within
+     * a ±2-hour window of the same start time.
      */
     public function findFuzzyDuplicates(RawEvent $event): ?Event
     {
-        // TODO: If startsAt is null, return null (cannot fuzzy match without date)
-        // TODO: Parse startsAt into a Carbon instance
-        // TODO: Query upcoming events within a 2-hour window: starts_at BETWEEN (startsAt - 2h) AND (startsAt + 2h)
-        // TODO: For each candidate event:
-        //   TODO: Calculate title similarity using similar_text() or levenshtein()
-        //   TODO: Normalize both titles before comparison (lowercase, trim)
-        //   TODO: If similarity > config('eventpulse.dedup.title_similarity_threshold', 0.8):
-        //     TODO: If venue is provided and matches (case-insensitive), boost confidence
-        //     TODO: Return the matching Event
-        // TODO: Return null if no fuzzy match found
+        if (! $event->startsAt) {
+            return null;
+        }
+
+        $startsAt = Carbon::parse($event->startsAt);
+        $normalisedTitle = mb_strtolower(trim($event->title));
+
+        $candidates = Event::query()
+            ->whereBetween('starts_at', [
+                $startsAt->copy()->subHours(2),
+                $startsAt->copy()->addHours(2),
+            ])
+            ->when($event->city !== null, fn ($q) => $q->where('city', $event->city))
+            ->get();
+
+        foreach ($candidates as $candidate) {
+            $candidateTitle = mb_strtolower(trim($candidate->title));
+            similar_text($normalisedTitle, $candidateTitle, $percent);
+
+            if ($percent >= 80.0) {
+                return $candidate;
+            }
+        }
+
         return null;
     }
 }

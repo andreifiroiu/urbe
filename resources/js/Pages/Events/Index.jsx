@@ -7,19 +7,19 @@ import { Button } from '@/Components/ui/Button';
 import { cn } from '@/lib/utils';
 
 const allCategories = [
-    'Music',
-    'Tech',
-    'Sports',
-    'Arts',
-    'Food',
-    'Nightlife',
-    'Business',
-    'Health',
-    'Education',
-    'Community',
-    'Film',
-    'Theater',
-    'Other',
+    { value: 'Music', label: 'Muzică' },
+    { value: 'Tech', label: 'Tech' },
+    { value: 'Sports', label: 'Sport' },
+    { value: 'Arts', label: 'Artă' },
+    { value: 'Food', label: 'Gastronomie' },
+    { value: 'Nightlife', label: 'Viața de noapte' },
+    { value: 'Business', label: 'Business' },
+    { value: 'Health', label: 'Sănătate' },
+    { value: 'Education', label: 'Educație' },
+    { value: 'Community', label: 'Comunitate' },
+    { value: 'Film', label: 'Film' },
+    { value: 'Theater', label: 'Teatru' },
+    { value: 'Other', label: 'Altele' },
 ];
 
 /**
@@ -49,8 +49,8 @@ export default function Index({ events = {}, filters = {} }) {
         );
     };
 
-    const handleCategoryFilter = (category) => {
-        const newCategory = activeCategory === category ? null : category;
+    const handleCategoryFilter = (value) => {
+        const newCategory = activeCategory === value ? null : value;
         router.get(
             '/events',
             { search, category: newCategory },
@@ -65,8 +65,8 @@ export default function Index({ events = {}, filters = {} }) {
     };
 
     return (
-        <AppLayout title="Browse Events">
-            <Head title="Events" />
+        <AppLayout title="Evenimente">
+            <Head title="Evenimente" />
 
             {/* Search bar */}
             <form onSubmit={handleSearch} className="mb-6">
@@ -74,27 +74,27 @@ export default function Index({ events = {}, filters = {} }) {
                     <Input
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        placeholder="Search events..."
+                        placeholder="Caută evenimente..."
                         className="flex-1"
                     />
-                    <Button type="submit">Search</Button>
+                    <Button type="submit">Caută</Button>
                 </div>
             </form>
 
             {/* Category filter chips */}
             <div className="flex flex-wrap gap-2 mb-6">
-                {allCategories.map((category) => (
+                {allCategories.map(({ value, label }) => (
                     <button
-                        key={category}
-                        onClick={() => handleCategoryFilter(category)}
+                        key={value}
+                        onClick={() => handleCategoryFilter(value)}
                         className={cn(
                             'inline-flex items-center rounded-full px-3 py-1.5 text-sm font-medium transition-colors',
-                            activeCategory === category
+                            activeCategory === value
                                 ? 'bg-indigo-600 text-white'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         )}
                     >
-                        {category}
+                        {label}
                     </button>
                 ))}
             </div>
@@ -102,7 +102,7 @@ export default function Index({ events = {}, filters = {} }) {
             {/* Event grid */}
             <EventList
                 events={Array.isArray(eventData) ? eventData : []}
-                emptyMessage="No events match your search. Try different keywords or filters."
+                emptyMessage="Niciun eveniment nu corespunde căutării. Încearcă alte cuvinte cheie sau filtre."
             />
 
             {/* Pagination */}
@@ -114,10 +114,10 @@ export default function Index({ events = {}, filters = {} }) {
                         disabled={!events.prev_page_url}
                         onClick={() => handlePageChange(events.prev_page_url)}
                     >
-                        Previous
+                        Înapoi
                     </Button>
                     <span className="text-sm text-gray-500">
-                        Page {events.current_page} of {events.last_page}
+                        Pagina {events.current_page} din {events.last_page}
                     </span>
                     <Button
                         variant="outline"
@@ -125,7 +125,7 @@ export default function Index({ events = {}, filters = {} }) {
                         disabled={!events.next_page_url}
                         onClick={() => handlePageChange(events.next_page_url)}
                     >
-                        Next
+                        Înainte
                     </Button>
                 </div>
             )}

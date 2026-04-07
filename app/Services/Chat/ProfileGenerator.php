@@ -4,76 +4,151 @@ declare(strict_types=1);
 
 namespace App\Services\Chat;
 
+use App\Enums\EventCategory;
 use App\Models\User;
-use Illuminate\Http\Client\Factory as HttpClient;
+use App\Services\Anthropic\AnthropicClient;
 use Illuminate\Support\Facades\Log;
 
 class ProfileGenerator
 {
-    /**
-     * Generates a structured interest profile from onboarding chat transcripts.
-     * Uses Claude to analyze the full conversation and extract a JSON profile
-     * mapping categories and tags to interest scores between 0.0 and 1.0.
-     *
-     * @param HttpClient $http The HTTP client for making Claude API requests.
-     */
     public function __construct(
-        private readonly HttpClient $http,
+        private readonly AnthropicClient $client,
     ) {}
 
     /**
-     * Generate a structured interest profile from a user's onboarding chat history.
+     * Analyse the user's onboarding chat and produce a structured interest profile.
      *
-     * Loads all onboarding messages, sends them to Claude with a profile generation
-     * prompt, and returns the parsed interest profile as an associative array.
-     *
-     * @param User $user The user whose onboarding chat should be analyzed.
-     * @return array<string, float> The generated interest profile mapping categories/tags to scores.
-     *   Example: ['music' => 0.9, 'jazz' => 0.85, 'technology' => 0.3, 'outdoor' => 0.7]
-     *
-     * @throws \RuntimeException If the Claude API call fails or returns unparseable output.
+     * @return array<string, mixed> Keys are category names (e.g. "music") or tag names
+     *                              (e.g. "tag:jazz"), values are float scores 0.0–1.0.
+     *                              May also include "city", "price_sensitive", "preferred_times".
      */
     public function generateFromChat(User $user): array
     {
-        // TODO: Load all onboarding chat messages for the user, ordered chronologically
-        //       $messages = $user->chatMessages()->where('context', 'onboarding')->orderBy('created_at')->get()
-        // TODO: Format the conversation as a readable transcript for Claude
-        //       "User: {message}\nAssistant: {message}\n..."
-        // TODO: Build the profile generation prompt from config('eventpulse.prompts.profile_generation')
-        //       The prompt should instruct Claude to:
-        //       - Analyze the conversation for expressed interests and preferences
-        //       - Map interests to EventCategory enum values and freeform tags
-        //       - Assign scores from 0.0 (no interest) to 1.0 (strong interest)
-        //       - Include negative signals (things user explicitly dislikes get low scores)
-        //       - Return JSON: { "category_name": score, "tag_name": score, ... }
-        // TODO: Send POST request to Claude API with the transcript and prompt
-        // TODO: Parse the JSON response
-        // TODO: Validate all values are floats between 0.0 and 1.0
-        // TODO: Clamp any out-of-range values to [0.0, 1.0]
-        // TODO: Log token usage for cost tracking
-        // TODO: Return the profile array
-        return [];
+        $messages = $user->chatMessages()
+            ->where('context', 'onboarding')
+            ->orderBy('created_at')
+            ->get();
+
+        if ($messages->isEmpty()) {
+            return [];
+        }
+
+        $transcript = $messages
+            ->map(fn ($msg) => ($msg->role === 'user' ? 'User' : 'Assistant').": {$msg->content}")
+            ->implode("\n\n");
+
+        try {
+            $result = $this->client->sendMessage(
+                systemPrompt: (string) config('eventpulse.llm.profile_generation_prompt'),
+                userMessage: $transcript,
+                operation: 'profile_generation',
+                logMetadata: ['user_id' => $user->id],
+            );
+
+            return $this->parseProfileResponse($result['content']);
+        } catch (\Throwable $e) {
+            Log::error('Profile generation failed', [
+                'user_id' => $user->id,
+                'error' => $e->getMessage(),
+            ]);
+
+            return [];
+        }
     }
 
     /**
-     * Merge two interest profiles, averaging scores for overlapping keys.
+     * Merge two profiles, averaging overlapping scores.
      *
-     * Used when updating an existing profile with new information from
-     * a profile update conversation. New keys are added directly; existing
-     * keys get their scores averaged with the new values.
-     *
-     * @param array<string, float> $existing The current interest profile.
-     * @param array<string, float> $new The new profile data to merge in.
-     * @return array<string, float> The merged profile with all scores clamped to [0.0, 1.0].
+     * @param  array<string, mixed>  $existing
+     * @param  array<string, mixed>  $new
+     * @return array<string, mixed>
      */
     public function mergeProfiles(array $existing, array $new): array
     {
-        // TODO: Start with a copy of the existing profile
-        // TODO: For each key in the new profile:
-        //   TODO: If key exists in existing, average the two scores: ($existing[$key] + $new[$key]) / 2
-        //   TODO: If key does not exist in existing, add it directly
-        // TODO: Clamp all values to [0.0, 1.0] using max(0.0, min(1.0, $value))
-        // TODO: Return the merged profile
-        return [];
+        $merged = $existing;
+
+        foreach ($new as $key => $value) {
+            if (! is_numeric($value)) {
+                $merged[$key] = $value;
+
+                continue;
+            }
+
+            $value = (float) $value;
+
+            if (isset($merged[$key]) && is_numeric($merged[$key])) {
+                $merged[$key] = max(0.0, min(1.0, ((float) $merged[$key] + $value) / 2));
+            } else {
+                $merged[$key] = max(0.0, min(1.0, $value));
+            }
+        }
+
+        return $merged;
+    }
+
+    /**
+     * Parse Claude's profile JSON response, extracting and clamping scores.
+     *
+     * @return array<string, mixed>
+     */
+    private function parseProfileResponse(string $responseText): array
+    {
+        $json = trim($responseText);
+
+        // Strip markdown code fences if present
+        if (preg_match('/```(?:json)?\s*(\{.*?\})\s*```/s', $json, $matches)) {
+            $json = $matches[1];
+        }
+
+        try {
+            $data = json_decode($json, true, flags: JSON_THROW_ON_ERROR);
+        } catch (\JsonException $e) {
+            Log::warning('Profile generation returned invalid JSON', [
+                'raw' => mb_substr($responseText, 0, 500),
+                'error' => $e->getMessage(),
+            ]);
+
+            return [];
+        }
+
+        if (! is_array($data)) {
+            return [];
+        }
+
+        $profile = [];
+        $validCategories = array_map(
+            fn (EventCategory $c) => $c->value,
+            EventCategory::cases(),
+        );
+
+        foreach ($data as $key => $value) {
+            $normKey = mb_strtolower((string) $key);
+
+            // Non-numeric metadata fields — pass through
+            if (in_array($normKey, ['city', 'price_sensitive', 'preferred_times'], true)) {
+                $profile[$normKey] = $value;
+
+                continue;
+            }
+
+            if (! is_numeric($value)) {
+                continue;
+            }
+
+            $score = max(0.0, min(1.0, (float) $value));
+
+            // Category scores
+            if (in_array($normKey, $validCategories, true)) {
+                $profile[$normKey] = $score;
+
+                continue;
+            }
+
+            // Tag scores — ensure "tag:" prefix
+            $tagKey = str_starts_with($normKey, 'tag:') ? $normKey : "tag:{$normKey}";
+            $profile[$tagKey] = $score;
+        }
+
+        return $profile;
     }
 }

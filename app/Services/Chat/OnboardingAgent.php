@@ -6,77 +6,148 @@ namespace App\Services\Chat;
 
 use App\Models\ChatMessage;
 use App\Models\User;
-use Illuminate\Http\Client\Factory as HttpClient;
+use App\Services\Anthropic\AnthropicClient;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Log;
 
 class OnboardingAgent
 {
-    /**
-     * Manages the conversational onboarding flow where new users describe
-     * their event preferences through natural language chat. Uses Claude
-     * as the conversational engine with a specialized system prompt that
-     * guides users to express their interests in detail.
-     *
-     * @param HttpClient $http The HTTP client for making Claude API requests.
-     */
     public function __construct(
-        private readonly HttpClient $http,
+        private readonly AnthropicClient $client,
     ) {}
 
     /**
-     * Send a user message in the onboarding chat and return the assistant's response.
+     * Process a user message and return the assistant's response.
      *
-     * Loads the user's conversation history, builds the messages array
-     * for the Claude API, sends the request with the onboarding system prompt,
-     * saves both messages to the database, and returns the assistant's reply.
-     *
-     * @param User $user The user participating in the onboarding chat.
-     * @param string $message The user's message text.
-     * @return string The assistant's response text.
-     *
-     * @throws \RuntimeException If the Claude API call fails.
+     * The controller is responsible for saving messages; this service only
+     * generates the response by calling the Claude API with full history.
      */
-    public function chat(User $user, string $message): string
+    public function respond(User $user, string $userMessage): string
     {
-        // TODO: Save the user's message to chat_messages table:
-        //       ChatMessage::create(['user_id' => $user->id, 'role' => 'user', 'content' => $message])
-        // TODO: Load full conversation history for this user:
-        //       $user->chatMessages()->where('context', 'onboarding')->orderBy('created_at')->get()
-        // TODO: Build the messages array for Claude API from conversation history:
-        //       [['role' => $msg->role, 'content' => $msg->content], ...]
-        // TODO: Load the onboarding system prompt from config('eventpulse.prompts.onboarding')
-        //       The prompt should instruct Claude to:
-        //       - Ask about event preferences, favorite activities, music genres, etc.
-        //       - Probe for specific likes and dislikes (e.g., "I like jazz but not smooth jazz")
-        //       - Ask about location preferences, willingness to travel
-        //       - Ask about preferred times and price sensitivity
-        //       - Be conversational, warm, and concise
-        // TODO: Send POST request to Claude API:
-        //       POST https://api.anthropic.com/v1/messages
-        //       with model, max_tokens, system prompt, and messages array
-        // TODO: Extract the assistant's response text from the API response
-        // TODO: Save the assistant's response to chat_messages table:
-        //       ChatMessage::create(['user_id' => $user->id, 'role' => 'assistant', 'content' => $response, 'context' => 'onboarding'])
-        // TODO: Log token usage for cost tracking
-        // TODO: Return the assistant's response text
-        return '';
+        $history = $this->loadHistory($user);
+
+        // Append the latest user message (already saved by the controller)
+        $messages = $this->buildApiMessages($history);
+
+        try {
+            $result = $this->client->sendMessage(
+                systemPrompt: (string) config('eventpulse.llm.onboarding_system_prompt'),
+                userMessage: $this->formatConversation($messages),
+                operation: 'onboarding_chat',
+                logMetadata: ['user_id' => $user->id],
+            );
+
+            return $result['content'];
+        } catch (\Throwable $e) {
+            Log::error('Onboarding chat failed', [
+                'user_id' => $user->id,
+                'error' => $e->getMessage(),
+            ]);
+
+            return 'Îmi pare rău, am întâmpinat o problemă. Poți încerca din nou?';
+        }
     }
 
     /**
-     * Determine whether the onboarding conversation has gathered enough information.
+     * Send a multi-turn conversation to Claude using the messages API.
      *
-     * Checks if the user has exchanged enough messages for the system to
-     * generate a meaningful interest profile.
+     * Unlike `respond()` which flattens history into a single user message,
+     * this builds proper alternating user/assistant turns.
+     */
+    public function chat(User $user, string $userMessage): string
+    {
+        $history = $this->loadHistory($user);
+
+        $apiMessages = $this->buildApiMessages($history);
+
+        try {
+            $response = $this->client->sendMultiTurn(
+                systemPrompt: (string) config('eventpulse.llm.onboarding_system_prompt'),
+                messages: $apiMessages,
+                operation: 'onboarding_chat',
+                logMetadata: ['user_id' => $user->id],
+            );
+
+            return $response['content'];
+        } catch (\Throwable $e) {
+            Log::error('Onboarding chat failed', [
+                'user_id' => $user->id,
+                'error' => $e->getMessage(),
+            ]);
+
+            return 'Îmi pare rău, am întâmpinat o problemă. Poți încerca din nou?';
+        }
+    }
+
+    /**
+     * Check whether the conversation has gathered enough information.
      *
-     * @param User $user The user to check onboarding status for.
-     * @return bool True if onboarding has gathered sufficient information.
+     * Returns true if:
+     * - User has sent at least `min_exchanges` messages, AND
+     * - The latest assistant message contains the [PROFILE_READY] marker
      */
     public function isOnboardingComplete(User $user): bool
     {
-        // TODO: Count user messages (role = 'user') in the onboarding context
-        //       $userMessageCount = $user->chatMessages()->where('context', 'onboarding')->where('role', 'user')->count()
-        // TODO: Get minimum required exchanges from config('eventpulse.onboarding.min_exchanges', 4)
-        // TODO: Return true if $userMessageCount >= $minExchanges
-        return false;
+        $minExchanges = (int) config('eventpulse.onboarding.min_exchanges', 4);
+
+        $userMessageCount = $user->chatMessages()
+            ->where('context', 'onboarding')
+            ->where('role', 'user')
+            ->count();
+
+        if ($userMessageCount < $minExchanges) {
+            return false;
+        }
+
+        $lastAssistant = $user->chatMessages()
+            ->where('context', 'onboarding')
+            ->where('role', 'assistant')
+            ->latest()
+            ->first();
+
+        return $lastAssistant !== null
+            && str_contains($lastAssistant->content, '[PROFILE_READY]');
+    }
+
+    /**
+     * Get the welcome message for a new onboarding session.
+     */
+    public function welcomeMessage(): string
+    {
+        return (string) config('eventpulse.onboarding.welcome_message');
+    }
+
+    /**
+     * @return Collection<int, ChatMessage>
+     */
+    private function loadHistory(User $user): Collection
+    {
+        return $user->chatMessages()
+            ->where('context', 'onboarding')
+            ->orderBy('created_at')
+            ->get();
+    }
+
+    /**
+     * Build the API messages array from chat history.
+     *
+     * @return array<int, array{role: string, content: string}>
+     */
+    private function buildApiMessages(Collection $history): array
+    {
+        return $history->map(fn (ChatMessage $msg) => [
+            'role' => $msg->role,
+            'content' => $msg->content,
+        ])->toArray();
+    }
+
+    /**
+     * Format conversation as a single text block for the single-turn API.
+     */
+    private function formatConversation(array $messages): string
+    {
+        return collect($messages)
+            ->map(fn (array $m) => ($m['role'] === 'user' ? 'User' : 'Assistant').": {$m['content']}")
+            ->implode("\n\n");
     }
 }

@@ -9,6 +9,7 @@ use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -27,11 +28,17 @@ class ScraperController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $source = $request->input('source');
+        $validAdapters = array_keys((array) config('eventpulse.adapter_registry', []));
+
+        $validated = $request->validate([
+            'source' => ['nullable', 'string', Rule::in($validAdapters)],
+        ]);
+
+        $source = $validated['source'] ?? null;
 
         RunScraperJob::dispatch($source);
 
         return redirect()->route('admin.scrapers.index')
-            ->with('success', 'Scraper run queued' . ($source ? " for {$source}" : ' for all sources') . '.');
+            ->with('success', 'Scraper run queued'.($source ? " for {$source}" : ' for all sources').'.');
     }
 }

@@ -18,23 +18,26 @@ class RunScraperJob implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public string $queue = 'scraping';
-
     public int $tries = 3;
 
     /** @var array<int, int> */
     public array $backoff = [60, 300, 900];
 
+    /** Allow up to 10 minutes — scraper sleeps between requests to avoid rate limits. */
+    public int $timeout = 600;
+
+    /**
+     * @param  array{adapter: string, url: string, enabled: bool, interval_hours: int}  $sourceConfig
+     */
     public function __construct(
-        public ?string $source = null,
-    ) {}
+        public readonly string $cityKey,
+        public readonly array $sourceConfig,
+    ) {
+        $this->onQueue('scraping');
+    }
 
     public function handle(ScraperOrchestrator $orchestrator): void
     {
-        if ($this->source !== null) {
-            $orchestrator->runSingle($this->source);
-        } else {
-            $orchestrator->runAll();
-        }
+        $orchestrator->runSource($this->cityKey, $this->sourceConfig['adapter']);
     }
 }

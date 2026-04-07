@@ -3,10 +3,10 @@ import { Button } from '@/Components/ui/Button';
 import { cn } from '@/lib/utils';
 
 const reactions = [
-    { key: 'interested', emoji: '\u2764\uFE0F', label: 'Interested' },
-    { key: 'not_interested', emoji: '\uD83D\uDC4E', label: 'Not for me' },
-    { key: 'saved', emoji: '\uD83D\uDD16', label: 'Save' },
-    { key: 'hidden', emoji: '\uD83D\uDE48', label: 'Hide' },
+    { key: 'interested', emoji: '\u2764\uFE0F', label: 'Interesant' },
+    { key: 'not_interested', emoji: '\uD83D\uDC4E', label: 'Nu-i pentru mine' },
+    { key: 'saved', emoji: '\uD83D\uDD16', label: 'Salveaza' },
+    { key: 'hidden', emoji: '\uD83D\uDE48', label: 'Ascunde' },
 ];
 
 /**

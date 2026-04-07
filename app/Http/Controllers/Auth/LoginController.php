@@ -24,7 +24,7 @@ class LoginController extends Controller
         /** @var array{email: string, password: string} $validated */
         $validated = $request->validated();
 
-        if (! Auth::attempt($validated, remember: true)) {
+        if (! Auth::attempt($validated, remember: false)) {
             return back()->withErrors([
                 'email' => __('auth.failed'),
             ])->onlyInput('email');

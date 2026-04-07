@@ -5,75 +5,120 @@ declare(strict_types=1);
 namespace App\Services\Processing;
 
 use App\DTOs\RawEvent;
+use App\Enums\EventCategory;
+use App\Jobs\ClassifyEventJob;
+use App\Jobs\DownloadEventImageJob;
 use App\Models\Event;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 
 class EventPipeline
 {
-    /**
-     * Orchestrates the full event processing pipeline.
-     *
-     * Takes raw scraped events through deduplication, model creation,
-     * AI classification, and geocoding/metadata enrichment. Each stage
-     * is handled by a dedicated service to keep responsibilities clean.
-     */
     public function __construct(
         private readonly EventDeduplicator $deduplicator,
-        private readonly EventClassifier $classifier,
-        private readonly EventEnricher $enricher,
     ) {}
 
     /**
-     * Process a single raw event through the full pipeline.
-     *
-     * Pipeline stages: fingerprint -> dedup check -> create Event model ->
-     * classify with LLM -> enrich with geocoding/metadata -> save.
-     *
-     * Returns the created Event, or null if the event was a duplicate.
+     * Process a single raw event: deduplicate, persist, and return the Event.
+     * Returns null if the event is a duplicate.
      */
     public function process(RawEvent $rawEvent): ?Event
     {
-        // TODO: Generate fingerprint using $this->deduplicator->generateFingerprint($rawEvent)
-        // TODO: Check exact duplicate: $this->deduplicator->isDuplicate($fingerprint)
-        //   TODO: If duplicate, log debug message and return null
-        // TODO: Check fuzzy duplicate: $this->deduplicator->findFuzzyDuplicates($rawEvent)
-        //   TODO: If fuzzy match found, log info and return null (or merge data into existing event)
-        // TODO: Create a new Event model from RawEvent data:
-        //   TODO: Map RawEvent fields to Event columns (title, description, source, source_url, etc.)
-        //   TODO: Set fingerprint
-        //   TODO: Set is_classified = false, is_geocoded = false, is_enriched = false
-        //   TODO: Save the initial Event record
-        // TODO: Classify the event: $classified = $this->classifier->classify($event)
-        //   TODO: Wrap in try/catch; on failure, log and leave unclassified
-        //   TODO: On success: update $event->category, $event->tags, $event->is_classified = true
-        //   TODO: Save the event
-        // TODO: Enrich with geocoding: $this->enricher->enrichGeocoding($event)
-        // TODO: Enrich with metadata: $this->enricher->enrichMetadata($event)
-        // TODO: Log info: "Processed event: {title} [{category}] from {source}"
-        // TODO: Return the fully processed Event
-        return null;
+        $fingerprint = $this->deduplicator->generateFingerprint($rawEvent);
+
+        if ($this->deduplicator->isDuplicate($fingerprint)) {
+            Log::debug('EventPipeline: exact duplicate skipped', ['title' => $rawEvent->title]);
+
+            return null;
+        }
+
+        if ($this->deduplicator->findFuzzyDuplicates($rawEvent) !== null) {
+            Log::debug('EventPipeline: fuzzy duplicate skipped', ['title' => $rawEvent->title]);
+
+            return null;
+        }
+
+        // Recurring events share the same source_url across different dates.
+        // If this URL already exists (different fingerprint, same URL), skip it.
+        if (Event::where('source_url', $rawEvent->sourceUrl)->exists()) {
+            Log::debug('EventPipeline: source_url already exists, skipping', ['url' => $rawEvent->sourceUrl]);
+
+            return null;
+        }
+
+        $attributes = [
+            'title' => $rawEvent->title,
+            'description' => $rawEvent->description,
+            'source' => $rawEvent->source,
+            'source_url' => $rawEvent->sourceUrl,
+            'source_id' => $rawEvent->sourceId,
+            'fingerprint' => $fingerprint,
+            'category' => EventCategory::Other,
+            'tags' => [],
+            'venue' => $rawEvent->venue,
+            'address' => $rawEvent->address,
+            'city' => $rawEvent->city,
+            'starts_at' => $rawEvent->startsAt,
+            'ends_at' => $rawEvent->endsAt,
+            'price_min' => $rawEvent->priceMin,
+            'price_max' => $rawEvent->priceMax,
+            'currency' => $rawEvent->currency ?? 'RON',
+            'is_free' => $rawEvent->isFree ?? false,
+            'image_url' => $rawEvent->imageUrl,
+            'metadata' => $rawEvent->metadata,
+            'is_classified' => false,
+            'is_geocoded' => false,
+            'is_enriched' => false,
+        ];
+
+        // Wrap in withoutSyncingToSearch so a missing/offline Meilisearch instance
+        // never blocks saving. Scout import can populate the index in a separate step.
+        /** @var Event $event */
+        $event = Event::withoutSyncingToSearch(fn () => Event::create($attributes));
+
+        Log::info('EventPipeline: saved event', [
+            'title' => $event->title,
+            'source' => $event->source,
+            'starts_at' => $event->getRawOriginal('starts_at'),
+        ]);
+
+        ClassifyEventJob::dispatch($event->id);
+
+        if ($rawEvent->imageUrl !== null) {
+            DownloadEventImageJob::dispatch($event);
+        }
+
+        return $event;
     }
 
     /**
-     * Process a batch of raw events through the pipeline.
+     * Process a batch of raw events. Failures for individual events are logged
+     * but do not halt the batch.
      *
-     * Iterates through each RawEvent, passing it to process(). Collects
-     * all successfully created Events and returns them. Failures for
-     * individual events are logged but do not halt the batch.
-     *
-     * @param Collection<int, RawEvent> $rawEvents
+     * @param  Collection<int, RawEvent>  $rawEvents
      * @return Collection<int, Event>
      */
     public function processBatch(Collection $rawEvents): Collection
     {
-        // TODO: Initialize empty results collection
-        // TODO: For each $rawEvent in the collection:
-        //   TODO: Call $this->process($rawEvent) inside try/catch
-        //   TODO: If result is not null, add to results
-        //   TODO: On exception: log error with event title and exception message, continue
-        // TODO: Log summary: "Batch complete: {created}/{total} events processed"
-        // TODO: Return results collection
-        return collect();
+        $results = collect();
+        $total = $rawEvents->count();
+
+        foreach ($rawEvents as $rawEvent) {
+            try {
+                $event = $this->process($rawEvent);
+                if ($event !== null) {
+                    $results->push($event);
+                }
+            } catch (\Throwable $e) {
+                Log::error('EventPipeline: failed to process event', [
+                    'title' => $rawEvent->title,
+                    'error' => $e->getMessage(),
+                ]);
+            }
+        }
+
+        Log::info("EventPipeline: batch complete — {$results->count()}/{$total} events saved");
+
+        return $results;
     }
 }

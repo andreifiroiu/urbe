@@ -25,7 +25,7 @@ import ReactionButtons from '@/Components/Events/ReactionButtons';
 export default function Show({ event }) {
     const formatDateTime = (dateStr) => {
         if (!dateStr) return null;
-        return new Date(dateStr).toLocaleDateString(undefined, {
+        return new Date(dateStr).toLocaleDateString('ro-RO', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
@@ -57,7 +57,7 @@ export default function Show({ event }) {
                             d="M15 19l-7-7 7-7"
                         />
                     </svg>
-                    Back to Events
+                    Înapoi la evenimente
                 </Link>
             </div>
 
@@ -108,7 +108,7 @@ export default function Show({ event }) {
                         <Card>
                             <CardContent className="p-6">
                                 <h2 className="text-lg font-semibold text-gray-900 mb-3">
-                                    About this event
+                                    Despre acest eveniment
                                 </h2>
                                 <div className="prose prose-sm max-w-none text-gray-700 whitespace-pre-wrap">
                                     {event.description}
@@ -159,7 +159,7 @@ export default function Show({ event }) {
                                         </p>
                                         {event.ends_at && (
                                             <p className="text-sm text-gray-500">
-                                                Until{' '}
+                                                Până la{' '}
                                                 {formatDateTime(event.ends_at)}
                                             </p>
                                         )}
@@ -234,7 +234,7 @@ export default function Show({ event }) {
                                     rel="noopener noreferrer"
                                 >
                                     <Button variant="outline" className="w-full mt-2">
-                                        View Original Source
+                                        Vezi sursa originală
                                     </Button>
                                 </a>
                             )}
@@ -259,7 +259,7 @@ export default function Show({ event }) {
                                             d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
                                         />
                                     </svg>
-                                    <p className="text-sm">Map</p>
+                                    <p className="text-sm">Hartă</p>
                                 </div>
                             </div>
                         </CardContent>
@@ -269,7 +269,7 @@ export default function Show({ event }) {
                     <Card>
                         <CardContent className="p-4">
                             <p className="text-sm font-medium text-gray-700 mb-3">
-                                What do you think?
+                                Ce părere ai?
                             </p>
                             <ReactionButtons
                                 eventId={event.id}

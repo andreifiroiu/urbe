@@ -6,9 +6,13 @@ use App\Enums\EventCategory;
 use App\Models\Event;
 use App\Models\User;
 
+beforeEach(function () {
+    $this->withoutVite();
+});
+
 it('shows recommendations on dashboard for authenticated user', function () {
     $user = User::factory()->create([
-        'interest_profile' => ['Music' => 0.8],
+        'interest_profile' => ['music' => 0.8],
         'city' => 'Bucharest',
         'onboarding_completed' => true,
     ]);

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Resources\EventResource;
+use App\Models\Event;
 use App\Services\Recommendation\RecommendationEngine;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -21,10 +22,14 @@ class RecommendationController extends Controller
     {
         $user = $request->user();
 
-        $recommendations = $this->recommendationEngine->recommend($user);
+        $batch = $this->recommendationEngine->recommend($user);
+
+        $recommendations = Event::whereIn('id', $batch->recommendedEventIds)->get();
+        $discoveryEvents = Event::whereIn('id', $batch->discoveryEventIds)->get();
 
         return Inertia::render('Dashboard/Index', [
-            'recommendations' => EventResource::collection($recommendations),
+            'recommendations' => EventResource::collection($recommendations)->resolve(),
+            'discoveryEvents' => EventResource::collection($discoveryEvents)->resolve(),
         ]);
     }
 
@@ -32,8 +37,16 @@ class RecommendationController extends Controller
     {
         $user = $request->user();
 
-        $recommendations = $this->recommendationEngine->recommend($user);
+        $batch = $this->recommendationEngine->recommend($user);
 
-        return EventResource::collection($recommendations)->response();
+        $recommendations = Event::whereIn('id', $batch->recommendedEventIds)->get();
+
+        return response()->json([
+            'recommendations' => EventResource::collection($recommendations),
+            'discovery' => EventResource::collection(
+                Event::whereIn('id', $batch->discoveryEventIds)->get(),
+            ),
+            'total_score' => $batch->totalScore,
+        ]);
     }
 }

@@ -1,7 +1,22 @@
-import { Link } from '@inertiajs/react';
 import { Card, CardContent } from '@/Components/ui/Card';
 import CategoryBadge from '@/Components/Events/CategoryBadge';
 import ReactionButtons from '@/Components/Events/ReactionButtons';
+
+const SOURCE_LABELS = {
+    iabilet: 'iaBilet',
+    zilesinopti: 'Zile și Nopți',
+    allevents: 'AllEvents',
+    eventbrite: 'Eventbrite',
+    onevent: 'OnEvent',
+    entertix: 'Entertix',
+    meetup: 'Meetup',
+    google_events: 'Google Events',
+    timisoreni: 'Timisoreni',
+    opera_timisoara: 'Opera Timișoara',
+    teatru_national_tm: 'Teatrul Național TM',
+    visit_timisoara: 'Visit Timișoara',
+    radio_timisoara: 'Radio Timișoara',
+};
 
 /**
  * @param {Object} props
@@ -10,9 +25,12 @@ import ReactionButtons from '@/Components/Events/ReactionButtons';
  * @param {string} props.event.title
  * @param {string} [props.event.image_url]
  * @param {string} [props.event.starts_at]
- * @param {string} [props.event.venue_name]
+ * @param {string} [props.event.venue]
  * @param {string} [props.event.category]
- * @param {string} [props.event.price]
+ * @param {number|null} [props.event.price_min]
+ * @param {boolean} [props.event.is_free]
+ * @param {string} [props.event.source]
+ * @param {string} [props.event.source_url]
  * @param {string|null} [props.event.current_reaction]
  */
 export default function EventCard({ event }) {
@@ -26,9 +44,25 @@ export default function EventCard({ event }) {
           })
         : null;
 
+    const sourceLabel = SOURCE_LABELS[event.source] ?? event.source;
+
+    const priceLabel = event.is_free
+        ? 'Gratuit'
+        : event.price_min != null
+          ? `De la ${event.price_min} RON`
+          : null;
+
+    const cardLink = event.source_url || null;
+
     return (
-        <Card className="overflow-hidden hover:shadow-md transition-shadow">
-            <Link href={`/events/${event.id}`} className="block">
+        <Card className="overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+            <a
+                href={cardLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+                aria-label={event.title}
+            >
                 <div className="aspect-video bg-gray-100 relative overflow-hidden">
                     {event.image_url ? (
                         <img
@@ -59,26 +93,32 @@ export default function EventCard({ event }) {
                         </div>
                     )}
                 </div>
-                <CardContent className="p-4">
-                    <h3 className="font-semibold text-gray-900 line-clamp-2 mb-1">
+                <CardContent className="p-4 flex flex-col gap-1">
+                    <h3 className="font-semibold text-gray-900 line-clamp-2">
                         {event.title}
                     </h3>
                     {formattedDate && (
-                        <p className="text-sm text-gray-500 mb-1">{formattedDate}</p>
+                        <p className="text-sm text-gray-500">{formattedDate}</p>
                     )}
-                    {event.venue_name && (
-                        <p className="text-sm text-gray-500 mb-2 truncate">
-                            {event.venue_name}
+                    {event.venue && (
+                        <p className="text-sm text-gray-500 truncate">{event.venue}</p>
+                    )}
+                    {priceLabel && (
+                        <p className="text-sm font-medium" style={{ color: '#FF5733' }}>
+                            {priceLabel}
                         </p>
                     )}
-                    {event.price && (
-                        <p className="text-sm font-medium text-indigo-600">
-                            {event.price}
+                    {sourceLabel && (
+                        <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                            <svg className="w-3 h-3 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            {sourceLabel}
                         </p>
                     )}
                 </CardContent>
-            </Link>
-            <div className="px-4 pb-4">
+            </a>
+            <div className="px-4 pb-4 mt-auto">
                 <ReactionButtons
                     eventId={event.id}
                     currentReaction={event.current_reaction}

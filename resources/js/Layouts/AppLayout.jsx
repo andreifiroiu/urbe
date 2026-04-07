@@ -4,10 +4,9 @@ import { Button } from '@/Components/ui/Button';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-    { href: '/', label: 'Dashboard' },
-    { href: '/events', label: 'Events' },
-    { href: '/profile', label: 'Profile' },
-    { href: '/settings/notifications', label: 'Settings' },
+    { href: '/dashboard', label: 'Acasă' },
+    { href: '/events', label: 'Evenimente' },
+    { href: '/profile', label: 'Profil' },
 ];
 
 /**
@@ -27,21 +26,22 @@ export default function AppLayout({ children, title }) {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
-            <nav className="bg-white border-b border-gray-200">
+        <div className="min-h-screen bg-[#F8F9FA]">
+            <nav className="bg-[#0A1128] border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         {/* Left side: logo + nav links */}
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center">
-                                <Link
-                                    href="/"
-                                    className="text-xl font-bold text-indigo-600"
-                                >
-                                    EventPulse
+                                <Link href="/dashboard">
+                                    <img
+                                        src="/images/logo-dark.png"
+                                        alt="Ghes"
+                                        className="h-9 w-auto"
+                                    />
                                 </Link>
                             </div>
-                            <div className="hidden sm:ml-8 sm:flex sm:space-x-4">
+                            <div className="hidden sm:ml-8 sm:flex sm:space-x-2">
                                 {navLinks.map((link) => (
                                     <Link
                                         key={link.href}
@@ -49,10 +49,10 @@ export default function AppLayout({ children, title }) {
                                         className={cn(
                                             'inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
                                             currentPath === link.href ||
-                                                (link.href !== '/' &&
+                                                (link.href !== '/dashboard' &&
                                                     currentPath.startsWith(link.href))
-                                                ? 'text-indigo-600 bg-indigo-50'
-                                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                                ? 'text-[#FF5733] bg-white/10'
+                                                : 'text-white/70 hover:text-white hover:bg-white/10'
                                         )}
                                     >
                                         {link.label}
@@ -67,10 +67,10 @@ export default function AppLayout({ children, title }) {
                                 <Button
                                     variant="ghost"
                                     onClick={() => setUserMenuOpen(!userMenuOpen)}
-                                    className="flex items-center gap-2"
+                                    className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10"
                                 >
-                                    <span className="text-sm text-gray-700">
-                                        {auth?.user?.name || 'User'}
+                                    <span className="text-sm">
+                                        {auth?.user?.name || 'Cont'}
                                     </span>
                                     <svg
                                         className={cn(
@@ -96,21 +96,14 @@ export default function AppLayout({ children, title }) {
                                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                                             onClick={() => setUserMenuOpen(false)}
                                         >
-                                            Your Profile
-                                        </Link>
-                                        <Link
-                                            href="/settings/notifications"
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                                            onClick={() => setUserMenuOpen(false)}
-                                        >
-                                            Settings
+                                            Profilul meu
                                         </Link>
                                         <hr className="my-1 border-gray-100" />
                                         <button
                                             onClick={handleLogout}
                                             className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                                         >
-                                            Logout
+                                            Deconectare
                                         </button>
                                     </div>
                                 )}
@@ -123,6 +116,7 @@ export default function AppLayout({ children, title }) {
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                className="text-white"
                             >
                                 {mobileMenuOpen ? (
                                     <svg
@@ -160,7 +154,7 @@ export default function AppLayout({ children, title }) {
 
                 {/* Mobile menu */}
                 {mobileMenuOpen && (
-                    <div className="sm:hidden border-t border-gray-200">
+                    <div className="sm:hidden border-t border-white/10">
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navLinks.map((link) => (
                                 <Link
@@ -170,26 +164,26 @@ export default function AppLayout({ children, title }) {
                                     className={cn(
                                         'block px-3 py-2 rounded-md text-base font-medium',
                                         currentPath === link.href ||
-                                            (link.href !== '/' &&
+                                            (link.href !== '/dashboard' &&
                                                 currentPath.startsWith(link.href))
-                                            ? 'text-indigo-600 bg-indigo-50'
-                                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                            ? 'text-[#FF5733] bg-white/10'
+                                            : 'text-white/70 hover:text-white hover:bg-white/10'
                                     )}
                                 >
                                     {link.label}
                                 </Link>
                             ))}
                         </div>
-                        <div className="border-t border-gray-200 px-4 py-3">
-                            <p className="text-sm font-medium text-gray-700">
-                                {auth?.user?.name || 'User'}
+                        <div className="border-t border-white/10 px-4 py-3">
+                            <p className="text-sm font-medium text-white">
+                                {auth?.user?.name || 'Cont'}
                             </p>
-                            <p className="text-xs text-gray-400">
+                            <p className="text-xs text-white/50">
                                 {auth?.user?.email || ''}
                             </p>
                             <button
                                 onClick={handleLogout}
-                                className="mt-2 block text-sm text-red-600 hover:text-red-800"
+                                className="mt-2 block text-sm text-[#FF5733] hover:text-red-400"
                             >
                                 Logout
                             </button>
@@ -201,7 +195,7 @@ export default function AppLayout({ children, title }) {
             {/* Page content */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {title && (
-                    <h1 className="text-2xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-2xl font-bold text-[#0A1128] mb-6">
                         {title}
                     </h1>
                 )}

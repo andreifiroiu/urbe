@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->uuid('id')->primary()->default(DB::raw('gen_random_uuid()'));
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->jsonb('interest_profile')->default('{}');
+            $table->json('interest_profile')->default('{}');
             $table->float('discovery_openness')->default(0.3);
             $table->string('notification_channel')->default('email');
             $table->string('notification_frequency')->default('daily');
