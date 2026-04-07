@@ -5,6 +5,7 @@ use App\Services\Scraping\Adapters\AllEventsScraper;
 use App\Services\Scraping\Adapters\EntertixScraper;
 use App\Services\Scraping\Adapters\EventbriteScraper;
 use App\Services\Scraping\Adapters\GenericHtmlScraper;
+use App\Services\Scraping\Adapters\GoogleEventsScraper;
 use App\Services\Scraping\Adapters\IaBiletScraper;
 use App\Services\Scraping\Adapters\MeetupScraper;
 use App\Services\Scraping\Adapters\OnEventScraper;
@@ -74,6 +75,7 @@ return [
         'visit_timisoara' => VisitTimisoaraScraper::class,
         'zilesinopti' => ZileSiNoptiScraper::class,
         'generic_html' => GenericHtmlScraper::class,
+        'google_events' => GoogleEventsScraper::class,
     ],
 
     'cities' => [
@@ -107,6 +109,7 @@ return [
 
     'default_city' => env('EVENTPULSE_DEFAULT_CITY', 'timisoara'),
     'eventbrite_api_key' => env('EVENTBRITE_API_KEY'),
+    'serpapi_api_key' => env('SERPAPI_API_KEY'),
     'notifications' => [
         'hour' => (int) env('EVENTPULSE_NOTIFICATION_HOUR', 8),
         'max_events_per_digest' => 10,
