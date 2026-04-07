@@ -53,6 +53,7 @@ class EventDeduplicator
                 $startsAt->copy()->subHours(2),
                 $startsAt->copy()->addHours(2),
             ])
+            ->when($event->city !== null, fn ($q) => $q->where('city', $event->city))
             ->get();
 
         foreach ($candidates as $candidate) {

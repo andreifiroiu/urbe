@@ -6,6 +6,7 @@ use App\Contracts\ScraperAdapter;
 use App\DTOs\RawEvent;
 use App\Jobs\RunScraperJob;
 use App\Models\ScraperRun;
+use App\Services\Scraping\Adapters\IaBiletScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 use App\Services\Scraping\ScraperOrchestrator;
 use Illuminate\Support\Facades\Queue;
@@ -224,5 +225,52 @@ describe('runSource', function () {
             ->and($run->status)->toBe('failed')
             ->and($run->errors_count)->toBe(1)
             ->and($run->error_log)->toContain('Scraper network error');
+    });
+
+    it('executes a disabled source when called directly via runSource', function () {
+        // iabilet is disabled in the timisoara config but runSource() ignores the enabled flag
+        $this->app->instance(IaBiletScraper::class, new FakeZileSiNoptiAdapter);
+
+        $orchestrator = app(ScraperOrchestrator::class);
+        $orchestrator->runSource('timisoara', 'iabilet');
+
+        $run = ScraperRun::where('source', 'iabilet')
+            ->where('city', 'timisoara')
+            ->first();
+
+        expect($run)->not->toBeNull()
+            ->and($run->status)->toBe('completed');
+    });
+});
+
+describe('runCity and runAll payloads', function () {
+    it('dispatches RunScraperJob with the correct cityKey', function () {
+        Queue::fake();
+
+        app(ScraperOrchestrator::class)->runCity('timisoara');
+
+        Queue::assertPushed(
+            RunScraperJob::class,
+            fn (RunScraperJob $job): bool => $job->cityKey === 'timisoara',
+        );
+    });
+
+    it('dispatches exactly one job per enabled source across all configured cities', function () {
+        Queue::fake();
+
+        $orchestrator = app(ScraperOrchestrator::class);
+
+        /** @var array<string, mixed> $cities */
+        $cities = config('eventpulse.cities', []);
+        $expected = array_sum(
+            array_map(
+                fn (string $cityKey): int => count($orchestrator->getEnabledSources($cityKey)),
+                array_keys($cities),
+            ),
+        );
+
+        $orchestrator->runAll();
+
+        Queue::assertPushedTimes(RunScraperJob::class, $expected);
     });
 });
