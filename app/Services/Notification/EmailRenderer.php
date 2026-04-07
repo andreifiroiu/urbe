@@ -25,21 +25,23 @@ class EmailRenderer
         $discoveryEvents = Event::whereIn('id', $notification->discovery_event_ids ?? [])->get();
 
         // Attach signed reaction URLs to each event
-        $attachReactionUrls = function (Event $event) use ($user): array {
+        $expiry = now()->addDays(30);
+
+        $attachReactionUrls = function (Event $event) use ($user, $expiry): array {
             return [
                 'event' => $event,
                 'reaction_urls' => [
-                    'interested' => URL::signedRoute('reactions.email', [
+                    'interested' => URL::temporarySignedRoute('reactions.email', $expiry, [
                         'user' => $user->id,
                         'event' => $event->id,
                         'reaction' => 'interested',
                     ]),
-                    'not_interested' => URL::signedRoute('reactions.email', [
+                    'not_interested' => URL::temporarySignedRoute('reactions.email', $expiry, [
                         'user' => $user->id,
                         'event' => $event->id,
                         'reaction' => 'not_interested',
                     ]),
-                    'saved' => URL::signedRoute('reactions.email', [
+                    'saved' => URL::temporarySignedRoute('reactions.email', $expiry, [
                         'user' => $user->id,
                         'event' => $event->id,
                         'reaction' => 'saved',

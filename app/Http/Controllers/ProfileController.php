@@ -25,13 +25,15 @@ class ProfileController extends Controller
         $user = $request->user();
         $validated = $request->validated();
 
-        if (isset($validated['email']) && $validated['email'] !== $user->email) {
+        $emailChanged = isset($validated['email']) && $validated['email'] !== $user->email;
+
+        if ($emailChanged) {
             $validated['email_verified_at'] = null;
         }
 
         $user->update($validated);
 
-        if (isset($validated['email_verified_at'])) {
+        if ($emailChanged) {
             $user->sendEmailVerificationNotification();
         }
 

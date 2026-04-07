@@ -23,7 +23,7 @@ it('records a reaction from a signed email URL', function () {
     $response = $this->get($url);
 
     $response->assertStatus(200);
-    $response->assertSee('Feedback Recorded');
+    $response->assertSee('Reacție înregistrată');
     $response->assertSee($event->title);
 
     $this->assertDatabaseHas('user_event_reactions', [

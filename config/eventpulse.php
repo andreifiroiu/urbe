@@ -17,6 +17,8 @@ use App\Services\Scraping\Adapters\VisitTimisoaraScraper;
 use App\Services\Scraping\Adapters\ZileSiNoptiScraper;
 
 return [
+    'admin_emails' => array_filter(explode(',', (string) env('EVENTPULSE_ADMIN_EMAILS', ''))),
+
     'recommendation' => [
         'weights' => [
             'category' => 0.30,

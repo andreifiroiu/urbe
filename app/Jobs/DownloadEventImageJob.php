@@ -42,27 +42,41 @@ class DownloadEventImageJob implements ShouldQueue
             return;
         }
 
-        $response = Http::timeout(15)->get($event->image_url);
+        $parsedUrl = parse_url($event->image_url);
+        if (($parsedUrl['scheme'] ?? '') !== 'https') {
+            Log::warning('DownloadEventImageJob: skipping non-HTTPS URL', ['event_id' => $event->id]);
+
+            return;
+        }
+
+        $response = Http::timeout(15)->withOptions(['max_filesize' => 5 * 1024 * 1024])->get($event->image_url);
 
         if ($response->failed()) {
             Log::warning('DownloadEventImageJob: failed to download image', [
                 'event_id' => $event->id,
-                'url' => $event->image_url,
                 'status' => $response->status(),
             ]);
 
             return;
         }
 
-        $contentType = $response->header('Content-Type');
+        // Validate by magic bytes rather than trusting the Content-Type header
+        $body = $response->body();
         $ext = match (true) {
-            str_contains($contentType, 'png') => 'png',
-            str_contains($contentType, 'webp') => 'webp',
-            default => 'jpg',
+            str_starts_with($body, "\x89PNG") => 'png',
+            str_starts_with($body, 'RIFF') && str_contains(substr($body, 8, 4), 'WEBP') => 'webp',
+            str_starts_with($body, "\xFF\xD8\xFF") => 'jpg',
+            default => null,
         };
 
+        if ($ext === null) {
+            Log::warning('DownloadEventImageJob: unrecognised image format', ['event_id' => $event->id]);
+
+            return;
+        }
+
         $path = "events/{$event->id}.{$ext}";
-        Storage::disk('public')->put($path, $response->body());
+        Storage::disk('public')->put($path, $body);
         $event->update(['image_url' => Storage::disk('public')->url($path)]);
 
         Log::info('DownloadEventImageJob: image saved', [

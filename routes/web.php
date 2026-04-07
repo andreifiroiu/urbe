@@ -26,9 +26,9 @@ Route::get('reactions/{user}/{event}/{reaction}', [EmailReactionController::clas
 // Auth (guest only)
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisterController::class, 'create'])->name('register');
-    Route::post('register', [RegisterController::class, 'store']);
+    Route::post('register', [RegisterController::class, 'store'])->middleware('throttle:10,1');
     Route::get('login', [LoginController::class, 'create'])->name('login');
-    Route::post('login', [LoginController::class, 'store']);
+    Route::post('login', [LoginController::class, 'store'])->middleware('throttle:5,1');
 });
 
 // Authenticated routes
@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
 
     // Onboarding chat
     Route::get('onboarding', [ChatController::class, 'index'])->name('onboarding');
-    Route::post('onboarding/chat', [ChatController::class, 'store'])->name('onboarding.chat');
+    Route::post('onboarding/chat', [ChatController::class, 'store'])->name('onboarding.chat')->middleware('throttle:20,1');
     Route::post('onboarding/confirm-profile', [ChatController::class, 'confirmProfile'])->name('onboarding.confirm');
 
     // Dashboard / Recommendations
@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::put('settings/notifications', [NotificationSettingsController::class, 'update'])->name('settings.notifications.update');
 
     // Admin
-    Route::prefix('admin')->name('admin.')->group(function () {
+    Route::prefix('admin')->name('admin.')->middleware('can:access-admin')->group(function () {
         Route::get('scrapers', [ScraperController::class, 'index'])->name('scrapers.index');
         Route::post('scrapers/run', [ScraperController::class, 'store'])->name('scrapers.run');
     });

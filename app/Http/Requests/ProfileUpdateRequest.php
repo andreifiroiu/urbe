@@ -24,7 +24,6 @@ class ProfileUpdateRequest extends FormRequest
             'email' => ['sometimes', 'string', 'email', 'max:255', Rule::unique('users')->ignore($this->user()->id)],
             'timezone' => ['sometimes', 'string', 'timezone'],
             'city' => ['sometimes', 'string', 'max:255'],
-            'discovery_openness' => ['sometimes', 'numeric', 'min:0', 'max:1'],
         ];
     }
 }
